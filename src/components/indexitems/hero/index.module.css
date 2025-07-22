@@ -1,0 +1,54 @@
+.heroBanner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+    h1{
+       font-size:  96px;
+       text-align: center;
+       line-height: 0.9;
+    }
+    .container{
+        z-index: 1;
+    }
+}
+
+.blur1{
+    position: absolute;
+    top: -120px;
+    left: -170px;
+    z-index: 0;
+    max-height: 700px;
+}
+.phero{
+    font-weight: 600;
+    font-size: 24px;
+    max-width: 750px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--bg-contaider);
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.year{
+    padding: 5px 20px;
+    background-color: #13644A;
+    color: #44CA9F;
+    border: solid 1px #44CA9F;
+    border-radius: 20px;
+}
