@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportal=self.webpackChunkportal||[]).push([[2999],{7650:(e,n,t)=>{t.r(n),t.d(n,{default:()=>u});var r=t(6540),s=t(8874),a=t(4848);function u(){return(0,r.useEffect)(()=>{s.N.auth.signOut().then(()=>{window.location.href="/"})},[]),(0,a.jsx)("p",{style:{padding:"2rem"},children:"Cerrando sesi\xf3n..."})}}}]);
