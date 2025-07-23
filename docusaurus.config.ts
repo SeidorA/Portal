@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://SeidorA.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Portal/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'SeidorA', // Usually your GitHub org/user name.
+  projectName: 'Portal', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -93,58 +93,10 @@ const config: Config = {
                 to: '/docs/daiana/intro',
                 sidebarId: 'daianavar',
               },
-              {
-                label: 'Doxa',
-                to: '/docs/doxa/intro',
-                sidebarId: 'doxavar',
-              },
-              {
-                label: 'Harbinger',
-                to: '/docs/harbinger/intro',
-                sidebarId: 'harbingervar',
-              },
-              {
-                label: 'Cloud Costing',
-                to: '/docs/cloud-costing/intro',
-                sidebarId: 'cloudcostingvar',
-              },{
-                label: 'Feelings',
-                to: '/docs/feelings/intro',
-                sidebarId: 'feelingsvar',
-              }
+              
             ],
         },
-        {
-          label: 'Act In',
-          position: 'left',
-          items: [
-            {
-              label: 'Success Factors',
-              to: '/docs/act-in/intro',
-              sidebarId: 'actinvar',
-            },
-            {
-              label: 'Business One analytics​',
-              to: '/docs/act-in-admin/intro',
-              sidebarId: 'actinadminvar', 
-            },
-            {
-              label: 'ByDesign',
-              to: '/docs/act-in-bydesign/intro',
-              sidebarId: 'actinbydesignvar',
-            },
-            {
-              label: 'S/4HANA Analytics​',
-              to: '/docs/act-in-s4hana/intro',
-              sidebarId: 'actins4hanavar',
-            },
-            {
-              label: 'SAC Planning',
-              to: '/docs/act-in-sac-planning/intro',
-              sidebarId: 'actinsacplanningvar',
-            }
-          ]
-        },
+
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'custom-navbar-user',
