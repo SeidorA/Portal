@@ -21,7 +21,9 @@
   --bg-full: #E2E8F0;
   --bg-contaider: #F1F5F9;
   --bg-container-tr: rgba(241, 245, 249, 0.5);
-  --carbon: #242528
+  --carbon: #242528;
+  --medium: #E2E8F0;
+  --hard: #94A3B8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -37,7 +39,9 @@
   --bg-full: #0F172B;
   --bg-contaider: #202938;
   --bg-container-tr: rgba(32, 41, 56, 0.5);
-  --carbon: #F1F5F9
+  --carbon: #F1F5F9;
+  --medium: #555C67;
+  --hard:#94A3B8;
 }
 
 body, html {
@@ -55,4 +59,25 @@ a:hover{
 .dropdown__menu{
   background-color: var(--bg-contaider);
   box-shadow: 0 0 6px 0 var(--bg-container-tr);
+}
+.docs_list{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .box{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: var(--bg-contaider);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.circle_brand{
+
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-contaider);
+  margin: 5px;
 }

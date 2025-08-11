@@ -1,0 +1,71 @@
+.container{
+    padding: 10px;
+    
+    border-radius: 8px;
+}
+.box{
+    padding: 40px 0;
+    border:  solid 2px var(--medium);
+    background-color: var(--bg-contaider);
+    padding:  20px 10px;
+    border-radius: 6px;
+}
+
+.files{
+    border-top-width: 1px; 
+    border-color: #F3F4F6; 
+    .filedeck:nth-child(1){
+        border: 0;
+    }
+}
+
+.filebox{
+    display: flex; 
+    margin-left: 1rem; 
+    flex: 1 1 0%; 
+    align-items: center; 
+    min-width: 0; 
+}
+
+.filedeck{
+    padding: 1rem; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; 
+    border-top: solid 1px var(--bg-full);
+    border-radius: 8px;
+}
+
+.filedeck:hover {
+ background-color: var(--bg-full); 
+}
+
+.fileicon{
+    
+    background-color: var(--bg-full);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    margin-right: 12px;
+}
+
+.btn{
+    display: inline-flex; 
+justify-content: center; 
+align-items: center; 
+border-radius: 9999px; 
+width: 2rem; 
+height: 2rem; 
+background-color: var(--bg-contaider);
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+border: 0px;
+}
+.btn:hover {
+ background-color: var(--bg-full); 
+ }

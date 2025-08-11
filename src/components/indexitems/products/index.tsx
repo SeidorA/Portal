@@ -1,59 +1,90 @@
 
 
+import React from 'react';
 import styles from './index.module.css';
+import { Brand } from 'iconcaral2';
+import { useColorMode } from '@docusaurus/theme-common';
 
 type productsItems = {
   title: string;
   description: string;
-img: string;
+
   class: string;
 };
 
 const FeatureList: productsItems[] = [
+    
     {
-        title: 'Caral',
-        description: 'Caral is a platform that allows you to create and manage your own online store with ease.',
-        img: 'img/blur1.png',
-        class: 'crestone',
-    },
-    {
-        title: 'Caral2',
+        title: 'Doxa',
         description: 'Caral2 is the next generation of Caral, offering enhanced features and better performance.',
-        img: 'img/blur1.png',
+       
         class: 'doxa',
     },
     {
-        title: 'Caral3',
+        title: 'Harbinger',
         description: 'Caral3 brings even more capabilities, including advanced analytics and AI-driven recommendations.',
-        img: 'img/blur1.png',
+       
         class: 'har',
     },
     {
-        title: 'Caral4',
+        title: 'Cloud Costing',
         description: 'Caral4 is the latest version, focusing on scalability and integration with third-party services.',
-        img: 'img/blur1.png',
+       
         class: 'cc',
     },{
-        title: 'Caral5',
+        title: 'Feelings',
         description: 'Caral5 introduces a new user interface and improved user experience for your online store.',
-        img: 'img/blur1.png',
+       
         class: 'feel',
-    },{
-        title: 'Caral6',
-        description: 'Caral6 enhances security features and provides better support for mobile devices.',
-        img: 'img/blur1.png',
-        class: 'daiana',
     }
 ];
 
-function ProductItem({title, description, img, class: className}: productsItems) {
+function ProductItem({title, description,  class: className}: productsItems) {
+  const { colorMode } = useColorMode();
+  const lightSrc = `img/index/${title.toLowerCase()}_ligth.png `;
+  const darkSrc = `img/index/${title.toLowerCase()}_dark.png `;
+
   return (
     <div className={`${styles.productItem} ${styles[className]}`}>
       
-      <h3 className={styles.productTitle}>{title}</h3>
-      <p className={styles.productDescription}>{description}</p>
+      <div className="padding--md">
+        <div className={styles.diplay__flex}>
+          <Brand name={title.replace(/\s+/g, "")} size={34} />
+          <h3 className={styles.productTitle}>{title}</h3>
+        </div>
+        <p className={styles.productDescription}>{description}</p>
+      </div>
+      <img src={colorMode === 'dark' ? darkSrc : lightSrc} className={styles.imgfloat} alt="" srcset="" />
     </div>
   );
+}
+
+function SuperItem({ title, children, class: className }: ProductsItems) {
+  const { colorMode } = useColorMode();
+  const lightSrc = `img/index/${title.toLowerCase()}_ligth.png `;
+  const darkSrc = `img/index/${title.toLowerCase()}_dark.png `;
+
+  return (
+    <div className={`${styles.superproductItem} ${styles[className]}`}>
+      <div 
+        className="padding--md" 
+        style={{
+          width: '40%',
+        }}
+      >
+        <div className={styles.diplay__flex}>
+          <Brand name={title.replace(/\s+/g, "")} size={34} />
+          <h3 className={styles.productTitle}>{title}</h3>
+        </div>
+        {children} 
+      </div>
+
+      <div className={styles.img_row}>
+        <img src={colorMode === 'dark' ? darkSrc : lightSrc} className={styles.imgfloat} alt="" srcset="" />
+        
+      </div>
+    </div>
+  )
 }
 
 export default function Products() {
@@ -63,6 +94,12 @@ export default function Products() {
             <h1>Nuestros productos</h1>
         </div>
         <div className={`${styles.parent} container`}>
+
+            <SuperItem title='Crestone' class="crestone" >
+              <p>Hola</p>
+            </SuperItem>
+
+          
             {FeatureList.map((item, idx) => (
                 <ProductItem    
                     key={idx}
@@ -72,7 +109,12 @@ export default function Products() {
                     class={item.class} />
             ))}
 
+            <SuperItem title='Daiana' class="daiana" >
+              <p>Hola</p>
+            </SuperItem>
+
         </div>
+        
     </div>
   );
 }

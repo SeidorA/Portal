@@ -8,6 +8,7 @@ import Heading from '@theme/Heading';
 import Heroportal from '@site/src/components/indexitems/hero';
 import Products from '@site/src/components/indexitems/products';
 import Actin from '@site/src/components/indexitems/actin';
+import { Brand } from 'iconcaral2';
 
 import styles from './index.module.css';
 
@@ -22,16 +23,44 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle"> Encunetra toda la documtaion se los productos de seidor </p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Get Started
-          </Link>
+
         </div>
       </div>
     </header>
   );
 }
+
+type LinkProps = {
+  link: string;
+  title: string;
+}
+
+function documentationLink( link: string, title: string ): ReactNode {
+  return (
+    <Link
+      className="docs_list"
+      to={link}>
+      <div className="box">
+        <Brand name={title}  size={40}/>
+      </div>
+      {title}
+    </Link>
+  );
+}
+const DocsList: LinkProps[] = [
+  {
+    title: 'Crestone',
+    link: 'https://crestone-help.seidoranalytics.com/',
+  },{
+    title: 'Daiana',
+    link: 'http://daiana.seidoranalytics.com:3030/es/home',
+  },
+  {
+    title: 'Doxa',
+    link: 'https://doxa-help.seidoranalytics.com/',
+  }
+  
+];
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
@@ -44,9 +73,18 @@ export default function Home(): ReactNode {
       <Products />
       <Actin />
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <div className="container margin-top--lg margin-bottom--lg">
+        <div className="row">
+          <div className="col col--3">
+            <h1>Acceso a nuestras documentaciones</h1>
+          </div>
+          {DocsList.map((props, idx) => (
+            <div className="col col--3" key={idx}>
+              {documentationLink(props.link, props.title)}
+            </div>
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 }

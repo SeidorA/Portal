@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
+import styles from './index.module.css';
+import { Brand } from 'iconcaral2';
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -22,43 +25,38 @@ export default function LoginPage() {
     } else {
  
       console.log('Login exitoso:', data);
-      window.location.href = '/'; 
+      window.location.href = '/Portal/docs/intro'; // Redirigir al usuario después del inicio de sesión exitoso
     }
     
     setLoading(false);
   };
 
+  
+
   return (
-    <div style={{ padding: '2rem', maxWidth: '400px', margin: 'auto' }}>
-      <h1>Iniciar sesión</h1>
-      <form onSubmit={handleLogin}>
+    <div className={styles.loginfull}>
+      <div className={styles.loginContainer}>
+        <h1>¡Bienvenido!</h1>
+        <p>Para iniciar sesión necesita una cuenta</p>
+         <form onSubmit={handleLogin}>
         <input
-          type="email"
-          placeholder="Tu correo"
+            type="email"
+          placeholder="ej: info@seidor.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
-          style={{ 
-            width: '100%', 
-            padding: '0.5rem', 
-            marginBottom: '1rem',
-            border: '1px solid #ccc',
-            borderRadius: '4px'
-          }}
+          className={styles.inputContainer}
         />
+
+
+        
+
         <input
           type="password"
           placeholder="Tu contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          style={{ 
-            width: '100%', 
-            padding: '0.5rem', 
-            marginBottom: '1rem',
-            border: '1px solid #ccc',
-            borderRadius: '4px'
-          }}
+          className={styles.inputContainer}
         />
         {error && (
           <div style={{ 
@@ -75,19 +73,47 @@ export default function LoginPage() {
         <button 
           type="submit" 
           disabled={loading}
+          className={styles.btn}
           style={{
-            width: '100%',
-            padding: '0.75rem',
-            backgroundColor: loading ? '#ccc' : '#007bff',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
+            backgroundColor: loading ? '#ccc' : '#07153a',
+            color: '#fff',
             cursor: loading ? 'not-allowed' : 'pointer'
           }}
         >
           {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
         </button>
+
+        <div className={styles.frame_parent}>
+          <div className={styles.frame_child}>
+          </div>
+          <div className={styles.o}>o</div>
+          <div className={styles.frame_child}>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          disabled={loading}
+          className={styles.btn}
+          style={{            
+            backgroundColor: loading ? '#ccc' : '#e2e8f0',
+            color: '#242528',
+            cursor: loading ? 'not-allowed' : 'pointer'
+          }}
+        >
+          <div className="circle_brand">
+            <Brand name='Azure'  size={20}/>
+          </div>
+          azure
+        </button>
       </form>
+      </div>
+
+      <div className={styles.logoContainer}>
+        <div className={styles.logo} aria-label="Logo" />
+  
+      </div>
     </div>
+   
   );
 }

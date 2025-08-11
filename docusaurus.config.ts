@@ -75,7 +75,7 @@ const config: Config = {
     navbar: {
       title: 'Portal',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Products Portal',
         src: 'img/logo.svg',
       },
       items: [

@@ -21,3 +21,137 @@
   align-items: center;
   justify-content: center;
 }
+
+.loginfull{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('/img/blur2.png') no-repeat center center fixed;
+
+  position: relative;
+}
+
+.loginContainer{
+  padding: 30px 20px;
+  border-radius: 6px;
+  background: var(--bg-container-tr);
+  min-width: 500px;
+  max-width: 600px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  h1{
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 0.8;
+  }
+
+  hr {
+  border: none;
+  border-top: 3px solid var(--medium);
+  color: var(--carbon);
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+  hr::after {
+    background: var(--bg-container-tr);
+    content: "o";
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+  }
+}
+
+
+.inputContainer{
+  width: 100%;
+  position: relative;
+  border-radius: 6px;
+  background-color: var(--bg-container-tr);
+  border: 1px solid var(--medium);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 0px 12px;
+  min-height: 44px;
+  text-align: left;
+  font-size: 16px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+.frame_child {
+flex: 1;
+position: relative;
+background-color: var(--medium);
+height: 1px;
+overflow: hidden;
+}
+.o {
+position: relative;
+line-height: 24px;
+color: var(--carbon);
+}
+.frame_parent {
+width: 100%;
+position: relative;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 10px;
+text-align: left;
+font-size: 16px;
+color: #94a3b8;
+font-family: Poppins;
+margin: 10px 0;
+}
+
+.btn {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  min-height: 44px;
+  text-align: left;
+  font-size: 16px;
+  color: var(--medium);
+  border: none;
+}
+
+.logoContainer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  background-color: var(--bg-contaider);
+  border-radius: 0 15px 0 0;
+}
+
+.logo{
+  height: 50px;
+  aspect-ratio: 1024 / 265;
+}
+/* En tu archivo styles.module.css */
+.logo {
+  background-image: url('/img/logos/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+[data-theme='dark'] .logo {
+  background-image: url('/img/logos/logowt.png');
+}
