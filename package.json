@@ -21,7 +21,7 @@
     "@supabase/supabase-js": "^2.52.0",
     "caralui": "^0.2.5",
     "clsx": "^2.0.0",
-    "iconcaral2": "^0.0.21",
+    "iconcaral2": "^0.0.22",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

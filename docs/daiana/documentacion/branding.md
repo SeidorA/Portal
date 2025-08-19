@@ -1,7 +1,7 @@
 ---
 title: Implementación de Branding Dinámico 
 sidebar_label: Branding Dinámico
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 El branding dinámico permite personalizar elementos clave de la interfaz de la aplicación para diferentes "tenants" (clientes o grupos) de manera dinámica. En este caso, el branding se configura usando la tabla tenants de la base de datos, donde tenant con id 1 puede tener su propio logo, nombre de aplicación, favicon, enlace, y otros valores personalizados. 

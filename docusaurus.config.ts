@@ -32,8 +32,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
   },
 
   presets: [
@@ -44,8 +44,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          
         },
         blog: {
           showReadingTime: true,
@@ -53,11 +52,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+          
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -92,9 +87,58 @@ const config: Config = {
                 label: 'Daiana',
                 to: '/docs/daiana/intro',
                 sidebarId: 'daianavar',
-              },
+              },{
+                label: 'Doxa',
+                to: '/docs/doxa/intro',
+                sidebarId: 'doxaSidebar'
+              },{
+                label: 'Cloud Costing',
+                to: '/docs/cc/intro',
+                sidebarId: 'ccSidebar'
+
+              },{
+                label: 'Harbinger',
+                to: '/docs/harbinger/intro',
+                sidebarId: 'harbingerSidebar'
+              },{
+                label: 'Feelings',
+                to: '/docs/feelings/intro',
+                sidebarId: 'feelingsSidebar'
+              }
               
             ],
+        },
+        {
+          label: 'Act In',
+          position: 'left',
+          items:[ 
+              {
+                label: 'Success Factors',
+                to: '/docs/successfactors/intro',
+                sidebarId: 'successfactorsSidebar',
+              },
+              {
+                label: 'Business One analytics',
+                to: '/docs/businessoneanalytics/intro',
+                sidebarId: 'businessone',
+              },
+              {
+                label: 'ByDesign',
+                to: '/docs/bydesign/intro',
+                sidebarId: 'bydesign',
+              },
+              {
+                label: 'S/4HANA Analytics​',
+                to: '/docs/s4hanaanalytics/intro',
+                sidebarId: 's4hanaanalytics',
+              },
+              {
+                label: 'Planning',
+                to: '/docs/planning/intro',
+                sidebarId: 'planning',
+              },
+          ]
+
         },
 
         {to: '/blog', label: 'Blog', position: 'left'},

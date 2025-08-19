@@ -24,6 +24,10 @@
   --carbon: #242528;
   --medium: #E2E8F0;
   --hard: #94A3B8;
+
+  --Seidor-Hard-blue: #07153AFF;
+  --Seidor-Medium-blue: #263C7AFF;
+  --Seidor-Ligth-blue: #66B6FFFF;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -42,6 +46,10 @@
   --carbon: #F1F5F9;
   --medium: #555C67;
   --hard:#94A3B8;
+
+  --Seidor-Hard-blue: #263C7AFF;
+  --Seidor-Medium-blue: #263C7AFF;
+  --Seidor-Ligth-blue: #66B6FFFF;
 }
 
 body, html {
@@ -80,4 +88,37 @@ a:hover{
   aspect-ratio: 1 / 1;
   background-color: var(--bg-contaider);
   margin: 5px;
+}
+
+.box_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.box_ui{
+  background-color: #99D3FF;
+  padding: 10px 0 10px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  p{
+    margin: 0;
+  }
+}
+
+/*** custom page **/
+
+.label_title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.theme-doc-markdown header {
+  display: none;
 }

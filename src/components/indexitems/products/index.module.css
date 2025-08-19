@@ -29,7 +29,7 @@ background-size: contain;
 .feel { grid-area: 2 / 2 / 3 / 3; }
 .daiana {    grid-area: 2 / 3 / 3 / 5; }
 
-
+.superproductItem{}
 
 .superproductItem , .productItem{
 border-radius: 8px;
@@ -43,6 +43,7 @@ border-radius: 8px;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .productItem{
     flex-direction: column;

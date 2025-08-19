@@ -16,24 +16,23 @@ const FeatureList: productsItems[] = [
     
     {
         title: 'Doxa',
-        description: 'Caral2 is the next generation of Caral, offering enhanced features and better performance.',
+        description: 'Doxa is an AI-powered survey platform that transforms feedback into actionable insights.',
        
         class: 'doxa',
     },
     {
         title: 'Harbinger',
-        description: 'Caral3 brings even more capabilities, including advanced analytics and AI-driven recommendations.',
-       
+        description: 'Harbinger anticipates business scenarios with predictive analytics and advanced forecasting.',
         class: 'har',
     },
     {
         title: 'Cloud Costing',
-        description: 'Caral4 is the latest version, focusing on scalability and integration with third-party services.',
+        description: 'Cloud Costing optimizes cloud expenses, providing transparency and control over resources..',
        
         class: 'cc',
     },{
         title: 'Feelings',
-        description: 'Caral5 introduces a new user interface and improved user experience for your online store.',
+        description: 'Feelings analyzes sentiment and emotions in text, enhancing understanding of customer experiences.',
        
         class: 'feel',
     }
@@ -96,7 +95,7 @@ export default function Products() {
         <div className={`${styles.parent} container`}>
 
             <SuperItem title='Crestone' class="crestone" >
-              <p>Hola</p>
+              <p>Crestone simplifies SAP data extraction, enabling seamless transfers to modern cloud platforms.</p>
             </SuperItem>
 
           
@@ -110,7 +109,7 @@ export default function Products() {
             ))}
 
             <SuperItem title='Daiana' class="daiana" >
-              <p>Hola</p>
+              <p>Daiana is an AI assistant that automates workflows and improves knowledge-driven interactions.</p>
             </SuperItem>
 
         </div>

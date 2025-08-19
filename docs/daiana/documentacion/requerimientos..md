@@ -1,6 +1,6 @@
 ---
 title: Requerimientos técnicos
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 Asegurar una correcta implementación para su normal funcionamiento es esencial, especialmente por el trabajo realizado en cada proceso lleva adelante **la inteligencia artificial.** A continuación, te enumeramos los requerimientos mínimos necesarios para la etapa de implementación: 
