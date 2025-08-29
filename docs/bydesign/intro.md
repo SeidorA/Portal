@@ -1,49 +1,61 @@
 ---
+sidebar_label: "SAP ByDesign"
+title: SAP ByDesign
 sidebar_position: 1
+iconName: "SAP"
+useBrand: true
+pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZD00uZADrJErpRtvUNsoJMBI_F1KpheHf3VZ72qqrPs7Q?e=25WqFW'
 ---
 
 
+## Act·in | SAP ByDesign analytics  <br /> Analítica Potente y Expandible​
 
-# Tutorial Intro
+- **Act·in | SAP ByDesign Analytics** es una solución de vanguardia que permite a las empresas obtener una comprensión más profunda de su negocio, abordar desafíos de manera proactiva y mejorar su desempeño general.​
+- En una era de rápida transformación, las empresas deben convertir constantemente los datos en conocimientos accionables. A pesar de haber realizado importantes inversiones en soluciones de BI, muchas organizaciones no han logrado obtener los resultados deseados.​
+- Las soluciones de BI preempaquetadas a un precio muy accesible son clave para impulsar el éxito de cualquier organización.​
+- Más que nunca, los directivos de alto nivel necesitan soluciones analíticas avanzadas que les ayuden a ahorrar tiempo: un tiempo valioso que puede ser mejor invertido en crear valor en lugar de gastarlo en tediosas tareas administrativas.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+### Análisis potente y ampliable
 
-## Getting Started
+- Ofrece análisis e información en tiempo real a partir de los datos de recursos empresariales contenidos en tu solución SAP ByD para una toma de decisiones más eficaz.​
+- Realiza un seguimiento de los indicadores clave de rendimiento (KPI) del negocio, incluyendo: ​
 
-Get started by **creating a new site**.
+  - Evolución de ventas a lo largo del tiempo​
+  - KPI financieros y flujo de caja​
+  - Información de compras y cuentas por cobrar y pagar​
+  - Tener todo el historial de KPI en un solo repositorio ​
+  - ... Y más
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+<div class="divmode">
+- El análisis de información de SAP ByD presenta una variedad de desafíos:​
+  - Replicación de modelos transaccionales complejos​
+  - Falta de vista histórica​
+  - Seguridad y permisos no heredables​
+  - Complejidad de las fuentes de datos Odata
+</div>
 
-### What you'll need
+![¿Por qué desarrollamos Act∙in?](/img/buisnes/Desarrollo.png)
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 
-## Generate a new site
+<div class="divmode">
+Solución integral plug & play para clientes de SAP ByD con beneficios clave:
 
-Generate a new Docusaurus site using the **classic template**.
+- Acceso fácil y visualización de todos los datos de ByD.​
+- Análisis de datos históricos para identificar tendencias.​
+- Ampliable para integrarse con otros sistemas para indicadores clave de desempeño corporativo.​
 
-The classic template will automatically be added to your project after you run the command:
+</div>
 
-```bash
-npm init docusaurus@latest my-website classic
-```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Act·in | SAP ByDesign analytics​
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Poderosa solución de análisis flexible que integra datos clave del negocio de SAP ByD y otras fuentes para un análisis más eficaz y transversal entre sistemas. Te dará acceso a 3 áreas de negocio, 3 dashboards de gestión, más de 20 métricas e indicadores claves y auto servicio
 
-## Start your site
+**Contenido de Negocio:​**
 
-Run the development server:
+- 3 Areas de Negocio​
+- 3 Tableros de Gestión​
+- 20+ Indicadores y Métricas clave​
+- ✓ Analítica Self Service
 
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+![Arquitectura](/img/buisnes/solucion.png)

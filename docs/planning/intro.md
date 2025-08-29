@@ -1,49 +1,152 @@
 ---
+sidebar_label: "SAC Planning"
+title: SAC Planning
 sidebar_position: 1
+iconName: "SAP"
+useBrand: true
+pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeycI3gso3lPlU8ymBy2v-IBN0kKMbCEW2IZ3jHGM0YmBw?e=YZo26h'
 ---
 
 
+## ¿Qué es ​Act·in | SAC Planning?
 
-# Tutorial Intro
+**Desafíos Planificación y presupuestos​**
+- Habitualmente no se dispone de un sistema que permita realizar formalmente el ciclo de planeamiento económico.​
+- Se requieren importantes esfuerzos, con alta propensión a errores de índole humano y baja capacidad de administración de **“variables macro”.​**
+- La información de gestión se genera y distribuye manualmente mediante la confección de planillas Excel, lo cual representaba importantes esfuerzos.​
+- No existe una base de datos única que integre y consolide la información presupuestada y real para realizar comparaciones, análisis y reportes de gestión​
+- Adaptarse de manera ágil a los cambios del mercado.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Completa solución de Planificación con ventajas claves:**
+- Rápida implementación​
+- Formalización del ciclo de presupuestación.​
+- Plantillas e Indicadores Précalculados​
+- Integración y Colaboración​
+- Escenarios y Analítica Listos para usar.​
+- Fácil de Administrar. 
 
-## Getting Started
 
-Get started by **creating a new site**.
+### Nuestra Solución Act∙in | SAP SAC Planning​
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Ofrece una solución paquetizada para la Gestión del Presupuesto Económico que permite gestionar de manera ágil la creación del presupuesto de la compañía, distribuyendo responsabilidades y simulando distintos escenarios, para el análisis y validación del presupuesto, como punto de partida para una presupuestación financiera.
 
-### What you'll need
+La solución contiene entre otras cosas:
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Modelos de Planificación para Ingresos, Costos, Gastos ,  P&L, Variables Macro. ​
+- Plantillas de Carga Preconfiguradas​
+- Métricas y analíticos basados en mejores prácticas.​
+- Reportes listos para usar.​
+- Seguridad por usuario
 
-## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
+## Arquitectura
+![Act-in | Planning](/img/Planning/arquitectura.png)
 
-The classic template will automatically be added to your project after you run the command:
+## Contenido
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+**Nuestra Solución Act∙in | SAC Planning​**
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Es una solución de planificación económica, que permite gestionar y realizar un presupuesto distribuido dentro de la compañía. ​
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Contenido de Negocio:​
+![Act-in | Planning](/img/Planning/inter.jpeg)
 
-## Start your site
+- 5 Modelos
+- 4 Management Dashboards
+- +20 Key indicators and metric
+- 10 Reportes  Analiticos​
 
-Run the development server:
+![Act-in | Planning](/img/Planning/modelo.png)
 
-```bash
-cd my-website
-npm run start
-```
+### Interacción de modelos
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+![Interacción de modelos](/img/Planning/modelo2.png)
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Alcance de la solución: Áreas de negocio​
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+| Módulo         | Descripción                                                         | Especificaciones                                                                                                                                                     |
+|----------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Ingresos**   | Modelo que permite la Proyección Anual de Ingresos, especificando Precios y Cantidades | **Apertura**<br />• Sociedad<br />• Canal<br />• Cliente<br />• Familia / Productos<br />• Moneda<br />• País / Zona de Venta<br /><br />**KPIs**<br />• PrecioUnit/Unidades<br />• Fact.Base/Fact.Neta/Ncrédito/PrecioDev/Unidad Dev/Comisiones/Descuentos |
+| **Costos**     | Modelo de Carga de Costos Directos e Indirectos                     | **Apertura**<br />• Sociedad<br />• Canal<br />• Cliente<br />• Familia / Productos<br />• Moneda<br />• País / Zona de Venta<br /><br />**KPIs**<br />• Costo Devolución<br />• Costo por Ventas<br />• Costo Total<br />• Costo Unitario<br />• Costos Indirectos<br />• Diferencia de Inventario<br />• Facturación Neta<br />• Gastos a distribuir<br />• Unidades |
+| **Gastos**     | Modelo de Carga de Gastos Operativos                                | **Apertura**<br />• Sociedad<br />• Canal<br />• Centro de Costo<br />• Cuenta Contable<br />• Moneda<br />• Proveedor<br /><br />**KPIs**<br />• Gastos calculados por % sobre facturación neta<br />• Gastos manuales |
+| **P&L**        | Modelo Consolidador de Estado de Resultados (P&L)                   | **Apertura**<br />• País<br />• Sociedad<br />• Cuenta Contable<br /><br />**KPIs**<br />• Monto<br /><br />**Dashboards**<br />• 1 dashboard |
+| **Variables Macro** | Modelo de Carga para variables Macro                           | **Apertura**<br />• País<br />• Sociedad<br />• Cuenta Contable<br />• Backlog<br /><br />**KPIs**<br />• TC<br />• IPC |
+
+
+### Landing Page​
+Sirve como manual de usuario y referencia de los distintos componentes de la plataforma, acompañando a los usuarios paso a paso, identificando que se debe cargar en cada uno y sirviendo de acceso directo a todas las planillas necesarias para operar y llegar a un reporte de PNL.
+
+![Landing Page​](/img/Planning/Landing.png)
+
+### Ingresos
+![Ingresos](/img/Planning/ingresos.png)
+
+### Costos
+![Costos](/img/Planning/Costos.png)
+![Costos](/img/Planning/Costos2.png)
+
+### Gastos
+![Costos](/img/Planning/Gastos.png)
+
+### P&L
+![P&L](/img/Planning/pyl.png)
+
+
+## Alcance de la solución
+- Implementación del Paquete en el Tenant del Cliente​
+- Adecuación de Datos Maestros. (Excel )​
+- Carga de Información Real (Excel ) un año hacia atrás​
+- Implementación de un Calendario de planificación.​
+- Implementación de Seguridad para 10 usuarios​
+- Capacitación para usuarios de Negocio en el uso de Act-in máximo 10 usuarios ​
+- Pruebas y Go Live
+
+### Cronograma - Alcance estándar
+
+| Act-in | SAC Planning                          | W1  | W2  | W3  | W4 |  W5  | W6  |
+|--------|---------------------------------------|-----|-----|-----|----|------|-----|
+| Setup & Configuración                         | ✔️  |     |     |     |     |     |
+| **Implementación**                            |     |     |     |     |     |     |
+| Adecuación Datos Maestros                     |     | ✔️  |     |     |     |     |
+| Carga información Real Excel                  |     |     | ✔️  |     |     |     |
+| Calendario                                    |     |     |     | ✔️  |     |     |
+| **Seguridad**                                 |     |     |     |     | ✔️  |     |
+| **Capacitación y Salida en vivo**             |     |     |     |     |     | ✔️  |
+
+## Inversión
+
+### Valor Inversión Act·in | SAC Planning
+
+| Descripción de Servicios                                                                 | Tiempo Implementación | Valor       |
+|------------------------------------------------------------------------------------------|------------------------|-------------|
+| **Opción 1:** Paquete Sin Conexión (Servicios Profesionales de Implementación Paquete (origen Excel) - Opción Google Drive) | • 6 semanas            | **40.000 USD** |
+| **Opción 2:** Paquete con Conexión SAP S4 FI (Servicios Profesionales de Implementación Paquete) | • 8 semanas            | **45.000 USD** |
+| **Opción 3:** Paquete con Conexión SAP S4 FI + SD (Servicios Profesionales de Implementación Paquete) | • 8 semanas            | **50.000 USD** |
+| **Valor Hora Adicional (Soporte Mejoras)**                                               |                        | **40 USD**  |
+
+
+- Costo por única Vez.​
+- Valores expresados dólares americanos, no contienen impuestos ni retenciones.​
+- Pago a 30 días de recibida la factura. Propuesta valida hasta al XX de XX de 202X.​
+- No incluye licenciamiento de SAC Planning.​
+- Servicio propuesto de forma remota, si se desea en una modalidad presencial se podrá coordinar.​
+- No se incluyen gastos de transporte, viaje o estadía.
+
+### Valor Licenciamiento SAC Planning​
+
+| Software para Implementación​                                                                | Valor anual​ |
+|---------------------------------------------------------------------------------------------|-------------|
+| **Software para implementación ​Planificación** <br/> 1   usuario SAC Planning Professional​ 10 usuarios SAC Planning Std.  | US$ 34.500​ | 
+
+### Alcance – Soporte Mejoras Evolutivas
+Las mantenciones evolutivas son necesarias para adaptar el sistema al dinamismo propio de los procesos de negocio que el cliente requiere.​
+
+Éstas mejoras pueden incluir:​
+- Análisis, diseño (especificación funcional y técnica), desarrollo, prueba e implantación de nuevas configuraciones que representen un nuevo proceso o escenario de negocio.​
+- Modificación de aplicaciones o configuraciones para atender a nuevos requisitos legales.​
+- Corrección de aplicaciones existentes para mejorar performance.​
+- Actualización de documentación (sistemas, procesos y entrenamiento) debido a mejoras.​
+- Generación de datos para pruebas (tests) de mejoras en los ambientes de desarrollo y calidad.​
+- Asesoramiento y análisis de factibilidad de nuevos requerimientos respecto de las capacidades y funcionalidades del sistema.​
+- Apoyo a los usuarios en cuanto a la utilización de las aplicaciones para las funcionalidades ya implementadas.
+
