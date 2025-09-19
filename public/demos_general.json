@@ -1,0 +1,174 @@
+[
+    {
+        "id": "ProductItem/demos/Databricks%25Conector.mov",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/EYZwH1QUbNJNmjf-iQOca7QBSK3i-PUguZRyeh8e42WlpQ?e=D9vSMm",
+        "name": "Databricks Conector.mov",
+        "Size": 0,
+        "IsFolder": false,
+        "MediaType": "video/mov"
+    },
+    {
+        "id": "ProductItem/demos/aws.mp4",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/ESyy9dVo_nBOmStBp65-UCcBSM1IHcBe0Z49rLDAs-UaaQ?e=fuESzc",
+        "name": "AWS.mp4",
+        "Size": 0,
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+    {
+        "id": "ProductItem/demos/azure.mp4",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/EaOgb9vjst5PpIUaaDze4NIB3M0AqfskOz2OX5AYxbPAJg?e=o5Ppxl",
+        "name": "Azure.mp4",
+        "Size": 0,
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+    {   
+        "id": "ProductItem/demos/bigquery.mp4",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/ES0j05Sccy5NhAmI4xT3A5cBIT51dFg-yVqlioPrmT1_7g?e=6CrdpE",
+        "name": "Bigquery.mp4",
+        "Size": 0,
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+    {
+        "id": "ProductItem/demos/snowflake.mp4",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZJQJzuxculJsSuFn5PBEwsB8kaZWptY0q1PuIY-8tugfg?e=883t7z",
+        "name": "Snowflake.mp4",
+        "Size": 0,
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+    {
+        "id": "ProductItem/demos/teradata.mp4",
+        "Path": "@site/src/components/onedrive/files",
+        "name": "Teradata.mp4",
+        "Size": 0,
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+    {
+        "id": "ProductItem/demos/fuentesap",
+        "Path": "@site/src/components/onedrive/files",
+        "name": "1. Creación de fuente (SAP).webm",
+        "Size": "2.9m",
+        "IsFolder": false,
+        "MediaType":"video/webm"
+    },
+    {
+        "id": "ProductItem/demos/destinoaws",
+        "Path": "@site/src/components/onedrive/files",
+        "name": "2. Creación de destino (AWS).webm",
+        "IsFolder":false,
+        "MediaType":"video/webm"
+    },
+    {
+        "id": "ProductItem/demos/destinosazure",
+        "Path": "@site/src/components/onedrive/files",
+        "name":"3. Creación de destino (AZURE).mp4",
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+    {
+        "id": "ProductItem/demos/Creacióndestino(AZURE)webm",
+        "Path": "@site/src/components/onedrive/files",
+        "name": "4. Creación de destino (AZURE).webm",
+        "IsFolder": false,
+        "MediaType":"video/webm"
+    },
+    {
+        "id": "ProductItem/demos/creacionnodos",
+        "Path": "@site/src/components/onedrive/files",
+        "name": "5. Creación de nodos.mp4",
+        "IsFolder":false,
+        "MediaType":"video/mp4"
+    },
+    {
+        "id" :"ProductItem/demos/moduletemplate",
+        "Path": "@site/src/components/onedrive/files",
+        "name": "Module Templates.mp4",
+        "IsFolder": false,
+        "MediaType": "video/mp4"
+    },
+
+    {
+        "id": "imp2%Authorizations",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:w:/g/personal/admin_seidoranalytics_onmicrosoft_com/EUKIuOLBXxJEhRfgMDWcoTQBgBZFck5236Kod4uQnyL7tg?e=vU8BR3",
+        "name": "Authorizations to extract from SAP.docx",
+        "IsFolder": false,
+        "MediaType": "document/docx"
+    },
+    {
+        "id": "imp2%clientes",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:x:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXfOle56hjVIpI6ZMT09KRwBoxZIXKMcHWAaWmtyqHS4nw?e=bderhN",
+        "name": "clientes con versiones de sap.xlsx",
+        "IsFolder": false,
+        "MediaType" :"document/xlsx" 
+    },
+    {
+        "id": "imp2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EV0bcQqXqdpBjOTGwyR0regBkvEqx0OFF_L0o785LQ-s1w?e=eYTaz1",
+        "name": "ImplementacionCrestone2 (1).pdf ",
+        "IsFolder":false,
+        "MediaType": "application/pdf"
+    },
+    {
+        "id": "crestoneOT",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:f:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ekumjrm59ZRKtW1lunCSI9EBIlo8TQ89W-f1p_SKa0QMMA?e=A3n1EM",
+        "name": "Crestone - OT",
+        "IsFolder":false,
+        "MediaType": "file"
+    },
+    {
+        "id": "crestoneOTzip",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:u:/g/personal/admin_seidoranalytics_onmicrosoft_com/ERkuMPvkNhRIm51dOLvfo9IBUJmWLN-phRbz5Y3uY9QXbw?e=xuGfx4",
+        "name": "Crestone - OT.zip",
+        "IsFolder":false,
+        "MediaType": "file"
+    },
+    {
+        "id": "crestonesaroles",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:u:/g/personal/admin_seidoranalytics_onmicrosoft_com/EX3G2LP595tGnTfm5riCurwBtyduOQEXdj2mSMgrhG13lw?e=DHYQgN",
+        "name": "Crestone - SAP Roles.zip",
+        "IsFolder":false,
+        "MediaType": "file"
+    },
+     {
+        "id": "comercial/REFERENCIAS",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EcXzF9g8FhdKuQ77W9u6HK8BKiujbbmlWLIp8lndXanEuA?e=fJvVJR",
+        "name": "REFERENCIAS CRESTONE.pptx",
+        "IsFolder": false,
+        "MediaType": "Docs/pptx"
+    },
+   
+    {
+        "id": "comercial/Roadmap",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eb_7jbikFJlMh5S2VP2HBUgBY5gDFaVAqapR32geIZwsUg?e=ppPspq",
+        "name": "CRESTONE - Roadmap & Release 012025.jpg",
+        "MediaType": "Image/jpg",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial/tecnicos",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eb_7jbikFJlMh5S2VP2HBUgBY5gDFaVAqapR32geIZwsUg?e=ppPspq",
+        "name": "Crestone requisitos tecnicos.pdf",
+        "MediaType": "application/pdf",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial/Products",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eb_7jbikFJlMh5S2VP2HBUgBY5gDFaVAqapR32geIZwsUg?e=ppPspq",
+        "name": "Products - Sales Training.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder": false
+    }
+]
+
+
+
+
+
+
+
+
+

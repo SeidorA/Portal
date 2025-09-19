@@ -1,12 +1,13 @@
 ---
 sidebar_label: "Daiana"
-title: ¿Qué es Daiana?
+title: ¿Qué es Daiana? 
 sidebar_position: 1
 iconName: "Daiana"
 useBrand: true
 pdfDoc:  "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eco7gYXU0IpItwbpxnU9pDoB1l_oH7bRMqHxpJ1jB0thXg?e=iG8rao"
 ---
 
+![Daiana](/img/daiana.png)
 
 **Su Agente Virtual Impulsado por AI**
 

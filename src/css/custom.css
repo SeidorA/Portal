@@ -179,3 +179,32 @@ a:hover{
   border-radius: 8px;
   overflow: hidden;
 }
+
+
+.footer__copyright {
+  display: none !important;
+}
+
+.dropdown-header{
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--hard);
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: solid 1px var(--medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+}
+
+.dropdown__menu{
+  background-color: #f1f5f983;
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+}
+
+[data-theme='dark'] .dropdown__menu {
+  background-color: #202938cc;
+  
+}
+

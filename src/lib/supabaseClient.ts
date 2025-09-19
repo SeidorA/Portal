@@ -6,13 +6,18 @@ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 
-// Función helper para obtener planes activos
-export const getActivePlanes = async () => {
+// Helper function to get active records from any table
+export const getActiveRecords = async (tableName: string) => {
   const { data, error } = await supabase
-    .from('Planes')
+    .from(tableName)
     .select('*')
     .eq('Active', true)
     .order('id', { ascending: true });
     
   return { data, error };
+};
+
+// Specific function for planes for backwards compatibility
+export const getActivePlanes = async () => {
+  return getActiveRecords('Planes');
 };

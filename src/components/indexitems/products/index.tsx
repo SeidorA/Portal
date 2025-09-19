@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './index.module.css';
 import { Brand } from 'iconcaral2';
 import { useColorMode } from '@docusaurus/theme-common';
+import Translate, {translate} from '@docusaurus/Translate';
 
 type productsItems = {
   title: string;
@@ -16,24 +17,21 @@ const FeatureList: productsItems[] = [
     
     {
         title: 'Doxa',
-        description: 'Doxa is an AI-powered survey platform that transforms feedback into actionable insights.',
-       
+        description: "owno.doxa",       
         class: 'doxa',
     },
     {
         title: 'Harbinger',
-        description: 'Harbinger anticipates business scenarios with predictive analytics and advanced forecasting.',
+        description: "owno.harbinger",
         class: 'har',
     },
     {
         title: 'Cloud Costing',
-        description: 'Cloud Costing optimizes cloud expenses, providing transparency and control over resources..',
-       
+        description: "owno.cc",
         class: 'cc',
     },{
         title: 'Feelings',
-        description: 'Feelings analyzes sentiment and emotions in text, enhancing understanding of customer experiences.',
-       
+        description: "owno.feelings",       
         class: 'feel',
     }
 ];
@@ -51,7 +49,10 @@ function ProductItem({title, description,  class: className}: productsItems) {
           <Brand name={title.replace(/\s+/g, "")} size={34} />
           <h3 className={styles.productTitle}>{title}</h3>
         </div>
-        <p className={styles.productDescription}>{description}</p>
+        <p className={styles.productDescription}>
+
+          <Translate id={description} />
+        </p>
       </div>
       <img src={colorMode === 'dark' ? darkSrc : lightSrc} className={styles.imgfloat} alt="" srcset="" />
     </div>
@@ -90,12 +91,17 @@ export default function Products() {
   return (
     <div className={styles.products}>
         <div className="container">
-            <h1>Nuestros productos</h1>
+            <h1>
+                <Translate id="ownp.title">
+                    Productos Own Tech
+                </Translate>
+              </h1>
+            
         </div>
         <div className={`${styles.parent} container`}>
 
             <SuperItem title='Crestone' class="crestone" >
-              <p>Crestone simplifies SAP data extraction, enabling seamless transfers to modern cloud platforms.</p>
+              <p><Translate id="owno.crestone" /></p>
             </SuperItem>
 
           
@@ -109,7 +115,7 @@ export default function Products() {
             ))}
 
             <SuperItem title='Daiana' class="daiana" >
-              <p>Daiana is an AI assistant that automates workflows and improves knowledge-driven interactions.</p>
+              <p><Translate id="owno.daiana" /></p>
             </SuperItem>
 
         </div>

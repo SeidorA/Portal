@@ -4,6 +4,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+
+
+
 const config: Config = {
   title: 'Portal',
   tagline: 'Encuentra toda la documentación de los productos de Seidor',
@@ -33,7 +36,17 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'es',
-    locales: ['es'],
+    locales: ['es', 'en'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+        label: 'English',
+      },
+      es: {
+        htmlLang: 'es-ES',
+        label: 'Español',
+      },
+    }
   },
 
   presets: [
@@ -76,6 +89,7 @@ const config: Config = {
       items: [
         {
             label: 'Productos',
+            type: 'dropdown',
             position: 'left',
             items: [
               {
@@ -104,44 +118,46 @@ const config: Config = {
                 label: 'Feelings',
                 to: '/docs/feelings/intro',
                 sidebarId: 'feelingsSidebar'
-              }
-              
-            ],
-        },
-        {
-          label: 'Act In',
-          position: 'left',
-          items:[ 
+              },
               {
-                label: 'Success Factors',
+                type: 'html',
+                value: '<div class="dropdown-header">Act In</div>',
+              },
+              {
+                label: 'Act-in SAP Success Factors',
                 to: '/docs/successfactors/intro',
                 sidebarId: 'successfactorsSidebar',
               },
               {
-                label: 'Business One analytics',
+                label: 'Act-in SAP Business One analytics',
                 to: '/docs/businessoneanalytics/intro',
                 sidebarId: 'businessone',
               },
               {
-                label: 'ByDesign',
+                label: 'Act-in SAP ByDesign',
                 to: '/docs/bydesign/intro',
                 sidebarId: 'bydesign',
               },
               {
-                label: 'S/4HANA Analytics​',
+                label: 'Act-in SAP S/4HANA Analytics​',
                 to: '/docs/s4hanaanalytics/intro',
                 sidebarId: 's4hanaanalytics',
               },
               {
-                label: 'Planning',
+                label: 'Act-in SAP Planning',
                 to: '/docs/planning/intro',
                 sidebarId: 'planning',
               },
-          ]
-
+              
+            ],
         },
+        
 
         {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           type: 'custom-navbar-user',
           position: 'right',
@@ -152,46 +168,105 @@ const config: Config = {
       style: 'dark',
       links: [
         {
+          title: 'Seidor Analytics',
+          items: [
+            {
+              html: `
+                <img src="img/logos/logowt.png" alt="Seidor Analytics" style="height: 40px; margin-bottom: 10px;" />
+              `,
+            },{
+              label: 'info@seidoranalytics.net',
+              href: 'mailto:info@seidoranalytics.net',
+            }
+          ]
+        },
+        {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Crestone',
+              to: '/docs/crestone/intro',
+            },{
+              label: 'Daiana',
+              to: '/docs/daiana/intro',
             },
+            {
+              label: 'Doxa',
+              to: '/docs/doxa/intro',},
+              {
+                label: 'Cloud Costing',
+                to: '/docs/cc/intro',},
+              {
+                label: 'Harbinger',
+                to: '/docs/harbinger/intro',},
+              {
+                label: 'Feelings',
+                to: '/docs/feelings/intro',},
+              
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Success Factors',
+                to: '/docs/successfactors/intro',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Business One analytics',
+                to: '/docs/businessoneanalytics/intro',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+                label: 'ByDesign',
+                to: '/docs/bydesign/intro',
             },
+            {
+                label: 'S/4HANA Analytics​',
+                to: '/docs/s4hanaanalytics/intro',
+              },
+              {
+                label: 'Planning',
+                to: '/docs/planning/intro',
+              },
           ],
         },
         {
           title: 'More',
           items: [
+            
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Big Data',
+              href: 'https://www.seidoranalytics.com/big-data/',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Business Analytics',
+              href: 'https://www.seidoranalytics.com/business-analytics/',
             },
+            {
+              label: 'Ciencia de Datos',
+              href: 'https://www.seidoranalytics.com/ciencia-de-datos/',
+            },
+            {
+              label: 'Data Management',
+              href: 'https://www.seidoranalytics.com/data-management/',
+            },
+            {
+              label: 'Planificación Financiera y Operativa',
+              href: 'https://www.seidoranalytics.com/planificacion-financiera-y-operativa/',
+            },
+            {
+              label: 'Technology Management',
+              href: 'https://www.seidoranalytics.com/technology-management/',
+            },{
+              label: 'Data Governance',
+              href: 'https://www.seidoranalytics.com/data-governance/',
+            },{
+              label: 'Smart Workplace',
+              href: 'https://www.seidoranalytics.com/workspace-nuvolcloud/',
+            }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

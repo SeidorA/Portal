@@ -5,6 +5,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start:en": "docusaurus start --locale en",
+    "start:es": "docusaurus start --locale es",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -15,13 +17,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@azure/msal-browser": "^4.22.0",
+    "@azure/msal-react": "^3.0.19",
     "@docusaurus/core": "3.8.1",
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.0.0",
     "@supabase/supabase-js": "^2.52.0",
     "caralui": "^0.2.5",
     "clsx": "^2.0.0",
-    "iconcaral2": "^0.0.22",
+    "dotenv": "^17.2.2",
+    "iconcaral2": "^0.0.27",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

@@ -5,188 +5,227 @@ sidebar_position: 1
 iconName: "Crestone"
 useBrand: true
 ---
+import Translate, {translate} from '@docusaurus/Translate';
+import BoxDoc from '../../src/components/boxdocs';
 
-<div class="row ">
-    <div class="col col--4 ">
-        <a target="_blank" href="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EegS5HoZqStGnJEVheigyp4BGkyVlytrANqFhuiy3QZkHQ?e=fJGUzH"> 
-          <button class="button button--primary button--block" >Brochure Agnostico (Horizontal)</button>
-        </a>
-    </div>   
-    <div class="col col--4 ">
-        <a target="_blank" href="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EegS5HoZqStGnJEVheigyp4BGkyVlytrANqFhuiy3QZkHQ?e=G6hUV3"> 
-          <button class="button button--primary button--block" >Brochure Agnostico (vertical)</button>
-        </a>
-    </div>  
-    <div class="col col--4 ">
-        <a target="_blank" href="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EUxmCjNhxqpMndRde3tIXfAB-CLnfMB7fLjd_vwx_gD7CA?e=w6lf7P"> 
-          <button class="button button--primary button--block" >Brochure</button>
-        </a>
-    </div>  
+
+<Translate id="owno.crestone" />
+
+<div class="margin-vert--lg">
+
+![Crestone](/img/crestone/index/portada2.png)
+
+</div>
+
+## Documentación y Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Brochure agnóstico (Horizontal)"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Brochure comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EegS5HoZqStGnJEVheigyp4BGkyVlytrANqFhuiy3QZkHQ?e=fJGUzH1"
+>
+  Material comercial en formato horizontal, diseñado para comunicar las capacidades de Crestone sin mencionar marcas específicas. Ideal para presentaciones generales y casos de uso neutrales.
+</BoxDoc>
+
+<BoxDoc
+  title="Brochure Agnostico (vertical)"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Brochure comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EegS5HoZqStGnJEVheigyp4BGkyVlytrANqFhuiy3QZkHQ?e=G6hUV3"
+>
+  Versión en formato vertical del brochure comercial, con el mismo enfoque agnóstico: resaltar las funcionalidades de Crestone sin referencias a proveedores de nube o bases de datos.
+</BoxDoc>
+
+
+<BoxDoc
+  title="Brochure"
+  language="Inglés"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Comercial Brochure"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EUxmCjNhxqpMndRde3tIXfAB-CLnfMB7fLjd_vwx_gD7CA?e=w6lf7P"
+>
+  Documento comercial completo que incluye el listado actualizado de todas las marcas y plataformas soportadas por Crestone, destacando su alcance y compatibilidad.
+</BoxDoc>
+
+<BoxDoc
+  title="Presentación Comercial"
+  language="Español"
+  format="PPT"
+  brand="Crestone"
+  titleimg="Presentación Comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EVc-d0hokNhPjyCHYuTKhG4BVG7qj3jqze4EpdxZLEg5ig?e=BWuwFm"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Crestone: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
 </div>
 
 
-## What is Crestone?
-
-Crestone is a data integration software that makes it easy to synchronize, transform and transfer information between various enterprise systems, including ERP, CRM, databases and analytics platforms. 
-
-The intuitive interface allows non-technical users to manage complex data flows efficiently.
 
 
-<div class="box_img">
-![crestone](/img/crestone/index/portada.png)
-</div>
 
 
-## Crestone supports
+## ¿Qué es Crestone?
+
+Crestone es un software de integración de datos que facilita la sincronización, transformación y transferencia de información entre diversos sistemas empresariales, incluyendo ERP, CRM, bases de datos y plataformas analíticas.  
+
+Su interfaz intuitiva permite que usuarios no técnicos gestionen flujos de datos complejos de manera eficiente.  
+
+
+![crestone](/img/crestone/index/conections.png)
+
+
+
+## Crestone soporta
 
 <div class="row">
     <div class="col col--6">
-        <h3>Source</h3>
+        <h3>Orígenes</h3>
         <ul>
             <li>SAP S/4HANA</li>
-            <li> SAP ABAP</li>
-            <li> HANA</li>
-            <li> SAP Business One</li>
-            <li> SAP Business ByDesign</li>
-            <li> ODat</li>
+            <li>SAP ABAP</li>
+            <li>HANA</li>
+            <li>SAP Business One</li>
+            <li>SAP Business ByDesign</li>
+            <li>OData</li>
         </ul>
     </div>
     <div class="col col--6">
-        <h3>Destinations</h3>
+        <h3>Destinos</h3>
         <ul>
-            <li>Snowflake  </li>
-            <li>AWS </li>
-            <li>Azure </li>
-            <li>Databricks </li>
-            <li>Teradata </li>
-            <li>Cloudera </li>
-            <li>Google storage </li>
-            <li>Salesforce </li>
+            <li>Snowflake</li>
+            <li>AWS</li>
+            <li>Azure</li>
+            <li>Databricks</li>
+            <li>Teradata</li>
+            <li>Cloudera</li>
+            <li>Google Storage</li>
+            <li>Salesforce</li>
             <li>Oracle</li>
-
         </ul>
     </div>
 </div>
 
 
-## Benefits
-### Improved Operating Efficienc
-Automates data integration and export processes,reducing manual tasks and minimizing human errors.
+## Beneficios
+### Eficiencia Operativa Mejorada
+Automatiza los procesos de integración y exportación de datos, reduciendo tareas manuales y minimizando errores humanos.  
 
-### Flexibility and Scalability
-It adapts to the specific needs of your business and scales as your data volume grows and increases.
+### Flexibilidad y Escalabilidad
+Se adapta a las necesidades específicas de tu negocio y escala a medida que crece el volumen de datos.  
 
-### Self-Service Made Eas
-Enables users to access and manage information quickly and easily, reducing dependency on technical support
-
-
-## Use Cases
-
-### Data Migration
-Makes it easy to migrate data from SAP systems to the cloud, unifying information from multiple sources and automating flows to external systems.
-
-### BI Process Automatio
-Optimizes the extraction and loading of data, both historical and real-time, to databases such as Snowflake, HANA and SQL
-
-### Multi-platform support and Cloud
-Compatible with Windows, Linux and MacOS, as well as natively integrating with cloud platforms such as AWS, Google Cloud and Azure
+### Autoservicio Simplificado
+Permite a los usuarios acceder y gestionar la información de manera rápida y sencilla, reduciendo la dependencia del soporte técnico.  
 
 
-## SAP Data Extractio
+## Casos de Uso
+
+### Migración de Datos
+Facilita la migración de datos desde sistemas SAP hacia la nube, unificando información de múltiples fuentes y automatizando flujos hacia sistemas externos.  
+
+### Automatización de Procesos de BI
+Optimiza la extracción y carga de datos, tanto históricos como en tiempo real, hacia bases de datos como Snowflake, HANA y SQL.  
+
+### Soporte Multiplataforma y en la Nube
+Compatible con Windows, Linux y MacOS, además de integrarse de forma nativa con plataformas en la nube como AWS, Google Cloud y Azure.  
+
+
+## Extracción de Datos SAP
 <div class="box_img">
 ![crestone](/img/crestone/index/dataextrac.png)
 </div>
 
-Crestone offers a robust and flexible solution for extracting data from SAP systems, allowing companies to access and use their information in modern analytics and warehousing platforms. The platform supports multiple extraction methods, adapting to different needs and data volumes
+Crestone ofrece una solución robusta y flexible para la extracción de datos desde sistemas SAP, permitiendo a las empresas acceder y utilizar su información en plataformas modernas de análisis y almacenamiento. La plataforma soporta múltiples métodos de extracción, adaptándose a diferentes necesidades y volúmenes de datos.  
 
-### Extractors
-ake advantage of standard SAP extractors to get pre-processed data optimized for analysis. Ideal for financial, sales and logistics reporting without the need for complex configurations
+### Extractores
+Aprovecha extractores estándar de SAP para obtener datos preprocesados y optimizados para el análisis. Ideal para reportes financieros, de ventas y logística sin necesidad de configuraciones complejas.  
 
-### Tables
-Allows you to extract data directly from any SAP table, making it easier to obtain raw information for analysis or integration with other systems
+### Tablas
+Permite extraer datos directamente desde cualquier tabla de SAP, facilitando la obtención de información en bruto para análisis o integración con otros sistemas.  
 
-### Reports
-un custom reports in SAP and extract results directly to any chosen destination, ensuring flexibility for users who require specific data without technical intervention.
+### Reportes
+Ejecuta reportes personalizados en SAP y extrae resultados directamente a cualquier destino elegido, brindando flexibilidad a usuarios que requieren datos específicos sin intervención técnica.  
 
-Crestone features an intuitive interface that makes it easy to search for extractors, tables, and reports within the SAP environment, allowing users to quickly find the data source they need. In addition, the platform incorporates transformation capabilities to structure, cleanse and enrich data before its final destination, ensuring that it is ready and able to be analyzed by the platform of choice.
+Crestone cuenta con una interfaz intuitiva que facilita la búsqueda de extractores, tablas y reportes dentro del entorno SAP, permitiendo a los usuarios encontrar rápidamente la fuente de datos que necesitan. Además, la plataforma incorpora capacidades de transformación para estructurar, limpiar y enriquecer los datos antes de su destino final, asegurando que estén listos para ser analizados en la plataforma de elección.  
 
 
-## Snowflake integration
+## Integración con Snowflake
 
 <div class="box_img">
 ![crestone](/img/crestone/index/snow.png)
 </div>
 
-Crestone makes it easy to integrate with Snowflake, allowing companies to move their SAP data efficiently and securely. Thanks to its flexible loading capabilities, Crestone offers two options to suit the user’s needs
+Crestone facilita la integración con Snowflake, permitiendo a las empresas mover sus datos SAP de forma eficiente y segura. Gracias a sus capacidades de carga flexibles, Crestone ofrece dos opciones que se adaptan a las necesidades del usuario:  
 
 ### Stage
+Ideal para usuarios que requieren un área intermedia antes de procesar los datos. Permite almacenar temporalmente la información en el Stage de Snowflake, facilitando validaciones, depuración y transformaciones antes de su uso en análisis o modelos de negocio.  
 
-Ideal for users who require an intermediate area before processing data. It allows to temporarily store the information in the Snowflake Stage, facilitating validations, debugging and transformations before its use in analysis or business models.
-
-### Table
-
-For those who need immediate access to structured data, Crestone allows information to be inserted directly into Snowflake tables, ensuring that data is ready for real-time 
-exploitation.
+### Tabla
+Para quienes necesitan acceso inmediato a datos estructurados, Crestone permite insertar la información directamente en tablas de Snowflake, asegurando que los datos estén listos para explotación en tiempo real.  
 
 
-## AWS S3 integration
+## Integración con AWS S3
 
 <div class="box_img">
 ![crestone](/img/crestone/index/aws.png)
 </div>
 
-Crestone facilitates integration with AWS S3, allowing companies to move their SAP data efficiently and securely. Thanks to its flexible upload capabilities, Crestone offers an option that adapts to the user’s needs:
+Crestone facilita la integración con AWS S3, permitiendo a las empresas mover sus datos SAP de manera eficiente y segura. Gracias a sus capacidades de carga flexibles, Crestone ofrece una opción que se adapta a las necesidades del usuario:  
 
 ### Stage
-Ideal for users who require an intermediate area before processing data. Allows information to be temporarily stored in AWS S3, facilitating validations, debugging and transformations before its use in analysis or business models.
+Ideal para usuarios que requieren un área intermedia antes de procesar los datos. Permite almacenar temporalmente la información en AWS S3, facilitando validaciones, depuración y transformaciones antes de su uso en análisis o modelos de negocio.  
+
+Crestone optimiza la transferencia de datos, asegurando cargas eficientes y escalables sin impactar el rendimiento del sistema SAP. Además, su capacidad de automatización permite programar cargas periódicas, garantizando que AWS S3 siempre cuente con datos actualizados para análisis, reportes y toma de decisiones estratégicas.  
 
 
-Crestone optimizes data transfer, ensuring efficient and scalable loads without impacting SAP system performance. In addition, its automation capability allows for scheduling periodic uploads, ensuring that AWS S3 always has up-to-date data for analysis, reporting and strategic decision making
-
-
-## Azure integration
+## Integración con Azure
 
 <div class="box_img">
 ![crestone](/img/crestone/index/azure.png)
 </div>
 
-Crestone facilitates integration with Azure, allowing companies to move their SAP data efficiently and securely. Thanks to its flexible upload capabilities, Crestone offers an option that adapts to the user’s needs:
+Crestone facilita la integración con Azure, permitiendo a las empresas mover sus datos SAP de manera eficiente y segura. Gracias a sus capacidades de carga flexibles, Crestone ofrece una opción que se adapta a las necesidades del usuario:  
 
 ### Stage
-Ideal for users who require an intermediate area before processing data. Allows temporary storage of information in Azure, facilitating validations, debugging and transformations before its use in analysis or business models.
+Ideal para usuarios que requieren un área intermedia antes de procesar los datos. Permite almacenar temporalmente la información en Azure, facilitando validaciones, depuración y transformaciones antes de su uso en análisis o modelos de negocio.  
 
-Crestone optimizes data transfer, ensuring efficient and scalable loads without impacting SAP system performance. In addition, its automation capability allows for scheduling periodic uploads, ensuring that Azure always has up-to-date data for analysis, reporting and strategic decision makin
+Crestone optimiza la transferencia de datos, asegurando cargas eficientes y escalables sin impactar el rendimiento del sistema SAP. Además, su capacidad de automatización permite programar cargas periódicas, garantizando que Azure siempre cuente con datos actualizados para análisis, reportes y toma de decisiones estratégicas.  
 
 
-## Databricks integration
+## Integración con Databricks
 
 <div class="box_img">
 ![crestone](/img/crestone/index/data.png)
 </div>
 
-Crestone facilitates integration with Databricks, allowing companies to move their SAP data efficiently and securely. Thanks to its flexible loading capabilities, Crestone offers an option that adapts to the user’s needs
+Crestone facilita la integración con Databricks, permitiendo a las empresas mover sus datos SAP de manera eficiente y segura. Gracias a sus capacidades de carga flexibles, Crestone ofrece una opción que se adapta a las necesidades del usuario:  
+
+### Tabla
+Para quienes necesitan acceso inmediato a datos estructurados, Crestone permite insertar la información directamente en tablas de Databricks, asegurando que los datos estén listos para explotación en tiempo real.  
+
+Sus capacidades de automatización permiten programar cargas periódicas, garantizando que Databricks siempre cuente con datos actualizados para análisis, reportes y toma de decisiones estratégicas.  
 
 
-### Table
-For those who need immediate access to structured data, Crestone allows information to be inserted directly into Databricks tables, ensuring that data is ready for real-time exploitation.
-
-Its automation capabilities allow scheduling periodic uploads, ensuring that Databricks always has up-to-date data for analysis, reporting and strategic decision making
-
-
-## Google Cloud integration
+## Integración con Google Cloud
 
 <div class="box_img">
 ![crestone](/img/crestone/index/google.png)
 </div>
 
-Crestone facilitates integration with Google Cloud Platform, allowing companies to move their SAP data efficiently and securely. Thanks to its flexible upload capabilities, Crestone offers two options to suit the user’s needs
+Crestone facilita la integración con Google Cloud Platform, permitiendo a las empresas mover sus datos SAP de manera eficiente y segura. Gracias a sus capacidades de carga flexibles, Crestone ofrece dos opciones que se adaptan a las necesidades del usuario:  
 
 ### BigQuery
-For those who need immediate access to structured data, Crestone allows information to be inserted directly into BigQuery, ensuring that data is ready for real-time exploitation
+Para quienes necesitan acceso inmediato a datos estructurados, Crestone permite insertar la información directamente en BigQuery, asegurando que los datos estén listos para explotación en tiempo real.  
 
-### Cloud Storag
-Ideal for users who require an intermediate area before processing data. Allows to temporarily store the information in Google Cloud Storage, facilitating validations, debugging and transformations before its use in analysis or business models
+### Cloud Storage
+Ideal para usuarios que requieren un área intermedia antes de procesar los datos. Permite almacenar temporalmente la información en Google Cloud Storage, facilitando validaciones, depuración y transformaciones antes de su uso en análisis o modelos de negocio.  
 
-Crestone optimizes data transfer, ensuring efficient and scalable loads without impacting SAP system performance. In addition, its automation capability allows scheduling periodic uploads, ensuring that Google Cloud Platform always has up-to-date data for analysis, reporting and strategic decision making.
-
-
+Crestone optimiza la transferencia de datos, asegurando cargas eficientes y escalables sin impactar el rendimiento del sistema SAP. Además, su capacidad de automatización permite programar cargas periódicas, garantizando que Google Cloud Platform siempre cuente con datos actualizados para análisis, reportes y toma de decisiones estratégicas.  

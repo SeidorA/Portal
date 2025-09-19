@@ -1,20 +1,44 @@
 .actinItem{
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    gap: 10px;
-    color: var(--container);
-    
+    height: 100%;
+    color: var(--carbon);
 }
 
-.box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--bg-contaider);
-    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.1);
-    
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
+
+
+.by {
+    grid-area: 1 / 1 / 3 / 2;
+    background-image: url(/img/index/by.png);
+}
+.bo { grid-area: 1 / 2 / 2 / 3; 
+    background-image: url(/img/index/one.png);
+}
+.hana { grid-area: 1 / 3 / 2 / 4; 
+     background-image: url(/img/index/hana.png);
+}
+.su { grid-area: 2 / 2 / 3 / 3; 
+    background-image: url(/img/index/sf.png);
+}
+.pla { grid-area: 2 / 3 / 3 / 4; 
+    background-image: url(/img/index/plan.png);
+}
+
+.by, .bo, .hana, .su, .pla {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: var(--bg-container-tr);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    background-size: contain;
+    border-radius: 8px;
+    height: 100%;
+    padding: 10px 10px 150px 10px;
+}
+

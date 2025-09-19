@@ -1,0 +1,34 @@
+[
+    {
+        "id": "comercial/REFERENCIAS",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EcXzF9g8FhdKuQ77W9u6HK8BKiujbbmlWLIp8lndXanEuA?e=fJvVJR",
+        "name": "REFERENCIAS CRESTONE.pptx",
+        "IsFolder": false,
+        "MediaType": "Docs/pptx"
+    },
+   
+    {
+        "id": "comercial/Roadmap",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eb_7jbikFJlMh5S2VP2HBUgBY5gDFaVAqapR32geIZwsUg?e=ppPspq",
+        "name": "CRESTONE - Roadmap & Release 012025.jpg",
+        "MediaType": "Image/jpg",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial/tecnicos",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eb_7jbikFJlMh5S2VP2HBUgBY5gDFaVAqapR32geIZwsUg?e=ppPspq",
+        "name": "Crestone requisitos tecnicos.pdf",
+        "MediaType": "application/pdf",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial/Products",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eb_7jbikFJlMh5S2VP2HBUgBY5gDFaVAqapR32geIZwsUg?e=ppPspq",
+        "name": "Products - Sales Training.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder": false
+    }
+
+]
+
+

@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.crestoneSidebar.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar crestoneSidebar"
+  },
+  "sidebar.crestoneSidebar.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar crestoneSidebar"
+  },
+  "sidebar.crestoneSidebar.category.Documentacion": {
+    "message": "Documentacion",
+    "description": "The label for category Documentacion in sidebar crestoneSidebar"
+  },
+  "sidebar.crestoneSidebar.category.SAP implementation": {
+    "message": "SAP implementation",
+    "description": "The label for category SAP implementation in sidebar crestoneSidebar"
+  },
+  "sidebar.crestoneSidebar.category.SAP authorizations": {
+    "message": "SAP authorizations",
+    "description": "The label for category SAP authorizations in sidebar crestoneSidebar"
+  },
+  "sidebar.daianaSidebar.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar daianaSidebar"
+  },
+  "sidebar.daianaSidebar.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar daianaSidebar"
+  },
+  "sidebar.daianaSidebar.category.Documentacion": {
+    "message": "Documentacion",
+    "description": "The label for category Documentacion in sidebar daianaSidebar"
+  }
+}

@@ -1,20 +1,37 @@
 ---
 title: Crestone vs Xtract Universal
 ---
+import BoxDoc from '@site/src/components/boxdocs';
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Battle Card"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Battle Card"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Efspj64MiylAi8aQGntpitUBbENvSlMcqn3oLRwle5GXCQ?e=3xzuY"
+>
+  Crestone y Xtract Universal son soluciones para extraer datos de SAP hacia múltiples destinos. Mientras que Xtract Universal destaca por la amplitud de conectores disponibles y su API de ejecución remota, Crestone ofrece una alternativa más accesible y flexible, con ejecución en servidor, programación avanzada de jobs, soporte para reportes Z y exportación directa a plataformas como Databricks.
+</BoxDoc>
+
+<BoxDoc
+  title="Battle Card"
+  language="Ingles"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Battle Card"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EQtiRED_wkZEk142rte7D7sBv1KdxRW0XMfdP1pWikyKDA?e=IxQfIG"
+>
+  Crestone and Xtract Universal are solutions for extracting data from SAP to multiple destinations. While Xtract Universal stands out for the breadth of connectors available and its remote execution API, Crestone offers a more accessible and flexible alternative, with server execution, advanced job scheduling, support for Z reports, and direct export to platforms such as Databricks.
+</BoxDoc>
 
 
-<div class="row margin-bottom--lg">
-    <div class="col col--6">
-        <a target="_blank" href="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EQtiRED_wkZEk142rte7D7sBv1KdxRW0XMfdP1pWikyKDA?e=IxQfIG"> 
-          <button class="button button--primary button--block" >Battle Card (En)</button>
-        </a>
-    </div>   
-    <div class="col col--6">
-        <a target="_blank" href="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Efspj64MiylAi8aQGntpitUBbENvSlMcqn3oLRwle5GXCQ?e=3xzuYc"> 
-          <button class="button button--primary button--block" >Battle Card (Es)</button>
-        </a>
-    </div>  
+
 </div>
+
+
 
 Crestone y Xtract Universal son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico.
 

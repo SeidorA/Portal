@@ -11,19 +11,21 @@ import Actin from '@site/src/components/indexitems/actin';
 import { Brand } from 'iconcaral2';
 
 import styles from './index.module.css';
+import Translate, {translate} from '@docusaurus/Translate';
 
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={styles.banner}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           Portal
         </Heading>
-        <p className="hero__subtitle"> Encunetra toda la documtaion se los productos de seidor </p>
+        <p className="hero__subtitle">
+          <Translate id='banner.text'></Translate> 
+        </p>
         <div className={styles.buttons}>
-
         </div>
       </div>
     </header>
@@ -76,7 +78,7 @@ export default function Home(): ReactNode {
       <div className="container margin-top--lg margin-bottom--lg">
         <div className="row">
           <div className="col col--3">
-            <h1>Acceso a nuestras documentaciones</h1>
+            <h1><Translate id='dox.text'></Translate></h1>
           </div>
           {DocsList.map((props, idx) => (
             <div className="col col--3" key={idx}>

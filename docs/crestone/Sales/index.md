@@ -1,8 +1,10 @@
 ---
-title: Sales
+title:  Commercial
 ---
+import Archivos from '@site/src/components/archivos';
 
-import ProductItem from '@site/src/components/onedrive/files'
 
-Aca encontraras todos los docuentos cargados en one Drive
-<ProductItem />
+En esta sección encontrarás toda la documentación relacionada con la gestión comercial de nuestros productos. Aquí reunimos materiales de apoyo, presentaciones y recursos clave diseñados para facilitar la comunicación con **clientes** y **prospectos**, resaltar el valor de nuestras soluciones y acompañar el proceso de ventas de manera clara y efectiva.
+
+
+<Archivos source="5" />

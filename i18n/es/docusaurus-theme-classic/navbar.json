@@ -1,0 +1,66 @@
+{
+  "title": {
+    "message": "Portal",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Products Portal",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Productos": {
+    "message": "Productos",
+    "description": "Navbar item with label Productos"
+  },
+  "item.label.Act In": {
+    "message": "Productos Act In",
+    "description": "Navbar item with label Act In"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Crestone": {
+    "message": "Crestone",
+    "description": "Navbar item with label Crestone"
+  },
+  "item.label.Daiana": {
+    "message": "Daiana",
+    "description": "Navbar item with label Daiana"
+  },
+  "item.label.Doxa": {
+    "message": "Doxa",
+    "description": "Navbar item with label Doxa"
+  },
+  "item.label.Cloud Costing": {
+    "message": "Cloud Costing",
+    "description": "Navbar item with label Cloud Costing"
+  },
+  "item.label.Harbinger": {
+    "message": "Harbinger",
+    "description": "Navbar item with label Harbinger"
+  },
+  "item.label.Feelings": {
+    "message": "Feelings",
+    "description": "Navbar item with label Feelings"
+  },
+  "item.label.Success Factors": {
+    "message": "Success Factors",
+    "description": "Navbar item with label Success Factors"
+  },
+  "item.label.Business One analytics": {
+    "message": "Business One analytics",
+    "description": "Navbar item with label Business One analytics"
+  },
+  "item.label.ByDesign": {
+    "message": "ByDesign",
+    "description": "Navbar item with label ByDesign"
+  },
+  "item.label.S/4HANA Analytics​": {
+    "message": "S/4HANA Analytics​",
+    "description": "Navbar item with label S/4HANA Analytics​"
+  },
+  "item.label.Planning": {
+    "message": "Planning",
+    "description": "Navbar item with label Planning"
+  }
+}

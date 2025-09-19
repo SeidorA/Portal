@@ -1,0 +1,103 @@
+{
+  "theme.NotFound.title": {
+    "message": "Page Not Found",
+    "description": "The title of the 404 page"
+  },
+  "theme.NotFound.p1": {
+    "message": "We could not find what you were looking for.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "description": "The second paragraph of the 404 page"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archive",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archive",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Blog list page navigation",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Newer Entries",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Older Entries",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  
+  "actin.title": {
+  "message": "Act In Products"
+},
+
+"actin.successFactors.desc": {
+  "message": "Better understand your business and address challenges to improve company performance."
+},
+
+"actin.businessOne.desc": {
+  "message": "Provides analysis and insights from data contained in your SAP Business One solution (SQL or HANA) for more effective decision making."
+},
+
+"actin.byDesign.desc": {
+  "message": "Powerful flexible analytics solution that integrates key business data from SAP ByD and other sources for more effective cross-system analysis."
+},
+
+"actin.s4hana.desc": {
+  "message": "It is a modular, ready-to-use analytical solution that integrates with SAP S/4HANA. It is designed to accelerate business decision making through clear visualizations."
+},
+
+"actin.sacPlanning.desc": {
+  "message": "It is a modular, ready-to-use analytical solution that integrates with SAP S/4HANA. It is designed to accelerate business decision making through clear visualizations."
+},
+
+"ownp.title": {
+  "message": "Products"
+},
+"owno.doxa":{
+  "message": "Doxa is a comprehensive solution for managing and optimizing the entire lifecycle of your assets, from acquisition to disposal."
+},"owno.harbinger": {
+  "message": "Harbinger anticipates business scenarios with predictive analytics and advanced forecasting."
+},
+"owno.cc":{
+  "message": "Cloud Costing optimizes cloud expenses, providing transparency and control over resources.."
+}
+,"owno.feelings":{
+  "message": "Feelings analyzes sentiment and emotions in text, enhancing understanding of customer experiences."
+},
+"owno.crestone":{
+  "message": "Crestone simplifies SAP data extraction, enabling seamless transfers to modern cloud platforms."
+},
+"owno.daiana":{
+  "message": "Daiana is an AI assistant that automates workflows and improves knowledge-driven interactions."
+},
+"hero.title":{
+  "message": "Explore the Seidor Analytics Ecosystem"
+},
+"hero.desc":{
+  "message": "Learn about our solutions, access documentation, and stay up to date on upcoming events."
+},
+"hero.bell":{
+  "message": "View all listings"
+},
+"banner.text":{
+  "message": "Find all the documentation for Seidor products"
+},
+"dox.text":{
+  "message": "Access to our documentation"
+},
+"boxdoc.download":{
+  "message": "Download"},
+"boxdoc.language":{
+    "message": "Language"},
+"boxdoc.format":{
+    "message": "Format"},
+  "owntech.nav":{
+    "message": "Products"
+  }
+}

@@ -1,5 +1,6 @@
 .products{
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 .parent {
 display: grid;

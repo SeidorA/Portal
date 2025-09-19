@@ -1,5 +1,7 @@
 import styles from './index.module.css';
 import { CaralIcon } from 'iconcaral2';
+import Translate, {translate} from '@docusaurus/Translate';
+
 
 export default function Heroportal() {
   return (
@@ -9,12 +11,22 @@ export default function Heroportal() {
         
         <div className={styles.bubble}>
             <div className={styles.year}>2025</div>
-            Ver todos los anuncios    <CaralIcon name='arrowRight'/>
+            <Translate id="hero.bell" />
+            <CaralIcon name='arrowRight'/>
         </div>
-        <h1 className="hero__title">Explora el ecosistema de Seidor Analytics</h1>
-        <p className={styles.phero} >Conoce nuestras soluciones, accede a sus documentaciones y mantente al tanto de los próximos eventos </p>
+        <h1 className="hero__title">
+          <Translate id="hero.title" />
+          
+        </h1>
+        <p className={styles.phero} >
+          <Translate id="hero.desc" />
+        </p>
         
       </div>
+
+      
+
+
     </header>
   );
 }

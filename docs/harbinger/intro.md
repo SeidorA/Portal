@@ -7,6 +7,8 @@ useBrand: true
 pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeycI3gso3lPlU8ymBy2v-IBN0kKMbCEW2IZ3jHGM0YmBw?e=YZo26h'
 ---
 
+![Harbinger Banner](/img/harbinger.png)
+
 **Solución de comunicación**
 
 Harbinger es una potente plataforma diseñada para optimizar la comunicación masiva a través de WhatsApp y SMS. Con ella, puedes crear y enviar mensajes personalizados a grandes volúmenes de contactos de manera eficiente y efectiva.
