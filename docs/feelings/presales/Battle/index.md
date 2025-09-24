@@ -1,9 +1,7 @@
 ---
-title: "Casos de uso"
-sidebar_position: 2
+title: "Battle Card"
 ---
 import Not from "@site/src/components/202"
  
 
 <Not/>
-

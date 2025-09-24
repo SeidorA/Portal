@@ -161,8 +161,296 @@
         "name": "Products - Sales Training.pptx",
         "MediaType": "Docs/pptx",
         "IsFolder": false
+    },
+    {
+        "id": "Daina2%demos2%seguros",
+        "Path": "",
+        "name": "Daiana Studio (Agente Analitico para Seguros).mov",
+        "MediaType": "video/mov",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%op",
+        "Path": "",
+        "name": "Daiana Studio (Creación OP).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%jira",
+        "Path": "",
+        "name": "Daiana Studio (Flujo de Jira).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%ventas",
+        "Path": "",
+        "name": "Daiana Studio (Flujo de ventas).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%sap",
+        "Path": "",
+        "name": "Daiana Studio (Reportes SAP).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%saleforce",
+        "Path": "",
+        "name": "Daiana Studio (Salesforce).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%hubspot",
+        "Path": "",
+        "name": "Daiana Studio EN (Sales Agent Hubspot).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "Daina2%demos2%enterprise",
+        "Path": "",
+        "name": "Enterprise (Daiana2.0).mp4",
+        "MediaType":"video/mp4",
+        "IsFolder":false
+    },
+    {
+        "id": "daiana2%casos2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:x:/g/personal/admin_seidoranalytics_onmicrosoft_com/ERLwg3_DBoFClhx5e8wddpYBovOuZr0rLaqECjXAVvProg?e=C2rDR4",
+        "name": "Catalogo de demos.xlsx ",
+        "MediaType": "document/xlsx",
+        "IsFolder": false
+    },
+    {
+        "id": "daiana2%casos2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EQ7RBIBzcO5CvvKARnBG6CEBNFqzHGuQjEXYTSjSFaCnPQ?e=MHCOVm",
+        "name": "Daiana Studio + Hubspot.pptx ",
+        "MediaType": "Docs/pptx",
+        "IsFolder": false
+    },{
+        
+        "id": "daiana2%casos2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/ESra7xJ8EWNOhizzW2hpMicBcEe6yR2d2aOND51nN2g0Ow?e=VB3Wni",
+        "name": "Daiana Studio + Jira.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder": false
+    },
+    {
+        "id": "daiana2%intern2%data",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXPxvGvyPpBGpJjENZV1xoABpRWjQzE8dJ-7O4fyRlywyA?e=LGheJ5",
+        "name": "SEIDOR Data Advisor - Uso Interno.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno2%saptecnicos",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EVT8Uqbw8TZJvxra2t8PpYcB1oV9KV8_ElrNXekVfDT9eQ?e=QdA9cT",
+        "name": "DAIANA conectado a SAP - Detalles Tecnicos.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno2%cliente",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXRqn6mARe9IldLzHVGHUrgBa_-MhF4JdCn2NUk8-Rc59w?e=vAupYq",
+        "name": "DAIANA conectado a SAP - Presentacion Cliente.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno2%videomkt",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/ESZLmGkod1JGvQAk6WzC6VoBC3x1uZGq4QRCz87h9KWFkQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=CADCeN",
+        "name": "DAIANA.mkv ",
+        "MediaType": "video/mov",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno2%integracion",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:v:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ef7iFF7cNINBpW4zfjS7MCABVt3U-trxPALqOVumFaDvrQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=206o4Q",
+        "name": "Integracion con Teams - Recruiting.mp4",
+        "MediaType": "video/mp4",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno2%pptusa",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EdApglcxMJBAlCroUing0MUBkVYN2pLk80nw9wNSwt7Q8Q?e=xZJOQZ",
+        "name": "ppt DAIANA WEBINAR USA v03.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno2%presentacion",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXZvEebaMzFGqnGhtMFH9ugBDOYDSreMiP_vkY9uAWJK5g?e=8oh3T5",
+        "name": "Presentación - IA Seidor Analytics.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "daiana2%interno%presentacionvideo",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EWNXKCfNFTJHrcIsnGssgwwB2SGyNnah5OKgWjPvo4NcAA?e=rYdFWk",
+        "name": "Presentación comercial DAIANA_conVideos.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial2%implementacion",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ecsa0y7dRvFIhTo3dKeVPNcBpmy_cnc4Kt8BcFc93bWH1w?e=fFAAm7",
+        "name": "Propuesta de implementación DAIANA 2025.pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%Pricing",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EffS8vcCoS9PiJ_fvN7fU08BFM6GYcT1FQ4ZHIwV5qRFrQ?e=hcxbjJ",
+        "name": "Acelerador IA - Pricing.pdf ",
+        "MediaType" : "application/pdf",
+        "IsFolder": false
+    },{
+        "id": "comercial2%Pricingppt",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/ETu0RAWcGWpAnUasNuXf5V0Bj2-9Pg1XkkLslo5n7OgGsA?e=3GiBk8",
+        "name": "Acelerador IA - Pricing.pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%presentacioncom",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXUPJcsyMGtIh3xLlCqAEuAB-oaYUcaau9Fmp574uFfgLg?e=FQmKBY",
+        "name": "Commercial presentation DAIANA (EN).pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%integracionaws",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EdP0DeSvCGVAm9wBkTcxWgkBFAiVvGknSdWH88gjQmPfMw?e=pFDDCv",
+        "name": "DAIANA - Integracion con AWS Bedrock.pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%Propuestavalor",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EX9hE7jaqVBBl5irtnXXLB8BZDXJiJDSaLgtkWc3CQN3Vg?e=wK9r7J",
+        "name": "DAIANA - Propuesta de valor.pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZQfryfp-WVEvdqHk-JU2-4B5J0fLpN-WL1fBA55bmVZhw?e=7d1wIw",
+        "name": "Daiana - Referencias.pdf",
+        "MediaType" : "application/pdf",
+        "IsFolder": false
+    },{
+        "id": "comercial2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeGhLx4D6M9GoFX8LlZRP7gBjH0w87OQwC0Stv7pwWmXQA?e=HEyjXw",
+        "name": "Daiana - Referencias.pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:i:/g/personal/admin_seidoranalytics_onmicrosoft_com/EftBdybr9nFIpDinB_DpWOwB_C2SDKTJLjKvLc4PMUj33Q?e=clkh7I",
+        "name": "DAIANA - Roadmap & Release Plan 012025.jpg",
+        "MediaType" : "Image/jpg",
+        "IsFolder": false
+    },{
+        "id": "comercial2%pptcomerciales",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXawZWK5RRZLk731UM-1E5sBaqZlVCRzxbHBCbQB66KVtg?e=vcA8wi",
+        "name": "Presentación Comercial DAIANA 2025 (ES).pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },{
+        "id": "comercial2%pptcomercialestudio",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXawZWK5RRZLk731UM-1E5sBaqZlVCRzxbHBCbQB66KVtg?e=vcA8wi",
+        "name": "Presentación Comercial DAIANA Studio 202504 (ES).pptx",
+        "MediaType" : "Docs/pptx",
+        "IsFolder": false
+    },
+
+
+    {
+        "id": "comercial2%har2%ref",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/ETJ7SorSDW1Js0rOk8LEUrMBe5-STD_7nHan11Ncf9eoCQ?e=arx5GV",
+        "name": "Referencias Harbinger.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial2%har2%brochure",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ed4SKQ7RPdhJv6SzWZEVzqoBqO2CMhhNFnXZK26iQpp63Q?e=5jzajz",
+        "name": "01_Harbinger Brochure ES.pdf",
+        "MediaType": "application/pdf",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial2%har2%sapb1",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZRbBfpIeLxPif_Q3zBkdLgBzWHz9bxB39gMYQMSwsKy-w?e=FEC03V",
+        "name": "Commercial presentation Harbinger SAP B1 (EN).pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },
+    {
+        "id": "comercial2%har2%sapb1es",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ec4X9KswfLdKkrwWZYpivEgBJ32NNlso-CoSZUtFJNlwBg?e=Xm3ylC",
+        "name": "Presentación comercial Harbinger SAP B1 (ES).pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },
+
+
+    {
+        "id": "docs2%har2%tecnica",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:w:/g/personal/admin_seidoranalytics_onmicrosoft_com/ERUsvsijiURHoSyCjyexyykBbiOwtl__CfXM8wExWqXAUg?e=zvpp7v",
+        "name": "Harbinger - Documentación Técnica.docx",
+        "MediaType": "document/docx",
+        "IsFolder":false
+    },
+     {
+        "id": "docs2%har2%onbor",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/ETFp9m2ey8tJrw1WNNNNHO8B-oGb5Sq35eieUXrvw2f6hg?e=Bpjcx0",
+        "name": "Harbinger - Proceso de Onboarding.pdf",
+        "MediaType": "application/pdf",
+        "IsFolder":false
+    }, 
+    
+    {
+        "id": "cc%drivers",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ec8EFFNNxIVFhKEBT8KjNQwBELPKsBgyG0QZA3kLa4I4gQ?e=37lgqb",
+        "name": "Cloud Costing - Drivers Explicados.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "cc2%har2%brecureen",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EcDTjI1eNRpEomQbHpdqQRMBoCOhR_iOj1EFHtVJzHw7iw?e=CLyZP8",
+        "name": "Cloud Costing Brochure EN.pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "cc2%har2%brocurees",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EdaMLrDVxehJt3zjRqylAOAB-tfXTE5FcBD-Hxrlfsa5zw?e=hakwnD",
+        "name": "Cloud Costing Brochure ES.pdf",
+        "MediaType": "application/pdf",
+        "IsFolder":false
+    },{
+        "id": "cc2%har2%",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfQL-mgvwMdDo3pcpMnia58BY9BKQpramOq-9VpKdRAQAQ?e=n1qcwL",
+        "name": "Presentacion comercial Cloud Costing (ES).pptx",
+        "MediaType": "Docs/pptx",
+        "IsFolder":false
+    },{
+        "id": "cc2%har2%propuestaes",
+        "Path": "https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EWoHwuAEzudIpRW1Itfy3BkBge26v7EXAGxQ54Io_cvIuw?e=00njBr",
+        "name": "Propuesta CLOUD COSTING de SEIDOR Analytics (ES).pptx",
+        "MediaType": "document/docx",
+        "IsFolder":false
+    },{
+        "id": "cc2%har2%",
+        "Path": "",
+        "name": "",
+        "MediaType": "document/docx",
+        "IsFolder":false
     }
 ]
+
+
+
+
+
+
+
+
+
+
+
 
 
 

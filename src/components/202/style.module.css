@@ -1,0 +1,30 @@
+.not{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--bg-contaider) url('../../../static/img/haz/4.png') no-repeat;
+    background-size: 70%;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: var(--carbon);
+    box-shadow: 0 0 34px 0 rgba( 0 ,0 ,0 , 0.1);
+    animation: move ease infinite 10s alternate;
+    img{
+        max-height: 40vh;
+        margin-bottom: 60px;
+    }
+    h2{
+        margin: 0 !important;
+    }
+}
+
+@keyframes move {
+    from{
+        background-position: 140% -160px;
+    },
+    to{
+        background-position: 10% -160px;
+    }
+}

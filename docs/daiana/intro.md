@@ -1,19 +1,60 @@
 ---
 sidebar_label: "Daiana"
-title: ¿Qué es Daiana? 
+title: Daiana
 sidebar_position: 1
 iconName: "Daiana"
 useBrand: true
-pdfDoc:  "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eco7gYXU0IpItwbpxnU9pDoB1l_oH7bRMqHxpJ1jB0thXg?e=iG8rao"
 ---
-
-![Daiana](/img/daiana.png)
+import BoxDoc from '@site/src/components/boxdocs';
 
 **Su Agente Virtual Impulsado por AI**
 
 Daiana es la plataforma de Seidor Analytics que permite crear, entrenar y desplegar agentes virtuales potenciados con inteligencia artificial.
 
 Desde asistentes conversacionales hasta sistemas complejos de atención al cliente o automatización de procesos, Daiana ofrece una solución integral, escalable y adaptable a cada necesidad.
+
+![Daiana](/img/daiana.png)
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+<BoxDoc
+  title="Brochure comercial"
+  language="Español"
+  format="PDF"
+  brand="Daiana"
+  titleimg="Brochure comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eco7gYXU0IpItwbpxnU9pDoB1l_oH7bRMqHxpJ1jB0thXg?e=hDb8ij"
+>
+ Documento comercial completo destacando su alcance, funciones  y compatibilidad.
+</BoxDoc>
+
+<BoxDoc
+  title="Presentación Comercial DAIANA"
+  language="Español"
+  format="PPTX"
+  brand="Daiana"
+  titleimg="Presentación Comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXawZWK5RRZLk731UM-1E5sBaqZlVCRzxbHBCbQB66KVtg?e=zZkauT"
+>
+ Presentación corporativa lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+<BoxDoc
+  title="Presentación Comercial DAIANA"
+  language="Inglés"
+  format="PPTX"
+  brand="Daiana"
+  titleimg="Commercial Presentation"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXUPJcsyMGtIh3xLlCqAEuAB-oaYUcaau9Fmp574uFfgLg?e=haf3Sk"
+>
+ Presentación corporativa lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+</div>
+
+
+## ¿Qué es Daiana?
 
 <div class="box_img">
 ![Daiana](/img/daiana/index.jpeg)

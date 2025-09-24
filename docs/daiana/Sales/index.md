@@ -1,8 +1,10 @@
 ---
 title: Sales
 ---
+import Archivos from '@site/src/components/archivos';
 
-import ProductItem from '@site/src/components/onedrive/files'
+En esta sección encontrarás todos los documentos relevantes para el área comercial de Daiana. El objetivo es centralizar la información clave en un solo lugar, facilitando el acceso a materiales estratégicos, presentaciones y comparativas que apoyan el trabajo con clientes y prospectos.
 
-Aca encontraras todos los docuentos cargados en one Drive
-<ProductItem />
+<Archivos source="9"/>
+
+

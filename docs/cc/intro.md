@@ -1,11 +1,42 @@
 ---
-sidebar_label: "Cloud Costing"
-title: ¿Qué es Cloud Costing?
+title: Cloud Costing
 sidebar_position: 1
 iconName: "CloudCosting"
 useBrand: true
-pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ee96Apk_NYlDj87jP0RsPvABIGxS3jrqv1TEknCx8tsqbQ?e=LpjqMC'
 ---
+import BoxDoc from '@site/src/components/boxdocs';
+
+La Solución de Administración de costos en la nube, una plataforma innovadora que ofrece una visibilidad completa y en tiempo real de los costos de los recursos de la nube utilizados por su empresa, lo que le permite identificar de manera rápida y precisa áreas de oportunidad para optimizar sus consumos.
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Brochure comercial"
+  language="Español"
+  format="pdf"
+  brand="CloudCosting"
+  titleimg="Brochure comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ee96Apk_NYlDj87jP0RsPvABIGxS3jrqv1TEknCx8tsqbQ?e=LpjqMC">
+ Material comercial diseñado para comunicar las capacidades de Cloud Costing. Ideal para presentaciones generales. 
+</BoxDoc>
+
+<BoxDoc
+  title="Presentacion comercial Cloud Costing"
+  language="Español"
+  format="PPPX"
+  brand="CloudCosting"
+  titleimg="Presentacion comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfQL-mgvwMdDo3pcpMnia58BY9BKQpramOq-9VpKdRAQAQ?e=nBbBXg"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Cloud Costing: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+</div>
+
+## ¿Qué es Cloud Costing?
 
 **Administración de costos en las nubes**
 

@@ -1,17 +1,60 @@
 ---
 sidebar_label: "Doxa"
-title: ¿Qué es Doxa?
+title: Doxa
 sidebar_position: 1
 iconName: "Doxa"
 useBrand: true
-pdfDoc: https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfeAy-gtjURKgN8Vuh0dF9gB7c14tPNwOOCevy0KgsD98g?e=uN3HIE
 ---
-
-![Doxa Banner](/img/doxa.png)
+import BoxDoc from '@site/src/components/boxdocs';
 
 DOXA by Seidor Analytics es una solución que permite a las empresas y particulares crear, distribuir y analizar encuestas y cuestionarios de manera sencilla, rápida y eficiente. ​
 
+
+![Doxa Banner](/img/doxa.png)
+
+
 Con una interfaz amigable y herramientas avanzadas de análisis, DOXA se posiciona como la solución ideal para recopilar feedback y obtener insights valiosos.
+
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Brochure comercial"
+  language="Español"
+  format="pdf"
+  brand="Doxa"
+  titleimg="Brochure comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfeAy-gtjURKgN8Vuh0dF9gB7c14tPNwOOCevy0KgsD98g?e=uN3HIE">
+ Material comercial diseñado para comunicar las capacidades de Doxa. Ideal para presentaciones generales. 
+</BoxDoc>
+
+<BoxDoc
+  title="Presentacion comercial Doxa"
+  language="Español"
+  format="PPPX"
+  brand="Doxa"
+  titleimg="Presentacion comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EWEycAb9JtpEqCjQ19k2NbEB9HP34-8BW15pmO8nMnbbng?e=VQC2HH"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Doxa: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+<BoxDoc
+  title="Presentacion comercial Doxa"
+  language="Inglés"
+  format="PDF"
+  brand="Doxa"
+  titleimg="Commercial Presentation"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EQ7ty5DV8nJBszj-5jOfp8EBet5ihdPsde5PxuIlghkMoQ?e=anXPdr"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Doxa: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+</div>
+
 
 ## ¿Cómo funciona DOXA? 
 

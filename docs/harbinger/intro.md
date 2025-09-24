@@ -1,14 +1,60 @@
 ---
-sidebar_label: "Harbinger"
-title: ¿Qué es Harbinger?
+
+title: Harbinger
 sidebar_position: 1
 iconName: "Harbinger"
 useBrand: true
-pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeycI3gso3lPlU8ymBy2v-IBN0kKMbCEW2IZ3jHGM0YmBw?e=YZo26h'
 ---
+
+import BoxDoc from '@site/src/components/boxdocs';
+
+
+Automatiza mensajes personalizados por whatsapp. Envía mensajes masivos por whatsapp y SMS.
 
 ![Harbinger Banner](/img/harbinger.png)
 
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Brochure comercial"
+  language="Español"
+  format="PDF"
+  brand="Harbinger"
+  titleimg="Brochure comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeycI3gso3lPlU8ymBy2v-IBN0kKMbCEW2IZ3jHGM0YmBw?e=nrDFv0"
+>
+  Material comercial diseñado para comunicar las capacidades de Harbinger. Ideal para presentaciones generales.
+</BoxDoc>
+
+<BoxDoc
+  title="Presentacion comercial Harbinger"
+  language="Español"
+  format="PPPX"
+  brand="Harbinger"
+  titleimg="Presentacion comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/ESC632bGAFVOhmxN-y_lf7wBBgMCaPwqvtJItsc_riETFg?e=s8L2jb"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Harbinger: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+<BoxDoc
+  title="Brochure comercial"
+  language="Inglés"
+  format="PDF"
+  brand="Harbinger"
+  titleimg="Commercial Presentation"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZE2cVs0_eFEujpG5CpljMgBRBBfko76hpHsLCKpNC1EEA?e=oMdgHU"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Harbinger: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+</div>
+
+
+## ¿Qué es Harbinger?
 **Solución de comunicación**
 
 Harbinger es una potente plataforma diseñada para optimizar la comunicación masiva a través de WhatsApp y SMS. Con ella, puedes crear y enviar mensajes personalizados a grandes volúmenes de contactos de manera eficiente y efectiva.

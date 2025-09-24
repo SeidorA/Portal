@@ -42,18 +42,20 @@ const BoxDoc: React.FC<BoxDocProps> = ({
         padding: 16,
         alignItems: "flex-start",
         gap: 24,
-        maxWidth: 900,
+        width: "100%"
       }}
     >
     <div
       style={{
         minWidth: 300,
+        maxWidth: 300,
         height: '-webkit-fill-available',
         backgroundImage: `url(${
         [haza, hazb, hazc, hazd, haze, hazf, hazg, hazh][
           Math.floor(Math.random() * 8)
         ]
         })`,
+        backgroundRepeat: "no-repeat",
         borderRadius: 10,
         display: "flex",
         alignItems: "center",
@@ -62,6 +64,7 @@ const BoxDoc: React.FC<BoxDocProps> = ({
         color: "#fff",
         fontWeight: 600,
         fontSize: 22,
+        textAlign: "center"
       }}
     >
         <CaralIcon name={brand} size={50} color="#fff"/>

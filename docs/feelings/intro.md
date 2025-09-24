@@ -1,11 +1,30 @@
 ---
 sidebar_label: "Feelings"
-title: ¿Qué es Feelings?
+title: Feelings
 sidebar_position: 1
 iconName: "Feelings"
 useBrand: true
-pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXyx-ehZDTpHkiTu3ntAd1MBHEkMKwxxm_ww3E4Ap29waQ?e=N3dZ2E'
 ---
+import BoxDoc from '@site/src/components/boxdocs';
+
+
+## Material Comercial
+<div class="padding-vert--sd">
+<BoxDoc
+  title="Brochure Comercial"
+  language="Español"
+  format="PPTX"
+  brand="Feelings"
+  titleimg="Brochure Comercial"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXyx-ehZDTpHkiTu3ntAd1MBHEkMKwxxm_ww3E4Ap29waQ?e=N3dZ2E">
+ Material comercial diseñado para comunicar las capacidades de Feelings. Ideal para presentaciones generales.
+</BoxDoc>
+</div>
+
+
+
+## ¿Qué es Feelings?
+
 **Los sentimientos primero**
 
 **Feelings** es una solución de escucha activa en las principales redes sociales que permite determinar los sentimientos de tus clientes. ​
