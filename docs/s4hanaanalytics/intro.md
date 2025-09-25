@@ -1,11 +1,39 @@
 ---
-sidebar_label: "SAP S/4HANA analytics​"
-title:  SAP S/4HANA analytics​
+sidebar_label: "SAP S4HANA analytics​"
+title:  SAP S4HANA analytics​
 sidebar_position: 1
 iconName: "SAP"
 useBrand: true
-pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ef3na5Exb5NOt3fLO7yVDZEBWUfc_5hAfglFJpw6zFbPaw?e=a9czkd'
 ---
+import BoxDoc from '../../src/components/boxdocs';
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Commercial Presentation ACT IN S4HANA"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="S4HANA"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXHUy9ELqpVIj0DLABs_TrwBa38ztr7nHs7PMTdDkozvaA?e=P3DR4T"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+<BoxDoc
+  title="Presentacion comercial ACT IN S4HANA"
+  language="Español"
+  format="PPTX"
+  brand="SAP"
+  titleimg="S4HANA"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ef3na5Exb5NOt3fLO7yVDZEBWUfc_5hAfglFJpw6zFbPaw?e=PsIc78"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+</div>
 
 ## ¿Qué es Act·in | SAP S/4HANA analytics?
 ### Analítica potente y ampliable

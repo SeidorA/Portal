@@ -6,7 +6,48 @@ iconName: "SAP"
 useBrand: true
 pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeycI3gso3lPlU8ymBy2v-IBN0kKMbCEW2IZ3jHGM0YmBw?e=YZo26h'
 ---
+import BoxDoc from '../../src/components/boxdocs';
 
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Comercial presentation ActIn - SAC SSFC"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Planning"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfSODOYi8VtIkAT4vJOphZcBCZt4Ws6Iq5nI9izZDzg6zg?e=26bOVg"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+<BoxDoc
+  title="Presentación comercial ActIn - SAC SSFCC"
+  language="Español"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Planning"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EYXZB2BYrntNmJdaoLYN3PQBphIONhO5mB1DGoVE3GzpzA?e=oXzP7G"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+<BoxDoc
+  title="ENG_act-in successfactors analytics_SeidorA_V4"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Success Factors"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZheB-tm-yRHmm8Bd52vKTgBkZeLKEqDQR2hoKhrLR93wQ?e=3aZsU7"
+>
+  Presentación corporativa.
+</BoxDoc>
+
+</div>
 
 ## ¿Qué es ​Act·in | SAC Planning?
 

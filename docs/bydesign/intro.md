@@ -6,9 +6,41 @@ iconName: "SAP"
 useBrand: true
 pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZD00uZADrJErpRtvUNsoJMBI_F1KpheHf3VZ72qqrPs7Q?e=25WqFW'
 ---
+import BoxDoc from '../../src/components/boxdocs';
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Commercial presentation ACT IN BYDESIGN"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="BY DESIGN"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/ERAc2zGqERVGqCOy8XULE68BEJEQ-ohXT8JwPfdHeSY3Jg?e=KQgBT6"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
 
 
-## Act·in | SAP ByDesign analytics  <br /> Analítica Potente y Expandible​
+<BoxDoc
+  title="Presentacion comercial ACT IN BYDESIGN"
+  language="Español"
+  format="PPTX"
+  brand="SAP"
+  titleimg="BY DESIGN"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZD00uZADrJErpRtvUNsoJMBI_F1KpheHf3VZ72qqrPs7Q?e=SnO1BN"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+</div>
+
+
+
+## Act·in | SAP ByDesign analytics
+**Analítica Potente y Expandible​**
 
 - **Act·in | SAP ByDesign Analytics** es una solución de vanguardia que permite a las empresas obtener una comprensión más profunda de su negocio, abordar desafíos de manera proactiva y mejorar su desempeño general.​
 - En una era de rápida transformación, las empresas deben convertir constantemente los datos en conocimientos accionables. A pesar de haber realizado importantes inversiones en soluciones de BI, muchas organizaciones no han logrado obtener los resultados deseados.​

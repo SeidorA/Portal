@@ -17,7 +17,7 @@ import BoxDoc from '../../src/components/boxdocs';
 
 </div>
 
-## Documentación y Material Comercial
+## Material Comercial
 
 <div class="padding-vert--sd">
 
@@ -45,7 +45,7 @@ import BoxDoc from '../../src/components/boxdocs';
 
 
 <BoxDoc
-  title="Brochure"
+  title="Brochure Comercial"
   language="Inglés"
   format="PDF"
   brand="Crestone"

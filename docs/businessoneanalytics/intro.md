@@ -4,8 +4,41 @@ title: SAP Business One
 sidebar_position: 1
 iconName: "SAP"
 useBrand: true
-pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ed5ej90gfcNBkPbXgKggDvoBT2YVrcRAHI2FW4nAO1qbzg?e=YwWmJo'
 ---
+import BoxDoc from '../../src/components/boxdocs';
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Commercial presentation SAC B1 ACT-IN"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Business One"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZ9RsQwUGb5OiMcOf_Swbj0BuaybKzCBxPodaRbM0fEt-w?e=5mRCGb"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+<BoxDoc
+  title="Presentacion comercial SAP B1 ACT-IN"
+  language="Español"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Business One"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ed5ej90gfcNBkPbXgKggDvoBT2YVrcRAHI2FW4nAO1qbzg?e=nY2WHg"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+</div>
+
+
+
+
 
 ## Analítica potente y ampliable
 

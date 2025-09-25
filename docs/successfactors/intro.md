@@ -1,11 +1,52 @@
 ---
-sidebar_label: "Success Factors​"
 title: Success Factors​
 sidebar_position: 1
 iconName: "SAP"
 useBrand: true
-pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Edhd58uDtvVLu10mEGEn0WABrh8Dr455bTgT2nQxgj2aJw?e=c4IkHi'
 ---
+import BoxDoc from '../../src/components/boxdocs';
+
+## Material Comercial
+
+<div class="padding-vert--sd">
+
+<BoxDoc
+  title="Commercial presentation ACT IN SAC Planning"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Success Factors"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Ea6d05KBlapPjjPrtc-ak_EBvdmBg8HR4AEeJv47BDk2fA?e=aPTRuS"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+<BoxDoc
+  title="Presentación comercial ACT IN SAC Planning"
+  language="Español"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Success Factors"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/Edhd58uDtvVLu10mEGEn0WABrh8Dr455bTgT2nQxgj2aJw?e=EXdgac"
+>
+  Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+
+<BoxDoc
+  title="ENG_act-in successfactors analytics_SeidorA_V4"
+  language="Inglés"
+  format="PPTX"
+  brand="SAP"
+  titleimg="Success Factors"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZheB-tm-yRHmm8Bd52vKTgBkZeLKEqDQR2hoKhrLR93wQ?e=3aZsU7"
+>
+  Presentación corporativa.
+</BoxDoc>
+
+</div>
+
 
 ## Objetivo​
 
