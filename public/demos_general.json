@@ -5,7 +5,8 @@
         "name": "Databricks Conector.mov",
         "Size": 0,
         "IsFolder": false,
-        "MediaType": "video/mov"
+        "MediaType": "video/mov",
+        "Description":"Video demostrativo que muestra cómo crear un source en Databricks, configurar un nodo y conectarlo dentro de un Job."
     },
     {
         "id": "ProductItem/demos/aws.mp4",
@@ -13,7 +14,8 @@
         "name": "AWS.mp4",
         "Size": 0,
         "IsFolder": false,
-        "MediaType": "video/mp4"
+        "MediaType": "video/mp4",
+        "Description":"Video demostrativo que muestra cómo crear un source en AWS, configurar un nodo y conectarlo dentro de un Job."
     },
     {
         "id": "ProductItem/demos/azure.mp4",
@@ -21,7 +23,8 @@
         "name": "Azure.mp4",
         "Size": 0,
         "IsFolder": false,
-        "MediaType": "video/mp4"
+        "MediaType": "video/mp4",
+        "Description":"Video demostrativo que muestra cómo crear un source en Azure, configurar un nodo y conectarlo dentro de un Job."
     },
     {   
         "id": "ProductItem/demos/bigquery.mp4",
@@ -29,7 +32,8 @@
         "name": "Bigquery.mp4",
         "Size": 0,
         "IsFolder": false,
-        "MediaType": "video/mp4"
+        "MediaType": "video/mp4",
+        "Description":"Video demostrativo que muestra cómo crear un source en Bigquery, configurar un nodo y conectarlo dentro de un Job."
     },
     {
         "id": "ProductItem/demos/snowflake.mp4",
@@ -37,7 +41,8 @@
         "name": "Snowflake.mp4",
         "Size": 0,
         "IsFolder": false,
-        "MediaType": "video/mp4"
+        "MediaType": "video/mp4",
+        "Description":"Video demostrativo que muestra cómo crear un source en Snowflake, configurar un nodo y conectarlo dentro de un Job."
     },
     {
         "id": "ProductItem/demos/teradata.mp4",
@@ -45,7 +50,8 @@
         "name": "Teradata.mp4",
         "Size": 0,
         "IsFolder": false,
-        "MediaType": "video/mp4"
+        "MediaType": "video/mp4",
+        "Description":"Video demostrativo que muestra cómo crear un source en Teradata, configurar un nodo y conectarlo dentro de un Job."
     },
     {
         "id": "ProductItem/demos/fuentesap",
@@ -53,7 +59,8 @@
         "name": "1. Creación de fuente (SAP).webm",
         "Size": "2.9m",
         "IsFolder": false,
-        "MediaType":"video/webm"
+        "MediaType":"video/webm",
+        "Description":"Video demostrativo que muestra cómo crear un source en SAP."
     },
     {
         "id": "ProductItem/demos/destinoaws",

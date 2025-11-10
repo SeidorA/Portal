@@ -39,12 +39,8 @@ type LinkProps = {
 
 function documentationLink( link: string, title: string ): ReactNode {
   return (
-    <Link
-      className="docs_list"
-      to={link}>
-      <div className="box">
-        <Brand name={title}  size={40}/>
-      </div>
+    <Link to={link} className={styles.docs}>
+      <img src={`/img/index/Docs_${title}.png`} alt={title} />
       {title}
     </Link>
   );
@@ -55,11 +51,15 @@ const DocsList: LinkProps[] = [
     link: 'https://crestone-help.seidoranalytics.com/',
   },{
     title: 'Daiana',
-    link: 'http://daiana.seidoranalytics.com:3030/es/home',
+    link: 'https://daiana-help.seidoranalytics.com/',
   },
-  {
-    title: 'Doxa',
-    link: 'https://doxa-help.seidoranalytics.com/',
+  
+   {
+    title: 'Harbinger',
+    link: 'https://Harbinger-help.seidoranalytics.com/',
+  },{
+    title: "Doxa",
+    link: 'https://doxadocs.seidoranalytics.com/',
   }
   
 ];
@@ -76,12 +76,10 @@ export default function Home(): ReactNode {
       <Actin />
       <HomepageHeader />
       <div className="container margin-top--lg margin-bottom--lg">
-        <div className="row">
-          <div className="col col--3">
-            <h1><Translate id='dox.text'></Translate></h1>
-          </div>
+        <h2 ><Translate id='dox.text'></Translate></h2>
+        <div className={styles.rowdocs}>
           {DocsList.map((props, idx) => (
-            <div className="col col--3" key={idx}>
+            <div className={styles.docsrow} key={idx}>
               {documentationLink(props.link, props.title)}
             </div>
           ))}

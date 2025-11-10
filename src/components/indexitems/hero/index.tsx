@@ -9,11 +9,11 @@ export default function Heroportal() {
     <img src="img/blur1.png"  className={styles.blur1} alt="" srcset="" />
       <div className={`${styles.container} container`}>
         
-        <div className={styles.bubble}>
+        {/*<div className={styles.bubble}>
             <div className={styles.year}>2025</div>
             <Translate id="hero.bell" />
             <CaralIcon name='arrowRight'/>
-        </div>
+        </div> */}
         <h1 className="hero__title">
           <Translate id="hero.title" />
           

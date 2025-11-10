@@ -13,12 +13,12 @@ import BoxDoc from '../../src/components/boxdocs';
 <div class="padding-vert--sd">
 
 <BoxDoc
-  title="Comercial presentation ActIn - SAC SSFC"
+  title="Commercial presentation ACT IN SAC Planning"
   language="Inglés"
   format="PPTX"
   brand="SAP"
   titleimg="Planning"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfSODOYi8VtIkAT4vJOphZcBCZt4Ws6Iq5nI9izZDzg6zg?e=26bOVg"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EfSODOYi8VtIkAT4vJOphZcBCZt4Ws6Iq5nI9izZDzg6zg?e=0cX0W3"
 >
   Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
 </BoxDoc>
@@ -30,21 +30,9 @@ import BoxDoc from '../../src/components/boxdocs';
   format="PPTX"
   brand="SAP"
   titleimg="Planning"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EYXZB2BYrntNmJdaoLYN3PQBphIONhO5mB1DGoVE3GzpzA?e=oXzP7G"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EYXZB2BYrntNmJdaoLYN3PQBphIONhO5mB1DGoVE3GzpzA?e=2VWZe4"
 >
   Presentación corporativa lista para exponer, con toda la información clave: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
-</BoxDoc>
-
-
-<BoxDoc
-  title="ENG_act-in successfactors analytics_SeidorA_V4"
-  language="Inglés"
-  format="PPTX"
-  brand="SAP"
-  titleimg="Success Factors"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EZheB-tm-yRHmm8Bd52vKTgBkZeLKEqDQR2hoKhrLR93wQ?e=3aZsU7"
->
-  Presentación corporativa.
 </BoxDoc>
 
 </div>

@@ -169,9 +169,17 @@ const Archivos = ({ source }) => {
                 <div className={style.icon}>
                 {getIconoArchivo(archivo.MediaType)}
                 </div>
-                <span className={style.name}>
-                  {archivo.name}
-                </span>
+               <div className={style.text}>
+                  <span className={style.name}>
+                    {archivo.name}
+                  </span>
+                  <br/>
+                  <small>
+                    {archivo.Description
+                      ? archivo.Description
+                      : `archivo tipo ${archivo.MediaType || 'desconocido'}`}
+                  </small>
+                </div>
               </div>
                 <CaralIcon name='chevronRigth' size={30}/>
               </button>

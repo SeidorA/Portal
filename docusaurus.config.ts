@@ -1,3 +1,5 @@
+import 'dotenv/config';
+import webpack from 'webpack';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -17,16 +19,50 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
+  // Use a small plugin to inject selected environment variables into the
+  // client bundle at build time. Put this inside `plugins` so Docusaurus
+  // validation accepts it.
+  plugins: [
+    function supabaseEnvPlugin() {
+      return {
+        name: 'supabase-env-plugin',
+        configureWebpack() {
+          return {
+            plugins: [
+              new webpack.DefinePlugin({
+                'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || ''),
+                'process.env.SUPABASE_ANON_KEY': JSON.stringify(process.env.SUPABASE_ANON_KEY || ''),
+              }),
+            ],
+          };
+        },
+      };
+    },
+    function buildExitPlugin() {
+      return {
+        name: 'build-exit-plugin',
+        async postBuild() {
+          // Force exit after build completes to avoid hanging processes
+          if (process.env.NODE_ENV === 'production') {
+            setTimeout(() => {
+              process.exit(0);
+            }, 1000);
+          }
+        },
+      };
+    },
+  ],
+
   // Set the production url of your site here
   url: 'https://SeidorA.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Portal/',
+  baseUrl: '',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'SeidorA', // Usually your GitHub org/user name.
-  projectName: 'Portal', // Usually your repo name.
+  projectName: 'portal', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -172,11 +208,11 @@ const config: Config = {
           items: [
             {
               html: `
-                <img src="img/logos/logowt.png" alt="Seidor Analytics" style="height: 40px; margin-bottom: 10px;" />
+                <div class="logo_footer" />
               `,
             },{
-              label: 'info@seidoranalytics.net',
-              href: 'mailto:info@seidoranalytics.net',
+              label: 'info@seidoranalytics.com',
+              href: 'mailto:info@seidoranalytics.com',
             }
           ]
         },
@@ -213,7 +249,7 @@ const config: Config = {
                 to: '/docs/successfactors/intro',
             },
             {
-                label: 'Business One analytics',
+                label: 'Business One Analytics',
                 to: '/docs/businessoneanalytics/intro',
             },
             {
@@ -234,6 +270,11 @@ const config: Config = {
           title: 'More',
           items: [
             
+            {
+              label: 'Admin',
+              to: '/docs/admin',
+              sidebarId: 'doxaSidebar',
+            },
             {
               label: 'Big Data',
               href: 'https://www.seidoranalytics.com/big-data/',

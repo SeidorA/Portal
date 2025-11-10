@@ -1,0 +1,61 @@
+.boxrroadmap{
+    background-color: var(--bg-contaider);
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 26px 0 rgba(46, 46, 46, 0.1);
+    background:  no-repeat top left ;
+    background-size: 100% auto;
+    width: 33.3%;
+    @media screen and (max-width: 820px) {
+        width: 100%;
+    }
+}
+
+.box{
+    background-color: var(--bg-contaider);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 22px;
+    color: var(--bg-contaider);
+    margin-bottom: 20px;
+}
+
+.bug, .funcionality{
+    padding: 7px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    display: inline-flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.funcionality{
+    background:  #DAF4EC;
+    border-radius: 30px; outline: 1px #13644A solid;
+}
+
+.bug{    
+    background:  #99D3FF;
+    border-radius: 30px; outline: 1px #66B6FF solid;
+    color: #07153A;   
+}
+
+.titleBox{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px 0;
+    p{
+        margin: 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+
+    }
+}

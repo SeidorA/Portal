@@ -1,0 +1,23 @@
+<div className={styles.frame_parent}>
+          <div className={styles.frame_child}>
+          </div>
+          <div className={styles.o}>o</div>
+          <div className={styles.frame_child}>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          disabled={loading}
+          className={styles.btn}
+          style={{            
+            backgroundColor: loading ? '#ccc' : '#e2e8f0',
+            color: '#242528',
+            cursor: loading ? 'not-allowed' : 'pointer'
+          }}
+        >
+          <div className="circle_brand">
+            <Brand name='Azure'  size={20}/>
+          </div>
+          azure
+        </button>

@@ -4,6 +4,7 @@
     align-items: center;
     height: 60px;
     width: 60px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--medium);
 }
@@ -22,8 +23,10 @@
 }
 
 .name{
+    font-size: 1.2em;
     font-weight: 800;
     color: var(--Seidor-hard-blue);
+    margin-bottom: 20px;
 }
 
 .itemContent{
@@ -58,4 +61,13 @@
     align-items: center;
     justify-content: center;
     border: 0px;
+}
+
+.text{
+    text-align: left;
+    margin: 0 70px  0 10px;
+    small{
+        color: var(--carbon);
+        font-size: 1.1em;
+    }
 }

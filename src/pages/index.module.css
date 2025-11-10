@@ -167,3 +167,34 @@ margin: 10px 0;
   background: url('/img/haz/2.png') no-repeat -15% top var(--Seidor-Hard-blue);
   background-size: 40%;
 }
+
+.docs{
+  color: var(--carbon);
+  img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+.rowdocs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.docsrow{
+  width: calc(25% - 10px);
+}
+@media screen and (max-width: 850px) {
+  .docsrow{
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .docsrow{
+    width: calc(100% - 10px);
+  }
+}

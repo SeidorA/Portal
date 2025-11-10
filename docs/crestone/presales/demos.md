@@ -3,7 +3,7 @@ title: Demos
 sidebar_position: 2
 ---
 import Archivos from '@site/src/components/archivos';
-
+import Webinar from '@site/src/components/webinar'
 
 ## Crestone Paso a paso
 
@@ -23,6 +23,45 @@ Qué incluye cada guía:
 
 
 <Archivos source="2" />
+
+### Demos Rápidas
+En esta sección encontrarás una serie de demostraciones en videos cortos que te guiarán paso a paso en la creacion de extracciones con Crestone.
+
+<Webinar 
+    title="Add Source and destination" 
+    img= "crestone/webinars/tuto1.png"
+    description={<p>Cómo agregar un origen y un destino en <b>Crestone</b></p> }
+    duration= "00:01:03"
+    version= "1.0"
+    url="https://www.youtube.com/embed/sSSXE9Th_i8?si=uxjcGHTy2XA1dP2I"
+    lang ="EN" />
+
+<Webinar 
+    title="Extraction Node" 
+    img= "crestone/webinars/tuto2.png"
+    description={<p>Genere su primer nodo con los orígenes creados previamente.</p>}
+    duration= "00:01:03"
+    version= "1.0"
+    url="https://www.youtube.com/embed/vBzC33NMmKQ?si=v6BEJy41uB1WDERf"
+    lang ="EN" />
+
+<Webinar 
+    title="How to create jobs" 
+    img= "crestone/webinars/tuto3.png"
+    description={<p>Genere su primer job con los orígenes y nodos creados previamente.</p>}
+    duration= "00:00:56"
+    version= "1.0"
+    url="https://www.youtube.com/embed/yYPQaHQy3JY?si=njvitRpBqYMCPuLE"
+    lang ="EN" />
+
+<Webinar 
+    title="How to run Jobs" 
+    img= "crestone/webinars/tuto4.png"
+    description={<p>Ejecute un job previamente creado.</p>}
+    duration= "00:00:56"
+    version= "1.0"
+    url="https://www.youtube.com/embed/SJ5T3jHIprM?si=-3TCv7M8OcSFE5au"
+    lang ="EN" />
 
 
 ## Conexiones 

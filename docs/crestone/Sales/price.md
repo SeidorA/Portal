@@ -1,6 +1,7 @@
 ---
 hide_table_of_contents: true
 title: "Pricing"
+sidebar_position: 2
 ---
 
 Los planes de licenciamiento de Crestone se dividen en dos modalidades principales: **Cloud y Self Hosted**. Cada opción responde a diferentes necesidades de infraestructura y volumen de uso:

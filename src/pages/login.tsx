@@ -25,7 +25,7 @@ export default function LoginPage() {
     } else {
  
       console.log('Login exitoso:', data);
-      window.location.href = '/Portal/docs/intro'; // Redirigir al usuario después del inicio de sesión exitoso
+      window.location.href = '/'; // Redirigir al usuario después del inicio de sesión exitoso
     }
     
     setLoading(false);
@@ -83,29 +83,7 @@ export default function LoginPage() {
           {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
         </button>
 
-        <div className={styles.frame_parent}>
-          <div className={styles.frame_child}>
-          </div>
-          <div className={styles.o}>o</div>
-          <div className={styles.frame_child}>
-          </div>
-        </div>
-
-        <button 
-          type="submit" 
-          disabled={loading}
-          className={styles.btn}
-          style={{            
-            backgroundColor: loading ? '#ccc' : '#e2e8f0',
-            color: '#242528',
-            cursor: loading ? 'not-allowed' : 'pointer'
-          }}
-        >
-          <div className="circle_brand">
-            <Brand name='Azure'  size={20}/>
-          </div>
-          azure
-        </button>
+        
       </form>
       </div>
 
