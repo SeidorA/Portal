@@ -3,4 +3,4 @@ name: Build & Deploy Portal Docs
 on:
   push:
     branches:
-      - Master # dispara solo cuando haces push a main
+      - main # dispara solo cuando haces push a main
