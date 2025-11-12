@@ -13,7 +13,7 @@ import BoxDoc from '../../src/components/boxdocs';
 
 <div class="margin-vert--lg">
 
-![Crestone](/img/crestone/index/portada2.png)
+![crestone](/img/crestone/index/portada2.png)
 
 </div>
 
