@@ -229,3 +229,6 @@ Para quienes necesitan acceso inmediato a datos estructurados, Crestone permite 
 Ideal para usuarios que requieren un área intermedia antes de procesar los datos. Permite almacenar temporalmente la información en Google Cloud Storage, facilitando validaciones, depuración y transformaciones antes de su uso en análisis o modelos de negocio.  
 
 Crestone optimiza la transferencia de datos, asegurando cargas eficientes y escalables sin impactar el rendimiento del sistema SAP. Además, su capacidad de automatización permite programar cargas periódicas, garantizando que Google Cloud Platform siempre cuente con datos actualizados para análisis, reportes y toma de decisiones estratégicas.  
+
+
+## Test from github edit
