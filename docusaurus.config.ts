@@ -56,13 +56,10 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://products.seidoranalytics.com/',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'SeidorA', // Usually your GitHub org/user name.
-  projectName: 'portal', // Usually your repo name.
+  // Deployment settings: GitHub Pages specific fields removed because
+  // this project no longer uses GitHub Pages.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

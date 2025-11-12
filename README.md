@@ -26,16 +26,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
+This project no longer uses GitHub Pages. To deploy the site you can build and publish the `build/` output with your preferred hosting (Docker, S3, Netlify, etc.). Example using Docker image defined in the repo:
 
-```bash
-USE_SSH=true yarn deploy
+```powershell
+npm run build; docker build -t portal .; docker tag portal cloudseidoranalytics/portal:latest; docker push cloudseidoranalytics/portal:latest
 ```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
