@@ -13,7 +13,7 @@ Daiana es la plataforma de Seidor Analytics que permite crear, entrenar y desple
 
 Desde asistentes conversacionales hasta sistemas complejos de atención al cliente o automatización de procesos, Daiana ofrece una solución integral, escalable y adaptable a cada necesidad.
 
-![Daiana](/img/daiana.png)
+![Daiana Baner](/img/daiana.png)
 
 ## Material Comercial
 
