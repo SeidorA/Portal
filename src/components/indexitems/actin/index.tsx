@@ -41,7 +41,7 @@ const Actinlist: ActitemProps[] = [
         titleKey: " Act-in ByDesign",
         link: "/Portal/docs/bydesign/intro",
         /* Changed bg from "bd" to "by" to match the pattern */
-        bg: "by",
+        bg: "byactin",
         descKey: "actin.byDesign.desc",
     },  
     {

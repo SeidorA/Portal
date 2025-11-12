@@ -10,7 +10,7 @@ import BoxDoc from '@site/src/components/boxdocs';
 DOXA by Seidor Analytics es una solución que permite a las empresas y particulares crear, distribuir y analizar encuestas y cuestionarios de manera sencilla, rápida y eficiente. ​
 
 
-![Doxa Banner Top](/img/doxa.png)
+![Doxa Banner Top](/img/portadadoxa.png)
 
 
 Con una interfaz amigable y herramientas avanzadas de análisis, DOXA se posiciona como la solución ideal para recopilar feedback y obtener insights valiosos.
