@@ -1,6 +1,0 @@
-name: Build & Deploy Portal Docs
-
-on:
-  push:
-    branches:
-      - main # dispara solo cuando haces push a main
