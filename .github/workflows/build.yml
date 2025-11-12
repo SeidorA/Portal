@@ -69,22 +69,3 @@ jobs:
             cloudseidoranalytics/portal:latest
             cloudseidoranalytics/portal:${{ github.sha }}
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: docker
-    environment: Portal-Productivo
-    
-    steps:
-      - name: Re-deploy stack in Portainer
-        run: |
-          TOKEN=$(curl -s -X POST "http://$PORTAINER_URL/api/auth" \
-            -H "Content-Type: application/json" \
-            -d "{\"username\":\"$PORTAINER_USER\",\"password\":\"$PORTAINER_PASS\"}" | jq -r .jwt)
-
-          curl -X PUT "http://$PORTAINER_URL/api/stacks/$STACK_ID/redeploy" \
-            -H "Authorization: Bearer $TOKEN"
-        env:
-          PORTAINER_URL: ${{ secrets.PORTAINER_URL }}
-          PORTAINER_USER: ${{ secrets.PORTAINER_USER }}
-          PORTAINER_PASS: ${{ secrets.PORTAINER_PASS }}
-          STACK_ID: ${{ secrets.STACK_ID }}
