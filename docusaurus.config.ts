@@ -58,7 +58,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
-  // Deployment settings: GitHub Pages specific fields removed because
+  // Deployment settings: GitHub Pages specific fields removed becausenp
   // this project no longer uses GitHub Pages.
 
   onBrokenLinks: 'throw',
