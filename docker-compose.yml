@@ -1,6 +1,6 @@
 services:
   docusaurus:
-    image: cloudseidoranalytics/portal:a6d955c22a2674f1d0a3941878afa6c3be26f05b
+    image: cloudseidoranalytics/portal:14a3e509f2b75323fa53b4ae9a00bf92cbf4cdb9
     build:
       context: .
     ports:
