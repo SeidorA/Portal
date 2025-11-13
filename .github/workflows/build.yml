@@ -69,5 +69,6 @@ jobs:
           file: ./dockerfile
           push: true
           tags: |
+            cloudseidoranalytics/portal:latest
             cloudseidoranalytics/portal:${{ github.sha }}
 
