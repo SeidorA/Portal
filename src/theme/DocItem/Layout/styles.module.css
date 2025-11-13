@@ -27,3 +27,34 @@
   }
 }
 
+.editIcon{
+  position: fixed;
+  bottom: 25px;
+  left: 10px;
+  z-index: 1000;
+  background-color: var(--Seidor-Hard-blue);
+  color: #FAFAFAFF;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  transition: all 1s ease;
+  span{
+    font-size: 0.8em;
+    transition: all 1s ease;
+  }
+  &:hover{
+    background-color: var(--Seidor-Medium-blue);
+    box-shadow: 0 0 50px 0 rgba(0,0,0, 0.5);
+    cursor: pointer;
+    gap: 15px;
+    span{
+      font-size: 0.9em;
+      
+    }
+    
+  }
+}
+

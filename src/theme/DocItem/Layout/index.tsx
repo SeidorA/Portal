@@ -76,6 +76,17 @@ const { session, loading } = useAuth();
           <ContentVisibility metadata={metadata} />
           <DocVersionBanner />
           <div className={styles.docItemContainer}>
+            
+            <a
+              href={`https://github.com/SeidorA/Portal/tree/main/docs${metadata.source?.path ?? metadata.source?.relativePath ?? metadata.unversionedId ?? ''}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.editIcon}
+            >
+              <CaralIcon name="edit" size={20} />
+              <span>Editar este documento</span>
+            </a>
+
             <article>
               <DocBreadcrumbs />
               <DocVersionBadge />
@@ -98,11 +109,14 @@ const { session, loading } = useAuth();
               </div>
               <DocItemContent>{children}</DocItemContent>
               <DocItemFooter />
+              
             </article>
             <DocItemPaginator />
           </div>
         </div>
         {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+
+        
       </div>
     );
   }
