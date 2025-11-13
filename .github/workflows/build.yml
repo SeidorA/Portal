@@ -50,6 +50,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Verify git repo
+        run: |
+          echo "Checking if .git exists..."
+          ls -la | grep git || echo "WARNING: .git directory not found!"
+          git log --oneline -1 || echo "WARNING: git log failed"
       
       - name: Download build artifacts
         uses: actions/download-artifact@v4
