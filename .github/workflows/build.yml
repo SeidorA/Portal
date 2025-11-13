@@ -1,5 +1,9 @@
 name: Build and Deploy
 
+# Allow the workflow to push commits when needed
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -52,8 +56,19 @@ jobs:
         with:
           name: build-output
       
-      - name: List files
-        run: ls -la
+      - name: List workspace files (debug)
+        run: |
+          echo "PWD: $(pwd)"
+          echo "Workspace root listing:"
+          ls -la /github/workspace || true
+          echo "Repo root listing:"
+          ls -la || true
+          echo "Find docker-compose files:" 
+          find . -maxdepth 4 -type f \( -iname 'docker-compose.yml' -o -iname 'docker-compose.yaml' -o -iname 'docker-compose.*.yml' \) -print || true
+          echo "git ls-files for docker-compose:" 
+          git ls-files | grep -i docker-compose || true
+          echo "If exists, show file content (first 200 lines):"
+          for f in $(git ls-files | grep -i docker-compose || true); do echo "--- $f ---"; sed -n '1,200p' "$f" || true; done
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -81,26 +96,40 @@ jobs:
     environment: Portal-Productivo
 
     steps:
-      - name: Update docker-compose image tag and push
+      - name: Update docker-compose image tag and push (robust)
         env:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: |
-          set -e
-          echo "Updating docker-compose.yml to use image tag $GITHUB_SHA"
+          set -euo pipefail
+          echo "Attempting to update docker-compose image tag to $GITHUB_SHA"
           sha=${{ github.sha }}
-          # Replace the image tag line in docker-compose.yml
-          if [ -f docker-compose.yml ]; then
-            sed -i "s|cloudseidoranalytics/portal:.*|cloudseidoranalytics/portal:${sha}|g" docker-compose.yml
-            git config user.name "$GIT_COMMITTER_NAME"
-            git config user.email "$GIT_COMMITTER_EMAIL"
-            git add docker-compose.yml
-            if git commit -m "chore(ci): set docker-compose image tag to ${sha} [skip ci]"; then
-              git push origin HEAD:main
-            else
-              echo "No changes to commit"
-            fi
-          else
-            echo "docker-compose.yml not found, skipping update"
+          # Try to locate docker-compose file via git index first
+          file=$(git ls-files | grep -iE 'docker-compose(\.|).*ya?ml$' || true)
+          if [ -z "${file}" ]; then
+            echo "No docker-compose file found in git index, searching filesystem..."
+            file=$(find . -maxdepth 4 -type f \( -iname 'docker-compose.yml' -o -iname 'docker-compose.yaml' \) -print -quit || true)
           fi
+          if [ -z "${file}" ]; then
+            echo "docker-compose file not found, aborting update"
+            exit 0
+          fi
+          echo "Found docker-compose file: ${file}"
+          # Make a backup
+          cp "${file}" "${file}.bak"
+          # Update the image tag (replace anything after cloudseidoranalytics/portal:)
+          sed -E -i "s|(cloudseidoranalytics/portal):[[:alnum:]]+|\1:${sha}|g" "${file}" || true
+          echo "Show updated file snippet:"
+          sed -n '1,120p' "${file}"
+          # Commit & push
+          git config user.name "$GIT_COMMITTER_NAME"
+          git config user.email "$GIT_COMMITTER_EMAIL"
+          git add "${file}"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(ci): set docker-compose image tag to ${sha} [skip ci]"
+          # Push using GITHUB_TOKEN auth via actions/checkout default token
+          git push origin HEAD:main
 
