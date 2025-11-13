@@ -230,5 +230,3 @@ Ideal para usuarios que requieren un área intermedia antes de procesar los dato
 
 Crestone optimiza la transferencia de datos, asegurando cargas eficientes y escalables sin impactar el rendimiento del sistema SAP. Además, su capacidad de automatización permite programar cargas periódicas, garantizando que Google Cloud Platform siempre cuente con datos actualizados para análisis, reportes y toma de decisiones estratégicas.  
 
-### cambio de docker-compose y workflow
-Para reflejar los cambios realizados en el workflow de GitHub Actions y en el archivo docker-compose.yml, se han realizado las siguientes actualizaciones:
