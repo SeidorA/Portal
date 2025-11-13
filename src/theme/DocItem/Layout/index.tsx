@@ -21,6 +21,9 @@ import DocItem from '@theme-original/DocItem';
 import { useAuth } from '../../../context/AuthContext';
 
 
+  
+
+
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -62,13 +65,15 @@ const { session, loading } = useAuth();
   }
 
   if (!session || !session.user) {
+    
     return (
       <div>
         <h1>Acceso restringido</h1>
         <p>Debes <a href="/login">iniciar sesión</a> para acceder a la documentación.</p>
-      </div>
+      </div>      
     );
   }
+  
   
   return (
       <div className="row">
@@ -77,7 +82,7 @@ const { session, loading } = useAuth();
           <DocVersionBanner />
           <div className={styles.docItemContainer}>
             
-            <a
+            {/* <a
               href={`https://github.com/SeidorA/Portal/tree/main/docs${metadata.source?.path ?? metadata.source?.relativePath ?? metadata.unversionedId ?? ''}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -85,7 +90,7 @@ const { session, loading } = useAuth();
             >
               <CaralIcon name="edit" size={20} />
               <span>Editar este documento</span>
-            </a>
+            </a> */}
 
             <article>
               <DocBreadcrumbs />
