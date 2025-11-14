@@ -90,8 +90,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/SeidorA/Portal/tree/main/',
-          
+          editUrl: 'https://github.com/SeidorA/Portal/tree/main/',          
         },
         blog: {
           showReadingTime: true,

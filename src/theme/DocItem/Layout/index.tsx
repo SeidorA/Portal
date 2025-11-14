@@ -16,13 +16,9 @@ import type {Props} from '@theme/DocItem/Layout';
 import { Brand, CaralIcon  } from 'iconcaral2';
 import styles from './styles.module.css';
 
-
 import DocItem from '@theme-original/DocItem';
 import { useAuth } from '../../../context/AuthContext';
-
-
-  
-
+import { isAllowedAdmin } from '../../../config/access';
 
 
 /**
@@ -52,28 +48,36 @@ function useDocTOC() {
 export default function DocItemLayout({children}: Props): ReactNode {
   const docTOC = useDocTOC();
   const {metadata} = useDoc();
-  console.log(metadata);
   const IconHead = metadata.frontMatter?.iconName;
   const branicon = metadata.frontMatter?.useBrand;
   const Pdfdoc = metadata.frontMatter?.pdfDoc;
-  console.log(IconHead);
-const { session, loading } = useAuth();
-
+  const { session, loading } = useAuth();
 
   if (loading) {
     return <div>Cargando...</div>;
   }
 
   if (!session || !session.user) {
-    
     return (
       <div>
         <h1>Acceso restringido</h1>
         <p>Debes <a href="/login">iniciar sesión</a> para acceder a la documentación.</p>
-      </div>      
+      </div>
     );
   }
-  
+
+  // Restringir la carpeta admin a una lista de correos permitidos
+  const docPath = (metadata?.source?.path ?? metadata?.source?.relativePath ?? metadata?.unversionedId ?? metadata?.permalink ?? '').toLowerCase();
+  const isAdminDoc = docPath.includes('/admin/') || docPath.startsWith('admin/') || metadata?.permalink?.toLowerCase().includes('/docs/admin/');
+
+  if (isAdminDoc && !isAllowedAdmin(session.user.email)) {
+    return (
+      <div>
+        <h1>Acceso restringido</h1>
+        <p>Esta sección de administración solo está disponible para usuarios autorizados.</p>
+      </div>
+    );
+  }
   
   return (
       <div className="row">
@@ -81,17 +85,6 @@ const { session, loading } = useAuth();
           <ContentVisibility metadata={metadata} />
           <DocVersionBanner />
           <div className={styles.docItemContainer}>
-            
-            {/* <a
-              href={`https://github.com/SeidorA/Portal/tree/main/docs${metadata.source?.path ?? metadata.source?.relativePath ?? metadata.unversionedId ?? ''}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.editIcon}
-            >
-              <CaralIcon name="edit" size={20} />
-              <span>Editar este documento</span>
-            </a> */}
-
             <article>
               <DocBreadcrumbs />
               <DocVersionBadge />
