@@ -1,6 +1,7 @@
 ---
 title: "Pricing"
 description: "Este documento reúne el contenido de la presentación Feelings Pricing."
+restricted_access: true
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 

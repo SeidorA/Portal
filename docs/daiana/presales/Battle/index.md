@@ -1,5 +1,6 @@
 ---
 title:  Battle Cards
+restricted_access: true
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 

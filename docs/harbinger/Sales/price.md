@@ -1,6 +1,7 @@
 ---
 title: "Pricing"
 hide_table_of_contents: true
+restricted_access: true
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 

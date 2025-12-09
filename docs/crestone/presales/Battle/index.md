@@ -1,5 +1,6 @@
 ---
 title: Crestone vs Xtract Universal
+restricted_access: true
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 

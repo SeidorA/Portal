@@ -1,6 +1,7 @@
 ---
 title: Daiana vs Copilot Studio
 sidebar_position: 2
+restricted_access: true
 ---
 
 

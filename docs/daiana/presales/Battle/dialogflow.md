@@ -1,6 +1,7 @@
 ---
 title: Daiana vs Dialogflow (Google Cloud)
 sidebar_position: 2
+restricted_access: true
 ---
 
 

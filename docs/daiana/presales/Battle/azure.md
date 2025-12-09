@@ -1,6 +1,7 @@
 ---
 title: Daiana vs Azure Bot Service
 sidebar_position: 4
+restricted_access: true
 ---
 
 

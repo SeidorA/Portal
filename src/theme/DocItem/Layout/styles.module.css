@@ -58,3 +58,17 @@
   }
 }
 
+.restrictedAccess{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: #E2E8F0;
+  padding: 50px;
+  border-radius: 8px;
+  background: url('/img/haz/1.png') no-repeat -130px -100px  var(--Seidor-Hard-blue);
+  background-size: 30vw;
+
+  text-align: center;
+}

@@ -1,6 +1,7 @@
 ---
 title: Daiana vs IBM Watson Assistant
 sidebar_position: 3
+restricted_access: true
 ---
 
 

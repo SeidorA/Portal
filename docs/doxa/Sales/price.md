@@ -1,5 +1,6 @@
 ---
 title: "Pricing"
+restricted_access: true
 ---
 
 
