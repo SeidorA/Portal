@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabaseClient';
 export interface Profile {
     id: string;
     email: string;
+    last_sign_in_at?: string; // from auth.users or potentially synced to profiles
 }
 
 export interface UserRole {
@@ -10,9 +11,6 @@ export interface UserRole {
     role_id: number;
     roles: {
         name: string;
-    };
-    profiles: {
-        email: string;
     };
 }
 
@@ -39,7 +37,7 @@ export const adminService = {
 
         const { data, error } = await supabase
             .from('user_roles')
-            .select('*, roles(name), profiles(email)');
+            .select('*, roles(name)');
 
         if (error) {
             console.error("Error fetching user roles:", error);
@@ -54,7 +52,7 @@ export const adminService = {
         const { data: roleData, error: roleError } = await supabase
             .from('roles')
             .select('id')
-            .eq('name', roleName)
+            .ilike('name', roleName)
             .single();
 
         if (roleError) throw roleError;
@@ -72,7 +70,7 @@ export const adminService = {
         const { data: roleData, error: roleError } = await supabase
             .from('roles')
             .select('id')
-            .eq('name', roleName)
+            .ilike('name', roleName)
             .single();
 
         if (roleError) throw roleError;
