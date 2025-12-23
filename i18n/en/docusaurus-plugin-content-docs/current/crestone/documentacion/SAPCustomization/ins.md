@@ -15,7 +15,7 @@ The following article shows how to import transport requests for custom function
 ### Upload SAP Transport Requests to SAP
 If you have access to the file system of SAP, you can copy and paste the files of your transport request directly into the data and cofiles folders of your SAP system. If you don’t have access to the file system, follow the steps below to upload the files of your transport request using the SAP function module `ARCHIVFILE_CLIENT_TO_SERVER`:
 
-1. Unzip the transport request provided by the Seidor Analytics team in the installation directory of your product.
+1. Unzip the transport request provided by the SEIDOR Analytics team in the installation directory of your product.
 2. Open SAP and go to transaction AL11.
 3. Find the entry DIR_TRANS in the column Name of Directory Parameter. Note or copy the path shown in the column Directory.
 

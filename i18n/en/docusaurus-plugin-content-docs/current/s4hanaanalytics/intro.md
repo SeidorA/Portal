@@ -111,7 +111,7 @@ pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoran
 
   - This investment scenario assumes the client uses their own AWS account to provision services.
   - Values are in U.S. dollars and do not include taxes or withholdings.
-  - Intellectual property of Seidor Analytics, 1-year subscription contract, with monthly billing in advance.
+  - Intellectual property of SEIDOR Analytics, 1-year subscription contract, with monthly billing in advance.
   - Transportation, travel, or lodging expenses are not included.
   - Training will be provided one time at the moment of the initial contract. If more training is needed, the client can contract it separately.
 
@@ -132,6 +132,6 @@ pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoran
 
   - This investment scenario assumes the client does not use their own AWS account to provision services.
   - Values are in U.S. dollars and do not include taxes or withholdings.
-  - Intellectual property of Seidor Analytics, 1-year subscription contract, with monthly billing in advance.
+  - Intellectual property of SEIDOR Analytics, 1-year subscription contract, with monthly billing in advance.
   - Transportation, travel, or lodging expenses are not included.
   - Training will be provided one time at the moment of the initial contract. If more training is needed, the client can contract it separately.

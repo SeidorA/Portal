@@ -47,7 +47,7 @@ Difficulties in analyzing SAP SuccessFactors information, due to lack of data st
 <div class="arrrowUP">
 
 #### Our Solution​
-Actin | SuccessFactors Analytics, is a solution developed by Seidor Analytics, that bridges SAP SuccessFactors and SAP Analytics cloud. It improves:
+Actin | SuccessFactors Analytics, is a solution developed by SEIDOR Analytics, that bridges SAP SuccessFactors and SAP Analytics cloud. It improves:
 
 - Easy access and visualization of all HR data​
 - Analyze historical data to identify trends​

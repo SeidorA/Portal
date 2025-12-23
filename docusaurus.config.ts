@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import webpack from 'webpack';
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -14,7 +14,7 @@ const config: Config = {
   tagline: 'Encuentra toda la documentación de los productos de Seidor',
   favicon: 'img/favicon.png',
 
-  
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -92,7 +92,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/SeidorA/Portal/tree/main/',          
+          editUrl: 'https://github.com/SeidorA/Portal/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -100,7 +100,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          
+
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -123,72 +123,72 @@ const config: Config = {
       },
       items: [
         {
-            label: 'Productos',
-            type: 'dropdown',
-            position: 'left',
-            items: [
-              {
-                label: 'Crestone',
-                to: '/docs/crestone/intro',
-                sidebarId: 'crestonevar',
-              },
-              {
-                label: 'Daiana',
-                to: '/docs/daiana/intro',
-                sidebarId: 'daianavar',
-              },{
-                label: 'Doxa',
-                to: '/docs/doxa/intro',
-                sidebarId: 'doxaSidebar'
-              },{
-                label: 'Cloud Costing',
-                to: '/docs/cc/intro',
-                sidebarId: 'ccSidebar'
+          label: 'Productos',
+          type: 'dropdown',
+          position: 'left',
+          items: [
+            {
+              label: 'Crestone',
+              to: '/docs/crestone/intro',
+              sidebarId: 'crestonevar',
+            },
+            {
+              label: 'Daiana',
+              to: '/docs/daiana/intro',
+              sidebarId: 'daianavar',
+            }, {
+              label: 'Doxa',
+              to: '/docs/doxa/intro',
+              sidebarId: 'doxaSidebar'
+            }, {
+              label: 'Cloud Costing',
+              to: '/docs/cc/intro',
+              sidebarId: 'ccSidebar'
 
-              },{
-                label: 'Harbinger',
-                to: '/docs/harbinger/intro',
-                sidebarId: 'harbingerSidebar'
-              },{
-                label: 'Feelings',
-                to: '/docs/feelings/intro',
-                sidebarId: 'feelingsSidebar'
-              },
-              {
-                type: 'html',
-                value: '<div class="dropdown-header">Act In</div>',
-              },
-              {
-                label: 'Act-in SAP Success Factors',
-                to: '/docs/successfactors/intro',
-                sidebarId: 'successfactorsSidebar',
-              },
-              {
-                label: 'Act-in SAP Business One analytics',
-                to: '/docs/businessoneanalytics/intro',
-                sidebarId: 'businessone',
-              },
-              {
-                label: 'Act-in SAP ByDesign',
-                to: '/docs/bydesign/intro',
-                sidebarId: 'bydesign',
-              },
-              {
-                label: 'Act-in SAP S/4HANA Analytics​',
-                to: '/docs/s4hanaanalytics/intro',
-                sidebarId: 's4hanaanalytics',
-              },
-              {
-                label: 'Act-in SAP Planning',
-                to: '/docs/planning/intro',
-                sidebarId: 'planning',
-              },
-              
-            ],
+            }, {
+              label: 'Harbinger',
+              to: '/docs/harbinger/intro',
+              sidebarId: 'harbingerSidebar'
+            }, {
+              label: 'Feelings',
+              to: '/docs/feelings/intro',
+              sidebarId: 'feelingsSidebar'
+            },
+            {
+              type: 'html',
+              value: '<div class="dropdown-header">Act In</div>',
+            },
+            {
+              label: 'Act-in SAP Success Factors',
+              to: '/docs/successfactors/intro',
+              sidebarId: 'successfactorsSidebar',
+            },
+            {
+              label: 'Act-in SAP Business One analytics',
+              to: '/docs/businessoneanalytics/intro',
+              sidebarId: 'businessone',
+            },
+            {
+              label: 'Act-in SAP ByDesign',
+              to: '/docs/bydesign/intro',
+              sidebarId: 'bydesign',
+            },
+            {
+              label: 'Act-in SAP S/4HANA Analytics​',
+              to: '/docs/s4hanaanalytics/intro',
+              sidebarId: 's4hanaanalytics',
+            },
+            {
+              label: 'Act-in SAP Planning',
+              to: '/docs/planning/intro',
+              sidebarId: 'planning',
+            },
+
+          ],
         },
-        
-        
-        {to: '/blog', label: 'Blog', position: 'left'},
+
+
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -203,13 +203,13 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Seidor Analytics',
+          title: 'SEIDOR Analytics',
           items: [
             {
               html: `
                 <div class="logo_footer" />
               `,
-            },{
+            }, {
               label: 'info@seidoranalytics.com',
               href: 'mailto:info@seidoranalytics.com',
             }
@@ -221,58 +221,66 @@ const config: Config = {
             {
               label: 'Crestone',
               to: '/docs/crestone/intro',
-            },{
+            }, {
               label: 'Daiana',
               to: '/docs/daiana/intro',
             },
             {
               label: 'Doxa',
-              to: '/docs/doxa/intro',},
-              {
-                label: 'Cloud Costing',
-                to: '/docs/cc/intro',},
-              {
-                label: 'Harbinger',
-                to: '/docs/harbinger/intro',},
-              {
-                label: 'Feelings',
-                to: '/docs/feelings/intro',},
-              
+              to: '/docs/doxa/intro',
+            },
+            {
+              label: 'Cloud Costing',
+              to: '/docs/cc/intro',
+            },
+            {
+              label: 'Harbinger',
+              to: '/docs/harbinger/intro',
+            },
+            {
+              label: 'Feelings',
+              to: '/docs/feelings/intro',
+            },
+
           ],
         },
         {
           title: 'Community',
           items: [
             {
-                label: 'Success Factors',
-                to: '/docs/successfactors/intro',
+              label: 'Success Factors',
+              to: '/docs/successfactors/intro',
             },
             {
-                label: 'Business One Analytics',
-                to: '/docs/businessoneanalytics/intro',
+              label: 'Business One Analytics',
+              to: '/docs/businessoneanalytics/intro',
             },
             {
-                label: 'ByDesign',
-                to: '/docs/bydesign/intro',
+              label: 'ByDesign',
+              to: '/docs/bydesign/intro',
             },
             {
-                label: 'S/4HANA Analytics​',
-                to: '/docs/s4hanaanalytics/intro',
-              },
-              {
-                label: 'Planning',
-                to: '/docs/planning/intro',
-              },
+              label: 'S/4HANA Analytics​',
+              to: '/docs/s4hanaanalytics/intro',
+            },
+            {
+              label: 'Planning',
+              to: '/docs/planning/intro',
+            },
           ],
         },
         {
           title: 'More',
           items: [
-            
+
             {
               label: 'Admin',
               to: '/docs/admin',
               sidebarId: 'doxaSidebar',
+            },
+            {
+              label: 'Herramientas',
+              to: '/docs/portal/introduccion',
             },
             {
               label: 'Big Data',
@@ -297,10 +305,10 @@ const config: Config = {
             {
               label: 'Technology Management',
               href: 'https://www.seidoranalytics.com/technology-management/',
-            },{
+            }, {
               label: 'Data Governance',
               href: 'https://www.seidoranalytics.com/data-governance/',
-            },{
+            }, {
               label: 'Smart Workplace',
               href: 'https://www.seidoranalytics.com/workspace-nuvolcloud/',
             }
@@ -312,7 +320,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
- 
+
     algolia: {
       // The application ID provided by Algolia
       appId: 'CCOGV4MJ51',
@@ -327,15 +335,15 @@ const config: Config = {
       replaceSearchResultPathname: {
         from: '/docs/', // or as RegExp: /\/docs\//
         to: '/docs/',
-      },      
+      },
       // Optional: Algolia search parameters
       searchParameters: {},
       // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
       // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
-    
-      }
+
+    }
   } satisfies Preset.ThemeConfig,
 };
 

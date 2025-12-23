@@ -47,9 +47,7 @@
     "message": "system mode",
     "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-  },
-  
+  "theme.colorToggle.ariaLabel.mode.light": {},
   "theme.colorToggle.ariaLabel.mode.light": {
     "message": "modo claro",
     "description": "The name for the light color mode"
@@ -324,76 +322,71 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
-  },  
-
-  "actin.title": {
-  "message": "Productos Act In"
   },
-
+  "actin.title": {
+    "message": "Productos Act In"
+  },
   "actin.successFactors.desc": {
     "message": "Comprende mejor su negocio y abordar los desafíos para mejorar el desempeño de la empresa."
   },
-
   "actin.businessOne.desc": {
-    "message":  "Ofrece análisis e información a partir de los datos de contenidos en su solución SAP Business One (SQL o HANA) para una toma de decisiones más eficaz."
+    "message": "Ofrece análisis e información a partir de los datos de contenidos en su solución SAP Business One (SQL o HANA) para una toma de decisiones más eficaz."
   },
-
   "actin.byDesign.desc": {
-    "message":  "Poderosa solución de análisis flexible que integra datos clave del negocio de SAP ByD y otras fuentes para un análisis más eficaz y transversal entre sistemas."
+    "message": "Poderosa solución de análisis flexible que integra datos clave del negocio de SAP ByD y otras fuentes para un análisis más eficaz y transversal entre sistemas."
   },
-
   "actin.s4hana.desc": {
     "message": "Es una solución analítica modular y lista para usar que se integra con SAP S/4HANA. Está diseñada para acelerar la toma de decisiones empresariales mediante visualizaciones claras."
   },
-
-
   "actin.sacPlanning.desc": {
     "message": "Es una solución analítica modular y lista para usar que se integra con SAP S/4HANA. Está diseñada para acelerar la toma de decisiones empresariales mediante visualizaciones claras."
   },
-
-
   "ownp.title": {
-  "message": "Productos"
-},
-"owno.doxa":{
-  "message": "Doxa es una solución integral para gestionar y optimizar todo el ciclo de vida de sus activos, desde la adquisición hasta la eliminación."
-},"owno.harbinger": {
-  "message": "Harbinger anticipa escenarios empresariales con análisis predictivo y previsiones avanzadas."
-},
-"owno.cc":{
-  "message": "Cloud Costing optimiza los gastos en la nube, proporcionando transparencia y control sobre los recursos."
+    "message": "Productos"
+  },
+  "owno.doxa": {
+    "message": "Doxa es una solución integral para gestionar y optimizar todo el ciclo de vida de sus activos, desde la adquisición hasta la eliminación."
+  },
+  "owno.harbinger": {
+    "message": "Harbinger anticipa escenarios empresariales con análisis predictivo y previsiones avanzadas."
+  },
+  "owno.cc": {
+    "message": "Cloud Costing optimiza los gastos en la nube, proporcionando transparencia y control sobre los recursos."
+  },
+  "owno.feelings": {
+    "message": "Feelings analiza el sentimiento y las emociones en el texto, mejorando la comprensión de las experiencias de los clientes."
+  },
+  "owno.crestone": {
+    "message": "Crestone simplifica la extracción de datos de SAP, lo que permite transferencias fluidas a plataformas modernas en la nube."
+  },
+  "owno.daiana": {
+    "message": "Daiana es una asistente de IA que automatiza los flujos de trabajo y mejora las interacciones basadas en el conocimiento."
+  },
+  "hero.title": {
+    "message": "Explore el ecosistema de SEIDOR Analytics"
+  },
+  "hero.desc": {
+    "message": "Conoce nuestras soluciones, accede a sus documentaciones y mantente al tanto de los próximos eventos."
+  },
+  "hero.bell": {
+    "message": "Ver todos los anuncios"
+  },
+  "banner.text": {
+    "message": "Encuentra toda la documentación de los productos de SEIDOR"
+  },
+  "dox.text": {
+    "message": "Acceso a nuestras documentaciones"
+  },
+  "boxdoc.download": {
+    "message": "Descargar"
+  },
+  "boxdoc.language": {
+    "message": "Idioma"
+  },
+  "boxdoc.format": {
+    "message": "Formato"
+  },
+  "owntech.nav": {
+    "message": "Productos Own Tech"
+  }
 }
-,"owno.feelings":{
-  "message": "Feelings analiza el sentimiento y las emociones en el texto, mejorando la comprensión de las experiencias de los clientes."
-},
-"owno.crestone":{
-  "message": "Crestone simplifica la extracción de datos de SAP, lo que permite transferencias fluidas a plataformas modernas en la nube."
-},
-"owno.daiana":{
-  "message": "Daiana es una asistente de IA que automatiza los flujos de trabajo y mejora las interacciones basadas en el conocimiento."
-},
-"hero.title":{
-  "message": "Explore el ecosistema de Seidor Analytics"
-},
-"hero.desc":{
-  "message": "Conoce nuestras soluciones, accede a sus documentaciones y mantente al tanto de los próximos eventos."
-},
-"hero.bell":{
-  "message": "Ver todos los anuncios"
-},
-"banner.text":{
-  "message": "Encuentra toda la documentación de los productos de Seidor"
-},
-"dox.text":{
-  "message": "Acceso a nuestras documentaciones"
-},
-"boxdoc.download":{
-  "message": "Descargar"},
-  "boxdoc.language":{
-    "message": "Idioma"},
-  "boxdoc.format":{
-    "message": "Formato"},
-  "owntech.nav":{
-    "message": "Productos Own Tech"}
-}
-

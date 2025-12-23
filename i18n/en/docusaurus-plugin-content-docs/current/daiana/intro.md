@@ -12,7 +12,7 @@ pdfDoc:  "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidora
 
 **Your AI-Powered Virtual Agent**
 
-Daiana is Seidor Analytics' platform that enables you to create, train and deploy virtual agents powered by artificial intelligence.
+Daiana is SEIDOR Analytics' platform that enables you to create, train and deploy virtual agents powered by artificial intelligence.
 
 From conversational assistants to complex customer service systems or process automation, Daiana offers a comprehensive, scalable and adaptable solution for every need.
 

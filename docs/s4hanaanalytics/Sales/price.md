@@ -33,7 +33,7 @@ import BoxDoc from '@site/src/components/boxdocs';
 
 </div>
 
-## Infraestructura Seidor Analytics
+## Infraestructura SEIDOR Analytics
 La siguiente tabla detalla la inversión requerida para implementar **Act·in | SAP S/4HANA Analytics**, considerando distintos escenarios según el número de módulos. Incluye costos de suscripción mensual, licencias, componentes de extracción de datos, horas de soporte y el valor de horas adicionales.
 
 | Concepto                                | 1 Módulo      | 2 Módulos     | 3 Módulos     |

@@ -8,7 +8,7 @@ pdfDoc: https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidorana
 ---
 ![Doxa Banner](/img/doxa.png)
 
-DOXA by Seidor Analytics is a solution that enables businesses and individuals to create, distribute and analyze surveys and questionnaires in a simple, fast and efficient way.
+DOXA by SEIDOR Analytics is a solution that enables businesses and individuals to create, distribute and analyze surveys and questionnaires in a simple, fast and efficient way.
 
 With a user-friendly interface and advanced analytics tools, DOXA positions itself as the ideal solution for collecting feedback and obtaining valuable insights.
 

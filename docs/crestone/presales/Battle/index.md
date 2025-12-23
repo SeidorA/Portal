@@ -1,10 +1,12 @@
 ---
-title: Crestone vs Xtract Universal
+title:  Battle Cards
 restricted_access: true
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 
-<div class="padding-vert--sd">
+
+**Esta Battle Card** tiene como objetivo proporcionar una visión clara y estructurada para comparar **Crestone** frente a otras soluciones ampliamente utilizadas para la extracción e integración de datos desde SAP y sistemas empresariales hacia plataformas analíticas y de nube, específicamente **Xtract Universal**, **Fivetran** y **BigQuery Toolkit**.
+
 
 <BoxDoc
   title="Battle Card"
@@ -12,41 +14,52 @@ import BoxDoc from '@site/src/components/boxdocs';
   format="PDF"
   brand="Crestone"
   titleimg="Battle Card"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Efspj64MiylAi8aQGntpitUBbENvSlMcqn3oLRwle5GXCQ?e=3xzuY"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQCRZBi2p_FNRbmCR_PbfcPlAdpNQH1MbWpVVcxHYkBYVSQ?e=hvSsxf"
 >
-  Crestone y Xtract Universal son soluciones para extraer datos de SAP hacia múltiples destinos. Mientras que Xtract Universal destaca por la amplitud de conectores disponibles y su API de ejecución remota, Crestone ofrece una alternativa más accesible y flexible, con ejecución en servidor, programación avanzada de jobs, soporte para reportes Z y exportación directa a plataformas como Databricks.
-</BoxDoc>
-
-<BoxDoc
-  title="Battle Card"
-  language="Ingles"
-  format="PDF"
-  brand="Crestone"
-  titleimg="Battle Card"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EQtiRED_wkZEk142rte7D7sBv1KdxRW0XMfdP1pWikyKDA?e=IxQfIG"
->
-  Crestone and Xtract Universal are solutions for extracting data from SAP to multiple destinations. While Xtract Universal stands out for the breadth of connectors available and its remote execution API, Crestone offers a more accessible and flexible alternative, with server execution, advanced job scheduling, support for Z reports, and direct export to platforms such as Databricks.
+  Accede al catálogo completo de comparaciones en formato PDF, donde encontrarás todas las Battle Cards en un solo lugar. Este recurso centralizado te permitirá consultar rápidamente ventajas, capacidades y diferenciales clave de Crestone frente a otras soluciones.
 </BoxDoc>
 
 
+**Esta Battle Card** está diseñada como una herramienta de apoyo para equipos de ventas y preventa, permitiendo identificar rápidamente las fortalezas diferenciales de **Crestone**, los escenarios en los que resulta más competitivo y los contextos donde cada alternativa puede ser más adecuada según las necesidades del cliente.
 
+La comparación se centra en criterios clave como:
+
+- Orígenes soportados
+- Objetos soportados
+- Destinos
+- Automatización
+- Licenciamiento
+- Soporte
+- Ventajas
+
+**Crestone** se posiciona como una solución server-side, orientada a la orquestación eficiente de cargas **SAP**, con foco en simplicidad operativa, menor costo total de propiedad y una experiencia moderna para equipos técnicos, mientras que las soluciones comparadas presentan enfoques distintos: desde herramientas tradicionales instalables, hasta conectores SaaS generalistas o kits especializados para ecosistemas específicos.
+
+
+Este Battle Card no busca descalificar alternativas, sino facilitar una conversación informada con el cliente, destacando cuándo Crestone es la mejor opción y cómo se diferencia de sus competidores directos en escenarios reales de negocio.
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col--6">
+        <a href="./Xtract">
+            ![Crestone](/img/crestone/Xtractor.png)
+            <h3> Crestone vs Xtract Universal </h3>
+        </a>
+    </div>
+    <div class="col col--6">
+        <a href="./fivetran">
+            ![Crestone](/img/crestone/Fivetran.png)
+            <h3> Crestone vs Fivetran</h3>
+        </a>
+    </div>
+    <div class="col col--6">
+        <a href="./bigquery">
+            ![Crestone](/img/crestone/Big.png)
+            <h3> Crestone vs BigQuery Toolkit</h3>
+        </a>
+    </div>
+  </div>
 </div>
-
-
-
-Crestone y Xtract Universal son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico.
-
-| Criterio             | Crestone                                                                  | Xtract Universal                                                                 |
-|----------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| Conexión SAP         | ODATA, ODP(SAPI), TABLE                                                   | ODP, TABLE, CDC, BAPIS                                                           |
-| Extracción SAP       | Datos a múltiples destinos (stage, tabla)                                 | Datos a múltiples destinos (stage, tabla)                                        |
-| Workspace            | Sí                                                                        | No tiene                                                                         |
-| Alertas              | Sí, en aplicación y mail                                                  | No tiene                                                                         |
-| Destinos soportados  | AWS S3, Snowflake, Azure, Databricks                                      | Más variedad (Azure SQL, Oracle, MySQL, SAP HANA, Power BI, Tableau, etc.)       |
-| Automatización       | Programación de trabajos con múltiples nodos mediante “JOBS”              | API expuesta para ejecución remota                                               |
-| Implementación       | Cloud y/o Self-hosted                                                     | Instalación local                                                                |
-| Ayudas al usuario    | - Rapid deployment (SAP) <br/> - Importación y exportación de JOBS*        | Permite clonar ejecuciones                                                       |
-
 
 
 ## Público Objetivo 
@@ -69,4 +82,3 @@ Profesionales técnicos con experiencia en SAP, ABAP y data lakes, que buscan un
 ✓ Integración con Databricks: Permite exportar datos directamente en tablas dentro de Databricks, optimizando cargas de trabajo en data lakes. 
 
 ✓ Experiencia mejorada: Interfaz más intuitiva y accesible para usuarios técnicos.
-

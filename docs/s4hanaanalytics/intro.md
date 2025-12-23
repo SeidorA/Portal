@@ -131,7 +131,7 @@ import BoxDoc from '../../src/components/boxdocs';
 *Notas*
 - Este escenario de inversión asume que el cliente utiliza su propia cuenta de AWS para aprovisionar los servicios.​
 - Valores expresados en dólares americanos, no contienen impuestos ni retenciones.​
-- Propiedad Intelectual de Seidor Analytics, contrato de suscripción por 1 año de suscripción, con facturación mensual adelantada.​
+- Propiedad Intelectual de SEIDOR Analytics, contrato de suscripción por 1 año de suscripción, con facturación mensual adelantada.​
 - No se incluyen gastos de transporte, viaje o estadía.​
 - La formación será impartida por única vez al momento de la contratación inicial, en caso de necesitarse más capacitación el cliente podrá contratarla.
 
@@ -151,6 +151,6 @@ import BoxDoc from '../../src/components/boxdocs';
 *Notas*
 - Este escenario de inversión asume que el cliente no utiliza su propia cuenta de AWS para aprovisionar los servicios.​
 - Valores expresados en dólares americanos, no contienen impuestos ni retenciones.​
-- Propiedad Intelectual de Seidor Analytics, contrato de suscripción por 1 año de suscripción, con facturación mensual adelantada.​
+- Propiedad Intelectual de SEIDOR Analytics, contrato de suscripción por 1 año de suscripción, con facturación mensual adelantada.​
 - No se incluyen gastos de transporte, viaje o estadía.​
 - La formación será impartida por única vez al momento de la contratación inicial, en caso de necesitarse más capacitación el cliente podrá contratarla.​

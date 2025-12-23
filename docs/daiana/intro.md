@@ -9,7 +9,7 @@ import BoxDoc from '@site/src/components/boxdocs';
 
 **Su Agente Virtual Impulsado por AI**
 
-Daiana es la plataforma de Seidor Analytics que permite crear, entrenar y desplegar agentes virtuales potenciados con inteligencia artificial.
+Daiana es la plataforma de SEIDOR Analytics que permite crear, entrenar y desplegar agentes virtuales potenciados con inteligencia artificial.
 
 Desde asistentes conversacionales hasta sistemas complejos de atención al cliente o automatización de procesos, Daiana ofrece una solución integral, escalable y adaptable a cada necesidad.
 
