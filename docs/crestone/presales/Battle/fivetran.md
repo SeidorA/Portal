@@ -3,8 +3,18 @@ title: Crestone vs Fivetran
 restricted_access: true
 sidebar_position: 2
 ---
+import BoxDoc from '@site/src/components/boxdocs';
 
-Crestone y Fivetran son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico.
+<BoxDoc
+  title="Battle Card"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Battle Card"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQAIiLADJwnXQYO_b70kR3xQAWhmnB5mm4oo95WWqpJ6z8E?e=kTmtle"
+>
+  Crestone y Fivetran son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico.
+</BoxDoc>
 
 
 | Criterio             | Crestone                                                                  | Fivetran                                                                 |

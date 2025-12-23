@@ -3,11 +3,20 @@ title: Crestone vs BigQuery Toolkit for SAP (ABAP SDK – Google)
 restricted_access: true
 sidebar_position: 3
 ---
+import BoxDoc from '@site/src/components/boxdocs';
 
+<BoxDoc
+  title="Battle Card"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Battle Card"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQB9w3e90oJTTq10rP24xxDWAfX2nRVZOpy50mzTkIgQ9ag?e=rbWI8u"
+>
+  Crestone y BigQuery Toolkit for SAP (ABAP SDK – Google) son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico. 
+</BoxDoc>
 
-Crestone y BigQuery Toolkit for SAP (ABAP SDK – Google) son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico.
-
-| Criterio             | Crestone                                                                  | Xtract Universal                                                                 |
+| Criterio             | Crestone                                                                  | BigQuery Toolkit for SAP (ABAP SDK – Google)                                                                 |
 |----------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | Orígenes soportados | SAP ABAP (S/4 HANA Y ECC), SAP B1, SAP S/4 Public Edition, SAP HANA, SAP by Design | SAP ECC, SAP S/4HANA, SAP BW (sobre sistemas ABAP). |
 | Objetos soportados | Extractores ODP (SAPI), reportes estándar y custom, BAPIs, tablas, CDC, OData | Tablas SAP, vistas, extractores desarrollados en ABAP, datos custom (Z), lógica ABAP propia. |
