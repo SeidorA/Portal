@@ -83,7 +83,10 @@
     "message": "Find all the documentation for SEIDOR products"
   },
   "dox.text": {
-    "message": "Access to our documentation"
+    "message": "Official documentation for our solutions"
+  },
+  "dox.text.description": {
+    "message": "Consult the official documentation for each product, including key concepts, usage flows, configurations, and use cases."
   },
   "boxdoc.download": {
     "message": "Download"

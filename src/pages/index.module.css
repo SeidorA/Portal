@@ -186,6 +186,11 @@ margin: 10px 0;
 
 .docsrow{
   width: calc(25% - 10px);
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.05);
+    
+  }
 }
 @media screen and (max-width: 850px) {
   .docsrow{

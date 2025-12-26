@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -11,11 +11,11 @@ import Actin from '@site/src/components/indexitems/actin';
 import { Brand } from 'iconcaral2';
 
 import styles from './index.module.css';
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={styles.banner}>
       <div className="container">
@@ -23,7 +23,7 @@ function HomepageHeader() {
           Portal
         </Heading>
         <p className="hero__subtitle">
-          <Translate id='banner.text'></Translate> 
+          <Translate id='banner.text'></Translate>
         </p>
         <div className={styles.buttons}>
         </div>
@@ -37,7 +37,7 @@ type LinkProps = {
   title: string;
 }
 
-function documentationLink( link: string, title: string ): ReactNode {
+function documentationLink(link: string, title: string): ReactNode {
   return (
     <Link to={link} className={styles.docs}>
       <img src={`/img/index/Docs_${title}.png`} alt={title} />
@@ -49,23 +49,23 @@ const DocsList: LinkProps[] = [
   {
     title: 'Crestone',
     link: 'https://crestone-help.seidoranalytics.com/',
-  },{
+  }, {
     title: 'Daiana',
     link: 'https://daiana-help.seidoranalytics.com/',
   },
-  
-   {
+
+  {
     title: 'Harbinger',
     link: 'https://Harbinger-help.seidoranalytics.com/',
-  },{
+  }, {
     title: "Doxa",
     link: 'https://doxadocs.seidoranalytics.com/',
   }
-  
+
 ];
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -77,6 +77,7 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <div className="container margin-top--lg margin-bottom--lg">
         <h2 ><Translate id='dox.text'></Translate></h2>
+        <p><Translate id='dox.text.description'></Translate></p>
         <div className={styles.rowdocs}>
           {DocsList.map((props, idx) => (
             <div className={styles.docsrow} key={idx}>

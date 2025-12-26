@@ -375,7 +375,10 @@
     "message": "Encuentra toda la documentación de los productos de SEIDOR"
   },
   "dox.text": {
-    "message": "Acceso a nuestras documentaciones"
+    "message": "Documentación oficial de nuestras soluciones"
+  },
+  "dox.text.description": {
+    "message": "Consultá la documentación oficial de cada producto, incluyendo conceptos clave, flujos de uso, configuraciones y casos de aplicación."
   },
   "boxdoc.download": {
     "message": "Descargar"
