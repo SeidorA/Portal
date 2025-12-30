@@ -56,6 +56,52 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 28px;
+    }
+    h5{
+        color: var(--carbon);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
 
+    }
+}
+
+
+/* feture  in timeline */
+
+.featurecheck{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notrealization, .realization{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    border: solid 1px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.notrealization{
+    color: var(--hard);
+    border-color: var(--hard);
+}
+
+.realization{
+    color: var(--Aprove);
+    border-color: var(--Aprove);
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: var(--carbon);
+    p{
+        margin: 0;
     }
 }

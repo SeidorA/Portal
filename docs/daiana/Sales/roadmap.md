@@ -16,38 +16,19 @@ Este plan refleja nuestras principales prioridades, las nuevas funcionalidades y
 
 Cada avance que verán está pensado para sumar valor real a los usuarios, mejorar la eficiencia del equipo y mantenernos un paso adelante en innovación.
 
+
+
+<a href="./Timeline" >
+  <div className="timeline">
+  Ver Timeline 
+  <CaralIcon name="chevronRigth" size={30} />
+  </div>
+</a>
+
+
+
 A continuación, encontrarán un resumen de las principales iniciativas organizadas por trimestre 👇
 
-
-
-## Q4 2025
-Este trimestre nos enfocamos en presentar la nueva versión de la plataforma Daiana con mejoras en interfaz, rendimiento y gestión de asistentes, permitir la interacción directa con los asistentes de Daiana desde entornos colaborativos corporativos y Fortalecer la seguridad y control de acceso sobre los asistentes compartidos dentro y fuera de la organización.
-
-<div className="boxrroadmap">
-  <Cardroad title="Octubre | 2025">
-    <Kind />
-    <Subitle title="Chat enriquecido para Daiana Studio" brand  icon="Daiana"/>
-    <p>
-      Se incorporará una nueva experiencia de interacción con los agentes creados en Studio, que permitirá respuestas más dinámicas, con elementos visuales, botones y acciones integradas dentro del chat, como interacción por voz.
-    </p>
-  </Cardroad>
-
-  <Cardroad title="Noviembre | 2025">
-    <Kind integration />
-    <Subitle title="Integracion de DB a MS Team" brand icon="Teams"/>
-    <p>
-    Estableceremos una integración profunda para sincronizar datos clave de Sales Cloud, Service Cloud y Marketing Cloud.
-    </p>
-  
-  </Cardroad>
-
-  <Cardroad title="Diciembre | 2025">
-    <Kind  />
-    <Subitle title="Asistentes compartidos"  icon="key"/>
-    <p> Se permitirá compartir el acceso a un asistente mediante un link seguro, para garantizar la seguridad y control de acceso en escenarios donde un asistente se comparte con usuarios externos o grupos limitados, sin exponerlo públicamente </p>
-    
-  </Cardroad>
-</div>
 
 
 ## Q1 2026
@@ -56,9 +37,9 @@ Este trimestre está fuertemente unificar el acceso y autenticación de usuarios
 <div className="boxrroadmap">
   <Cardroad title="Enero | 2026">
     <Kind integration/>
-    <Subitle title="Seguridad de SAP"  brand icon="SAP"/>
+    <Subitle title="LLM Ollama en Enterprise" brand icon="Ollama"/>
     <p>
-      Se habilitará la sincronización con roles y se lanzará un paquete integrado que combine Daiana con productos de analítica avanzada.
+    Se integrará compatibilidad con Ollama para desplegar LLMs internos, manteniendo la estructura de Daiana sin depender de servicios externos.
     </p>
     
   </Cardroad>
@@ -89,9 +70,9 @@ Para este trimestre, nos enfocaremos en ofrecer una alternativa local y personal
 <div class="boxrroadmap">
   <Cardroad title="Abril | 2026">
     <Kind integration />
-    <Subitle title="LLM Ollama en Enterprise" icon="Ollama"/>
+    <Subitle title="Seguridad de SAP"  brand icon="SAP"/>
     <p>
-      Se integrará compatibilidad con Ollama para desplegar LLMs internos, manteniendo la estructura de Daiana sin depender de servicios externos.
+      Se habilitará la sincronización con roles y se lanzará un paquete integrado que combine Daiana con productos de analítica avanzada.
     </p>
     
   </Cardroad>
