@@ -17,3 +17,19 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+Crestone:
+  label: Crestone
+  permalink: /crestone
+  description: Crestone tag description
+
+Daiana:
+  label: Daiana
+  permalink: /daiana
+  description: Daiana tag description
+
+Harbinger:
+  label: Harbinger
+  permalink: /harbinger
+  description: Harbinger tag description
+

@@ -1,25 +1,18 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+rosario:
+  name: Rosario Stremel
+  title: Account Executive • Commercial
+  image_url: /img/pr/rosario.jpg
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    linkedin: rosario-stremel
+    github: RosarioStremel
+    newsletter: https://app.humand.co/profile/1228174
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+matias:
+  name: Matias Ariel Rodriguez
+  title: Senior Data Analyst • Consulting
+  image_url: /img/pr/matias.jpg
+  page: true
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    linkedin: matias-ariel-rodriguez
+    newsletter: https://app.humand.co/profile/285040

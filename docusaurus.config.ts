@@ -188,7 +188,7 @@ const config: Config = {
         },
 
 
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/blog', label: 'Novedades', position: 'left' },
         {
           type: 'localeDropdown',
           position: 'right',
