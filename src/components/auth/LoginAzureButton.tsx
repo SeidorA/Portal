@@ -31,17 +31,6 @@ export const LoginAzureButton: React.FC = () => {
 
     return (
         <div className="azure-login-container" style={{ margin: '10px 0', width: '100%' }}>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                margin: '20px 0',
-                color: '#666',
-                fontSize: '14px'
-            }}>
-                <div style={{ flex: 1, height: '1px', backgroundColor: '#e1e1e1' }}></div>
-                <span style={{ padding: '0 10px' }}>O</span>
-                <div style={{ flex: 1, height: '1px', backgroundColor: '#e1e1e1' }}></div>
-            </div>
 
             <button
                 onClick={handleLogin}

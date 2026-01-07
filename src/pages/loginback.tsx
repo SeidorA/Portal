@@ -39,6 +39,49 @@ export default function LoginPage() {
         <h1>¡Bienvenido!</h1>
         <p>Para iniciar sesión necesita una cuenta</p>
         <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="ej: info@seidor.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={styles.inputContainer}
+          />
+
+
+
+
+          <input
+            type="password"
+            placeholder="Tu contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className={styles.inputContainer}
+          />
+          {error && (
+            <div style={{
+              color: 'red',
+              marginBottom: '1rem',
+              padding: '0.5rem',
+              backgroundColor: '#ffeaea',
+              border: '1px solid #ffcaca',
+              borderRadius: '4px'
+            }}>
+              {error}
+            </div>
+          )}
+          <button
+            type="submit"
+            disabled={loading}
+            className={styles.btn}
+            style={{
+              backgroundColor: loading ? '#ccc' : '#07153a',
+              color: '#fff',
+              cursor: loading ? 'not-allowed' : 'pointer'
+            }}
+          >
+            {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
+          </button>
           <LoginAzureButton />
         </form>
       </div>

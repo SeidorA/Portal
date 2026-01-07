@@ -11,7 +11,9 @@ export default function NavbarUser() {
 
   return (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', padding: '0 10px' }}>
-      <span style={{ fontSize: '0.9rem' }}>{session.user.email?.replace(/@seidoranalytics\.com$/i, '')}</span> | 
+      <span style={{ fontSize: '0.9rem' }}>
+        {session.user.user_metadata?.full_name || session.user.email?.replace(/@seidoranalytics\.com$/i, '')}
+      </span> |
       <Link to="/logout">Logout</Link>
     </div>
   );
