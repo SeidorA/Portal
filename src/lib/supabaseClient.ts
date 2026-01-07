@@ -6,8 +6,8 @@ import { createClient } from '@supabase/supabase-js';
 // are present in the process when running `docusaurus start` or `docusaurus build`.
 // We keep the previous hard-coded values as a fallback (useful for quick local dev),
 // but you should set the env vars for production and avoid committing secrets.
-const supabaseUrl = process.env.SUPABASE_URL || 'https://bddshydwlmeszaaqncrt.supabase.co'; // fallback
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkZHNoeWR3bG1lc3phYXFuY3J0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI4NTQ2MzQsImV4cCI6MjA2ODQzMDYzNH0.SjPTorvgsuleFX0LiQN2cIExaOsDjGGUwsvTQWOSjRQ'; // fallback
+const supabaseUrl = process.env.SUPABASE_URL || 'https://supa.portal.seidoranalytics.com'; // fallback
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyAgCiAgICAicm9sZSI6ICJhbm9uIiwKICAgICJpc3MiOiAic3VwYWJhc2UtZGVtbyIsCiAgICAiaWF0IjogMTY0MTc2OTIwMCwKICAgICJleHAiOiAxNzk5NTM1NjAwCn0.dc_X5iR_VP_qT0zsiyj_I_OZ2T9FtRU2BBNWN8Bu4GE'; // fallback
 
 if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
   // Informative warning during dev; in production you probably won't want this log.
@@ -28,7 +28,7 @@ export const getActiveRecords = async (tableName: string) => {
     .select('*')
     .eq('Active', true)
     .order('id', { ascending: true });
-    
+
   return { data, error };
 };
 
