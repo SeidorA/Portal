@@ -56,7 +56,7 @@ const DocsList: LinkProps[] = [
 
   {
     title: 'Harbinger',
-    link: 'https://Harbinger-help.seidoranalytics.com/',
+    link: 'https://harbingerdocs.seidoranalytics.com/',
   }, {
     title: "Doxa",
     link: 'https://doxadocs.seidoranalytics.com/',
