@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
+console.log('🚀 AuthContext.tsx file loaded');
+
 type AuthContextType = {
   session: any;
   loading: boolean;
@@ -16,6 +18,7 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  console.log('🏗️ AuthProvider rendering');
   const [session, setSession] = useState<any>(null);
   const [roles, setRoles] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -99,7 +102,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const initializeAuth = async () => {
+      console.log('🔄 Initializing Auth...');
       const { data: { session } } = await supabase.auth.getSession();
+      console.log('📡 Session fetched:', session ? 'User logged in' : 'No user');
       setSession(session);
 
       if (session?.user) {
