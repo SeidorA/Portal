@@ -102,30 +102,50 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const initializeAuth = async () => {
-      console.log('🔄 Initializing Auth...');
-      const { data: { session } } = await supabase.auth.getSession();
-      console.log('📡 Session fetched:', session ? 'User logged in' : 'No user');
-      setSession(session);
+      try {
+        console.log('🔄 Initializing Auth...');
+        const timeout = setTimeout(() => {
+          console.warn('⚠️ supabase.auth.getSession() is taking longer than 5 seconds...');
+        }, 5000);
 
-      if (session?.user) {
-        let userRoles = await fetchRoles(session.user.id);
-        userRoles = await autoAssignSalesRole(session.user, userRoles);
-        setRoles(userRoles);
-      } else {
-        setRoles([]);
+        const { data: { session }, error } = await supabase.auth.getSession();
+        clearTimeout(timeout);
+
+        if (error) {
+          console.error('❌ Error fetching session:', error);
+        }
+
+        console.log('📡 Session fetched:', session ? 'User logged in' : 'No user');
+        if (session) {
+          console.log('📧 Logged as:', session.user.email);
+        }
+
+        setSession(session);
+
+        if (session?.user) {
+          let userRoles = await fetchRoles(session.user.id);
+          console.log('🎭 Fetched roles:', userRoles);
+          userRoles = await autoAssignSalesRole(session.user, userRoles);
+          setRoles(userRoles);
+        } else {
+          setRoles([]);
+        }
+      } catch (err) {
+        console.error('💥 Critical error in initializeAuth:', err);
+      } finally {
+        setLoading(false);
       }
-
-      setLoading(false);
     };
 
     initializeAuth();
 
-    const { data: listener } = supabase.auth.onAuthStateChange(async (_event, session) => {
+    const { data: listener } = supabase.auth.onAuthStateChange(async (event, session) => {
+      console.log('🔔 Auth State Changed:', event);
       setSession(session);
       if (session?.user) {
-        // Only fetch if we don't have roles or if session user changed (though usually full reload happens)
-        // For simplicity, re-fetch to be safe on login
+        console.log('📧 Session user:', session.user.email);
         let userRoles = await fetchRoles(session.user.id);
+        console.log('🎭 Fetched roles (on change):', userRoles);
         userRoles = await autoAssignSalesRole(session.user, userRoles);
         setRoles(userRoles);
       } else {
