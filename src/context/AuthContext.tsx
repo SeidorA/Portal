@@ -43,17 +43,28 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const autoAssignSalesRole = async (user: any, currentRoles: string[]) => {
-    if (currentRoles.includes('Sales')) return currentRoles;
+    console.log('Checking auto-assignment for user:', user.email);
+    console.log('User metadata:', user.user_metadata);
+    console.log('Current roles:', currentRoles);
 
-    const department = user.user_metadata?.department;
-    const jobTitle = user.user_metadata?.job_title;
+    if (currentRoles.includes('Sales')) {
+      console.log('User already has Sales role, skipping auto-assignment');
+      return currentRoles;
+    }
 
-    const isSalesTeam = [department, jobTitle].some(val =>
+    const { department, job_title } = user.user_metadata || {};
+    console.log('Detected Department:', department);
+    console.log('Detected Job Title:', job_title);
+
+    const isSalesTeam = [department, job_title].some(val =>
       val && (val.toLowerCase().includes('commercial') || val.toLowerCase().includes('presales'))
     );
 
+    console.log('Is user in Sales team?', isSalesTeam);
+
     if (isSalesTeam) {
       try {
+        console.log('Attempting to assign "Sales" role...');
         const { data: roleData, error: roleError } = await supabase
           .from('roles')
           .select('id')
