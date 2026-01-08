@@ -46,20 +46,26 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const autoAssignSalesRole = async (user: any, currentRoles: string[]) => {
-    console.log('Checking auto-assignment for user:', user.email);
-    console.log('User metadata:', user.user_metadata);
-    console.log('Current roles:', currentRoles);
+    console.log('--- Auto-Assignment Check ---');
+    console.log('User:', user.email);
+    console.log('Full Metadata:', JSON.stringify(user.user_metadata, null, 2));
 
     if (currentRoles.includes('Sales')) {
-      console.log('User already has Sales role, skipping auto-assignment');
+      console.log('User already has Sales role, skipping');
       return currentRoles;
     }
 
-    const { department, job_title } = user.user_metadata || {};
-    console.log('Detected Department:', department);
-    console.log('Detected Job Title:', job_title);
+    const metadata = user.user_metadata || {};
+    const customClaims = metadata.custom_claims || {};
 
-    const isSalesTeam = [department, job_title].some(val =>
+    // Azure AD can place these in different places depending on configuration
+    const department = metadata.department || customClaims.department;
+    const jobTitle = metadata.job_title || metadata.jobTitle || customClaims.jobTitle || customClaims.job_title;
+
+    console.log('Resolved Department:', department);
+    console.log('Resolved Job Title:', jobTitle);
+
+    const isSalesTeam = [department, jobTitle].some(val =>
       val && (val.toLowerCase().includes('commercial') || val.toLowerCase().includes('presales'))
     );
 
