@@ -42,13 +42,58 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  const autoAssignSalesRole = async (user: any, currentRoles: string[]) => {
+    if (currentRoles.includes('Sales')) return currentRoles;
+
+    const department = user.user_metadata?.department;
+    const jobTitle = user.user_metadata?.job_title;
+
+    const isSalesTeam = [department, jobTitle].some(val =>
+      val && (val.toLowerCase().includes('commercial') || val.toLowerCase().includes('presales'))
+    );
+
+    if (isSalesTeam) {
+      try {
+        const { data: roleData, error: roleError } = await supabase
+          .from('roles')
+          .select('id')
+          .ilike('name', 'Sales')
+          .single();
+
+        if (roleError || !roleData) {
+          console.error('Error finding "Sales" role:', roleError);
+          return currentRoles;
+        }
+
+        const { error: assignError } = await supabase
+          .from('user_roles')
+          .insert({ user_id: user.id, role_id: roleData.id });
+
+        if (assignError) {
+          if (assignError.code === '23505') { // Unique violation, user already has the role
+            return [...currentRoles, 'Sales'];
+          }
+          console.error('Error assigning "Sales" role:', assignError);
+          return currentRoles;
+        }
+
+        console.log('Successfully assigned "Sales" role automatically');
+        return [...currentRoles, 'Sales'];
+      } catch (err) {
+        console.error('Unexpected error during auto role assignment:', err);
+      }
+    }
+    return currentRoles;
+  };
+
   useEffect(() => {
     const initializeAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       setSession(session);
 
       if (session?.user) {
-        const userRoles = await fetchRoles(session.user.id);
+        let userRoles = await fetchRoles(session.user.id);
+        userRoles = await autoAssignSalesRole(session.user, userRoles);
         setRoles(userRoles);
       } else {
         setRoles([]);
@@ -64,7 +109,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       if (session?.user) {
         // Only fetch if we don't have roles or if session user changed (though usually full reload happens)
         // For simplicity, re-fetch to be safe on login
-        const userRoles = await fetchRoles(session.user.id);
+        let userRoles = await fetchRoles(session.user.id);
+        userRoles = await autoAssignSalesRole(session.user, userRoles);
         setRoles(userRoles);
       } else {
         setRoles([]);
