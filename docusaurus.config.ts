@@ -56,8 +56,7 @@ const config: Config = {
   ],
 
   // Set the production url of your site here
-  url: 'https://products.seidoranalytics.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
+  url: 'https://products.seidoranalytics.com/',
   baseUrl: '/',
 
   // Deployment settings: GitHub Pages specific fields removed becausenp
