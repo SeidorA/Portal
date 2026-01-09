@@ -18,7 +18,7 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  console.log('🏗️ AuthProvider rendering');
+  console.log('🏗️ 🚀🚀 AuthProvider rendering');
   const [session, setSession] = useState<any>(null);
   const [roles, setRoles] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
