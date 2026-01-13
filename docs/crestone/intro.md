@@ -75,7 +75,7 @@ import BoxDoc from '../../src/components/boxdocs';
 
 ## ¿Qué es Crestone?
 
-Crestone es un software de integración de datos que facilita la sincronización, transformación y transferencia de información entre diversos sistemas empresariales, incluyendo ERP, CRM, bases de datos y plataformas analíticas.  
+Crestone es un software de integración de datos que facilita la sincronización, transformación y transferencia de información entre diversos sistemas empresariales, incluyendo ERP, bases de datos y plataformas analíticas.  
 
 Su interfaz intuitiva permite que usuarios no técnicos gestionen flujos de datos complejos de manera eficiente.  
 
