@@ -1,0 +1,188 @@
+backend:
+  name: github
+  # Ajusta tu repositorio GitHub aquí: <org>/<repo>
+  repo: SeidorA/Portal
+  # Usaremos la rama 'CMS' para los cambios de contenido, como solicitaste
+  branch: CMS
+
+# Permite flujo editorial con drafts y revisiones
+publish_mode: editorial_workflow
+
+# Carpeta para medios (se publican en /img)
+media_folder: static/img
+public_folder: /img
+
+# Habilita backend local para desarrollo (requiere ejecutar el proxy)
+local_backend: true
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  # Blog
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: description, label: Descripción, widget: text, required: false }
+      - { name: date, label: Fecha, widget: datetime }
+      - { name: authors, label: Autores, widget: list, required: false }
+      - { name: tags, label: Tags, widget: list, required: false }
+
+  # Docs por áreas (sidebar autogenerado por carpeta)
+  - name: docs_crestone
+    label: Docs · Crestone
+    folder: docs/crestone
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+      - { name: iconName, label: Icono, widget: string, required: false }
+      - { name: useBrand, label: Usar marca, widget: boolean, required: false }
+      - { name: pdfDoc, label: PDF relacionado, widget: string, required: false }
+
+  - name: docs_daiana
+    label: Docs · Daiana
+    folder: docs/daiana
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+      - { name: iconName, label: Icono, widget: string, required: false }
+      - { name: useBrand, label: Usar marca, widget: boolean, required: false }
+      - { name: pdfDoc, label: PDF relacionado, widget: string, required: false }
+
+  - name: docs_doxa
+    label: Docs · Doxa
+    folder: docs/doxa
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_cc
+    label: Docs · CC
+    folder: docs/cc
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_harbinger
+    label: Docs · Harbinger
+    folder: docs/harbinger
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_feelings
+    label: Docs · Feelings
+    folder: docs/feelings
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_successfactors
+    label: Docs · SuccessFactors
+    folder: docs/successfactors
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_businessoneanalytics
+    label: Docs · Business One Analytics
+    folder: docs/businessoneanalytics
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_bydesign
+    label: Docs · ByDesign
+    folder: docs/bydesign
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_s4hanaanalytics
+    label: Docs · S4HANA Analytics
+    folder: docs/s4hanaanalytics
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_planning
+    label: Docs · Planning
+    folder: docs/planning
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
+
+  - name: docs_admin
+    label: Docs · Admin
+    folder: docs/admin
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: sidebar_position, label: Posición en sidebar, widget: number, required: false }
+      - { name: sidebar_label, label: Etiqueta sidebar, widget: string, required: false }
+      - { name: description, label: Descripción, widget: text, required: false }
