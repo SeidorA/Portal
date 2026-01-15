@@ -8,7 +8,7 @@ pdfDoc:  "https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidora
 ---
 
 
-![Daiana](/img/daiana.png)
+![Daiana](/img/portadadaiana.png)
 
 **Your AI-Powered Virtual Agent**
 

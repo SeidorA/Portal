@@ -35,19 +35,6 @@ const config: Config = {
         },
       };
     },
-    function buildExitPlugin() {
-      return {
-        name: 'build-exit-plugin',
-        async postBuild() {
-          // Force exit after build completes to avoid hanging processes
-          if (process.env.NODE_ENV === 'production') {
-            setTimeout(() => {
-              process.exit(0);
-            }, 1000);
-          }
-        },
-      };
-    },
   ],
 
   // Set the production url of your site here

@@ -4,8 +4,11 @@ import style from './files.module.css';
 import { useOneDrive } from '../../../hooks/useOneDrive';
 
 
-const OneDriveFilesReal = ({ folderPath = '', title = "Archivos Relacionados" }) => {
-  const { files, loading, error, downloadFile, refreshFiles } = useOneDrive(folderPath);
+const OneDriveFilesReal = ({ folderPath = '', title = "Archivos Relacionados", files: manualFiles = null }) => {
+  const { files: fetchedFiles, loading: fetchLoading, error, downloadFile, refreshFiles } = useOneDrive(folderPath);
+
+  const files = manualFiles || fetchedFiles;
+  const loading = manualFiles ? false : fetchLoading;
 
   const getFileIcon = (type) => {
     switch (type) {
@@ -74,7 +77,7 @@ const OneDriveFilesReal = ({ folderPath = '', title = "Archivos Relacionados" })
         <div className="bg-red-50 border border-red-200 rounded-lg p-6">
           <div className="text-red-600 font-medium">Error al cargar archivos</div>
           <div className="text-red-500 text-sm mt-1">{error}</div>
-          <button 
+          <button
             onClick={refreshFiles}
             className="mt-3 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 text-sm"
           >
@@ -101,18 +104,18 @@ const OneDriveFilesReal = ({ folderPath = '', title = "Archivos Relacionados" })
             <CaralIcon name='download' size={30} />
           </button>
         </div>
-        
+
         <div className="divide-y divide-gray-100">
           {files.filter(file => !file.isFolder).map((file) => (
-            <div 
-              key={file.id} 
+            <div
+              key={file.id}
               className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
             >
               <div className="flex items-center space-x-4 flex-1 min-w-0">
                 <div className="flex-shrink-0">
                   {getFileIcon(file.type)}
                 </div>
-                
+
                 <div className="flex-1 min-w-0">
                   <div className="text-sm font-medium text-gray-900 truncate">
                     {file.name}
@@ -122,7 +125,7 @@ const OneDriveFilesReal = ({ folderPath = '', title = "Archivos Relacionados" })
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex-shrink-0 ml-4">
                 <button
                   onClick={() => handleDownload(file)}
@@ -135,7 +138,7 @@ const OneDriveFilesReal = ({ folderPath = '', title = "Archivos Relacionados" })
             </div>
           ))}
         </div>
-        
+
         {files.length === 0 && (
           <div className="text-center py-12">
             <CaralIcon name="file" size={24} />

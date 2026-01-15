@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Brand, CaralIcon } from 'iconcaral2';
-import BoxFiles from './BoxFiles';
+import BoxFiles from './boxfiles';
 import style from './files.module.css';
 
 interface FileItem {
@@ -66,7 +66,7 @@ const OneDriveFiles = () => {
     }, 1000);
   }, []);
 
-  
+
 
   if (loading) {
     return (
