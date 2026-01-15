@@ -7,7 +7,7 @@ useBrand: true
 pdfDoc: 'https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EeycI3gso3lPlU8ymBy2v-IBN0kKMbCEW2IZ3jHGM0YmBw?e=YZo26h'
 ---
 
-![Harbinger Banner](/img/harbinger.png)
+![Harbinger Banner](/img/Harbinger.png)
 
 **Communication solution**
 

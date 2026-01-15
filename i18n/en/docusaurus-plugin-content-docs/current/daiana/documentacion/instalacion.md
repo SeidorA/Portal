@@ -26,7 +26,7 @@ hide_table_of_contents: true
 ![supabase](/img/documentos/instalacion/g.jpeg)
 
 8. En el campo Instance seleccionar la instancia recientemente creada y en **Private IP address** selecciona la IP Privada (debería estar disponible solo una). Luego click en Associate.
-![supabase](/img/documentos/instalacion/H.jpeg)
+![supabase](/img/documentos/instalacion/h.jpeg)
 
 9. La IP Pública estática se asignó correctamente.
 ![supabase](/img/documentos/instalacion/i.jpeg)
