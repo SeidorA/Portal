@@ -35,6 +35,22 @@ const config: Config = {
         },
       };
     },
+    function buildExitPlugin() {
+      return {
+        name: 'build-exit-plugin',
+        // @ts-ignore
+        postBuild(props) {
+          // @ts-ignore
+          const locale = props.i18n.currentLocale;
+          if (process.env.NODE_ENV === 'production' && locale === 'en') {
+            console.log('Build for "en" (final locale) complete. Forcing exit to avoid CI hang...');
+            setTimeout(() => {
+              process.exit(0);
+            }, 1000);
+          }
+        },
+      };
+    },
   ],
 
   // Set the production url of your site here
