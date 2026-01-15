@@ -16,11 +16,6 @@ const config: Config = {
 
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
-
   // Use a small plugin to inject selected environment variables into the
   // client bundle at build time. Put this inside `plugins` so Docusaurus
   // validation accepts it.
@@ -58,6 +53,7 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://products.seidoranalytics.com',
   baseUrl: '/',
+  trailingSlash: false,
 
   // Deployment settings: GitHub Pages specific fields removed becausenp
   // this project no longer uses GitHub Pages.
