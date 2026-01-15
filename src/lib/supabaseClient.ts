@@ -21,7 +21,15 @@ if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {
   );
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const isBrowser = typeof window !== 'undefined';
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: isBrowser,
+    autoRefreshToken: isBrowser,
+    detectSessionInUrl: isBrowser,
+  },
+});
 
 
 // Helper function to get active records from any table
