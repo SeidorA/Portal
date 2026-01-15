@@ -1,8 +1,6 @@
 services:
   docusaurus:
     image: cloudseidoranalytics/portal:9647e036f444b40c4c53abe80020d9798832aa41
-    build:
-      context: .
     ports:
       - "3050:80"  # Solo HTTP, Nginx Proxy Manager hace el TLS
     restart: unless-stopped
