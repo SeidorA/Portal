@@ -1,8 +1,8 @@
 services:
   docusaurus:
     image: cloudseidoranalytics/portal:4841a690389eca94541e706031959e0147aed7ac
-    build:
-      context: .
+    # IMPORTANTE: No añadir sección 'build' aquí. 
+    # La imagen se construye en GitHub Actions y Portainer solo debe descargarla (PULL).
     ports:
       - "3050:80"  # Solo HTTP, Nginx Proxy Manager hace el TLS
     restart: unless-stopped
