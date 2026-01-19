@@ -67,7 +67,7 @@ Responde preguntas técnicas de productos como lubricantes de motor por tipo de 
 
 <Webinar 
     title="Agente de ventas para Salesforce" 
-    img= "daiana/usos/salesforce.png"
+    img= "daiana/usos/Saledorce.png"
     description={<p>Responde preguntas básicas de productos y añade al cliente en la base de datos como lead</p> }
     duration= "00:30:35"
     speakers= "karen Ochoa M."
