@@ -16,13 +16,13 @@ Estos casos de uso forman parte del **catálogo de usos de Daiana**, pensado par
 
 Los siguientes casos de uso son ejemplos prácticos de cómo Daiana puede ser utilizada en diferentes entornos de trabajo y necesidades empresariales.
 
-### Asisitente de Colocación de créditos 
+### Asistente de colocación de créditos 
 Da cifra acerca de la aprobación, negación o estudio de creditos de consumo, hipotecarios y cupos de tarjetas de crédito
 
-### Asisitente de ventas 
+### Asistente de ventas 
 Muestra indicadores principales de ventas como productos, clientes, regiones
 
-### Asistente de Servicio al cliente
+### Asistente de servicio al cliente
 Responde consultas frecuentes de productos, servicios, horarios y ubicaciones de la organización
 
 ### Asistente de colocación de seguros 
