@@ -11,7 +11,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Portal',
-  tagline: 'Encuentra toda la documentación de los productos de Seidor',
+  tagline: 'Encuentra toda la documentación de los productos de SEIDOR Analytics',
   favicon: 'img/favicon.png',
 
 

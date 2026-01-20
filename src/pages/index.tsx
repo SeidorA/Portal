@@ -68,8 +68,8 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={translate({ message: 'Encuentra toda la documentación de los productos de SEIDOR Analytics | ', id: 'homepage.title' })}
+      description={siteConfig.tagline}>
       <Heroportal />
 
       <Products />
