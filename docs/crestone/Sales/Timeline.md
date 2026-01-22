@@ -3,7 +3,6 @@ title: Timeline
 description: Roadmap de Crestone Sales
 
 unlisted: true
-sidebar_position: 5
 ---
 import { Cardroad, Kind, Subitle, Featurecheck   }  from '@site/src/components/cardroad'; 
 

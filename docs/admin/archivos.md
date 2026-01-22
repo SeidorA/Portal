@@ -34,3 +34,6 @@ import ArchivosHijos from '@site/src/components/archivosHijos';
 <hr/>
 
 <ArchivosHijos source="12" title="Documentación | Cloud Costing" link="../cc/Sales" />
+
+
+<ArchivosHijos source="13" title="Inteligent Archiving | Crestone" link="../crestone/Sales/Archiving" />
