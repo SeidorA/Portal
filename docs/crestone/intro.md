@@ -66,6 +66,29 @@ import BoxDoc from '../../src/components/boxdocs';
   Presentación corporativa lista para exponer, con toda la información clave de Crestone: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
 </BoxDoc>
 
+
+<BoxDoc
+  title="Brochure comercial Microsoft"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Brochure comercial Microsoft"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQDNKngejzy5QZjpYR8VNVCAAUQBN1PxQUpPOT3766VuQ34?e=jjDzJF"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Crestone enfocada en los productos Microsoft: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+<BoxDoc
+  title="Brochure comercial Microsoft"
+  language="Inglés"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Easily replicate your data."
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQAIFkbZztrTQLjzl9OnB-jrAVaKqMLsLfMSj174SlI60u8?e=fuPOfF"
+>
+  Presentación corporativa lista para exponer, con toda la información clave de Crestone enfocada en los productos Microsoft: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
 </div>
 
 

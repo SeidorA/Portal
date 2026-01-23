@@ -3,6 +3,7 @@ title: Guía para creación de Data Advisor
 sidebar_label: Data Advisor
 sidebar_position: 1
 ---
+import BoxDoc from '@site/src/components/boxdocs';
 
 ## Historial de Revisiones
 | Fecha | Version | Descripción | Revisor |
@@ -221,3 +222,19 @@ Daiana Studio permite construir Data Advisors mediante flujos de agentes configu
 El enfoque presentado en esta guía muestra cómo utilizar los distintos componentes de la plataforma para implementar un Agent Flow basado en un patrón **Supervisor–Workers**, priorizando claridad de responsabilidades, mantenibilidad y comportamiento predecible.
 
 A partir de esta base, cada implementación puede adaptar los flujos, agentes y documentación según sus necesidades específicas, reutilizando la estructura común que provee la plataforma.
+
+
+
+## Documentación comercial
+
+<BoxDoc
+  title="SEIDOR Data Advisor - Uso Interno"
+  language="Español"
+  format="PPTX"
+  brand="SEIDOR Data Advisor"
+  titleimg="Easily replicate your data."
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQB1TCd1ZRDGQ6tg_MyE14F-AZkX7bZ57YE45TM3KSQ1KYI?e=PpXUWj"
+>
+  Incluye un asistente como parte del proyecto para que el equipo cuente con un consultor virtual disponible en todo momento. ​
+
+</BoxDoc>
