@@ -231,8 +231,8 @@ A partir de esta base, cada implementación puede adaptar los flujos, agentes y 
   title="SEIDOR Data Advisor - Uso Interno"
   language="Español"
   format="PPTX"
-  brand="SEIDOR Data Advisor"
-  titleimg="Easily replicate your data."
+  brand="Daiana"
+  titleimg="SEIDOR Data Advisor."
   onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQB1TCd1ZRDGQ6tg_MyE14F-AZkX7bZ57YE45TM3KSQ1KYI?e=PpXUWj"
 >
   Incluye un asistente como parte del proyecto para que el equipo cuente con un consultor virtual disponible en todo momento. ​
