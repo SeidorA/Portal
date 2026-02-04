@@ -36,7 +36,7 @@ export default function LoginPage() {
   return (
     <div className={styles.loginfull}>
       <div className={styles.loginContainer}>
-        <h1>¡Bienvenido!</h1>
+        <h1>Les damos la bienvenida</h1>
         <p>Para iniciar sesión necesita una cuenta</p>
         <form onSubmit={handleLogin}>
           <LoginAzureButton />
