@@ -30,41 +30,42 @@ Este trimestre está fuertemente enfocado en la Inteligencia Artificial y en la 
 <div className="boxrroadmap">
   <Cardroad title="Enero | 2026">
     <Kind />
-    <Subitle title="Daiana package"  brand icon="Daiana"/>
+    <Subitle title="OData in the app" icon="OData"/>
     <p>
-      Integración de asistentes inteligentes de la suite **Daiana**, que permiten realizar consultas en lenguaje natural sobre el contenido de tu base de datos **SAP S4/HANA**. Una nueva forma de obtener respuestas ágiles y precisas sin necesidad de escribir consultas técnicas.
+      Attachments and their target destination can now be configured directly within **OData**, along with improved URL readability and greater stability in connections, endpoint validation, and pagination.
     </p>
     <hr />
     <Kind integration />
-      <Subitle title="Integración con Oracle" brand icon="Oracle"/>
+      <Subitle title="General improvements" brand icon="Crestone"/>
       <p>
-      Integración profunda y optimizada para la extracción y procesamiento eficiente de datos hacia las bases de datos Oracle.
+      The complete OData extraction flow with attachments was optimized, with internal adjustments to ensure stronger consistency across configuration, execution, and final destination.
       </p>
   </Cardroad>
 
   <Cardroad title="Febrero | 2026">
     <Kind integration />
-    <Subitle title="Integración con MSSQL" brand icon="MSSQL"/>
+    <Subitle title="End-to-end attachments and better performance" />
     <p>
-    Habilitación del conector optimizado para la extracción y gestión de datos desde Microsoft SQL Server, garantizando la compatibilidad con entornos empresariales comunes.
+    The full attachments extraction flow has been implemented, enabling direct delivery to the configured destination, along with automatic generation of a metadata file for traceability. In addition, parallel processing was optimized (default 20 threads) to improve execution times.
     </p>
-    <hr />
-    <Subitle title="Integración con Sybase" brand icon="Sybase"/>
-    <p>
-    Integración de un conector dedicado para bases de datos Sybase, ampliando el ecosistema de bases de datos heredadas y críticas soportadas por la plataforma.
-    </p>
+    
   </Cardroad>
   
   <Cardroad title="Marzo | 2026">
     <Kind />
-    <Subitle title="AI Asistence" icon="squareFace"/>
+    <Subitle title="Licensing control" icon="squareFace"/>
     <p>
-      La facilidad de uso —uno de los pilares del producto— se potencia con la incorporación de **inteligencia artificial**, que te acompaña en la configuración, supervisión y resolución de tareas operativas, reduciendo tiempos y errores.
+      Implementation of a centralized interface for proactive management of the license lifecycle, including expiration alerts and usage tracking to avoid surprises at contract end.
     </p>
     <hr />
-      <Subitle title="Real Time conection"  icon="clock"/>
+      <Subitle title="SQL as a source"  icon="AzureSql"/>
       <p>
-        A la programación tradicional de transferencias se suma la posibilidad de operar en **tiempo real**, completando así una paleta de opciones flexible que se adapta a distintos escenarios de negocio y volumen de datos.
+        Enable SQL Server as a data source to extract tables/views, with support for full and (when applicable) incremental loads, plus flexible connection and query configuration.
+      </p>
+      <hr />
+      <Subitle title="Job execution triggers"  icon="job"/>
+      <p>
+        Provide a mechanism to automatically trigger jobs based on events/conditions (e.g., completion of a previous job, data availability, external signal, or schedule), reducing manual execution and improving orchestration.
       </p>
   </Cardroad>
 </div>
@@ -76,38 +77,41 @@ Este plan estratégico describe nuestras prioridades clave, las funcionalidades 
 <div class="boxrroadmap">
   <Cardroad title="Abril | 2026">
     <Kind />
-    <Subitle title="Query Designer" icon="code"/>
+    <Subitle title="PostgreSQL Integration" brand icon="PostgreSQL"/>
     <p>
-      Incorporación de un entorno visual para el diseño de consultas, que simplifica la creación y validación de reglas de extracción sin necesidad de conocimientos técnicos avanzados, optimizando la experiencia de los usuarios y la precisión de los resultados.
+       Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform.
     </p>
      <hr />
-    <Kind integration />
-    <Subitle title="SAP BW" brand icon="SAP"/>
+    <Subitle title="SAP Datasphere" brand icon="SAP"/>
     <p>
-    Implementación de una conexión avanzada con SAP BW para la extracción eficiente de datos de InfoProviders, DSOs y Cubos, consolidando la capacidad analítica de BI.
+    Incorporation of an automated channel for delivering CSV files, simplifying daily operations, reducing manual intervention, and ensuring up to date and reliable data for analysis. Additionally, it offers flexible shipping configuration and status tracking, improving operational efficiency and user experience.
     </p>
   </Cardroad>
 
   <Cardroad title="Mayo | 2026">
     <Kind integration />
-    <Subitle title="Integración con MySQL" brand icon="mySQL"/>
+    <Subitle title="Salesforce Integration" brand icon="Saleforce"/>
     <p>
-    Habilitación del conector optimizado para la extracción y gestión de datos desde Google BigQuery, garantizando la compatibilidad con entornos empresariales comunes.
+    We will establish a deep integration to synchronize key data from Sales Cloud, Service Cloud, and Marketing Cloud.
     </p>
     <hr />
-    <Subitle title="Integración con IBM" brand icon="IBMDb2"/>
+    <Subitle title="Oracle Integration" brand icon="Oracle"/>
     <p>
-    Integración de un conector dedicado para bases de datos Snowflake, ampliando el ecosistema de bases de datos en la nube soportadas por la plataforma.
+    Deep and optimized integration for efficient data extraction and processing to Oracle databases.
     </p>
   </Cardroad>
 
   <Cardroad title="Junio | 2026">
     <Kind integration />
-    <Subitle title="Integración con SAP BTP" brand icon="SAP"/>
+    <Subitle title="Sybase Integration" brand icon="Sybase"/>
     <p>
-    Ampliación de las capacidades de conexión incorporando soporte nativo para la plataforma multinube SAP Business Technology Platform (BTP), consolidando la interoperabilidad con ecosistemas empresariales críticos.
+    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
     </p>
     <hr />
+    <Subitle title="AI assistant" icon="squareFace"/>
+    <p>
+    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
+    </p>
   </Cardroad>
 
 </div>
@@ -118,17 +122,60 @@ Este trimestre nos enfocamos en fortalecer la base de nuestra plataforma mediant
 
 <div class="boxrroadmap">
   <Cardroad title="Julio | 2026">
-    <Kind integration/>
-    <Subitle title="Integración con Cloudera" icon="Cloudera" brand/>
+    <Kind />
+    <Subitle title="Real time connection"  icon="clock"/>
     <p>
-       Integración nativa y optimizada con el ecosistema Cloudera para la extracción, procesamiento y gestión de grandes volúmenes de datos, facilitando el análisis de Big Data.
+       In addition to traditional transfer scheduling, the ability to operate in real time is added, thus completing a flexible palette of options that adapts to different business scenarios and data volumes.
     </p>
+    <hr />
+    <Subitle title="Query Designer" icon="code"/>
+    <p>
+    Incorporation of a visual environment for query design, simplifying the creation and validation of extraction rules without the need for advanced technical knowledge, optimizing user experience and result accuracy.
+    </p>
+
   </Cardroad>
   <Cardroad title="Agosto | 2026">
-    <Kind  />
-    <Subitle title="Harbinger Alerts" brand icon="Harbinger"/>
+    <Kind  integration />
+    <Subitle title="Integrations SAP BW" brand icon="SAP"/>
     <p>
-    Extensión de las capacidades de monitoreo mediante notificaciones por **WhatsApp o SMS**, para que estés siempre informado sobre el estado de tus jobs y posibles incidentes, incluso fuera del entorno de trabajo.
+    Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities.
+    </p>
+    <hr />
+    <Subitle title="MySQL Integration" brand icon="mySQL"/>
+    <p>
+    Integration of a dedicated and optimized connector for data extraction and management from MySQL databases, covering one of the most widely used open source systems. 
     </p>
   </Cardroad>  
+
+  <Cardroad title="Septiembre | 2026">
+    <Kind  integration />
+    <Subitle title="IBM Integration" brand icon="IBMDb2"/>
+    <p>
+    Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities.
+    </p>
+    <hr />
+    <Subitle title="SAP BTP Integration" brand icon="SAP"/>
+    <p>
+    Expansion of connection capabilities by incorporating native support for the SAP Business Technology Platform (BTP), consolidating interoperability with critical enterprise ecosystems.
+    </p>
+  </Cardroad>  
+</div>
+
+## Q4 2026
+
+
+<div class="boxrroadmap">
+  <Cardroad title="Octubre | 2026">
+    <Kind />
+    <Subitle title="Cloudera Integration" brand icon="Cloudera"/>
+    <p>
+    Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data, facilitating Big Data analysis.
+    </p>
+    <hr />
+    <Subitle title="Harbinger Alerts" brand icon="Harbinger"/>
+    <p>
+    Extension of monitoring capabilities through notifications via WhatsApp or SMS, so you are always informed about the status of your jobs and potential incidents, even outside the work environment.
+    </p>
+  </Cardroad>
+
 </div>

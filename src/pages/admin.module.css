@@ -87,10 +87,9 @@
 /* TABLE STYLES */
 .tableContainer {
   background: white;
-  border-radius: 8px;
-  border: solid 1px var(--hard);
+
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  overflow: hidden;
+ 
 }
 
 .tableHeader {
