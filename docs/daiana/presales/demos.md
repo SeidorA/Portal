@@ -13,3 +13,7 @@ Cada demo está pensada para ilustrar, de forma clara y concreta, cómo los agen
 
 Estas demostraciones están diseñadas tanto para equipos comerciales como para responsables de implementación, facilitando la comprensión de las ventajas de Daiana en entornos reales.
 
+## Evaluaciones
+Las evaluaciones te ayudan a monitorear y comprender el rendimiento de tu aplicación de Chatflow/Agentflow
+
+<Archivos source="15" />

@@ -74,3 +74,8 @@ Cada demo está pensada para mostrar de manera práctica lo sencillo y flexible 
 <Archivos source="1" />
 
 
+## Attachments con Odata
+
+En esta sección encontrarás los videos para demostrar la conexión con ODATA SAP ByDesign para la extracción de registros y de sus Attachments
+
+<Archivos source="14" />
