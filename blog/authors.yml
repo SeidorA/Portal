@@ -16,3 +16,12 @@ matias:
   socials:
     linkedin: matias-ariel-rodriguez
     newsletter: https://app.humand.co/profile/285040
+
+
+francisco:
+  name: Francisco Chamorro
+  title: Team Lead | Products
+  image_url: /img/pr/fran.jpg
+  page: true
+  socials:
+    newsletter: https://app.humand.co/profile/1688585

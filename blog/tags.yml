@@ -33,3 +33,9 @@ Harbinger:
   permalink: /harbinger
   description: Harbinger tag description
 
+Portal:
+  label: Portal
+  permalink: /portal
+  description: Novedades sobre actulizaciones en el portal de productos de SEIDOR Analytics
+
+
