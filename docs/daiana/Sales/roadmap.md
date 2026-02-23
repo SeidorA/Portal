@@ -11,7 +11,7 @@ Les compartimos el Roadmap de DAIANA, que marca el rumbo de lo que se viene.
 
 Este plan refleja nuestras principales prioridades, las nuevas funcionalidades y las integraciones que seguirán potenciando la herramienta y abriendo camino a nuevas oportunidades de negocio.
 
-![Crestone Roadmap](/img/crestone/road/portada.png)
+![Crestone Roadmap](/img/daiana/road.png)
 
 
 Cada avance que verán está pensado para sumar valor real a los usuarios, mejorar la eficiencia del equipo y mantenernos un paso adelante en innovación.
