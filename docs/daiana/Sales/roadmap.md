@@ -32,65 +32,155 @@ A continuación, encontrarán un resumen de las principales iniciativas organiza
 
 
 ## Q1 2026
-Este trimestre está fuertemente unificar el acceso y autenticación de usuarios corporativos y Mejorar la precisión y relevancia de las respuestas de los asistentes mediante retroalimentación humana.
+
 
 <div className="boxrroadmap">
   <Cardroad title="Enero | 2026">
-    <Kind integration/>
-    <Subitle title="LLM Ollama en Enterprise" brand icon="Ollama"/>
+    <Kind/>
+    <Subitle title="Organización por Workspaces" icon="usersWifi"/>
     <p>
-    Se integrará compatibilidad con Ollama para desplegar LLMs internos, manteniendo la estructura de Daiana sin depender de servicios externos.
+      Incorporación de una nueva forma de organizar y gestionar tus desarrollos con IA para trabajar de manera ordenada y aislada por cuenta.
+      <br/>
+      Esto permite a las organizaciones:
+      <ul>
+        <li>SSeparar desarrollos por equipos de trabajo o áreas</li>
+        <li>Escalar la adopción sin perder control</li>
+        <li>Ordenar entornos bajo estándares corporativos</li>
+      </ul>
     </p>
-    
+    <hr/>
+     <Subitle title="Entorno de Evaluación y Testing" icon="editFile"/>
+    <p>
+      Se habilita un sistema de evaluación controlado para validar asistentes y flujos antes de su salida a producción.
+      <br/>
+      Beneficios para el negocio:
+      <ul>
+        <li>Reducción de riesgos en despliegues</li>
+        <li>Optimización de costos (tokens, performance)</li>
+        <li>Mejora continua basada en métricas</li>
+        <li>Mayor confiabilidad operativa</li>
+      </ul>
+    </p>
+
   </Cardroad>
 
   <Cardroad title="Febrero | 2026">
-    <Kind integration />
-    <Subitle title="Integración Active Directory" brand icon="Windows"/>
+    <Kind />
+    <Subitle title="Seguridad y Control de Accesos"  icon="lock"/>
     <p>
-    Daiana reconocerá usuarios y grupos provenientes de Active Directory, permitiendo otorgar accesos automáticos según políticas empresariales.
+    Refuerzo de la arquitectura de seguridad de DAIANA Studio con:
+    <ul>
+      <li>Gestión avanzada de roles y permisos</li>
+      <li>Control de acceso por Workspace</li>
+      <li>Aislamiento seguro entre proyectos</li>
+      <li>Mayor trazabilidad y gobernanza</li>
+    </ul>
+    Los permisos configurados desde Studio garantizan que la información no se comparta entre perfiles sin autorización, y trabajan en conjunto con los Workspaces para asegurar una separación clara y controlada entre usuarios, equipos y proyectos. Una estructura pensada para escalar la IA de forma segura, ordenada y alineada a estándares corporativos.
     </p>
-   
+    <hr/>
+    <Subitle title="Gestión de Aceleración de Cómputo" icon="gear"/>
+    <p>
+      **DAIANA** permite configurar el tipo de procesamiento según la infraestructura disponible.
+
+      Impacto para las organizaciones:
+      <ul>
+        <li>Mejor performance en tareas intensivas</li>
+        <li>Mayor eficiencia en consumo de recursos</li>
+        <li>Adaptabilidad a distintos entornos tecnológicos</li>
+        <li>Optimización de costos operativos</li>
+      </ul>
+    </p >
+
   </Cardroad>
   
   <Cardroad title="Marzo | 2026">
     <Kind />
-    <Subitle title="Feedback Loop" icon="refreshPresentation"/>
+    <Subitle title="Control de Licenciamiento" icon="refreshPresentation"/>
     <p>
-      Los administradores podrán marcar respuestas como “buenas” o “malas” para reentrenar los embeddings y prompts del asistente automáticamente, aplicable a los asistentes de documentos en entornos Enterprise.
+      Implementación de un sistema centralizado de gestión del ciclo de vida de licencias.
+      <br/>
+      Beneficios:
+      <ul>
+        <li>Alertas de vencimiento</li>
+        <li>Seguimiento de uso</li>
+        <li>Control de consumo por entorno</li>
+        <li>Mayor previsibilidad presupuestaria</li>
+      </ul>
     </p>
+    <hr/>
+    <Subitle title="Generación de Flujos mediante Lenguaje Natural" icon="jobs"/>
+    <p>
+      La plataforma acelera la construcción de flujos descriptos en lenguaje natural generando la estructura básica a través de la propia IA.  <br/>
+      Impacto para las organizaciones:
+      <ul>
+        <li>Reducción de barrera técnica</li>
+        <li>Aceleración en el desarrollo</li>
+        <li>Mayor autonomía de equipos funcionales</li>
+      </ul>
+    </p >
     
   </Cardroad>
 </div>
 
 
 ## Q2 2026
-Para este trimestre, nos enfocaremos en ofrecer una alternativa local y personalizable de modelos LLM dentro de entornos Enterprise, Ampliar las fuentes de conocimiento disponibles y optimizar la atención automatizada dirigiendo las consultas a la persona, área o sistema más adecuado.
 
 <div class="boxrroadmap">
   <Cardroad title="Abril | 2026">
-    <Kind integration />
-    <Subitle title="Seguridad de SAP"  brand icon="SAP"/>
+    <Kind  />
+    <Subitle title="Plataforma Interoperable (MCP Ready)"  icon="command"/>
     <p>
-      Se habilitará la sincronización con roles y se lanzará un paquete integrado que combine Daiana con productos de analítica avanzada.
+      DAIANA evoluciona hacia un modelo abierto capaz de integrarse con herramientas externas bajo estándares modernos.
+      <br/>
+      Esto permite:
+      <ul>
+        <li>Extender capacidades sin desarrollos adicionales</li>
+        <li>Integrarse con ecosistemas existentes</li>
+        <li>Construir arquitecturas distribuidas de IA</li>
+        <li>Escalar de forma modular</li>
+      </ul>
     </p>
     
   </Cardroad>
 
   <Cardroad title="Mayo | 2026">
-    <Kind integration />
-    <Subitle title="ORACLE DB en Enterprise" brand icon="Oracle"/>
+    <Kind  />
+    <Subitle title="Orquestación Multimodal"  icon="network"/>
     <p>
-    Se incorporará soporte nativo para conexión segura a Oracle Database dentro de los entornos Enterprise de Daiana.
+    Incorporación de capacidades para combinar texto, documentos, imágenes y audio dentro de un mismo flujo.
+    <br/>
+    Casos de valor:
+    <ul>
+      <li>Asistentes con entrada por voz</li>
+      <li>Análisis documental enriquecido</li>
+      <li>Procesamiento visual integrado</li>
+      <li>Experiencias conversacionales más avanzadas</li>
+    </ul>
     </p>
   
   </Cardroad>
 
   <Cardroad title="Junio | 2026">
     <Kind integration />
-    <Subitle title="Enrutamiento inteligente" icon="squareFace"/>
+    <Subitle title="Sistema Multiagente con Human-in-the-Loop" icon="squareFace"/>
     <p>
-    El sistema identificará la complejidad o tipo de solicitud y redirigirá automáticamente la interacción al canal o responsable correspondiente, saliendo del flujo de IA cuando sea necesario.
+    DAIANA incorpora orquestación avanzada entre múltiples agentes especializados.
+    <br/>
+    Capacidades:
+    <ul>
+      <li>Asignación dinámica según contexto</li>
+      <li>Decisiones condicionales automatizadas</li>
+      <li>Escalamiento inteligente</li>
+      <li>Intervención humana cuando el proceso lo requiera</li>
+    </ul>
+    <br/>
+    Impacto estratégico:
+    <ul>
+      <li>Automatización de procesos complejos</li>
+      <li>Reducción de carga operativa</li>
+      <li>Mayor control y supervisión</li>
+      <li>IA alineada a procesos críticos de negocio</li>
+    </ul>
     </p>
   </Cardroad>
 
