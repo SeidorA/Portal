@@ -25,25 +25,24 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
 
 
 ## Q1 2026
-Este trimestre está fuertemente enfocado en la Inteligencia Artificial y en la conectividad crítica en tiempo real con sistemas SAP y bases de datos clave, lo cual generará un salto cualitativo en la eficiencia de nuestros usuarios.
+
 
 <div className="boxrroadmap">
-  <Cardroad title="Enero | 2026">
+  <Cardroad title="January | 2026">
     <Kind />
     <Subitle title="OData in the app" icon="OData"/>
     <p>
       Attachments and their target destination can now be configured directly within **OData**, along with improved URL readability and greater stability in connections, endpoint validation, and pagination.
     </p>
     <hr />
-    <Kind integration />
       <Subitle title="General improvements" brand icon="Crestone"/>
       <p>
       The complete OData extraction flow with attachments was optimized, with internal adjustments to ensure stronger consistency across configuration, execution, and final destination.
       </p>
   </Cardroad>
 
-  <Cardroad title="Febrero | 2026">
-    <Kind integration />
+  <Cardroad title="February | 2026">
+    <Kind  />
     <Subitle title="End-to-end attachments and better performance" />
     <p>
     The full attachments extraction flow has been implemented, enabling direct delivery to the configured destination, along with automatic generation of a metadata file for traceability. In addition, parallel processing was optimized (default 20 threads) to improve execution times.
@@ -51,32 +50,33 @@ Este trimestre está fuertemente enfocado en la Inteligencia Artificial y en la 
     
   </Cardroad>
   
-  <Cardroad title="Marzo | 2026">
+  <Cardroad title="March | 2026">
     <Kind />
     <Subitle title="Licensing control" icon="squareFace"/>
     <p>
       Implementation of a centralized interface for proactive management of the license lifecycle, including expiration alerts and usage tracking to avoid surprises at contract end.
     </p>
-    <hr />
-      <Subitle title="SQL as a source"  icon="AzureSql"/>
-      <p>
-        Enable SQL Server as a data source to extract tables/views, with support for full and (when applicable) incremental loads, plus flexible connection and query configuration.
-      </p>
       <hr />
       <Subitle title="Job execution triggers"  icon="job"/>
       <p>
         Provide a mechanism to automatically trigger jobs based on events/conditions (e.g., completion of a previous job, data availability, external signal, or schedule), reducing manual execution and improving orchestration.
+      </p>
+    <hr />
+    <Kind integration />
+      <Subitle title="SQL as a source"  icon="AzureSql"/>
+      <p>
+        Enable SQL Server as a data source to extract tables/views, with support for full and (when applicable) incremental loads, plus flexible connection and query configuration.
       </p>
   </Cardroad>
 </div>
 
 
 ## Q2 2026
-Este plan estratégico describe nuestras prioridades clave, las funcionalidades que entregaremos y las integraciones que nos permitirán fortalecer nuestra plataforma y alcanzar nuevos hitos.
+
 
 <div class="boxrroadmap">
-  <Cardroad title="Abril | 2026">
-    <Kind />
+  <Cardroad title="April | 2026">
+    <Kind integration />
     <Subitle title="PostgreSQL Integration" brand icon="PostgreSQL"/>
     <p>
        Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform.
@@ -88,7 +88,7 @@ Este plan estratégico describe nuestras prioridades clave, las funcionalidades 
     </p>
   </Cardroad>
 
-  <Cardroad title="Mayo | 2026">
+  <Cardroad title="May | 2026">
     <Kind integration />
     <Subitle title="Salesforce Integration" brand icon="Saleforce"/>
     <p>
@@ -101,13 +101,14 @@ Este plan estratégico describe nuestras prioridades clave, las funcionalidades 
     </p>
   </Cardroad>
 
-  <Cardroad title="Junio | 2026">
+  <Cardroad title="June | 2026">
     <Kind integration />
     <Subitle title="Sybase Integration" brand icon="Sybase"/>
     <p>
     Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
     </p>
     <hr />
+    <Kind  />
     <Subitle title="AI assistant" icon="squareFace"/>
     <p>
     Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
@@ -118,10 +119,9 @@ Este plan estratégico describe nuestras prioridades clave, las funcionalidades 
 
 
 ## Q3 2026
-Este trimestre nos enfocamos en fortalecer la base de nuestra plataforma mediante la integración con ecosistemas de datos clave y la implementación de herramientas para una gestión de licenciamiento transparente y proactiva.
 
 <div class="boxrroadmap">
-  <Cardroad title="Julio | 2026">
+  <Cardroad title="July | 2026">
     <Kind />
     <Subitle title="Real time connection"  icon="clock"/>
     <p>
@@ -134,7 +134,7 @@ Este trimestre nos enfocamos en fortalecer la base de nuestra plataforma mediant
     </p>
 
   </Cardroad>
-  <Cardroad title="Agosto | 2026">
+  <Cardroad title="August | 2026">
     <Kind  integration />
     <Subitle title="Integrations SAP BW" brand icon="SAP"/>
     <p>
@@ -147,7 +147,7 @@ Este trimestre nos enfocamos en fortalecer la base de nuestra plataforma mediant
     </p>
   </Cardroad>  
 
-  <Cardroad title="Septiembre | 2026">
+  <Cardroad title="September | 2026">
     <Kind  integration />
     <Subitle title="IBM Integration" brand icon="IBMDb2"/>
     <p>
@@ -165,8 +165,8 @@ Este trimestre nos enfocamos en fortalecer la base de nuestra plataforma mediant
 
 
 <div class="boxrroadmap">
-  <Cardroad title="Octubre | 2026">
-    <Kind />
+  <Cardroad title="October | 2026">
+    <Kind integration />
     <Subitle title="Cloudera Integration" brand icon="Cloudera"/>
     <p>
     Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data, facilitating Big Data analysis.
