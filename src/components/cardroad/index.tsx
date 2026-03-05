@@ -10,6 +10,7 @@ type CardroadProps = {
     brand?: boolean;
     icon?: string;
     realization?: boolean;
+    crenstonplus?: boolean;
 }
 
 export function Cardroad({ title, children }: CardroadProps) {
@@ -48,10 +49,13 @@ export function Kind({ integration }: CardroadProps) {
     );
 }
 
-export function Subitle({ title, brand, icon }: CardroadProps) {
+export function Subitle({ title, brand, icon, crenstonplus }: CardroadProps) {
 
     return (
         <div className={styles.titleBox}>
+            {crenstonplus && (<>
+                <Brand name="Crestone" size={30} /> <CaralIcon name="plus" size={15} />
+            </>)}
             {brand ? (<Brand name={icon} size={30} />) : (<CaralIcon name={icon} size={30} />)}
             <p>{title}</p>
         </div>

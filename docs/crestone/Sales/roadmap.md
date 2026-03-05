@@ -30,8 +30,10 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
 <div className="boxrroadmap">
   <Cardroad title="January | 2026">
     <Kind />
-    <Subitle title="OData in the app" icon="OData"/>
+    <Subitle  title="OData in the app" icon="OData"/>
     <p>
+      More robust attachments, connections, and navigation
+      <br />
       Attachments and their target destination can now be configured directly within **OData**, along with improved URL readability and greater stability in connections, endpoint validation, and pagination.
     </p>
     <hr />
@@ -62,6 +64,11 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
         Provide a mechanism to automatically trigger jobs based on events/conditions (e.g., completion of a previous job, data availability, external signal, or schedule), reducing manual execution and improving orchestration.
       </p>
     <hr />
+    <Subitle title="Crestone available on Snowflake Marketplace"  crenstonplus brand icon="Snowflake"/>
+    <p>
+      Crestone will be available for customers to obtain directly from Snowflake Marketplace, simplifying access and purchasing within the Snowflake ecosystem and improving product discoverability.
+    </p>
+    <hr/>
     <Kind integration />
       <Subitle title="SQL as a source"  icon="AzureSql"/>
       <p>
@@ -76,19 +83,32 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
 
 <div class="boxrroadmap">
   <Cardroad title="April | 2026">
-    <Kind integration />
-    <Subitle title="PostgreSQL Integration" brand icon="PostgreSQL"/>
+    <Kind  />
+    <Subitle title="AI assistant" icon="squareFace"/>
     <p>
-       Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform.
+    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
+    </p>
+    <hr/>
+    <Kind integration />
+    <Subitle title="ACT·in powered by Crestone (standard extraction layer)" brand icon="Crestone"/>
+    <p>
+       act·in solutions will use Crestone as the underlying engine for data extractions and delivery, standardizing connectivity and scheduling while improving reliability and traceability end-to-end.
     </p>
      <hr />
-    <Subitle title="SAP Datasphere" brand icon="SAP"/>
+    <Subitle title="Crestone available on Microsoft Marketplace" crenstonplus brand icon="Windows"/>
     <p>
-    Incorporation of an automated channel for delivering CSV files, simplifying daily operations, reducing manual intervention, and ensuring up to date and reliable data for analysis. Additionally, it offers flexible shipping configuration and status tracking, improving operational efficiency and user experience.
+   Crestone will be available for customers to obtain directly from Microsoft Marketplace, simplifying access and purchasing within the Microsoft/Azure ecosystem and improving product discoverability.
     </p>
+
   </Cardroad>
 
   <Cardroad title="May | 2026">
+    <Kind />
+    <Subitle title="Theobald to Crestone migrator" brand  icon="Crestone"/>
+      <p>
+        Provide a mechanism to automatically trigger jobs based on events/conditions (e.g., completion of a previous job, data availability, external signal, or schedule), reducing manual execution and improving orchestration.
+      </p>
+      <hr />
     <Kind integration />
     <Subitle title="Salesforce Integration" brand icon="Saleforce"/>
     <p>
@@ -103,16 +123,22 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
 
   <Cardroad title="June | 2026">
     <Kind integration />
-    <Subitle title="Sybase Integration" brand icon="Sybase"/>
+    <Subitle title="PostgreSQL Integration" brand icon="PostgreSQL"/>
     <p>
-    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
+       Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform.
     </p>
-    <hr />
-    <Kind  />
-    <Subitle title="AI assistant" icon="squareFace"/>
+     <hr />
+    <Subitle title="SAP Business Data cloud" brand icon="SAP"/>
     <p>
-    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
+    Incorporation of an automated channel for delivering CSV files, simplifying daily operations, reducing manual intervention, and ensuring up to date and reliable data for analysis. Additionally, it offers flexible shipping configuration and status tracking, improving operational efficiency and user experience.
     </p>
+    <hr/>
+    <Kind />
+    <Subitle title="Crestone available on Databricks Marketplace" crenstonplus brand icon="Databricks"/>
+    <p>
+    Crestone will be available for customers to obtain directly from Databricks Marketplace, simplifying access and purchasing within the Databricks ecosystem and improving product discoverability.
+    </p>
+    
   </Cardroad>
 
 </div>
@@ -141,9 +167,9 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
     Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities.
     </p>
     <hr />
-    <Subitle title="MySQL Integration" brand icon="mySQL"/>
+    <Subitle title="Sybase Integration" brand icon="Sybase"/>
     <p>
-    Integration of a dedicated and optimized connector for data extraction and management from MySQL databases, covering one of the most widely used open source systems. 
+    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
     </p>
   </Cardroad>  
 
@@ -151,13 +177,9 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
     <Kind  integration />
     <Subitle title="IBM Integration" brand icon="IBMDb2"/>
     <p>
-    Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities.
+    Integration with IBM databases (DB2 or Informix), ensuring compatibility with large corporate and mission critical environments.
     </p>
-    <hr />
-    <Subitle title="SAP BTP Integration" brand icon="SAP"/>
-    <p>
-    Expansion of connection capabilities by incorporating native support for the SAP Business Technology Platform (BTP), consolidating interoperability with critical enterprise ecosystems.
-    </p>
+   
   </Cardroad>  
 </div>
 
@@ -171,11 +193,34 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
     <p>
     Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data, facilitating Big Data analysis.
     </p>
-    <hr />
-    <Subitle title="Harbinger Alerts" brand icon="Harbinger"/>
+    
+  </Cardroad>
+
+
+  <Cardroad title="November | 2026">
+    <Kind />
+    <Subitle title="ETL capabilities" brand icon="Crestone"/>
     <p>
-    Extension of monitoring capabilities through notifications via WhatsApp or SMS, so you are always informed about the status of your jobs and potential incidents, even outside the work environment.
+    Extend Crestone from extraction to an end-to-end ETL platform by adding built-in transformations and orchestration, enabling data cleansing and standardization before delivery to the target system and reducing reliance on external tools.
     </p>
+    <hr />
+    <Subitle title="Crestone available on Google Cloud" brand icon="GoogleStorage"/>
+    <p>
+    Enable Crestone deployment on Google Cloud, allowing customers to accelerate implementation without changing their cloud strategy and standardize their data operations in GCP.
+    </p>
+  </Cardroad>
+    <Cardroad title="December | 2026">
+    <Kind />
+    <Subitle title="Crestone available on AWS" brand icon="AWS"/>
+    <p>
+    Enable Crestone deployment on AWS, allowing customers to run it in their own cloud environment, aligned with their IT standards and with greater control over data and operations.
+    </p>
+    <hr />
+    <Subitle title="Crestone available on Microsoft Azure" brand icon="Azure"/>
+    <p>
+    Enable Crestone deployment on Azure to facilitate adoption for Microsoft-centric organizations and keep the solution within the cloud ecosystem they already use.
+    </p>
+    
   </Cardroad>
 
 </div>
