@@ -86,7 +86,7 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
     <Kind  />
     <Subitle title="AI assistant" icon="squareFace"/>
     <p>
-    Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
+    Ease of use one of the pillars of the product is enhanced with the incorporation of artificial intelligence, which assists you in configuration, monitoring, and resolving operational tasks, reducing time and errors.
     </p>
     <hr/>
     <Kind integration />
