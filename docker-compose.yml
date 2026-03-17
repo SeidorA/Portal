@@ -6,7 +6,4 @@ services:
     ports:
       - "3050:80"  # Solo HTTP, Nginx Proxy Manager hace el TLS
     restart: unless-stopped
-
-    environment:
-      - NEXT_PUBLIC_SUPABASE_URL=${SUPABASE_URL}
-      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+
