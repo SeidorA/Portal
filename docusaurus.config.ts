@@ -21,14 +21,27 @@ const config: Config = {
   // validation accepts it.
   plugins: [
     function supabaseEnvPlugin() {
+      // Intentar leer de process.env.SUPABASE_URL o NEXT_PUBLIC_SUPABASE_URL
+      const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+      const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+      console.log('----------------------------------------------------');
+      console.log('🚀 supabaseEnvPlugin (Tiempo de Compilación)');
+      console.log('📡 Usando URL de Supabase:', supabaseUrl ? 'Seteada ✔️' : 'Vacía ❌');
+      console.log('🔑 Usando ANON_KEY de Supabase:', supabaseAnonKey ? 'Seteada ✔️' : 'Vacía ❌');
+      if (!supabaseUrl || !supabaseAnonKey) {
+        console.warn('⚠️  ADVERTENCIA: Las variables no están llegando a docusaurus. Revisa los Secrets de GitHub Actions.');
+      }
+      console.log('----------------------------------------------------');
+
       return {
         name: 'supabase-env-plugin',
         configureWebpack() {
           return {
             plugins: [
               new webpack.DefinePlugin({
-                'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || ''),
-                'process.env.SUPABASE_ANON_KEY': JSON.stringify(process.env.SUPABASE_ANON_KEY || ''),
+                'process.env.SUPABASE_URL': JSON.stringify(supabaseUrl),
+                'process.env.SUPABASE_ANON_KEY': JSON.stringify(supabaseAnonKey),
               }),
             ],
           };
