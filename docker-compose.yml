@@ -6,4 +6,4 @@ services:
     ports:
       - "3050:80"  # Solo HTTP, Nginx Proxy Manager hace el TLS
     restart: unless-stopped
-
+
