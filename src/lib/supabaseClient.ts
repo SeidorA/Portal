@@ -25,9 +25,11 @@ const isBrowser = typeof window !== 'undefined';
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
-    persistSession: isBrowser,
-    autoRefreshToken: isBrowser,
-    detectSessionInUrl: isBrowser,
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: true,
+    storage: isBrowser ? window.localStorage : undefined,
+    storageKey: 'supabase-portal-auth-token',
   },
 });
 
