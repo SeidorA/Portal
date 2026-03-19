@@ -29,15 +29,28 @@ Desde asistentes conversacionales hasta sistemas complejos de atención al clien
  Documento comercial completo destacando su alcance, funciones  y compatibilidad.
 </BoxDoc>
 
+
+
 <BoxDoc
-  title="Presentación Comercial DAIANA"
+  title="Presentación Comercial"
   language="Español"
   format="PPTX"
   brand="Daiana"
   titleimg="Presentación Comercial"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXawZWK5RRZLk731UM-1E5sBaqZlVCRzxbHBCbQB66KVtg?e=zZkauT"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/DAIANA/(100)%20Comercial%20-%20Commercial/Daiana%20-%20Presentacion%20Comercial%202026.pptx?d=w147b4ce47da84ff085bccc964b5db222&csf=1&web=1&e=raBzYy"
 >
  Presentación corporativa lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
+</BoxDoc>
+
+<BoxDoc
+  title="Propuesta economica"
+  language="Español"
+  format="PPTX"
+  brand="Daiana"
+  titleimg="Propuesta economica"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/DAIANA/(100)%20Comercial%20-%20Commercial/Propuesta%20economica%20DAIANA%202026.pptx?d=wf245bed4a3684d809f85093227fca7d1&csf=1&web=1&e=cSLyVK"
+>
+ Propuesta economica lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso, planes y ecosistema de integraciones.
 </BoxDoc>
 
 <BoxDoc

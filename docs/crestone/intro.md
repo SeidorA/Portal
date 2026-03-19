@@ -61,11 +61,32 @@ import BoxDoc from '../../src/components/boxdocs';
   format="PPT"
   brand="Crestone"
   titleimg="Presentación Comercial"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EVc-d0hokNhPjyCHYuTKhG4BVG7qj3jqze4EpdxZLEg5ig?e=BWuwFm"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Crestone%20-%20Presentaci%C3%B3n%20comercial%202026.pptx?d=w98b93af0b3944832b5784b39fef2e578&csf=1&web=1&e=sG6lEa"
 >
   Presentación corporativa lista para exponer, con toda la información clave de Crestone: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
 </BoxDoc>
 
+<BoxDoc
+  title="Propuesta economica"
+  language="Español"
+  format="PPT"
+  brand="Crestone"
+  titleimg="Propuesta economica"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Propuesta%20economica%20Crestone%202026.pptx?d=wcbbb568b780e463ea4ea9a26a2f460b1&csf=1&web=1&e=bTv5Fo"
+>
+  Propuesta economica lista para exponer, con toda la información clave de Crestone: funcionalidades, beneficios, precios y ecosistema de integraciones.
+</BoxDoc>
+
+
+<BoxDoc
+  title="propuesta económica archiving"
+  language="Español"
+  format="PPT"
+  brand="Crestone"
+  titleimg="Propuesta economica"
+  onDownload="https://teams.microsoft.com/l/message/19:307f0384-83e3-403e-9e33-5288032ed437_b3f61704-c1a6-4e46-bcfe-7593f512a218@unq.gbl.spaces/1773940555905?context=%7B%22contextType%22%3A%22chat%22%7D" >
+  Propuesta economica lista para exponer, con toda la información clave de Crestone: funcionalidades, beneficios, precios y ecosistema de integraciones.
+</BoxDoc>
 
 <BoxDoc
   title="Brochure comercial Microsoft"
