@@ -79,12 +79,12 @@ import BoxDoc from '../../src/components/boxdocs';
 
 
 <BoxDoc
-  title="propuesta económica archiving"
+  title="Propuesta económica archiving"
   language="Español"
   format="PPT"
   brand="Crestone"
   titleimg="Propuesta economica"
-  onDownload="https://teams.microsoft.com/l/message/19:307f0384-83e3-403e-9e33-5288032ed437_b3f61704-c1a6-4e46-bcfe-7593f512a218@unq.gbl.spaces/1773940555905?context=%7B%22contextType%22%3A%22chat%22%7D" >
+  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Archiving/CRESTONE%20ARCHIVING%20-%20Propuesta%20economica%20ejemplo.pptx?d=w019bdf87ae0a4804bfce5ec0ed2b3eac&csf=1&web=1&e=TTYqND" >
   Propuesta economica lista para exponer, con toda la información clave de Crestone: funcionalidades, beneficios, precios y ecosistema de integraciones.
 </BoxDoc>
 
