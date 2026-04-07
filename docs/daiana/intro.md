@@ -59,7 +59,7 @@ Desde asistentes conversacionales hasta sistemas complejos de atención al clien
   format="PPTX"
   brand="Daiana"
   titleimg="Commercial Presentation"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/EXUPJcsyMGtIh3xLlCqAEuAB-oaYUcaau9Fmp574uFfgLg?e=haf3Sk"
+  onDownload="https://teams.microsoft.com/l/message/19:307f0384-83e3-403e-9e33-5288032ed437_b3f61704-c1a6-4e46-bcfe-7593f512a218@unq.gbl.spaces/1775510395450?context=%7B%22contextType%22%3A%22chat%22%7D"
 >
  Presentación corporativa lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
 </BoxDoc>
