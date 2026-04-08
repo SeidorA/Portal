@@ -10,7 +10,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY build/ /usr/share/nginx/html
  
 # Exponer puerto interno
-EXPOSE 3050
+EXPOSE 80
  
 # Correr Nginx en modo foreground
 CMD ["nginx", "-g", "daemon off;"]
