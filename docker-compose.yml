@@ -4,5 +4,5 @@ services:
     # IMPORTANTE: No añadir sección 'build' aquí. 
     # La imagen se construye en GitHub Actions y Portainer solo debe descargarla (PULL).
     ports:
-      - "3050:3050"  # Solo HTTP, Nginx Proxy Manager hace el TLS
+      - "3050:80"  # Solo HTTP, Nginx Proxy Manager hace el TLS
     restart: unless-stopped
