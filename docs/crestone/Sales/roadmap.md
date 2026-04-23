@@ -155,7 +155,6 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
       Incorporation of a visual environment for query design, simplifying the creation and validation of extraction rules without the need for advanced technical knowledge. 
     </p>
   </Cardroad>
-
   <Cardroad title="August | 2026">
     <Subitle title="Integrations SAP BW" icon="SAP"/>
     <p>
