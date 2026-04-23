@@ -80,7 +80,7 @@ import BoxDoc from '../../src/components/boxdocs';
 
 
 <BoxDoc
-  title="Propuesta económica archiving"
+  title="Propuesta económica SAP Data Preservation"
   language="Español"
   format="PPT"
   brand="Crestone"
