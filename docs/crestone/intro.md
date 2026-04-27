@@ -141,6 +141,8 @@ Su interfaz intuitiva permite que usuarios no técnicos gestionen flujos de dato
             <li>SAP Business One</li>
             <li>SAP Business ByDesign</li>
             <li>OData</li>
+            <li> MS SQL Server </li>
+            <li> Azure SQL </li>
         </ul>
     </div>
     <div class="col col--6">
