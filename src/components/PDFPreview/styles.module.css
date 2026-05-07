@@ -1,0 +1,193 @@
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  margin: 0 auto;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  color: #242528;
+  position: relative;
+  box-sizing: border-box;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.crestoneLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #07153a;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.quoteNumber {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.infoGrid {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.infoItem label {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 300;
+}
+
+.infoItem span {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #e2e8f0;
+  text-align: left;
+  padding: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: normal !important;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.75rem;
+  vertical-align: top;
+  letter-spacing: normal !important;
+}
+
+.productDescription {
+  color: #94a3b8;
+  font-size: 0.7rem;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.summaryRow {
+  background-color: #f8fafc;
+}
+
+.summaryLabel {
+  text-align: right;
+  font-weight: 500;
+}
+
+.summaryValue {
+  text-align: right;
+  font-weight: 500;
+}
+
+.totalRow {
+  background-color: #e2e8f0;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.termsList {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+}
+
+.termsList li {
+  margin-bottom: 0.25rem;
+}
+
+.acceptanceBox {
+  background-color: #d4ecff;
+  border: 1px solid #006abb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.7rem;
+}
+
+.acceptanceTitle {
+  color: #0191ff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footerNote {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.signatures {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.signatureLine {
+  flex: 1;
+  border-top: 1px solid #94a3b8;
+  padding-top: 0.5rem;
+  text-align: center;
+  font-size: 0.65rem;
+}
+
+.legal {
+  border-left: 2px solid #0191ff;
+  padding-left: 10px;
+  font-size: 0.5rem;
+  margin-top: 2rem;
+  line-height: 1.5;
+  letter-spacing: normal !important;
+}
+
+.decorationTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(1, 145, 255, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.decorationBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(-45deg, rgba(1, 145, 255, 0.1) 0%, transparent 70%);
+  z-index: 0;
+}
