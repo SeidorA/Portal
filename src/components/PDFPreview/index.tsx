@@ -19,6 +19,7 @@ export interface PDFData {
   hours: string;
   positionClient: string;
   positionSeidor: string;
+  validity: string;
 }
 
 interface Props {

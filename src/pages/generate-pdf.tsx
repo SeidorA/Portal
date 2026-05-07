@@ -25,6 +25,7 @@ const initialData: PDFData = {
   hours: '',
   positionClient: '',
   positionSeidor: '',
+  validity: '',
 };
 
 export default function GeneratePDFPage() {
@@ -112,7 +113,12 @@ export default function GeneratePDFPage() {
       drawText(`USD ${data.totalContract}`, 690, 560, true, 11);
 
       // Expiración / Horas Serv: x124 y510
-      drawText(data.expiryDate, 162, 692);
+      drawText(data.expiryDate, 162, 692, true);
+
+      // Validez
+      drawText(data.validity, 210, 295, true, fontSizeSmall);
+
+      drawText(data.validity, 93, 632, true)
 
 
       // [Position_client] + [Date]: x126 y699
@@ -193,6 +199,16 @@ export default function GeneratePDFPage() {
                   onChange={handleInputChange}
                   placeholder="001" />
               </div>
+            </div>
+
+            <div className={styles.formGroup}>
+              <label className={styles.label}>Validez de Oferta</label>
+              <input
+                className={styles.input}
+                name="validity"
+                value={data.validity}
+                onChange={handleInputChange}
+                placeholder="Ej: 15 días" />
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
