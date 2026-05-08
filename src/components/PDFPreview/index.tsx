@@ -12,8 +12,8 @@ export interface PDFData {
   endDate: string;
   unitPrice: string;
   totalPrice: string;
-  netTotal: string;
-  vatAmount: string;
+  CargoCustomer: string;
+  CargoSeidor: string;
   totalContract: string;
   expiryDate: string;
   hours: string;
@@ -34,7 +34,7 @@ const PDFPreview: React.FC<Props> = ({ data, innerRef }) => {
 
       <header className={styles.header}>
         <div className={styles.crestoneLogo}>
-          <img src="/img/pdf/logo.png" alt="Crestone" style={{ height: '36px' }} />
+          <img src="/img/pdf/Logo.png" alt="Crestone" style={{ height: '36px' }} />
           <span>Crestone</span>
         </div>
         <img src="/img/logos/logo.png" alt="Seidor Analytics" className={styles.logo} />
@@ -46,11 +46,11 @@ const PDFPreview: React.FC<Props> = ({ data, innerRef }) => {
 
       <div className={styles.infoGrid}>
         <div className={styles.infoItem}>
-          <label>Cliente:</label>
+          <label>Client:</label>
           <span>{data.customerName || '[CUSTOMER_NAME]'}</span>
         </div>
         <div className={styles.infoItem}>
-          <label>Fecha:</label>
+          <label>Date:</label>
           <span>{data.date || '[DATE]'}</span>
         </div>
       </div>
@@ -58,92 +58,88 @@ const PDFPreview: React.FC<Props> = ({ data, innerRef }) => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>POS</th>
-            <th width='100%'>Producto</th>
-            <th>Cantidad</th>
-            <th>Precio Unitario</th>
-            <th>Precio Total</th>
+            <th style={{ width: '40px' }}>POS</th>
+            <th style={{ width: '100%' }}>Product</th>
+            <th style={{ width: '80px' }}>Quantity</th>
+            <th style={{ width: '100px' }}>Unit Price</th>
+            <th style={{ width: '120px' }}>Total Price</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
             <td>
-              <div>CRESTONE Platform</div>
+              <div style={{ fontWeight: 500 }}>CRESTONE Platform</div>
               <div className={styles.productDescription}>
-                Licencia de suscripción anual<br />
+                Annual subscription license<br />
                 Plan: {data.planType || '[PLAN_TYPE]'}<br />
-                Especificaciones: {data.specifications || '[Especificaciones]'}<br />
-                Período: {data.startDate || '[START_DATE]'} - {data.endDate || '[END_DATE]'}
+                Period: {data.startDate || '[START_DATE]'} - {data.endDate || '[END_DATE]'}<br />
+                Specifications: {data.specifications || '[Specifications]'}
               </div>
             </td>
-            <td>1 año</td>
+            <td>1 year</td>
             <td>
-              <div>USD</div>
+              <div className={styles.currency}>USD</div>
               <div>{data.unitPrice || '[UNIT_PRICE]'}</div>
             </td>
             <td>
-              <div>USD</div>
+              <div className={styles.currency}>USD</div>
               <div>{data.totalPrice || '[TOTAL_PRICE]'}</div>
             </td>
           </tr>
-          <tr className={styles.summaryRow}>
-            <td colSpan={3} className={styles.summaryLabel}>Subtotal (neto)</td>
-            <td colSpan={2} className={styles.summaryValue}>USD {data.netTotal || '[NET_TOTAL]'}</td>
-          </tr>
-          <tr className={styles.summaryRow}>
-            <td colSpan={3} className={styles.summaryLabel}>IVA (%)</td>
-            <td colSpan={2} className={styles.summaryValue}>USD {data.vatAmount || '[VAT_AMOUNT]'}</td>
-          </tr>
+        </tbody>
+        <tfoot>
           <tr className={styles.totalRow}>
-            <td colSpan={3} className={styles.summaryLabel}>Total Contrato</td>
+            <td colSpan={3} className={styles.summaryLabel}>Total Contract</td>
             <td colSpan={2} className={styles.summaryValue}>USD {data.totalContract || '[TOTAL_CONTRACT]'}</td>
           </tr>
-        </tbody>
+        </tfoot>
       </table>
 
-      <div className={styles.sectionTitle}>Términos de la Oferta:</div>
+      <div className={styles.sectionTitle}>Terms of the Offer:</div>
       <ul className={styles.termsList}>
-        <li><strong>Vigencia:</strong> 12 meses (1 año)</li>
-        <li><strong>Renovación:</strong> Automática por el mismo período, a menos que se notifique cancelación con 30 días de anticipación</li>
-        <li><strong>Pago:</strong> 30 días netos desde emisión de factura (pago único anual por adelantado)</li>
-        <li><strong>Instalación:</strong> Incluye {data.hours || '[HOURS]'} horas de servicios profesionales para instalación</li>
-        <li><strong>Validez de oferta:</strong> Hasta {data.expiryDate || '[EXPIRY_DATE]'}</li>
+        <li>Validity: {data.validity || '12 months (1 year)'}</li>
+        <li>Renewal: Automatic for the same period, unless cancellation is notified 30 days in advance</li>
+        <li>Payment: 30 days net from invoice issuance (one-time annual payment in advance)</li>
+        <li>Offer validity: Until {data.expiryDate || '[EXPIRY_DATE]'}</li>
       </ul>
 
       <div className={styles.acceptanceBox}>
-        <div className={styles.acceptanceTitle}>Aceptación</div>
-        <p>Esta oferta constituye una propuesta vinculante. Al firmar esta carta oferta, usted acepta:</p>
+        <div className={styles.acceptanceTitle}>Acceptance</div>
+        <p>This offer constitutes a binding proposal. By signing this offer letter, you agree to:</p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
-          <li>Los términos y condiciones adjuntos (disponibles en www.crestone.io/terms)</li>
-          <li>Las condiciones comerciales y de soporte detalladas</li>
-          <li>La política de privacidad y protección de datos</li>
+          <li>The attached terms and conditions (available at www.crestone.io/terms)</li>
+          <li>The detailed business and support conditions</li>
+          <li>The privacy and data protection policy</li>
         </ul>
       </div>
 
       <div className={styles.footerNote}>
-        ¿Preguntas? Contacte a su ejecutivo de cuenta o escriba a: sales@crestone.io
+        Questions? Contact your account executive or write to: sales@crestone.io
       </div>
 
       <div className={styles.signatures}>
         <div className={styles.signatureLine}>
-          <div>Firma / Nombre</div>
-          <div style={{ fontSize: '0.5rem', color: '#64748b' }}>{data.positionClient || 'Cargo / Fecha'}</div>
+          <div className={styles.signatureLabel}>Customer</div>
+          <div className={styles.signatureInfo}>{data.positionClient || '[Position_client]'} - {data.hours || '[Date]'}</div>
+          <div className={styles.signatureInfo}>{data.CargoCustomer || '[CargoCustomer]'}</div>
         </div>
         <div className={styles.signatureLine}>
-          <div>Firma / Nombre</div>
-          <div style={{ fontSize: '0.5rem', color: '#64748b' }}>{data.positionSeidor || 'Cargo / Fecha'}</div>
+          <div className={styles.signatureLabel}>SEIDOR Analytics</div>
+          <div className={styles.signatureInfo}>{data.positionSeidor || '[Position_Seidor]'} - {data.hours || '[Date]'}</div>
+          <div className={styles.signatureInfo}>{data.CargoSeidor || '[CargoSeidor]'}</div>
         </div>
       </div>
 
       <div className={styles.legal}>
-        Nota Legal: Los términos y condiciones generales (GTC) aplican exclusivamente a esta oferta y a todas las relaciones comerciales derivadas. Puede consultarlos en: www.crestone.io/terms<br /><br />
-        Al aceptar esta oferta, usted acepta la validez de nuestras GTC. Condiciones desviadas del cliente no aplicarán a menos que hayamos expresamente acordado su validez por escrito. Este documento, junto con los términos y condiciones adjuntos, constituye el acuerdo completo entre las partes.
+        Legal Notice: The general terms and conditions (GTC) apply exclusively to this offer and to all resulting business relationships. You can consult them at: www.crestone.io/terms<br /><br />
+        By accepting this offer, you agree to the validity of our GTC. Customer-deviated conditions will not apply unless we have expressly agreed to their validity in writing. This document, along with the attached terms and conditions, constitutes the complete agreement between the parties.
       </div>
 
       <div className={styles.decorationBottom} />
     </div>
   );
 };
+
 
 export default PDFPreview;

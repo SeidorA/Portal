@@ -18,8 +18,8 @@ const initialData: PDFData = {
   endDate: '',
   unitPrice: '',
   totalPrice: '',
-  netTotal: '',
-  vatAmount: '',
+  CargoCustomer: '',
+  CargoSeidor: '',
   totalContract: '',
   expiryDate: '',
   hours: '',
@@ -103,29 +103,29 @@ export default function GeneratePDFPage() {
       drawText(`USD ${data.unitPrice}`, 565, 285);
       drawText(`USD ${data.totalPrice}`, 690, 285); // Estimated total column X
 
-      // Subtotal: x509 y331
-      drawText(`USD ${data.netTotal}`, 690, 460, true);
-
       // IVA: x 509 y 371
-      drawText(`USD ${data.vatAmount}`, 690, 510);
-
-      // Total: x509 y410
-      drawText(`USD ${data.totalContract}`, 690, 560, true, 11);
+      drawText(`USD ${data.totalContract}`, 690, 510, true);
 
       // Expiración / Horas Serv: x124 y510
-      drawText(data.expiryDate, 162, 692, true);
+      drawText(data.expiryDate, 162, 640, true);
 
       // Validez
       drawText(data.validity, 210, 295, true, fontSizeSmall);
 
-      drawText(data.validity, 93, 632, true)
+      drawText(data.validity, 93, 580, true)
 
 
       // [Position_client] + [Date]: x126 y699
-      drawText(`${data.positionClient} - ${data.hours}`, 140, 940, false, fontSizeSmall);
+      drawText(`${data.positionClient} - ${data.hours}`, 140, 890, false, fontSizeSmall);
 
       // [Position_Seidor] + [Date]: x 423 y699
-      drawText(`${data.positionSeidor} - ${data.hours}`, 530, 940, false, fontSizeSmall);
+      drawText(`${data.positionSeidor} - ${data.hours}`, 530, 890, false, fontSizeSmall);
+
+      //cargo cliente
+      drawText(`${data.CargoCustomer}`, 140, 900, false, fontSizeSmall);
+
+      //cargo seidor
+      drawText(`${data.CargoSeidor}`, 530, 900, false, fontSizeSmall);
 
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
@@ -162,7 +162,7 @@ export default function GeneratePDFPage() {
       <div className={styles.container}>
         <aside className={styles.sidebar}>
           <div className={styles.title}>
-            <img src="/img/pdf/logo.png" alt="Crestone" style={{ height: '40px' }} />
+            <img src="/img/pdf/Logo.png" alt="Crestone" style={{ height: '40px' }} />
             <div>
               <h1 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 700 }}>Generator</h1>
               <p style={{ margin: 0, fontSize: '0.75rem', color: 'var(--hard)' }}>Crestone Document Hub</p>
@@ -170,6 +170,7 @@ export default function GeneratePDFPage() {
           </div>
 
           <div className={styles.form}>
+            <div className={styles.sectionHeader}>Información del Documento</div>
             <div className={styles.formGroup}>
               <label className={styles.label}>Cliente</label>
               <input
@@ -202,44 +203,35 @@ export default function GeneratePDFPage() {
             </div>
 
             <div className={styles.formGroup}>
-              <label className={styles.label}>Validez de Oferta</label>
+              <label className={styles.label}>Fecha Doc</label>
               <input
                 className={styles.input}
-                name="validity"
-                value={data.validity}
+                name="date"
+                value={data.date}
                 onChange={handleInputChange}
-                placeholder="Ej: 15 días" />
+                placeholder="DD/MM/YYYY" />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Fecha Doc</label>
-                <input
-                  className={styles.input}
-                  name="date"
-                  value={data.date}
-                  onChange={handleInputChange}
-                  placeholder="DD/MM/YYYY" />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Plan Type</label>
-                <input
-                  className={styles.input}
-                  name="planType"
-                  value={data.planType}
-                  onChange={handleInputChange}
-                  placeholder="Enterprise" />
-              </div>
+            <div className={styles.sectionHeader}>Detalles del Plan</div>
+            <div className={styles.formGroup}>
+              <label className={styles.label}>Tipo de Plan</label>
+              <input
+                className={styles.input}
+                name="planType"
+                value={data.planType}
+                onChange={handleInputChange}
+                placeholder="Enterprise" />
             </div>
 
             <div className={styles.formGroup}>
               <label className={styles.label}>Especificaciones</label>
-              <input
+              <textarea
                 className={styles.input}
                 name="specifications"
                 value={data.specifications}
                 onChange={handleInputChange}
-                placeholder="Detalles del plan" />
+                placeholder="Detalles del plan"
+                rows={3} />
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
@@ -263,6 +255,7 @@ export default function GeneratePDFPage() {
               </div>
             </div>
 
+            <div className={styles.sectionHeader}>Precios y Validez</div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className={styles.formGroup}>
                 <label className={styles.label}>Precio Unitario</label>
@@ -284,70 +277,87 @@ export default function GeneratePDFPage() {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Subtotal</label>
-                <input
-                  className={styles.input}
-                  name="netTotal"
-                  value={data.netTotal}
-                  onChange={handleInputChange} />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>IVA</label>
-                <input
-                  className={styles.input}
-                  name="vatAmount"
-                  value={data.vatAmount}
-                  onChange={handleInputChange} />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Total</label>
-                <input
-                  className={styles.input}
-                  name="totalContract"
-                  value={data.totalContract}
-                  onChange={handleInputChange} />
-              </div>
+            <div className={styles.formGroup}>
+              <label className={styles.label}>Total Contrato</label>
+              <input
+                className={styles.input}
+                name="totalContract"
+                value={data.totalContract}
+                onChange={handleInputChange}
+                placeholder="0.00" />
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Expiración</label>
+                <label className={styles.label}>Vigencia de Oferta</label>
+                <input
+                  className={styles.input}
+                  name="validity"
+                  value={data.validity}
+                  onChange={handleInputChange}
+                  placeholder="Ej: 12 meses" />
+              </div>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Válido hasta</label>
                 <input
                   className={styles.input}
                   name="expiryDate"
                   value={data.expiryDate}
-                  onChange={handleInputChange} />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Fecha Firma</label>
-                <input
-                  className={styles.input}
-                  name="hours"
-                  value={data.hours}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  placeholder="Fecha Expiración" />
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
+            <div className={styles.sectionHeader}>Firmas y Cargos</div>
+            <div className={styles.formGroup}>
+              <label className={styles.label}>Fecha de Firma</label>
+              <input
+                className={styles.input}
+                name="hours"
+                value={data.hours}
+                onChange={handleInputChange}
+                placeholder="Fecha de la firma" />
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Cargo Cliente</label>
+                <label className={styles.label}>Nombre Cliente</label>
                 <input
                   className={styles.input}
                   name="positionClient"
                   value={data.positionClient}
                   onChange={handleInputChange}
-                  placeholder="Cargo / Nombre" />
+                  placeholder="Nombre Firmante" />
               </div>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Cargo Seidor</label>
+                <label className={styles.label}>Cargo Cliente</label>
+                <input
+                  className={styles.input}
+                  name="CargoCustomer"
+                  value={data.CargoCustomer}
+                  onChange={handleInputChange}
+                  placeholder="Cargo Firmante" />
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Nombre Seidor</label>
                 <input
                   className={styles.input}
                   name="positionSeidor"
                   value={data.positionSeidor}
                   onChange={handleInputChange}
-                  placeholder="Cargo / Nombre" />
+                  placeholder="Nombre Firmante" />
+              </div>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Cargo Seidor</label>
+                <input
+                  className={styles.input}
+                  name="CargoSeidor"
+                  value={data.CargoSeidor}
+                  onChange={handleInputChange}
+                  placeholder="Cargo Firmante" />
               </div>
             </div>
 

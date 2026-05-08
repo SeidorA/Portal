@@ -158,9 +158,26 @@
 .signatureLine {
   flex: 1;
   border-top: 1px solid #94a3b8;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
   text-align: center;
+}
+
+.signatureLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.signatureInfo {
   font-size: 0.65rem;
+  color: #242528;
+  line-height: 1.4;
+}
+
+.currency {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  margin-bottom: 2px;
 }
 
 .legal {

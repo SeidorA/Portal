@@ -34,6 +34,20 @@
   margin-bottom: 2rem;
   color: var(--Seidor-Hard-blue);
 }
+.sectionHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--info);
+  margin: 2.5rem 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(1, 145, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sectionHeader:first-child {
+  margin-top: 0;
+}
 
 .formGroup {
   margin-bottom: 1.5rem;
@@ -43,7 +57,7 @@
   display: block;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--hard);
+  color: var(--carbon);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -54,7 +68,7 @@
   padding: 0.85rem 1.15rem;
   border: 1px solid rgba(226, 232, 240, 0.8);
   border-radius: 12px;
-  background-color: white;
+  background-color: var(--bg-contaider);
   font-family: inherit;
   font-size: 0.95rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
