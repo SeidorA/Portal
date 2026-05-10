@@ -102,6 +102,7 @@ const PDFPreview: React.FC<Props> = ({ data, innerRef }) => {
         <li>Renewal: Automatic for the same period, unless cancellation is notified 30 days in advance</li>
         <li>Payment: 30 days net from invoice issuance (one-time annual payment in advance)</li>
         <li>Offer validity: Until {data.expiryDate || '[EXPIRY_DATE]'}</li>
+        <li>Prices are listed in U.S. dollars and do not include taxes; taxes will be added to the final bill.</li>
       </ul>
 
       <div className={styles.acceptanceBox}>
