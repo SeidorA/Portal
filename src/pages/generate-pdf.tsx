@@ -238,7 +238,7 @@ export default function GeneratePDFPage() {
                   name="ccadminmail"
                   value={data.ccadminmail}
                   onChange={handleInputChange}
-                  placeholder="E-Mail del Administrador" />
+                  placeholder="E-Mail" />
               </div>
 
             </div>
@@ -419,7 +419,8 @@ export default function GeneratePDFPage() {
             </button>
           </div>
 
-          <div style={{ marginTop: '2rem', padding: '1rem', border: '1px dashed var(--soft)', borderRadius: '8px' }}>
+          {/*
+            <div style={{ marginTop: '2rem', padding: '1rem', border: '1px dashed var(--soft)', borderRadius: '8px' }}>
             <h3 style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>Herramienta de Coordenadas</h3>
             <button
               className={isPickerMode ? styles.clearBtn : styles.generateBtn}
@@ -436,6 +437,7 @@ export default function GeneratePDFPage() {
               </div>
             )}
           </div>
+          */}
         </aside>
 
         <main className={styles.mainContent}>
