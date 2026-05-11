@@ -109,10 +109,10 @@ export default function GeneratePDFPage() {
 
       // Customer account administrator
       //NameCCA: x 93 y 563
-      drawText(data.ccadmin, 600, 500, true);
+      drawText(data.ccadmin, 600, 500);
 
       //EmailCCA: x 93 y 578
-      drawText(data.ccadminmail, 600, 515, true);
+      drawText(data.ccadminmail, 600, 515);
 
       // Expiración / Horas Serv: x124 y510
       drawText(data.expiryDate, 162, 640, true);
@@ -222,23 +222,23 @@ export default function GeneratePDFPage() {
             <div className={styles.sectionHeader}>Customer account administrator</div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Nombre CCA</label>
+                <label className={styles.label}>Nombre</label>
                 <input
                   className={styles.input}
                   name="ccadmin"
                   value={data.ccadmin}
                   onChange={handleInputChange}
-                  placeholder="Fecha Fin" />
+                  placeholder="Nombre del Administrador" />
               </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.label}>Email CAA</label>
+                <label className={styles.label}>Email</label>
                 <input
                   className={styles.input}
                   name="ccadminmail"
                   value={data.ccadminmail}
                   onChange={handleInputChange}
-                  placeholder="Mail CAA" />
+                  placeholder="E-Mail del Administrador" />
               </div>
 
             </div>

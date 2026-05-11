@@ -213,10 +213,16 @@
 .admin{
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  background-color:  var(--medium);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
   div p{
     font-size: 0.75rem;
-    line-height: 0;
   }
   
+  p{
+    margin: 0;
+  }
 }
