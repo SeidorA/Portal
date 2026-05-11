@@ -208,3 +208,15 @@
   background: linear-gradient(-45deg, rgba(1, 145, 255, 0.1) 0%, transparent 70%);
   z-index: 0;
 }
+
+
+.admin{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  div p{
+    font-size: 0.75rem;
+    line-height: 0;
+  }
+  
+}

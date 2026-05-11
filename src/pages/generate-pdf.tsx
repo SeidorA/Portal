@@ -105,7 +105,14 @@ export default function GeneratePDFPage() {
       drawText(`USD ${data.totalPrice}`, 690, 285); // Estimated total column X
 
       // IVA: x 509 y 371
-      drawText(`USD ${data.totalContract}`, 690, 510, true);
+      drawText(`USD ${data.totalContract}`, 690, 460, true);
+
+      // Customer account administrator
+      //NameCCA: x 93 y 563
+      drawText(data.ccadmin, 600, 500, true);
+
+      //EmailCCA: x 93 y 578
+      drawText(data.ccadminmail, 600, 515, true);
 
       // Expiración / Horas Serv: x124 y510
       drawText(data.expiryDate, 162, 640, true);
@@ -210,6 +217,30 @@ export default function GeneratePDFPage() {
                 value={data.date}
                 onChange={handleInputChange}
                 placeholder="DD/MM/YYYY" />
+            </div>
+
+            <div className={styles.sectionHeader}>Customer account administrator</div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Nombre CCA</label>
+                <input
+                  className={styles.input}
+                  name="ccadmin"
+                  value={data.ccadmin}
+                  onChange={handleInputChange}
+                  placeholder="Fecha Fin" />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label className={styles.label}>Email CAA</label>
+                <input
+                  className={styles.input}
+                  name="ccadminmail"
+                  value={data.ccadminmail}
+                  onChange={handleInputChange}
+                  placeholder="Mail CAA" />
+              </div>
+
             </div>
 
             <div className={styles.sectionHeader}>Detalles del Plan</div>

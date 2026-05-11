@@ -21,6 +21,8 @@ export interface PDFData {
   positionSeidor: string;
   validity: string;
   Quantity: string;
+  ccadmin: string;
+  ccadminmail: string;
 }
 
 interface Props {
@@ -96,6 +98,15 @@ const PDFPreview: React.FC<Props> = ({ data, innerRef }) => {
           </tr>
         </tfoot>
       </table>
+
+      <div className={styles.admin}>
+        <p>Customer account administrator</p>
+        <div>
+
+          <p>{data.ccadmin || '[CCADMIN]'}</p>
+          <p>{data.ccadminmail || '[CCADMINMAIL]'}</p>
+        </div>
+      </div>
 
       <div className={styles.sectionTitle}>Terms of the Offer:</div>
       <ul className={styles.termsList}>
