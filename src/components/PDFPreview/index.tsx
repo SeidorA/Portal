@@ -20,6 +20,7 @@ export interface PDFData {
   positionClient: string;
   positionSeidor: string;
   validity: string;
+  Quantity: string;
 }
 
 interface Props {
@@ -71,13 +72,13 @@ const PDFPreview: React.FC<Props> = ({ data, innerRef }) => {
             <td>
               <div style={{ fontWeight: 500 }}>CRESTONE Platform</div>
               <div className={styles.productDescription}>
-                Annual subscription license<br />
+
                 Plan: {data.planType || '[PLAN_TYPE]'}<br />
                 Period: {data.startDate || '[START_DATE]'} - {data.endDate || '[END_DATE]'}<br />
                 Specifications: {data.specifications || '[Specifications]'}
               </div>
             </td>
-            <td>1 year</td>
+            <td>{data.Quantity || '[QUANTITY]'}</td>
             <td>
               <div className={styles.currency}>USD</div>
               <div>{data.unitPrice || '[UNIT_PRICE]'}</div>

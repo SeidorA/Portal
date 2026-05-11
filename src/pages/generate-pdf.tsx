@@ -26,6 +26,7 @@ const initialData: PDFData = {
   positionClient: '',
   positionSeidor: '',
   validity: '',
+  Quantity: '',
 };
 
 export default function GeneratePDFPage() {
@@ -90,13 +91,13 @@ export default function GeneratePDFPage() {
       drawText(data.date, 500, 160);
 
       // Plan Type: x 79 y225
-      drawText(data.planType, 103, 313, false, fontSizeSmall);
+      drawText(data.planType, 103, 293, false, fontSizeSmall);
 
       // Inicio / Fin: x86 y 243
-      drawText(`${data.startDate} - ${data.endDate}`, 115, 335, false, fontSizeSmall);
+      drawText(`${data.startDate} - ${data.endDate}`, 115, 315, false, fontSizeSmall);
 
       // Especificaciones: x126 y 260
-      drawText(data.specifications, 170, 357, false, fontSizeSmall);
+      drawText(data.specifications, 170, 337, false, fontSizeSmall);
 
       // Precio Unitario / Total: x445 y192
 
@@ -110,9 +111,8 @@ export default function GeneratePDFPage() {
       drawText(data.expiryDate, 162, 640, true);
 
       // Validez
-      drawText(data.validity, 210, 295, true, fontSizeSmall);
-
-      drawText(data.validity, 93, 580, true)
+      drawText(data.Quantity, 500, 275);
+      drawText(data.validity, 93, 580, true);
 
 
       // [Position_client] + [Date]: x126 y699
@@ -256,6 +256,16 @@ export default function GeneratePDFPage() {
             </div>
 
             <div className={styles.sectionHeader}>Precios y Validez</div>
+            <div className={styles.formGroup}>
+              <label className={styles.label}>Cantidad</label>
+              <input
+                className={styles.input}
+                name="Quantity"
+                value={data.Quantity}
+                onChange={handleInputChange}
+                placeholder="1"
+              />
+            </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className={styles.formGroup}>
                 <label className={styles.label}>Precio Unitario</label>
