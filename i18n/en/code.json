@@ -99,5 +99,137 @@
   },
   "owntech.nav": {
     "message": "Products"
+  },
+  "pdfGenerator.errorAlert": {
+    "message": "Error generating PDF. Check console for details."
+  },
+  "pdfGenerator.pageTitle": {
+    "message": "Quote Generator"
+  },
+  "pdfGenerator.pageDescription": {
+    "message": "Generate and export PDF quotes"
+  },
+  "pdfGenerator.quoteGeneratorTitle": {
+    "message": "Quote Generator"
+  },
+  "pdfGenerator.crestoneDocumentHubSubtitle": {
+    "message": "Crestone Document Hub"
+  },
+  "pdfGenerator.documentInformation": {
+    "message": "Document Information"
+  },
+  "pdfGenerator.customer": {
+    "message": "Customer"
+  },
+  "pdfGenerator.customerNamePlaceholder": {
+    "message": "Customer Name"
+  },
+  "pdfGenerator.year": {
+    "message": "Year"
+  },
+  "pdfGenerator.planNumber": {
+    "message": "Plan No."
+  },
+  "pdfGenerator.documentDate": {
+    "message": "Doc Date"
+  },
+  "pdfGenerator.customerAccountAdministrator": {
+    "message": "Customer Account Administrator"
+  },
+  "pdfGenerator.name": {
+    "message": "Name"
+  },
+  "pdfGenerator.administratorNamePlaceholder": {
+    "message": "Administrator Name"
+  },
+  "pdfGenerator.email": {
+    "message": "Email"
+  },
+  "pdfGenerator.planDetails": {
+    "message": "Plan Details"
+  },
+  "pdfGenerator.planType": {
+    "message": "Plan Type"
+  },
+  "pdfGenerator.specifications": {
+    "message": "Specifications"
+  },
+  "pdfGenerator.planDetailsPlaceholder": {
+    "message": "Plan details"
+  },
+  "pdfGenerator.startDate": {
+    "message": "Start Date"
+  },
+  "pdfGenerator.startDatePlaceholder": {
+    "message": "Start Date"
+  },
+  "pdfGenerator.endDate": {
+    "message": "End Date"
+  },
+  "pdfGenerator.endDatePlaceholder": {
+    "message": "End Date"
+  },
+  "pdfGenerator.pricingAndValidity": {
+    "message": "Pricing and Validity"
+  },
+  "pdfGenerator.quantity": {
+    "message": "Quantity"
+  },
+  "pdfGenerator.unitPrice": {
+    "message": "Unit Price"
+  },
+  "pdfGenerator.totalPrice": {
+    "message": "Total Price"
+  },
+  "pdfGenerator.totalContract": {
+    "message": "Total Contract"
+  },
+  "pdfGenerator.offerValidity": {
+    "message": "Offer Validity"
+  },
+  "pdfGenerator.offerValidityPlaceholder": {
+    "message": "e.g., 12 months"
+  },
+  "pdfGenerator.validUntil": {
+    "message": "Valid Until"
+  },
+  "pdfGenerator.expirationDatePlaceholder": {
+    "message": "Expiration Date"
+  },
+  "pdfGenerator.signaturesAndPositions": {
+    "message": "Signatures and Positions"
+  },
+  "pdfGenerator.signatureDate": {
+    "message": "Signature Date"
+  },
+  "pdfGenerator.signatureDatePlaceholder": {
+    "message": "Signature date"
+  },
+  "pdfGenerator.clientName": {
+    "message": "Client Name"
+  },
+  "pdfGenerator.signerNamePlaceholder": {
+    "message": "Signer Name"
+  },
+  "pdfGenerator.clientPosition": {
+    "message": "Client Position"
+  },
+  "pdfGenerator.signerPositionPlaceholder": {
+    "message": "Signer Position"
+  },
+  "pdfGenerator.seidorName": {
+    "message": "Seidor Name"
+  },
+  "pdfGenerator.seidorPosition": {
+    "message": "Seidor Position"
+  },
+  "pdfGenerator.generatingPdf": {
+    "message": "Generating..."
+  },
+  "pdfGenerator.downloadPdf": {
+    "message": "Download PDF"
+  },
+  "pdfGenerator.clearForm": {
+    "message": "Clear"
   }
 }
