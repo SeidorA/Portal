@@ -38,5 +38,101 @@
   "copyright": {
     "message": "Copyright © 2025 My Project, Inc. Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.title.SEIDOR Analytics": {
+    "message": "SEIDOR Analytics",
+    "description": "The title of the footer links column with title=SEIDOR Analytics in the footer"
+  },
+  "link.item.label.info@seidoranalytics.com": {
+    "message": "info@seidoranalytics.com",
+    "description": "The label of footer link with label=info@seidoranalytics.com linking to mailto:info@seidoranalytics.com"
+  },
+  "link.item.label.Crestone": {
+    "message": "Crestone",
+    "description": "The label of footer link with label=Crestone linking to /docs/crestone/intro"
+  },
+  "link.item.label.Daiana": {
+    "message": "Daiana",
+    "description": "The label of footer link with label=Daiana linking to /docs/daiana/intro"
+  },
+  "link.item.label.Doxa": {
+    "message": "Doxa",
+    "description": "The label of footer link with label=Doxa linking to /docs/doxa/intro"
+  },
+  "link.item.label.Cloud Costing": {
+    "message": "Cloud Costing",
+    "description": "The label of footer link with label=Cloud Costing linking to /docs/cc/intro"
+  },
+  "link.item.label.Harbinger": {
+    "message": "Harbinger",
+    "description": "The label of footer link with label=Harbinger linking to /docs/harbinger/intro"
+  },
+  "link.item.label.Feelings": {
+    "message": "Feelings",
+    "description": "The label of footer link with label=Feelings linking to /docs/feelings/intro"
+  },
+  "link.item.label.Success Factors": {
+    "message": "Success Factors",
+    "description": "The label of footer link with label=Success Factors linking to /docs/successfactors/intro"
+  },
+  "link.item.label.Business One Analytics": {
+    "message": "Business One Analytics",
+    "description": "The label of footer link with label=Business One Analytics linking to /docs/businessoneanalytics/intro"
+  },
+  "link.item.label.ByDesign": {
+    "message": "ByDesign",
+    "description": "The label of footer link with label=ByDesign linking to /docs/bydesign/intro"
+  },
+  "link.item.label.S/4HANA Analytics​": {
+    "message": "S/4HANA Analytics​",
+    "description": "The label of footer link with label=S/4HANA Analytics​ linking to /docs/s4hanaanalytics/intro"
+  },
+  "link.item.label.Planning": {
+    "message": "Planning",
+    "description": "The label of footer link with label=Planning linking to /docs/planning/intro"
+  },
+  "link.item.label.Admin": {
+    "message": "Admin",
+    "description": "The label of footer link with label=Admin linking to /docs/admin"
+  },
+  "link.item.label.Generar PDF": {
+    "message": "Generar PDF",
+    "description": "The label of footer link with label=Generar PDF linking to /generate-pdf"
+  },
+  "link.item.label.Herramientas": {
+    "message": "Herramientas",
+    "description": "The label of footer link with label=Herramientas linking to /docs/portal/introduccion"
+  },
+  "link.item.label.Big Data": {
+    "message": "Big Data",
+    "description": "The label of footer link with label=Big Data linking to https://www.seidoranalytics.com/big-data/"
+  },
+  "link.item.label.Business Analytics": {
+    "message": "Business Analytics",
+    "description": "The label of footer link with label=Business Analytics linking to https://www.seidoranalytics.com/business-analytics/"
+  },
+  "link.item.label.Ciencia de Datos": {
+    "message": "Ciencia de Datos",
+    "description": "The label of footer link with label=Ciencia de Datos linking to https://www.seidoranalytics.com/ciencia-de-datos/"
+  },
+  "link.item.label.Data Management": {
+    "message": "Data Management",
+    "description": "The label of footer link with label=Data Management linking to https://www.seidoranalytics.com/data-management/"
+  },
+  "link.item.label.Planificación Financiera y Operativa": {
+    "message": "Planificación Financiera y Operativa",
+    "description": "The label of footer link with label=Planificación Financiera y Operativa linking to https://www.seidoranalytics.com/planificacion-financiera-y-operativa/"
+  },
+  "link.item.label.Technology Management": {
+    "message": "Technology Management",
+    "description": "The label of footer link with label=Technology Management linking to https://www.seidoranalytics.com/technology-management/"
+  },
+  "link.item.label.Data Governance": {
+    "message": "Data Governance",
+    "description": "The label of footer link with label=Data Governance linking to https://www.seidoranalytics.com/data-governance/"
+  },
+  "link.item.label.Smart Workplace": {
+    "message": "Smart Workplace",
+    "description": "The label of footer link with label=Smart Workplace linking to https://www.seidoranalytics.com/workspace-nuvolcloud/"
   }
 }

@@ -290,6 +290,11 @@ const config: Config = {
               sidebarId: 'doxaSidebar',
             },
             {
+              label: 'Generar PDF',
+              to: '/generate-pdf',
+              sidebarId: 'doxaSidebar',
+            },
+            {
               label: 'Herramientas',
               to: '/docs/portal/introduccion',
             },

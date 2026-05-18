@@ -62,5 +62,29 @@
   "item.label.Planning": {
     "message": "Planning",
     "description": "Navbar item with label Planning"
+  },
+  "item.label.Novedades": {
+    "message": "Novedades",
+    "description": "Navbar item with label Novedades"
+  },
+  "item.label.Act-in SAP Success Factors": {
+    "message": "Act-in SAP Success Factors",
+    "description": "Navbar item with label Act-in SAP Success Factors"
+  },
+  "item.label.Act-in SAP Business One analytics": {
+    "message": "Act-in SAP Business One analytics",
+    "description": "Navbar item with label Act-in SAP Business One analytics"
+  },
+  "item.label.Act-in SAP ByDesign": {
+    "message": "Act-in SAP ByDesign",
+    "description": "Navbar item with label Act-in SAP ByDesign"
+  },
+  "item.label.Act-in SAP S/4HANA Analytics​": {
+    "message": "Act-in SAP S/4HANA Analytics​",
+    "description": "Navbar item with label Act-in SAP S/4HANA Analytics​"
+  },
+  "item.label.Act-in SAP Planning": {
+    "message": "Act-in SAP Planning",
+    "description": "Navbar item with label Act-in SAP Planning"
   }
 }

@@ -34,5 +34,77 @@
   "sidebar.daianaSidebar.category.Documentacion": {
     "message": "Documentacion",
     "description": "The label for category Documentacion in sidebar daianaSidebar"
+  },
+  "sidebar.crestoneSidebar.category.Battle Card": {
+    "message": "Battle Card",
+    "description": "The label for category Battle Card in sidebar crestoneSidebar"
+  },
+  "sidebar.daianaSidebar.category.Battle Cards": {
+    "message": "Battle Cards",
+    "description": "The label for category Battle Cards in sidebar daianaSidebar"
+  },
+  "sidebar.doxaSidebar.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar doxaSidebar"
+  },
+  "sidebar.doxaSidebar.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar doxaSidebar"
+  },
+  "sidebar.ccSidebar.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar ccSidebar"
+  },
+  "sidebar.ccSidebar.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar ccSidebar"
+  },
+  "sidebar.harbingerSidebar.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar harbingerSidebar"
+  },
+  "sidebar.harbingerSidebar.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar harbingerSidebar"
+  },
+  "sidebar.feelingsSidebar.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar feelingsSidebar"
+  },
+  "sidebar.feelingsSidebar.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar feelingsSidebar"
+  },
+  "sidebar.feelingsSidebar.category.Comercial.link.generated-index.title": {
+    "message": "Comercial",
+    "description": "The generated-index page title for category Comercial in sidebar feelingsSidebar"
+  },
+  "sidebar.businessone.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar businessone"
+  },
+  "sidebar.businessone.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar businessone"
+  },
+  "sidebar.bydesign.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar bydesign"
+  },
+  "sidebar.bydesign.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar bydesign"
+  },
+  "sidebar.s4hanaanalytics.category.Pre Sales": {
+    "message": "Pre Sales",
+    "description": "The label for category Pre Sales in sidebar s4hanaanalytics"
+  },
+  "sidebar.s4hanaanalytics.category.Comercial": {
+    "message": "Comercial",
+    "description": "The label for category Comercial in sidebar s4hanaanalytics"
+  },
+  "sidebar.portal.category.Herramientas": {
+    "message": "Herramientas",
+    "description": "The label for category Herramientas in sidebar portal"
   }
 }

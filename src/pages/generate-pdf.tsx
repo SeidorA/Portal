@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Translate, { translate } from '@docusaurus/Translate';
 import styles from './generate-pdf.module.css';
 import PDFPreview, { PDFData } from '@site/src/components/PDFPreview';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 const initialData: PDFData = {
   year: '',
@@ -139,13 +141,13 @@ export default function GeneratePDFPage() {
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `Quote_${data.customerName || 'Draft'}.pdf`;
+      link.download = `Cotizacion_${data.customerName || 'Borrador'}.pdf`;
       link.click();
       URL.revokeObjectURL(url);
 
     } catch (error) {
       console.error('Error generating PDF with pdf-lib:', error);
-      alert('Error al generar el PDF. Revisa la consola para más detalles.');
+      alert(translate({ id: 'pdfGenerator.errorAlert', message: 'Error al generar el PDF. Revisa la consola para más detalles.' }));
     } finally {
       setIsGenerating(false);
     }
@@ -165,261 +167,265 @@ export default function GeneratePDFPage() {
   };
 
   return (
-    <Layout title="Generator" description="Generate and export PDF quotes">
-      <div className={styles.container}>
-        <aside className={styles.sidebar}>
-          <div className={styles.title}>
-            <img src="/img/pdf/Logo.png" alt="Crestone" style={{ height: '40px' }} />
-            <div>
-              <h1 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 700 }}>Generator</h1>
-              <p style={{ margin: 0, fontSize: '0.75rem', color: 'var(--hard)' }}>Crestone Document Hub</p>
-            </div>
-          </div>
-
-          <div className={styles.form}>
-            <div className={styles.sectionHeader}>Información del Documento</div>
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Cliente</label>
-              <input
-                className={styles.input}
-                name="customerName"
-                value={data.customerName}
-                onChange={handleInputChange}
-                placeholder="Nombre del Cliente" />
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Año</label>
-                <input
-                  className={styles.input}
-                  name="year"
-                  value={data.year}
-                  onChange={handleInputChange}
-                  placeholder="2024" />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Plan N°</label>
-                <input
-                  className={styles.input}
-                  name="planNumber"
-                  value={data.planNumber}
-                  onChange={handleInputChange}
-                  placeholder="001" />
+    <Layout 
+      title={translate({ id: 'pdfGenerator.pageTitle', message: 'Generador de Cotizaciones' })} 
+      description={translate({ id: 'pdfGenerator.pageDescription', message: 'Generar y exportar cotizaciones en PDF' })}
+    >
+      <ProtectedRoute allowedRoles={['admin']}>
+        <div className={styles.container}>
+          <aside className={styles.sidebar}>
+            <div className={styles.title}>
+              <img src="/img/pdf/Logo.png" alt="Crestone" style={{ height: '40px' }} />
+              <div>
+                <h1 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 700 }}><Translate id="pdfGenerator.quoteGeneratorTitle">Generador de Cotizaciones</Translate></h1>
+                <p style={{ margin: 0, fontSize: '0.75rem', color: 'var(--hard)' }}><Translate id="pdfGenerator.crestoneDocumentHubSubtitle">Centro de Documentos Crestone</Translate></p>
               </div>
             </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Fecha Doc</label>
-              <input
-                className={styles.input}
-                name="date"
-                value={data.date}
-                onChange={handleInputChange}
-                placeholder="DD/MM/YYYY" />
-            </div>
-
-            <div className={styles.sectionHeader}>Customer account administrator</div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className={styles.form}>
+              <div className={styles.sectionHeader}><Translate id="pdfGenerator.documentInformation">Información del Documento</Translate></div>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Nombre</label>
+                <label className={styles.label}><Translate id="pdfGenerator.customer">Cliente</Translate></label>
                 <input
                   className={styles.input}
-                  name="ccadmin"
-                  value={data.ccadmin}
+                  name="customerName"
+                  value={data.customerName}
                   onChange={handleInputChange}
-                  placeholder="Nombre del Administrador" />
+                  placeholder={translate({ id: 'pdfGenerator.customerNamePlaceholder', message: 'Nombre del Cliente' })} />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.year">Año</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="year"
+                    value={data.year}
+                    onChange={handleInputChange}
+                    placeholder="2024" />
+                </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.planNumber">Plan N°</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="planNumber"
+                    value={data.planNumber}
+                    onChange={handleInputChange}
+                    placeholder="001" />
+                </div>
               </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.label}>Email</label>
+                <label className={styles.label}><Translate id="pdfGenerator.documentDate">Fecha Doc</Translate></label>
                 <input
                   className={styles.input}
-                  name="ccadminmail"
-                  value={data.ccadminmail}
+                  name="date"
+                  value={data.date}
                   onChange={handleInputChange}
-                  placeholder="E-Mail" />
+                  placeholder="DD/MM/YYYY" />
               </div>
 
-            </div>
+              <div className={styles.sectionHeader}><Translate id="pdfGenerator.customerAccountAdministrator">Administrador de la cuenta del cliente</Translate></div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.name">Nombre</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="ccadmin"
+                    value={data.ccadmin}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.administratorNamePlaceholder', message: 'Nombre del Administrador' })} />
+                </div>
 
-            <div className={styles.sectionHeader}>Detalles del Plan</div>
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Tipo de Plan</label>
-              <input
-                className={styles.input}
-                name="planType"
-                value={data.planType}
-                onChange={handleInputChange}
-                placeholder="Enterprise" />
-            </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.email">Email</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="ccadminmail"
+                    value={data.ccadminmail}
+                    onChange={handleInputChange}
+                    placeholder="E-Mail" />
+                </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Especificaciones</label>
-              <textarea
-                className={styles.input}
-                name="specifications"
-                value={data.specifications}
-                onChange={handleInputChange}
-                placeholder="Detalles del plan"
-                rows={3} />
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Inicio</label>
-                <input
-                  className={styles.input}
-                  name="startDate"
-                  value={data.startDate}
-                  onChange={handleInputChange}
-                  placeholder="Fecha Inicio" />
               </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Fin</label>
-                <input
-                  className={styles.input}
-                  name="endDate"
-                  value={data.endDate}
-                  onChange={handleInputChange}
-                  placeholder="Fecha Fin" />
-              </div>
-            </div>
 
-            <div className={styles.sectionHeader}>Precios y Validez</div>
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Cantidad</label>
-              <input
-                className={styles.input}
-                name="Quantity"
-                value={data.Quantity}
-                onChange={handleInputChange}
-                placeholder="1"
-              />
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className={styles.sectionHeader}><Translate id="pdfGenerator.planDetails">Detalles del Plan</Translate></div>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Precio Unitario</label>
+                <label className={styles.label}><Translate id="pdfGenerator.planType">Tipo de Plan</Translate></label>
                 <input
                   className={styles.input}
-                  name="unitPrice"
-                  value={data.unitPrice}
+                  name="planType"
+                  value={data.planType}
+                  onChange={handleInputChange}
+                  placeholder="Enterprise" />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label className={styles.label}><Translate id="pdfGenerator.specifications">Especificaciones</Translate></label>
+                <textarea
+                  className={styles.input}
+                  name="specifications"
+                  value={data.specifications}
+                  onChange={handleInputChange}
+                  placeholder={translate({ id: 'pdfGenerator.planDetailsPlaceholder', message: 'Detalles del plan' })}
+                  rows={3} />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.startDate">Inicio</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="startDate"
+                    value={data.startDate}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.startDatePlaceholder', message: 'Fecha Inicio' })} />
+                </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.endDate">Fin</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="endDate"
+                    value={data.endDate}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.endDatePlaceholder', message: 'Fecha Fin' })} />
+                </div>
+              </div>
+
+              <div className={styles.sectionHeader}><Translate id="pdfGenerator.pricingAndValidity">Precios y Validez</Translate></div>
+              <div className={styles.formGroup}>
+                <label className={styles.label}><Translate id="pdfGenerator.quantity">Cantidad</Translate></label>
+                <input
+                  className={styles.input}
+                  name="Quantity"
+                  value={data.Quantity}
+                  onChange={handleInputChange}
+                  placeholder="1"
+                />
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.unitPrice">Precio Unitario</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="unitPrice"
+                    value={data.unitPrice}
+                    onChange={handleInputChange}
+                    placeholder="0.00" />
+                </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.totalPrice">Precio Total</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="totalPrice"
+                    value={data.totalPrice}
+                    onChange={handleInputChange}
+                    placeholder="0.00" />
+                </div>
+              </div>
+
+              <div className={styles.formGroup}>
+                <label className={styles.label}><Translate id="pdfGenerator.totalContract">Total Contrato</Translate></label>
+                <input
+                  className={styles.input}
+                  name="totalContract"
+                  value={data.totalContract}
                   onChange={handleInputChange}
                   placeholder="0.00" />
               </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.offerValidity">Vigencia de Oferta</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="validity"
+                    value={data.validity}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.offerValidityPlaceholder', message: 'Ej: 12 meses' })} />
+                </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.validUntil">Válido hasta</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="expiryDate"
+                    value={data.expiryDate}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.expirationDatePlaceholder', message: 'Fecha Expiración' })} />
+                </div>
+              </div>
+
+              <div className={styles.sectionHeader}><Translate id="pdfGenerator.signaturesAndPositions">Firmas y Cargos</Translate></div>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Precio Total</label>
+                <label className={styles.label}><Translate id="pdfGenerator.signatureDate">Fecha de Firma</Translate></label>
                 <input
                   className={styles.input}
-                  name="totalPrice"
-                  value={data.totalPrice}
+                  name="hours"
+                  value={data.hours}
                   onChange={handleInputChange}
-                  placeholder="0.00" />
+                  placeholder={translate({ id: 'pdfGenerator.signatureDatePlaceholder', message: 'Fecha de la firma' })} />
               </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.clientName">Nombre Cliente</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="positionClient"
+                    value={data.positionClient}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.signerNamePlaceholder', message: 'Nombre Firmante' })} />
+                </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.clientPosition">Cargo Cliente</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="CargoCustomer"
+                    value={data.CargoCustomer}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.signerPositionPlaceholder', message: 'Cargo Firmante' })} />
+                </div>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.seidorName">Nombre Seidor</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="positionSeidor"
+                    value={data.positionSeidor}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.signerNamePlaceholder', message: 'Nombre Firmante' })} />
+                </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label}><Translate id="pdfGenerator.seidorPosition">Cargo Seidor</Translate></label>
+                  <input
+                    className={styles.input}
+                    name="CargoSeidor"
+                    value={data.CargoSeidor}
+                    onChange={handleInputChange}
+                    placeholder={translate({ id: 'pdfGenerator.signerPositionPlaceholder', message: 'Cargo Firmante' })} />
+                </div>
+              </div>
+
             </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Total Contrato</label>
-              <input
-                className={styles.input}
-                name="totalContract"
-                value={data.totalContract}
-                onChange={handleInputChange}
-                placeholder="0.00" />
+            <div className={styles.buttonGroup}>
+              <button
+                className={styles.generateBtn}
+                onClick={handleGeneratePDF}
+                disabled={isGenerating}
+              >
+                {isGenerating 
+                  ? translate({ id: 'pdfGenerator.generatingPdf', message: 'Generando...' }) 
+                  : translate({ id: 'pdfGenerator.downloadPdf', message: 'Descargar PDF' })}
+              </button>
+              <button className={styles.clearBtn} onClick={handleClear}>
+                <Translate id="pdfGenerator.clearForm">Limpiar</Translate>
+              </button>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Vigencia de Oferta</label>
-                <input
-                  className={styles.input}
-                  name="validity"
-                  value={data.validity}
-                  onChange={handleInputChange}
-                  placeholder="Ej: 12 meses" />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Válido hasta</label>
-                <input
-                  className={styles.input}
-                  name="expiryDate"
-                  value={data.expiryDate}
-                  onChange={handleInputChange}
-                  placeholder="Fecha Expiración" />
-              </div>
-            </div>
-
-            <div className={styles.sectionHeader}>Firmas y Cargos</div>
-            <div className={styles.formGroup}>
-              <label className={styles.label}>Fecha de Firma</label>
-              <input
-                className={styles.input}
-                name="hours"
-                value={data.hours}
-                onChange={handleInputChange}
-                placeholder="Fecha de la firma" />
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Nombre Cliente</label>
-                <input
-                  className={styles.input}
-                  name="positionClient"
-                  value={data.positionClient}
-                  onChange={handleInputChange}
-                  placeholder="Nombre Firmante" />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Cargo Cliente</label>
-                <input
-                  className={styles.input}
-                  name="CargoCustomer"
-                  value={data.CargoCustomer}
-                  onChange={handleInputChange}
-                  placeholder="Cargo Firmante" />
-              </div>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Nombre Seidor</label>
-                <input
-                  className={styles.input}
-                  name="positionSeidor"
-                  value={data.positionSeidor}
-                  onChange={handleInputChange}
-                  placeholder="Nombre Firmante" />
-              </div>
-              <div className={styles.formGroup}>
-                <label className={styles.label}>Cargo Seidor</label>
-                <input
-                  className={styles.input}
-                  name="CargoSeidor"
-                  value={data.CargoSeidor}
-                  onChange={handleInputChange}
-                  placeholder="Cargo Firmante" />
-              </div>
-            </div>
-
-
-
-          </div>
-
-          <div className={styles.buttonGroup}>
-            <button
-              className={styles.generateBtn}
-              onClick={handleGeneratePDF}
-              disabled={isGenerating}
-            >
-              {isGenerating ? 'Generando...' : 'Descargar PDF'}
-            </button>
-            <button className={styles.clearBtn} onClick={handleClear}>
-              Limpiar
-            </button>
-          </div>
-
-          {/*
+            {/*
             <div style={{ marginTop: '2rem', padding: '1rem', border: '1px dashed var(--soft)', borderRadius: '8px' }}>
             <h3 style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}>Herramienta de Coordenadas</h3>
             <button
@@ -438,30 +444,31 @@ export default function GeneratePDFPage() {
             )}
           </div>
           */}
-        </aside>
+          </aside>
 
-        <main className={styles.mainContent}>
-          <div
-            className={styles.previewWrapper}
-            onClick={handlePageClick}
-            style={{ cursor: isPickerMode ? 'crosshair' : 'default', position: 'relative' }}
-          >
-            {isPickerMode ? (
-              <div style={{ position: 'relative', width: '794px', height: '1123px', background: 'white', boxShadow: '0 0 20px rgba(0,0,0,0.1)' }}>
-                <iframe
-                  src="/img/pdf/Quote.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                  style={{ width: '100%', height: '100%', border: 'none', pointerEvents: 'none' }}
-                />
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 10 }}>
-                  {/* Invisible overlay to catch clicks */}
+          <main className={styles.mainContent}>
+            <div
+              className={styles.previewWrapper}
+              onClick={handlePageClick}
+              style={{ cursor: isPickerMode ? 'crosshair' : 'default', position: 'relative' }}
+            >
+              {isPickerMode ? (
+                <div style={{ position: 'relative', width: '794px', height: '1123px', background: 'white', boxShadow: '0 0 20px rgba(0,0,0,0.1)' }}>
+                  <iframe
+                    src="/img/pdf/Quote.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                    style={{ width: '100%', height: '100%', border: 'none', pointerEvents: 'none' }}
+                  />
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 10 }}>
+                    {/* Invisible overlay to catch clicks */}
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <PDFPreview data={data} innerRef={pdfRef} />
-            )}
-          </div>
-        </main>
-      </div>
+              ) : (
+                <PDFPreview data={data} innerRef={pdfRef} />
+              )}
+            </div>
+          </main>
+        </div>
+      </ProtectedRoute>
     </Layout>
   );
 }

@@ -1,6 +1,6 @@
 ---
-title: Intelligent Archiving of SAP Business ByDesign
-sidebar_label: Intelligent Archiving
+title: Data Preservation
+sidebar_label: Data Preservation
 useBrand: true
 iconName: SAP
 sidebar_position:: 4
