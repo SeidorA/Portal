@@ -111,6 +111,20 @@ import BoxDoc from '../../src/components/boxdocs';
   Presentación corporativa lista para exponer, con toda la información clave de Crestone enfocada en los productos Microsoft: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
 </BoxDoc>
 
+
+
+<BoxDoc
+  title="SAP Data Preservation"
+  language="Inglés"
+  format="PDF"
+  brand="Crestone"
+  titleimg="SAP Data Preservation."
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/DATA%20Preservation/DATAPreservation.pdf?csf=1&web=1&e=TmiAJP"
+>
+Transform the storage of historical data from a technical maintenance task into a strategic step to reduce the cost of migration to SAP RISE and enable modern analytics.
+</BoxDoc>
+
+
 </div>
 
 

@@ -36,6 +36,8 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
     <hr />
     <Subitle title="General improvements" brand icon="Crestone"/>
     <p>
+      a more consistent end-to-end flow
+      <br />
       The complete OData extraction flow with attachments was optimized, with internal adjustments to ensure stronger consistency across configuration, execution, and final destination. 
     </p>
   </Cardroad>
@@ -43,7 +45,7 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
   <Cardroad title="February | 2026">
   <Subitle title="End-to-end attachments and better performance" />
     <p>
-      The full attachments extraction flow has been implemented, enabling direct delivery to the configured destination, along with automatic generation of a metadata file for traceability.  In addition, parallel processing was optimized (default 20 threads) to improve execution times. 
+      The full attachments extraction flow has been implemented, enabling direct delivery to the configured destination, along with automatic generation of a metadata file for traceability. In addition, parallel processing was optimized (default 20 threads) to improve execution times. 
     </p>
   </Cardroad>
 
@@ -95,24 +97,20 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
   <Cardroad title="May | 2026">
     <Subitle title="Theobald to Crestone migrator" icon="arrowDownToLine"/>
     <p>
-      Provide a guided migration tool to move existing Theobald extractions into Crestone, reducing manual effort and transition risk by mapping connections/objects and supporting basic validation. 
+      Provide a guided migration tool to move existing Theobald extractions into Crestone, reducing manual effort and transition risk by mapping connections/objects, generating equivalent configurations, and supporting basic validation to speed up onboarding.
     </p>
     <hr />
-    <Subitle title="Salesforce Integration" brand icon="Saleforce"/>
+    <Subitle title="Integrations SAP BW" icon="SAP"/>
     <p>
-      We will establish a deep integration to synchronize key data from Sales Cloud, Service Cloud, and Marketing Cloud.
-    </p>
-    <hr />
-    <Subitle title="Oracle Integration" brand icon="Oracle"/>
-    <p>
-      Deep and optimized integration for efficient data extraction and processing to Oracle databases.
+      Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities.
     </p>
     <hr />
     <Subitle title="Crestone available on Snowflake Marketplace" crenstonplus brand icon="Snowflake"/>
     <p>
       Crestone will be available for customers to obtain directly from Snowflake Marketplace, simplifying access and purchasing within the Snowflake ecosystem and improving product discoverability.
     </p>
-    <Subitle title="ACT·in powered by Crestone " brand icon="Crestone"/>
+    <hr />
+    <Subitle title="ACT·in powered by Crestone" brand icon="Crestone"/>
     <p>
       <b>(standard extraction layer)</b>
       <br />
@@ -131,11 +129,10 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
       Incorporation of an automated channel for delivering CSV files, simplifying daily operations, reducing manual intervention, and ensuring up to date and reliable data for analysis. Additionally, it offers flexible shipping configuration and status tracking, improving operational efficiency and user experience.
     </p>
     <hr />
-    <Subitle title="Crestone available on Databricks Marketplace" crenstonplus brand icon="Databricks"/>
+    <Subitle title="Oracle Integration" brand icon="Oracle"/>
     <p>
-      Crestone will be available for customers to obtain directly from Databricks Marketplace, simplifying access and purchasing within the Databricks ecosystem and improving product discoverability.
+      Deep and optimized integration for efficient data extraction and processing to Oracle databases.
     </p>
-
   </Cardroad>
 </div>
 
@@ -147,23 +144,24 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
   <Cardroad title="July | 2026">
     <Subitle title="Real time connection" icon="clock"/>
     <p>
-      In addition to traditional transfer scheduling, the ability to operate in real time is added, adapting to different business scenarios and data volumes. 
+      In addition to traditional transfer scheduling, the ability to operate in real time is added, thus completing a flexible palette of options that adapts to different business scenarios and data volumes.
     </p>
     <hr />
     <Subitle title="Query Designer" icon="design"/>
     <p>
-      Incorporation of a visual environment for query design, simplifying the creation and validation of extraction rules without the need for advanced technical knowledge. 
-    </p>
-  </Cardroad>
-  <Cardroad title="August | 2026">
-    <Subitle title="Integrations SAP BW" icon="SAP"/>
-    <p>
-      Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes. 
+      Incorporation of a visual environment for query design, simplifying the creation and validation of extraction rules without the need for advanced technical knowledge, optimizing user experience and result accuracy.
     </p>
     <hr />
+    <Subitle title="Salesforce Integration" brand icon="Saleforce"/>
+    <p>
+      We will establish a deep integration to synchronize key data from Sales Cloud, Service Cloud, and Marketing Cloud.
+    </p>
+  </Cardroad>
+
+  <Cardroad title="August | 2026">
     <Subitle title="Sybase Integration" brand icon="Sybase"/>
     <p>
-      Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported. 
+      Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
     </p>
   </Cardroad>
 
@@ -183,26 +181,31 @@ Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguie
   <Cardroad title="October | 2026">
     <Subitle title="Cloudera Integration" icon="Cloudera"/>
     <p>
-      Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data. 
+      Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data, facilitating Big Data analysis.
     </p>
   </Cardroad>
 
   <Cardroad title="November | 2026">
     <Subitle title="ETL capabilities" icon="process"/>
     <p>
-      Extend Crestone from extraction to an end-to-end ETL platform by adding built-in transformations and orchestration, enabling data cleansing and standardization before delivery. 
+      Extend Crestone from extraction to an end-to-end ETL platform by adding built-in transformations and orchestration, enabling data cleansing and standardization before delivery to the target system and reducing reliance on external tools.
     </p>
     <hr />
-    <Subitle title="Crestone on Google Cloud" brand icon="GCP"/>
+    <Subitle title="Crestone available on Google Cloud" brand icon="GCP"/>
     <p>
-      Enable Crestone deployment on Google Cloud, allowing customers to accelerate implementation and standardize data operations in GCP. 
+      Enable Crestone deployment on Google Cloud, allowing customers to accelerate implementation without changing their cloud strategy and standardize their data operations in GCP.
     </p>
   </Cardroad>
 
   <Cardroad title="December | 2026">
     <Subitle title="Cloud Expansion" brand icon="Cloud"/>
     <p>
-      Enable Crestone deployment on **AWS**  and **Microsoft Azure**  to facilitate adoption for organizations within their preferred cloud ecosystems, ensuring greater control over data and operations.
+      Enable Crestone deployment on AWS and Microsoft Azure to facilitate adoption for organizations within their preferred cloud ecosystems, ensuring greater control over data and operations.
+    </p>
+    <hr />
+    <Subitle title="Crestone available on Databricks Marketplace" crenstonplus brand icon="Databricks"/>
+    <p>
+      Crestone will be available for customers to obtain directly from Databricks Marketplace, simplifying access and purchasing within the Databricks ecosystem and improving product discoverability.
     </p>
   </Cardroad>
 </div>
