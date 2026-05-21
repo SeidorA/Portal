@@ -13,7 +13,7 @@ Nos complace compartir con ustedes nuestro emocionante roadmap de producto para 
 
 Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros usuarios, optimizar la eficiencia operativa y mantenernos a la vanguardia en el mercado. A continuación, encontrarán un resumen detallado por trimestre:
 
-<a href="./Timeline" >
+<a href="../Timeline" >
   <div className="timeline">
   Ver Timeline 
   <CaralIcon name="chevronRigth" size={30} />
@@ -21,53 +21,7 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
 </a>
 
 
-Aquí tienes el RoadMap completo convertido al formato `.mdx` solicitado, siguiendo la estructura de componentes de React/Markdown que proporcionaste:
 
-## Q1 2026
-
-<div className="boxrroadmap">
-  <Cardroad title="January | 2026">
-    <Subitle title="OData in the app" icon="OData"/>
-    <p>
-      More robust attachments, connections, and navigation 
-      <br />
-      Attachments and their target destination can now be configured directly within **OData**, along with improved URL readability and greater stability in connections, endpoint validation, and pagination. 
-    </p>
-    <hr />
-    <Subitle title="General improvements" brand icon="Crestone"/>
-    <p>
-      a more consistent end-to-end flow
-      <br />
-      The complete OData extraction flow with attachments was optimized, with internal adjustments to ensure stronger consistency across configuration, execution, and final destination. 
-    </p>
-  </Cardroad>
-
-  <Cardroad title="February | 2026">
-  <Subitle title="End-to-end attachments and better performance" />
-    <p>
-      The full attachments extraction flow has been implemented, enabling direct delivery to the configured destination, along with automatic generation of a metadata file for traceability. In addition, parallel processing was optimized (default 20 threads) to improve execution times. 
-    </p>
-  </Cardroad>
-
-  <Cardroad title="March | 2026">
-    <Subitle title="SQL as a source" icon="AzureSql"/>
-    <p>
-      Enable SQL Server as a data source to extract tables/views, with support for full and (when applicable) incremental loads, plus flexible connection and query configuration. 
-    </p>
-    <hr />
-    <Subitle title="Job execution triggers" icon="job"/>
-    <p>
-      Provide a mechanism to automatically trigger jobs based on events/conditions (e.g., completion of a previous job, data availability, external signal, or schedule), reducing manual execution and improving orchestration. 
-    </p>
-    <hr />
-    <Subitle title="HANA as a Destination" icon="SAP"/>
-    <p>
-      Load extracted data into SAP HANA, with support for full and, where applicable, incremental loads, along with flexible connection and write configuration options. 
-    </p>
-  </Cardroad>
-</div>
-
----
 
 ## Q2 2026
 

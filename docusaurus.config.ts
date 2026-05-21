@@ -138,16 +138,36 @@ const config: Config = {
           type: 'dropdown',
           position: 'left',
           items: [
+             {
+              type: 'html',
+              value: '<div class="dropdown-header">Crestone</div>',
+            },
             {
               label: 'Crestone',
               to: '/docs/crestone/intro',
               sidebarId: 'crestonevar',
             },
             {
+              label: 'SAP Data Preservation',
+              to: '/docs/sap-data-preservation/intro',
+              sidebarId: 'sap-data-preservation',
+            },
+             {
+              type: 'html',
+              value: '<div class="dropdown-header">Daiana</div>',
+            },
+            {
               label: 'Daiana',
               to: '/docs/daiana/intro',
               sidebarId: 'daianavar',
-            }, {
+            },
+            
+            
+             {
+              type: 'html',
+              value: '<div class="dropdown-header">.</div>',
+            },
+            {
               label: 'Doxa',
               to: '/docs/doxa/intro',
               sidebarId: 'doxaSidebar'
