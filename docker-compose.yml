@@ -1,6 +1,6 @@
 services:
   docusaurus:
-    image: cloudseidoranalytics/portal:12495395293f03e5c8cc0b6580d2c8ea3668c37b
+    image: cloudseidoranalytics/portal:85e86e1eb6ff146bb1a6960fce6e84e811fbbb51
     # IMPORTANTE: No añadir sección 'build' aquí. 
     # La imagen se construye en GitHub Actions y Portainer solo debe descargarla (PULL).
     ports:
