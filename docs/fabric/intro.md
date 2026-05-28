@@ -1,7 +1,7 @@
 ---
-title: Act·in | Finance
+title: Integraciones a Fabric (FI & SD)
 sidebar_position: 1
-description: Act-in Fabric
+description: Integraciones a Microsoft Fabric desde SAP FI y SAP SD
 ---
 
 ## Contexto 

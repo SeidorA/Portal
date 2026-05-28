@@ -215,7 +215,7 @@ const config: Config = {
               sidebarId: 'planning',
             },
             {
-              label: 'Act·in | Finance',
+              label: 'Act·in SAP + Microsoft FABRIC',
               to: '/docs/fabric/intro',
               sidebarId: 'fabric',
             }
