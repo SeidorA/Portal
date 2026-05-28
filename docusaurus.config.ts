@@ -138,7 +138,7 @@ const config: Config = {
           type: 'dropdown',
           position: 'left',
           items: [
-             {
+            {
               type: 'html',
               value: '<div class="dropdown-header">Crestone</div>',
             },
@@ -152,7 +152,7 @@ const config: Config = {
               to: '/docs/sap-data-preservation/intro',
               sidebarId: 'sap-data-preservation',
             },
-             {
+            {
               type: 'html',
               value: '<div class="dropdown-header">Daiana</div>',
             },
@@ -161,9 +161,9 @@ const config: Config = {
               to: '/docs/daiana/intro',
               sidebarId: 'daianavar',
             },
-            
-            
-             {
+
+
+            {
               type: 'html',
               value: '<div class="dropdown-header">.</div>',
             },
@@ -214,6 +214,11 @@ const config: Config = {
               to: '/docs/planning/intro',
               sidebarId: 'planning',
             },
+            {
+              label: 'Act·in | Finance',
+              to: '/docs/fabric/intro',
+              sidebarId: 'fabric',
+            }
 
           ],
         },
