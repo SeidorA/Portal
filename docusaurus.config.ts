@@ -318,6 +318,9 @@ const config: Config = {
               label: 'Generar PDF',
               to: '/generate-pdf',
               sidebarId: 'doxaSidebar',
+            }, {
+              label: 'Keyforge',
+              href: "https://keyforge.portal.seidoranalytics.com/login"
             },
             {
               label: 'Herramientas',
