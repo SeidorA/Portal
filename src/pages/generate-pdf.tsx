@@ -117,11 +117,11 @@ export default function GeneratePDFPage() {
       drawText(data.ccadminmail, 600, 515);
 
       // Expiración / Horas Serv: x124 y510
-      drawText(data.expiryDate, 162, 640, true);
+      drawText(data.expiryDate, 162, 620, true);
 
       // Validez
       drawText(data.Quantity, 500, 275);
-      drawText(data.validity, 93, 580, true);
+      drawText(data.validity, 93, 770, true);
 
 
       // [Position_client] + [Date]: x126 y699
@@ -167,8 +167,8 @@ export default function GeneratePDFPage() {
   };
 
   return (
-    <Layout 
-      title={translate({ id: 'pdfGenerator.pageTitle', message: 'Generador de Cotizaciones' })} 
+    <Layout
+      title={translate({ id: 'pdfGenerator.pageTitle', message: 'Generador de Cotizaciones' })}
       description={translate({ id: 'pdfGenerator.pageDescription', message: 'Generar y exportar cotizaciones en PDF' })}
     >
       <ProtectedRoute allowedRoles={['admin']}>
@@ -416,8 +416,8 @@ export default function GeneratePDFPage() {
                 onClick={handleGeneratePDF}
                 disabled={isGenerating}
               >
-                {isGenerating 
-                  ? translate({ id: 'pdfGenerator.generatingPdf', message: 'Generando...' }) 
+                {isGenerating
+                  ? translate({ id: 'pdfGenerator.generatingPdf', message: 'Generando...' })
                   : translate({ id: 'pdfGenerator.downloadPdf', message: 'Descargar PDF' })}
               </button>
               <button className={styles.clearBtn} onClick={handleClear}>
