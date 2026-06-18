@@ -14,9 +14,11 @@ import BoxDoc from '@site/src/components/boxdocs';
   format="PDF"
   brand="Crestone"
   titleimg="Battle Card"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQCRZBi2p_FNRbmCR_PbfcPlAdpNQH1MbWpVVcxHYkBYVSQ?e=hvSsxf"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Battlecard/UsoInterno/BattleCardCrestone.pdf?csf=1&web=1&e=Trp2e2"
 >
   Accede al catálogo completo de comparaciones en formato PDF, donde encontrarás todas las Battle Cards en un solo lugar. Este recurso centralizado te permitirá consultar rápidamente ventajas, capacidades y diferenciales clave de Crestone frente a otras soluciones.
+  <br/>
+  <strong>USO INTERNO</strong>
 </BoxDoc>
 
 

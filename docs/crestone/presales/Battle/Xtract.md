@@ -13,9 +13,11 @@ import BoxDoc from '@site/src/components/boxdocs';
   format="PDF"
   brand="Crestone"
   titleimg="Battle Card"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Efspj64MiylAi8aQGntpitUBbENvSlMcqn3oLRwle5GXCQ?e=3xzuY"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Battlecard/UsoInterno/BattleCardExtractES.pdf?csf=1&web=1&e=7oRoYl"
 >
   Crestone y Xtract Universal son soluciones para extraer datos de SAP hacia múltiples destinos. Mientras que Xtract Universal destaca por la amplitud de conectores disponibles y su API de ejecución remota, Crestone ofrece una alternativa más accesible y flexible, con ejecución en servidor, programación avanzada de jobs, soporte para reportes Z y exportación directa a plataformas como Databricks.
+  <br/>
+  <strong>USO INTERNO</strong>
 </BoxDoc>
 
 <BoxDoc
@@ -24,9 +26,12 @@ import BoxDoc from '@site/src/components/boxdocs';
   format="PDF"
   brand="Crestone"
   titleimg="Battle Card"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EQtiRED_wkZEk142rte7D7sBv1KdxRW0XMfdP1pWikyKDA?e=IxQfIG"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Battlecard/UsoInterno/BattleCardExtractEN.pdf?csf=1&web=1&e=tBHWD1"
 >
   Crestone and Xtract Universal are solutions for extracting data from SAP to multiple destinations. While Xtract Universal stands out for the breadth of connectors available and its remote execution API, Crestone offers a more accessible and flexible alternative, with server execution, advanced job scheduling, support for Z reports, and direct export to platforms such as Databricks.
+
+  <br/>
+  <strong>INTERNAL USE</strong>
 </BoxDoc>
 
 

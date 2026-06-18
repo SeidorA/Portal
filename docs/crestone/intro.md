@@ -43,20 +43,28 @@ Su interfaz intuitiva permite que usuarios no técnicos gestionen flujos de dato
             <li>OData</li>
             <li> MS SQL Server </li>
             <li> Azure SQL </li>
+            <li>MySQL</li>
+            <li>Oracle</li>
+            <li>PostgreSQL</li>
         </ul>
     </div>
     <div class="col col--6">
         <h3>Destinos</h3>
         <ul>
             <li>Snowflake</li>
-            <li>AWS</li>
-            <li>Azure</li>
-            <li>Databricks</li>
+            <li>Amazon S3</li>
+            <li>Azure Storage</li>
             <li>Teradata</li>
-            <li>Cloudera</li>
-            <li>Google Storage</li>
-            <li>Salesforce</li>
+            <li>Databricks</li>
+            <li>Google Cloud Platform</li>
+            <li>Google Cloud Big Query</li>
+            <li>MS SQL Server</li>
+            <li>Microsoft Fabric</li>
+            <li>PostgreSQL</li>
             <li>Oracle</li>
+            <li>Windows File Server</li>
+            <li>SAP HANA</li>
+            <li>MySQL</li>
         </ul>
     </div>
 </div>
