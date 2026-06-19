@@ -1,0 +1,120 @@
+.loadingContainer, .errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  background-color: var(--bg-contaider);
+  border: 1px solid var(--medium);
+  margin: 1.5rem 0;
+  text-align: center;
+  color: var(--carbon);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3.5px solid rgba(102, 182, 255, 0.2);
+  border-top-color: var(--Seidor-Ligth-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sectionTitle {
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--carbon);
+  font-size: 1.35rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--Seidor-Ligth-blue), transparent);
+  border-radius: 2px;
+}
+
+.connectionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.connectionCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 10px;
+  background-color: var(--bg-contaider);
+  border: 1px solid var(--medium);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--carbon) !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.connectionCard:hover {
+  background-color: var(--bg-contaider);
+  border-color: var(--Seidor-Ligth-blue);
+  transform: translateX(5px);
+  box-shadow: 0 6px 16px rgba(102, 182, 255, 0.12);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(102, 182, 255, 0.08);
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.connectionCard:hover .iconWrapper {
+  background-color: rgba(102, 182, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--carbon);
+  transition: color 0.2s ease;
+}
+
+.connectionCard:hover .cardTitle {
+  color: var(--Seidor-Ligth-blue);
+}
+
+.cardDescription {
+  font-size: 0.8rem;
+  color: var(--hard);
+  margin-top: 0.2rem;
+  line-height: 1.3;
+}
