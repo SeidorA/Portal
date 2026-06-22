@@ -1,6 +1,7 @@
 ---
 title: "Brochure"
 sidebar_label: "Brochures comerciales"
+sidebar_position: 1
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 

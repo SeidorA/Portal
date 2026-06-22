@@ -1,0 +1,35 @@
+{
+  "originsOrder": [
+    "sap4hanna",
+    "sapabap",
+    "sapodata",
+    "erp",
+    "businessone",
+    "bydesign",
+    "publice",
+    "azuresql",
+    "ms",
+    "dynamics-source",
+    "mysql-source",
+    "oracle-source",
+    "postgresql-source"
+  ],
+  "destinationsOrder": [
+    "aws",
+    "redshift",
+    "snowflake",
+    "Azure",
+    "AzureSQL",
+    "teradata",
+    "databricks",
+    "gcp",
+    "gcs",
+    "sqlserver",
+    "fabric",
+    "postgresql-destination",
+    "oracle-destination",
+    "fileserver",
+    "mysql-destination",
+    "hana"
+  ]
+}

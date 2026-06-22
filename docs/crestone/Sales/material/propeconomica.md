@@ -2,6 +2,7 @@
 title: "Popuesta económica"
 sidebar_label: "Propuesta económica"
 slug: "propuesta-economica"
+sidebar_position: 3
 ---
 import BoxDoc from '@site/src/components/boxdocs';
 

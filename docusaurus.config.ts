@@ -392,3 +392,5 @@ const config: Config = {
 };
 
 export default config;
+// Trigger config reload to compile new component assets
+
