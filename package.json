@@ -27,6 +27,7 @@
     "caralui": "^0.2.5",
     "clsx": "^2.0.0",
     "dotenv": "^17.2.2",
+    "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
     "iconcaral2": "^0.0.33",
     "jspdf": "^4.2.1",

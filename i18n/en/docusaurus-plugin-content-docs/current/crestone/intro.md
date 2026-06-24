@@ -84,6 +84,10 @@ The intuitive interface allows non-technical users to manage complex data flows 
 
 ## Crestone supports
 
+:::tip Connections Diagram Generator
+You can view and customize the full live connections diagram, select custom backgrounds, and download it as a high-resolution PNG for your presentations and slides at the [Connections Diagram Generator](/connections-diagram).
+:::
+
 <div class="row">
     <div class="col col--6">
         <h3>Source</h3>

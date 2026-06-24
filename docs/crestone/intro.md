@@ -32,6 +32,10 @@ Su interfaz intuitiva permite que usuarios no técnicos gestionen flujos de dato
 
 ## Crestone soporta
 
+:::tip Generador de Diagrama de Conexiones
+Puedes ver y personalizar el diagrama completo de conexiones en tiempo real, seleccionar fondos personalizados y descargarlo como un PNG de alta resolución para tus presentaciones y diapositivas en el [Generador de Diagrama de Conexiones](/connections-diagram).
+:::
+
 <CrestoneConnections />
 
 
