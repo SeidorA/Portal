@@ -14,6 +14,15 @@ Usa el botón **Descargar Imagen para PPT** para exportar la diapositiva en form
 
 <CrestonePptSlide />
 
+
+## Generador de presentación
+
+<a href="/generate-deck" target="_blank">
+![Generador de presentación](/img/crestone/generador.png)
+</a>
+
+
+
 ## Generador de portada
 
 En esta página puedes generar una portada para tu presentación comercial de PowerPoint.

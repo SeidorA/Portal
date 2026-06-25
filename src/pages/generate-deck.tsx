@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useColorMode } from '@docusaurus/theme-common';
 import { Brand, CaralIcon } from 'iconcaral2';
 import fallbackData from '../components/CrestoneConnections/connections.json';
 import { PDFDocument } from 'pdf-lib';
@@ -268,7 +269,7 @@ function SeidorAnalyticsLogo({ theme, size = 15 }: { theme: 'light' | 'dark'; si
   const textColor = isDark ? '#ffffff' : '#0c1d4a';
   const barColor = isDark ? 'rgba(255,255,255,0.3)' : '#cbd5e1';
   const analyticsColor = '#00a2ff';
-  
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: "'Poppins', 'Inter', sans-serif" }}>
       <span style={{ fontSize: `${size}px`, fontWeight: 800, color: textColor, letterSpacing: '0.5px', display: 'flex', alignItems: 'center' }}>
@@ -312,21 +313,21 @@ interface ConnectionMatrixProps {
 
 function ConnectionMatrix({ origins, destinations, theme }: ConnectionMatrixProps) {
   const isDark = theme === 'dark';
-  
+
   const canvasWidth = 1200;
   const canvasHeight = 1150;
   const columnWidth = 260;
-  
+
   const origListHeight = origins.length > 0 ? (origins.length * 50 + (origins.length - 1) * 12) : 0;
   const origStartTop = 85 + (980 - origListHeight) / 2;
-  
+
   const destListHeight = destinations.length > 0 ? (destinations.length * 50 + (destinations.length - 1) * 12) : 0;
   const destStartTop = 85 + (980 - destListHeight) / 2;
-  
+
   const hubY = 85 + 980 / 2; // 575
 
   const arrowColor = isDark ? '#ffffff' : '#0c1d4a';
-  
+
   const getLineStroke = (isDestination: boolean) => {
     if (isDark) {
       return isDestination ? 'url(#destGradMatrix)' : 'url(#originGradMatrix)';
@@ -592,21 +593,21 @@ interface ClientConnectionMatrixProps {
 
 function ClientConnectionMatrix({ origins, destinations, theme }: ClientConnectionMatrixProps) {
   const isDark = theme === 'dark';
-  
+
   const canvasWidth = 1600;
   const canvasHeight = 900;
   const columnWidth = 440;
   const cardHeight = 110;
   const cardGap = 50;
-  
+
   const origListHeight = origins.length > 0 ? (origins.length * cardHeight + (origins.length - 1) * cardGap) : 0;
   const origStartTop = (canvasHeight - origListHeight) / 2;
-  
+
   const destListHeight = destinations.length > 0 ? (destinations.length * cardHeight + (destinations.length - 1) * cardGap) : 0;
   const destStartTop = (canvasHeight - destListHeight) / 2;
-  
+
   const hubY = canvasHeight / 2; // 450
-  
+
   const getLineStroke = (isDestination: boolean) => {
     if (isDark) {
       return isDestination ? 'url(#destGradMatrixClient)' : 'url(#originGradMatrixClient)';
@@ -845,20 +846,20 @@ const sortConnections = (items: ConnectionItem[], orderArray: string[]) => {
   return [...items].sort((a, b) => {
     const indexA = orderArray.indexOf(a.id);
     const indexB = orderArray.indexOf(b.id);
-    
+
     if (indexA !== -1 && indexB !== -1) {
       return indexA - indexB;
     }
     if (indexA !== -1) return -1;
     if (indexB !== -1) return 1;
-    
+
     return a.title.localeCompare(b.title);
   });
 };
 
 const cleanTitle = (item: ConnectionItem) => {
   let title = item.title.trim();
-  
+
   if (item.id === 'sap4hanna') return 'SAP S/4HANA';
   if (item.id === 'sapabap') return 'SAP ECC';
   if (item.id === 'erp') return 'SAP ERP';
@@ -874,7 +875,7 @@ const cleanTitle = (item: ConnectionItem) => {
   if (item.id === 'AzureSQL') return 'Azure SQL';
   if (item.id === 'fabric') return 'Fabric';
   if (item.id === 'fileserver') return 'Windows File Server';
-  
+
   title = title.replace(/Source Connection/gi, '');
   title = title.replace(/Destination Connection/gi, '');
   title = title.replace(/Destination/gi, '');
@@ -882,7 +883,7 @@ const cleanTitle = (item: ConnectionItem) => {
   title = title.replace(/Connection/gi, '');
   title = title.replace(/ODATA/gi, '');
   title = title.replace(/MS /gi, '');
-  
+
   return title.trim();
 };
 
@@ -1015,7 +1016,7 @@ function getCoverLogosAndPositions(bgId: string, selectedOrigins: string[], sele
   return resultLogos;
 }
 
-export default function GenerateDeckPage() {
+function GenerateDeckContent() {
   const { i18n } = useDocusaurusContext();
   const currentLocale = i18n?.currentLocale === 'en' ? 'en' : 'es';
 
@@ -1026,20 +1027,30 @@ export default function GenerateDeckPage() {
   const compatibilityRef = useRef<HTMLDivElement>(null);
   const deploymentRef = useRef<HTMLDivElement>(null);
 
+  const { colorMode } = useColorMode();
+
   // States
   const [data, setData] = useState<ConnectionsData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [customerName, setCustomerName] = useState<string>('');
-  
+  const [environment, setEnvironment] = useState<string>('');
+
+  // Sync Docusaurus colorMode to slide theme
+  useEffect(() => {
+    if (colorMode === 'dark' || colorMode === 'light') {
+      setTheme(colorMode);
+    }
+  }, [colorMode]);
+
   // Selection states (checklists)
   const [selectedOrigins, setSelectedOrigins] = useState<string[]>([]);
   const [selectedDestinations, setSelectedDestinations] = useState<string[]>([]);
-  
+
   // Specific single items selected for Deployment flow slide
   const [deployOriginId, setDeployOriginId] = useState<string>('');
   const [deployDestinationId, setDeployDestinationId] = useState<string>('');
-  
+
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<'cover' | 'fullMatrix' | 'clientMatrix' | 'compatibility' | 'deployment'>('cover');
 
@@ -1052,7 +1063,7 @@ export default function GenerateDeckPage() {
   // Sync custom sorting from localStorage
   useEffect(() => {
     if (!data) return;
-    
+
     let originsOrderArr = defaultSlideOrder.originsOrder;
     let destinationsOrderArr = defaultSlideOrder.destinationsOrder;
     let customFound = false;
@@ -1150,7 +1161,7 @@ export default function GenerateDeckPage() {
           const initDestinations = jsonData.destinations.slice(0, 3).map(d => d.id);
           setSelectedOrigins(initOrigins);
           setSelectedDestinations(initDestinations);
-          
+
           if (initOrigins.length > 0) setDeployOriginId(initOrigins[0]);
           if (initDestinations.length > 0) setDeployDestinationId(initDestinations[0]);
           setLoading(false);
@@ -1164,7 +1175,7 @@ export default function GenerateDeckPage() {
           const initDestinations = fallbackData.destinations.slice(0, 3).map(d => d.id);
           setSelectedOrigins(initOrigins);
           setSelectedDestinations(initDestinations);
-          
+
           if (initOrigins.length > 0) setDeployOriginId(initOrigins[0]);
           if (initDestinations.length > 0) setDeployDestinationId(initDestinations[0]);
           setLoading(false);
@@ -1177,42 +1188,40 @@ export default function GenerateDeckPage() {
 
   if (loading || !data) {
     return (
-      <Layout title="Generador de Presentaciones" description="Generador de presentaciones corporativas Crestone">
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '70vh',
+        fontFamily: "'Inter', sans-serif"
+      }}>
         <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '70vh',
-          fontFamily: "'Inter', sans-serif"
-        }}>
-          <div style={{
-            border: '4px solid #f3f3f3',
-            borderTop: '4px solid #3b82f6',
-            borderRadius: '50%',
-            width: '40px',
-            height: '40px',
-            animation: 'spin 1s linear infinite',
-            marginBottom: '16px'
-          }} />
-          <style>{`
-            @keyframes spin {
-              0% { transform: rotate(0deg); }
-              100% { transform: rotate(360deg); }
-            }
-          `}</style>
-          <p style={{ color: 'var(--ifm-color-gray-medium-dark)', fontSize: '16px' }}>
-            {currentLocale === 'en' ? 'Loading connections...' : 'Cargando conexiones...'}
-          </p>
-        </div>
-      </Layout>
+          border: '4px solid #f3f3f3',
+          borderTop: '4px solid #3b82f6',
+          borderRadius: '50%',
+          width: '40px',
+          height: '40px',
+          animation: 'spin 1s linear infinite',
+          marginBottom: '16px'
+        }} />
+        <style>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+        <p style={{ color: 'var(--ifm-color-gray-medium-dark)', fontSize: '16px' }}>
+          {currentLocale === 'en' ? 'Loading connections...' : 'Cargando conexiones...'}
+        </p>
+      </div>
     );
   }
 
   // 1. Determine Cover Preset automatically
   const numO = selectedOrigins.length;
   const numD = selectedDestinations.length;
-  
+
   // Origins preset type
   const oType = numO <= 1 ? '1o' : '2o';
   // Destinations preset type
@@ -1220,10 +1229,10 @@ export default function GenerateDeckPage() {
   if (numD > 6) dType = '9d';
   else if (numD > 5) dType = '6d';
   else if (numD > 3) dType = '5d';
-  
+
   const autoBgId = `${dType}${oType}`;
   const selectedBg = backgroundOptions.find(bg => bg.id === autoBgId) || backgroundOptions[7]; // default 9d2o
-  
+
   // Calculate active cover logos placement coordinates
   const coverLogos = getCoverLogosAndPositions(selectedBg.id, selectedOrigins, selectedDestinations);
 
@@ -1283,7 +1292,7 @@ export default function GenerateDeckPage() {
         // Override styles so off-screen elements render at the canvas origin (0,0) with full opacity
         return await toPng(ref.current, {
           pixelRatio: 2.2,
-          style: { 
+          style: {
             transform: 'scale(1)',
             left: '0',
             top: '0',
@@ -1300,9 +1309,12 @@ export default function GenerateDeckPage() {
       const compatibilityPngData = await renderPng(compatibilityRef);
       const deploymentPngData = await renderPng(deploymentRef);
 
-      // 2. Fetch baseline presentation PDF (Crestone - Presentación comercial.pdf)
-      const response = await fetch('/pdf/Crestone - Presentación comercial.pdf');
-      if (!response.ok) throw new Error('No se pudo cargar la plantilla Crestone - Presentación comercial.pdf');
+      // 2. Fetch baseline presentation PDF (Crestone - Presentación comercial.pdf or Crestone - Presentación comercialdark.pdf)
+      const pdfTemplateName = isDark
+        ? 'Crestone - Presentación comercialdark.pdf'
+        : 'Crestone - Presentación comercial.pdf';
+      const response = await fetch(`/pdf/${pdfTemplateName}`);
+      if (!response.ok) throw new Error(`No se pudo cargar la plantilla ${pdfTemplateName}`);
       const existingPdfBytes = await response.arrayBuffer();
 
       // 3. Load PDF Document
@@ -1360,26 +1372,27 @@ export default function GenerateDeckPage() {
       link.download = `Presentacion_Crestone_${customerName || 'Cliente'}.pdf`;
       link.click();
       URL.revokeObjectURL(url);
-      
+
     } catch (err) {
       console.error('Error compiling deck PDF:', err);
-      alert(currentLocale === 'en' 
-        ? 'Failed to generate presentation. Consult console logs.' 
+      alert(currentLocale === 'en'
+        ? 'Failed to generate presentation. Consult console logs.'
         : 'Error al compilar la presentación PDF. Revisa los registros en consola.');
     } finally {
       setIsGenerating(false);
     }
   };
 
-  const renderIconPpt = (item: ConnectionItem) => {
+  const renderIconPpt = (item: ConnectionItem, size = 42) => {
+    const iconColor = isDark ? '#ffffff' : '#2d3748';
     if (!item.iconName) {
-      return <CaralIcon name={"file" as any} size={42} color="#2d3748" />;
+      return <CaralIcon name={"file" as any} size={size} color={iconColor} />;
     }
     const normalizedIconName = item.iconName.trim();
     if (item.useBrand) {
-      return <Brand name={normalizedIconName as any} size={42} />;
+      return <Brand name={normalizedIconName as any} size={size} />;
     } else {
-      return <CaralIcon name={normalizedIconName as any} size={42} color="#2d3748" />;
+      return <CaralIcon name={normalizedIconName as any} size={size} color={iconColor} />;
     }
   };
 
@@ -1393,25 +1406,25 @@ export default function GenerateDeckPage() {
 
     const renderItem = (item: ConnectionItem, absoluteIndex: number) => {
       return (
-        <div 
-          key={item.id} 
-          style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '18px', 
-            width: '100%', 
+        <div
+          key={item.id}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '18px',
+            width: '100%',
             boxSizing: 'border-box',
             padding: '3px 0',
             position: 'relative'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '42px', height: '42px', flexShrink: 0 }}>
-            {renderIconPpt(item)}
+            {renderIconPpt(item, 42)}
           </div>
-          <span style={{ 
-            fontSize: '24px', 
-            fontWeight: 600, 
-            color: '#2d3748', 
+          <span style={{
+            fontSize: '24px',
+            fontWeight: 600,
+            color: isDark ? '#ffffff' : '#2d3748',
             lineHeight: 1.25,
             whiteSpace: 'normal',
             wordBreak: 'break-word',
@@ -1419,10 +1432,10 @@ export default function GenerateDeckPage() {
           }}>
             {cleanTitle(item)}
           </span>
-          
+
           {isEditingOrder && !isGenerating && (
             <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto', alignSelf: 'center', zIndex: 10, paddingLeft: '12px' }}>
-              <button 
+              <button
                 onClick={() => moveItem(listType, absoluteIndex, 'up')}
                 disabled={absoluteIndex === 0}
                 title="Subir"
@@ -1436,7 +1449,7 @@ export default function GenerateDeckPage() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '14px',
+                  fontSize: '12px',
                   cursor: absoluteIndex === 0 ? 'not-allowed' : 'pointer',
                   opacity: absoluteIndex === 0 ? 0.25 : 1,
                   padding: 0
@@ -1444,7 +1457,7 @@ export default function GenerateDeckPage() {
               >
                 ▲
               </button>
-              <button 
+              <button
                 onClick={() => moveItem(listType, absoluteIndex, 'down')}
                 disabled={absoluteIndex === items.length - 1}
                 title="Bajar"
@@ -1458,7 +1471,7 @@ export default function GenerateDeckPage() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '14px',
+                  fontSize: '12px',
                   cursor: absoluteIndex === items.length - 1 ? 'not-allowed' : 'pointer',
                   opacity: absoluteIndex === items.length - 1 ? 0.25 : 1,
                   padding: 0
@@ -1485,869 +1498,1034 @@ export default function GenerateDeckPage() {
   };
 
   return (
-    <Layout title={currentLocale === 'en' ? 'Presentation Deck Generator' : 'Generador de Presentaciones'} description="Compila un PDF de presentación para clientes con todos los diagramas integrados">
+    <div style={{
+      padding: '30px 20px',
+      maxWidth: '1600px',
+      margin: '0 auto',
+      fontFamily: "'Inter', sans-serif"
+    }}>
+      {/* Header */}
+      <div style={{ marginBottom: '24px' }}>
+        <h1 style={{ fontWeight: 800, fontSize: '32px', marginBottom: '8px', background: 'linear-gradient(90deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          {currentLocale === 'en' ? 'Presentation Deck Builder' : 'Generador de Presentaciones'}
+        </h1>
+        <p style={{ color: 'var(--ifm-color-gray-medium-dark)', fontSize: '15px' }}>
+          {currentLocale === 'en'
+            ? 'Enter client details, select the source/destination matrix connections, and download the full 16-page slide presentation.'
+            : 'Introduce el cliente, marca las conexiones que se incluirán en el informe y descarga la presentación completa de 16 páginas.'}
+        </p>
+      </div>
+
+      {/* Builder layout */}
       <div style={{
-        padding: '30px 20px',
-        maxWidth: '1600px',
-        margin: '0 auto',
-        fontFamily: "'Inter', sans-serif"
+        display: 'flex',
+        gap: '30px',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'flex-start'
       }}>
-        {/* Header */}
-        <div style={{ marginBottom: '24px' }}>
-          <h1 style={{ fontWeight: 800, fontSize: '32px', marginBottom: '8px', background: 'linear-gradient(90deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            {currentLocale === 'en' ? 'Presentation Deck Builder' : 'Generador de Presentaciones'}
-          </h1>
-          <p style={{ color: 'var(--ifm-color-gray-medium-dark)', fontSize: '15px' }}>
-            {currentLocale === 'en'
-              ? 'Enter client details, select the source/destination matrix connections, and download the full 16-page slide presentation.'
-              : 'Introduce el cliente, marca las conexiones que se incluirán en el informe y descarga la presentación completa de 16 páginas.'}
-          </p>
-        </div>
-
-        {/* Builder layout */}
+        {/* Settings Sidebar */}
         <div style={{
+          flex: '0 0 350px',
+          width: '350px',
+          backgroundColor: 'var(--ifm-card-background-color)',
+          border: '1px solid var(--ifm-toc-border-color)',
+          borderRadius: '12px',
+          padding: '20px',
           display: 'flex',
-          gap: '30px',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          alignItems: 'flex-start'
+          flexDirection: 'column',
+          gap: '18px',
+          boxSizing: 'border-box',
+          maxHeight: 'calc(100vh - 120px)',
+          overflowY: 'auto'
         }}>
-          {/* Settings Sidebar */}
-          <div style={{
-            flex: '0 0 350px',
-            width: '350px',
-            backgroundColor: 'var(--ifm-card-background-color)',
-            border: '1px solid var(--ifm-toc-border-color)',
-            borderRadius: '12px',
-            padding: '20px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '18px',
-            boxSizing: 'border-box',
-            maxHeight: 'calc(100vh - 120px)',
-            overflowY: 'auto'
-          }}>
-            {/* Customer Name */}
-            <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
-                {currentLocale === 'en' ? 'Client Name' : 'Nombre del Cliente'}
-              </label>
-              <input
-                type="text"
-                value={customerName}
-                onChange={(e) => setCustomerName(e.target.value)}
-                placeholder="SEIDOR / Client..."
-                style={{
-                  width: '100%',
-                  padding: '10px 12px',
-                  borderRadius: '8px',
-                  border: '1px solid var(--ifm-toc-border-color)',
-                  backgroundColor: 'var(--ifm-background-color)',
-                  color: 'var(--ifm-color-content)',
-                  fontSize: '14px',
-                  outline: 'none'
-                }}
-              />
-            </div>
-
-            {/* Theme selector */}
-            <div>
-              <span style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
-                {currentLocale === 'en' ? 'Background Theme' : 'Tema de Fondo'}
-              </span>
-              <div style={{ display: 'flex', gap: '8px' }}>
-                {(['light', 'dark'] as const).map((tVal) => (
-                  <button
-                    key={tVal}
-                    onClick={() => setTheme(tVal)}
-                    style={{
-                      flex: '1',
-                      padding: '8px 10px',
-                      borderRadius: '6px',
-                      fontSize: '12px',
-                      border: theme === tVal ? '2px solid #3b82f6' : '1px solid var(--ifm-toc-border-color)',
-                      backgroundColor: theme === tVal ? '#e0f2fe' : 'var(--ifm-background-color)',
-                      color: theme === tVal ? '#0369a1' : 'var(--ifm-color-content)',
-                      fontWeight: 600,
-                      cursor: 'pointer',
-                      textTransform: 'capitalize'
-                    }}
-                  >
-                    {tVal === 'light' ? (currentLocale === 'en' ? 'Light' : 'Claro') : (currentLocale === 'en' ? 'Dark' : 'Oscuro')}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Deployment Origin Selector */}
-            <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
-                {currentLocale === 'en' ? 'Deploy Slide Origin' : 'Origen en Diapositiva Despliegue'}
-              </label>
-              <select
-                value={deployOriginId}
-                onChange={(e) => setDeployOriginId(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '8px 10px',
-                  borderRadius: '6px',
-                  border: '1px solid var(--ifm-toc-border-color)',
-                  backgroundColor: 'var(--ifm-background-color)',
-                  color: 'var(--ifm-color-content)',
-                  fontSize: '13px',
-                  outline: 'none',
-                  cursor: 'pointer'
-                }}
-              >
-                {data.origins.map((o) => (
-                  <option key={o.id} value={o.id}>{o.title}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Deployment Destination Selector */}
-            <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
-                {currentLocale === 'en' ? 'Deploy Slide Destination' : 'Destino en Diapositiva Despliegue'}
-              </label>
-              <select
-                value={deployDestinationId}
-                onChange={(e) => setDeployDestinationId(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '8px 10px',
-                  borderRadius: '6px',
-                  border: '1px solid var(--ifm-toc-border-color)',
-                  backgroundColor: 'var(--ifm-background-color)',
-                  color: 'var(--ifm-color-content)',
-                  fontSize: '13px',
-                  outline: 'none',
-                  cursor: 'pointer'
-                }}
-              >
-                {data.destinations.map((d) => (
-                  <option key={d.id} value={d.id}>{d.title}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Origins Checklist */}
-            <div style={{ borderTop: '1px solid var(--ifm-toc-border-color)', paddingTop: '12px' }}>
-              <span style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
-                {currentLocale === 'en' ? 'Orígenes Checklist' : 'Orígenes / Sources'}
-              </span>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '140px', overflowY: 'auto', padding: '6px', border: '1px solid var(--ifm-toc-border-color)', borderRadius: '6px', backgroundColor: 'var(--ifm-background-color)' }}>
-                {data.origins.map((o) => (
-                  <label key={o.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', cursor: 'pointer', color: 'var(--ifm-color-content)' }}>
-                    <input
-                      type="checkbox"
-                      checked={selectedOrigins.includes(o.id)}
-                      onChange={() => handleToggleOrigin(o.id)}
-                      style={{ cursor: 'pointer' }}
-                    />
-                    {o.title}
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Destinations Checklist */}
-            <div style={{ borderTop: '1px solid var(--ifm-toc-border-color)', paddingTop: '12px' }}>
-              <span style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
-                {currentLocale === 'en' ? 'Destinations Checklist' : 'Destinos / Targets'}
-              </span>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '140px', overflowY: 'auto', padding: '6px', border: '1px solid var(--ifm-toc-border-color)', borderRadius: '6px', backgroundColor: 'var(--ifm-background-color)' }}>
-                {data.destinations.map((d) => (
-                  <label key={d.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', cursor: 'pointer', color: 'var(--ifm-color-content)' }}>
-                    <input
-                      type="checkbox"
-                      checked={selectedDestinations.includes(d.id)}
-                      onChange={() => handleToggleDestination(d.id)}
-                      style={{ cursor: 'pointer' }}
-                    />
-                    {d.title}
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            {/* Generate Button */}
-            <button
-              onClick={compilePresentationPDF}
-              disabled={isGenerating || selectedOrigins.length === 0 || selectedDestinations.length === 0}
+          {/* Customer Name */}
+          <div>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
+              {currentLocale === 'en' ? 'Client Name' : 'Nombre del Cliente'}
+            </label>
+            <input
+              type="text"
+              value={customerName}
+              onChange={(e) => setCustomerName(e.target.value)}
+              placeholder="SEIDOR / Client..."
               style={{
                 width: '100%',
-                backgroundColor: '#10b981',
-                color: '#ffffff',
-                border: 'none',
+                padding: '10px 12px',
                 borderRadius: '8px',
-                padding: '12px 20px',
+                border: '1px solid var(--ifm-toc-border-color)',
+                backgroundColor: 'var(--ifm-background-color)',
+                color: 'var(--ifm-color-content)',
                 fontSize: '14px',
-                fontWeight: 700,
-                cursor: isGenerating ? 'not-allowed' : 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px',
-                transition: 'all 0.15s ease',
-                boxShadow: '0 4px 10px rgba(16, 185, 129, 0.25)',
-                marginTop: '10px'
+                outline: 'none'
               }}
-              onMouseEnter={(e) => {
-                if (!isGenerating) {
-                  e.currentTarget.style.backgroundColor = '#059669';
-                  e.currentTarget.style.transform = 'translateY(-1px)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!isGenerating) {
-                  e.currentTarget.style.backgroundColor = '#10b981';
-                  e.currentTarget.style.transform = 'none';
-                }
-              }}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" y1="13" x2="8" y2="13" />
-                <line x1="16" y1="17" x2="8" y2="17" />
-                <polyline points="10 9 9 9 8 9" />
-              </svg>
-              {isGenerating 
-                ? (currentLocale === 'en' ? 'Compiling PDF...' : 'Compilando PDF...') 
-                : (currentLocale === 'en' ? 'Download Presentation' : 'Descargar Presentación')}
-            </button>
+            />
           </div>
 
-          {/* Right Preview Column */}
+          {/* Environment */}
+          <div>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
+              {currentLocale === 'en' ? 'Environment' : 'Entorno'}
+            </label>
+            <input
+              type="text"
+              value={environment}
+              onChange={(e) => setEnvironment(e.target.value)}
+              placeholder="crestone.seidoranalytics.com/"
+              style={{
+                width: '100%',
+                padding: '10px 12px',
+                borderRadius: '8px',
+                border: '1px solid var(--ifm-toc-border-color)',
+                backgroundColor: 'var(--ifm-background-color)',
+                color: 'var(--ifm-color-content)',
+                fontSize: '14px',
+                outline: 'none'
+              }}
+            />
+          </div>
+
+          {/* Theme selector */}
+          <div>
+            <span style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
+              {currentLocale === 'en' ? 'Background Theme' : 'Tema de Fondo'}
+            </span>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              {(['light', 'dark'] as const).map((tVal) => (
+                <button
+                  key={tVal}
+                  onClick={() => setTheme(tVal)}
+                  style={{
+                    flex: '1',
+                    padding: '8px 10px',
+                    borderRadius: '6px',
+                    fontSize: '12px',
+                    border: theme === tVal ? '2px solid #3b82f6' : '1px solid var(--ifm-toc-border-color)',
+                    backgroundColor: theme === tVal ? '#e0f2fe' : 'var(--ifm-background-color)',
+                    color: theme === tVal ? '#0369a1' : 'var(--ifm-color-content)',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    textTransform: 'capitalize'
+                  }}
+                >
+                  {tVal === 'light' ? (currentLocale === 'en' ? 'Light' : 'Claro') : (currentLocale === 'en' ? 'Dark' : 'Oscuro')}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Deployment Origin Selector */}
+          <div>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
+              {currentLocale === 'en' ? 'Deploy Slide Origin' : 'Origen en Diapositiva Despliegue'}
+            </label>
+            <select
+              value={deployOriginId}
+              onChange={(e) => setDeployOriginId(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '8px 10px',
+                borderRadius: '6px',
+                border: '1px solid var(--ifm-toc-border-color)',
+                backgroundColor: 'var(--ifm-background-color)',
+                color: 'var(--ifm-color-content)',
+                fontSize: '13px',
+                outline: 'none',
+                cursor: 'pointer'
+              }}
+            >
+              {data.origins.map((o) => (
+                <option key={o.id} value={o.id}>{o.title}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* Deployment Destination Selector */}
+          <div>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '6px' }}>
+              {currentLocale === 'en' ? 'Deploy Slide Destination' : 'Destino en Diapositiva Despliegue'}
+            </label>
+            <select
+              value={deployDestinationId}
+              onChange={(e) => setDeployDestinationId(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '8px 10px',
+                borderRadius: '6px',
+                border: '1px solid var(--ifm-toc-border-color)',
+                backgroundColor: 'var(--ifm-background-color)',
+                color: 'var(--ifm-color-content)',
+                fontSize: '13px',
+                outline: 'none',
+                cursor: 'pointer'
+              }}
+            >
+              {data.destinations.map((d) => (
+                <option key={d.id} value={d.id}>{d.title}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* Origins Checklist */}
+          <div style={{ borderTop: '1px solid var(--ifm-toc-border-color)', paddingTop: '12px' }}>
+            <span style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
+              {currentLocale === 'en' ? 'Orígenes Checklist' : 'Orígenes / Sources'}
+            </span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '140px', overflowY: 'auto', padding: '6px', border: '1px solid var(--ifm-toc-border-color)', borderRadius: '6px', backgroundColor: 'var(--ifm-background-color)' }}>
+              {data.origins.map((o) => (
+                <label key={o.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', cursor: 'pointer', color: 'var(--ifm-color-content)' }}>
+                  <input
+                    type="checkbox"
+                    checked={selectedOrigins.includes(o.id)}
+                    onChange={() => handleToggleOrigin(o.id)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                  {o.title}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Destinations Checklist */}
+          <div style={{ borderTop: '1px solid var(--ifm-toc-border-color)', paddingTop: '12px' }}>
+            <span style={{ display: 'block', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
+              {currentLocale === 'en' ? 'Destinations Checklist' : 'Destinos / Targets'}
+            </span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '140px', overflowY: 'auto', padding: '6px', border: '1px solid var(--ifm-toc-border-color)', borderRadius: '6px', backgroundColor: 'var(--ifm-background-color)' }}>
+              {data.destinations.map((d) => (
+                <label key={d.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', cursor: 'pointer', color: 'var(--ifm-color-content)' }}>
+                  <input
+                    type="checkbox"
+                    checked={selectedDestinations.includes(d.id)}
+                    onChange={() => handleToggleDestination(d.id)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                  {d.title}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* Generate Button */}
+          <button
+            onClick={compilePresentationPDF}
+            disabled={isGenerating || selectedOrigins.length === 0 || selectedDestinations.length === 0}
+            style={{
+              width: '100%',
+              backgroundColor: '#10b981',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '12px 20px',
+              fontSize: '14px',
+              fontWeight: 700,
+              cursor: isGenerating ? 'not-allowed' : 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+              transition: 'all 0.15s ease',
+              boxShadow: '0 4px 10px rgba(16, 185, 129, 0.25)',
+              marginTop: '10px'
+            }}
+            onMouseEnter={(e) => {
+              if (!isGenerating) {
+                e.currentTarget.style.backgroundColor = '#059669';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (!isGenerating) {
+                e.currentTarget.style.backgroundColor = '#10b981';
+                e.currentTarget.style.transform = 'none';
+              }
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            {isGenerating
+              ? (currentLocale === 'en' ? 'Compiling PDF...' : 'Compilando PDF...')
+              : (currentLocale === 'en' ? 'Download Presentation' : 'Descargar Presentación')}
+          </button>
+        </div>
+
+        {/* Right Preview Column */}
+        <div style={{
+          flex: '1',
+          minWidth: '0',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '15px'
+        }}>
+          {/* Tabs Selector */}
           <div style={{
-            flex: '1',
-            minWidth: '0',
             display: 'flex',
-            flexDirection: 'column',
-            gap: '15px'
+            borderBottom: '2px solid var(--ifm-toc-border-color)',
+            gap: '6px',
+            paddingBottom: '4px'
           }}>
-            {/* Tabs Selector */}
+            {([
+              { key: 'cover', label: currentLocale === 'en' ? '1. Cover' : '1. Portada' },
+              { key: 'fullMatrix', label: currentLocale === 'en' ? '4. Full Matrix' : '4. Matriz Completa' },
+              { key: 'clientMatrix', label: currentLocale === 'en' ? '5. Client Matrix' : '5. Matriz Cliente' },
+              { key: 'compatibility', label: currentLocale === 'en' ? '6. Compatibility' : '6. Compatible con' },
+              { key: 'deployment', label: currentLocale === 'en' ? '9. Deployment' : '9. Despliegue' },
+            ] as const).map((tab) => {
+              const isActive = activeTab === tab.key;
+              return (
+                <button
+                  key={tab.key}
+                  onClick={() => setActiveTab(tab.key)}
+                  style={{
+                    padding: '10px 16px',
+                    borderRadius: '8px 8px 0 0',
+                    border: 'none',
+                    backgroundColor: isActive ? 'var(--ifm-toc-border-color)' : 'transparent',
+                    color: isActive ? 'var(--ifm-color-primary)' : 'var(--ifm-color-content)',
+                    fontWeight: isActive ? 700 : 500,
+                    cursor: 'pointer',
+                    fontSize: '13px',
+                    transition: 'all 0.15s ease',
+                    borderBottom: isActive ? '3px solid var(--ifm-color-primary)' : 'none'
+                  }}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {activeTab === 'compatibility' && (
             <div style={{
               display: 'flex',
-              borderBottom: '2px solid var(--ifm-toc-border-color)',
-              gap: '6px',
-              paddingBottom: '4px'
+              gap: '12px',
+              alignItems: 'center',
+              margin: '10px 0 0 0',
+              padding: '4px'
             }}>
-              {([
-                { key: 'cover', label: currentLocale === 'en' ? '1. Cover' : '1. Portada' },
-                { key: 'fullMatrix', label: currentLocale === 'en' ? '4. Full Matrix' : '4. Matriz Completa' },
-                { key: 'clientMatrix', label: currentLocale === 'en' ? '5. Client Matrix' : '5. Matriz Cliente' },
-                { key: 'compatibility', label: currentLocale === 'en' ? '6. Compatibility' : '6. Compatible con' },
-                { key: 'deployment', label: currentLocale === 'en' ? '9. Deployment' : '9. Despliegue' },
-              ] as const).map((tab) => {
-                const isActive = activeTab === tab.key;
-                return (
-                  <button
-                    key={tab.key}
-                    onClick={() => setActiveTab(tab.key)}
-                    style={{
-                      padding: '10px 16px',
-                      borderRadius: '8px 8px 0 0',
-                      border: 'none',
-                      backgroundColor: isActive ? 'var(--ifm-toc-border-color)' : 'transparent',
-                      color: isActive ? 'var(--ifm-color-primary)' : 'var(--ifm-color-content)',
-                      fontWeight: isActive ? 700 : 500,
-                      cursor: 'pointer',
-                      fontSize: '13px',
-                      transition: 'all 0.15s ease',
-                      borderBottom: isActive ? '3px solid var(--ifm-color-primary)' : 'none'
-                    }}
-                  >
-                    {tab.label}
-                  </button>
-                );
-              })}
-            </div>
+              <button
+                onClick={() => setIsEditingOrder(!isEditingOrder)}
+                style={{
+                  backgroundColor: isEditingOrder ? '#3b82f6' : 'var(--ifm-button-background-color, #e5e7eb)',
+                  color: isEditingOrder ? '#ffffff' : 'var(--ifm-color-content, #374151)',
+                  fontWeight: 600,
+                  fontSize: '13px',
+                  padding: '8px 14px',
+                  border: '1px solid var(--ifm-toc-border-color, #d1d5db)',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  transition: 'all 0.15s ease-in-out'
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                  <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                </svg>
+                {isEditingOrder
+                  ? (currentLocale === 'en' ? 'Finish Reordering' : 'Terminar Reordenación')
+                  : (currentLocale === 'en' ? 'Reorder Connections' : 'Reordenar Conexiones')}
+              </button>
 
-            {activeTab === 'compatibility' && (
-              <div style={{
-                display: 'flex',
-                gap: '12px',
-                alignItems: 'center',
-                margin: '10px 0 0 0',
-                padding: '4px'
-              }}>
-                <button 
-                  onClick={() => setIsEditingOrder(!isEditingOrder)}
+              {hasCustomOrder && (
+                <button
+                  onClick={handleResetOrder}
                   style={{
-                    backgroundColor: isEditingOrder ? '#3b82f6' : 'var(--ifm-button-background-color, #e5e7eb)',
-                    color: isEditingOrder ? '#ffffff' : 'var(--ifm-color-content, #374151)',
+                    backgroundColor: 'transparent',
+                    color: '#e53e3e',
                     fontWeight: 600,
                     fontSize: '13px',
                     padding: '8px 14px',
-                    border: '1px solid var(--ifm-toc-border-color, #d1d5db)',
+                    border: '1px dashed #e53e3e',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     display: 'inline-flex',
                     alignItems: 'center',
-                    gap: '6px',
+                    gap: '5px',
                     transition: 'all 0.15s ease-in-out'
                   }}
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                    <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <polyline points="3 6 5 6 21 6" />
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
                   </svg>
-                  {isEditingOrder 
-                    ? (currentLocale === 'en' ? 'Finish Reordering' : 'Terminar Reordenación') 
-                    : (currentLocale === 'en' ? 'Reorder Connections' : 'Reordenar Conexiones')}
+                  {currentLocale === 'en' ? 'Reset Order' : 'Restaurar Orden'}
                 </button>
+              )}
 
-                {hasCustomOrder && (
-                  <button 
-                    onClick={handleResetOrder}
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: '#e53e3e',
-                      fontWeight: 600,
-                      fontSize: '13px',
-                      padding: '8px 14px',
-                      border: '1px dashed #e53e3e',
-                      borderRadius: '8px',
-                      cursor: 'pointer',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '5px',
-                      transition: 'all 0.15s ease-in-out'
-                    }}
-                  >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <polyline points="3 6 5 6 21 6" />
-                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                    </svg>
-                    {currentLocale === 'en' ? 'Reset Order' : 'Restaurar Orden'}
-                  </button>
-                )}
-                
-                <span style={{ fontSize: '12px', color: 'var(--ifm-color-gray-medium-dark)', fontStyle: 'italic' }}>
-                  {currentLocale === 'en' 
-                    ? '💡 Changes to the order are saved automatically and shared with the slide in documentation.' 
-                    : '💡 Los cambios en el orden se guardan automáticamente y se comparten con la diapositiva de la documentación.'}
-                </span>
-              </div>
-            )}
+              <span style={{ fontSize: '12px', color: 'var(--ifm-color-gray-medium-dark)', fontStyle: 'italic' }}>
+                {currentLocale === 'en'
+                  ? '💡 Changes to the order are saved automatically and shared with the slide in documentation.'
+                  : '💡 Los cambios en el orden se guardan automáticamente y se comparten con la diapositiva de la documentación.'}
+              </span>
+            </div>
+          )}
 
-            {/* Preview Viewport */}
+          {/* Preview Viewport */}
+          <div style={{
+            backgroundColor: '#e2e8f0',
+            borderRadius: '12px',
+            border: '1px solid var(--ifm-toc-border-color)',
+            padding: '24px',
+            overflowX: 'auto',
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: 'inset 0 2px 8px rgba(0,0,0,0.05)'
+          }}>
+            {/* Scaled preview frame */}
             <div style={{
-              backgroundColor: '#e2e8f0',
-              borderRadius: '12px',
-              border: '1px solid var(--ifm-toc-border-color)',
-              padding: '24px',
-              overflowX: 'auto',
-              display: 'flex',
-              justifyContent: 'center',
-              boxShadow: 'inset 0 2px 8px rgba(0,0,0,0.05)'
+              width: '1920px',
+              height: '1080px',
+              transform: 'scale(0.48)',
+              transformOrigin: 'top center',
+              flexShrink: 0,
+              marginBottom: '-560px' // Offset scale overflow
             }}>
-              {/* Scaled preview frame */}
-              <div style={{
-                width: '1920px',
-                height: '1080px',
-                transform: 'scale(0.48)',
-                transformOrigin: 'top center',
-                flexShrink: 0,
-                marginBottom: '-560px' // Offset scale overflow
-              }}>
-                {/* 1. Portada preview */}
-                <div 
-                  ref={coverRef} 
-                  style={{ 
-                    ...slideWrapperStyle, 
-                    position: activeTab === 'cover' ? 'relative' : 'absolute',
-                    left: '0',
-                    top: '0',
-                    opacity: activeTab === 'cover' ? 1 : 0,
-                    pointerEvents: activeTab === 'cover' ? 'auto' : 'none',
-                    zIndex: activeTab === 'cover' ? 10 : 1,
-                    backgroundImage: `url(${bgSlideUrl})`
-                  }}
-                >
-                  <div className="gridOverlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(rgba(99,102,241,0.1) 1px, transparent 1px)', backgroundSize: '24px 24px', pointerEvents: 'none' }} />
-                  {/* Background diagram */}
-                  <img
-                    src={`${bgPortadaPath}${selectedBg.file}`}
-                    alt="Diagram"
-                    style={{
-                      position: 'absolute',
-                      left: `${selectedBg.left}px`,
-                      top: `${selectedBg.top}px`,
-                      width: `${selectedBg.width}px`,
-                      height: `${selectedBg.height}px`,
-                      pointerEvents: 'none'
-                    }}
-                  />
-                  {/* Title & Subtitle */}
-                  <div style={{ 
-                    position: 'absolute', 
-                    left: '152px', 
-                    top: '410px', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    gap: '10px',
-                    maxWidth: '800px',
-                    pointerEvents: 'none'
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
-                      <CrestoneLogo 
-                        color1={isDark ? '#66B6FF' : '#0191FF'} 
-                        color2={isDark ? '#ffffff' : '#1b2c6d'} 
-                        size={70} 
-                      />
-                      <h1 style={{ 
-                        margin: 0, 
-                        fontSize: '80px', 
-                        fontWeight: 800, 
-                        lineHeight: 1.07, 
-                        letterSpacing: '-1.5px', 
-                        fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
-                        background: 'linear-gradient(90deg, #0191FF, #66B6FF)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                      }}>
-                        CRESTONE
-                      </h1>
-                    </div>
-                    <p style={{ 
-                      margin: 0, 
-                      fontSize: '32px', 
-                      fontWeight: 400, 
-                      color: isDark ? '#e2e8f0' : '#1e293b', 
-                      opacity: 0.9,
-                      textShadow: isDark ? '0 2px 6px rgba(0, 0, 0, 0.3)' : '0 1px 4px rgba(255, 255, 255, 0.60)',
-                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif"
-                    }}>
-                      {customerName 
-                        ? `${currentLocale === 'en' ? 'Proposal for' : 'Propuesta para'} ${customerName}` 
-                        : (currentLocale === 'en' ? 'Integration Matrix & Supported Targets' : 'Matriz de Integración y Destinos Soportados')}
-                    </p>
-                  </div>
-
-                  {/* Footer */}
-                  <div style={{ 
-                    position: 'absolute', 
-                    bottom: '60px', 
-                    left: '100px', 
-                    right: '100px', 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'flex-end',
-                    borderTop: isDark ? '1.5px solid rgba(255, 255, 255, 0.12)' : '1.5px solid rgba(15, 23, 42, 0.15)',
-                    paddingTop: '20px',
-                    pointerEvents: 'none'
-                  }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      <span style={{ 
-                        fontSize: '12px', 
-                        fontWeight: 600, 
-                        textTransform: 'uppercase', 
-                        color: isDark ? '#94a3b8' : '#475569', 
-                        letterSpacing: '1.5px' 
-                      }}>
-                        {currentLocale === 'es' ? 'Más Información' : 'More Information'}
-                      </span>
-                      <span style={{ 
-                        fontSize: '16px', 
-                        fontWeight: 700, 
-                        color: isDark ? '#ffffff' : '#0f172a' 
-                      }}>
-                        crestone.io
-                      </span>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-end' }}>
-                      <span style={{ 
-                        fontSize: '12px', 
-                        fontWeight: 600, 
-                        textTransform: 'uppercase', 
-                        color: isDark ? '#94a3b8' : '#475569', 
-                        letterSpacing: '1.5px' 
-                      }}>
-                        {currentLocale === 'es' ? 'Entorno' : 'Environment'}
-                      </span>
-                      <span style={{ 
-                        fontSize: '16px', 
-                        fontWeight: 700, 
-                        color: '#10b981' 
-                      }}>
-                        ● crestone.seidoranalytics.com/
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Connection logo overlays */}
-                  {coverLogos.map((item) => (
-                    <div
-                      key={item.id}
-                      style={{
-                        position: 'absolute',
-                        left: `${item.left}px`,
-                        top: `${item.top}px`,
-                        width: '139px',
-                        height: '98px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
-                    >
-                      <img
-                        src={`${bgPortadaPath}${item.coverLogoId}.png`}
-                        alt="Logo"
-                        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                {/* 2. Matriz Completa preview */}
-                <div 
-                  ref={fullMatrixRef} 
-                  style={{ 
-                    ...slideWrapperStyle, 
-                    position: activeTab === 'fullMatrix' ? 'relative' : 'absolute',
-                    left: '0',
-                    top: '0',
-                    opacity: activeTab === 'fullMatrix' ? 1 : 0,
-                    pointerEvents: activeTab === 'fullMatrix' ? 'auto' : 'none',
-                    zIndex: activeTab === 'fullMatrix' ? 10 : 1,
-                    backgroundImage: `url(${isDark ? '/img/crestone/ppt/Matrizfulldark.png' : '/img/crestone/ppt/Matrizfull.png'})`
-                  }}
-                >
-                  {/* Slide Header */}
-                  <div style={{ position: 'absolute', left: '100px', top: '75px', zIndex: 2 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                      <CrestoneLogo size={48} color1="#3b82f6" color2={isDark ? '#ffffff' : '#0c1d4a'} />
-                      <h1 style={{ 
-                        margin: 0, 
-                        fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
-                        fontSize: '42px', 
-                        fontWeight: 800, 
-                        color: textColorMain, 
-                        letterSpacing: '-0.5px' 
-                      }}>
-                        {currentLocale === 'en' ? 'Full Connection Matrix' : 'Matriz de Conexión Crestone'}
-                      </h1>
-                    </div>
-                    <p style={{ margin: '4px 0 0 0', fontSize: '16px', color: isDark ? '#94a3b8' : '#475569' }}>
-                      {currentLocale === 'en' ? 'Ecosystem of SAP Origins and Target Cloud Destinations' : 'Ecosistema de Orígenes SAP y Destinos en la Nube'}
-                    </p>
-                  </div>
-                  {/* Matrix centered and scaled */}
-                  <div style={{
+              {/* 1. Portada preview */}
+              <div
+                ref={coverRef}
+                style={{
+                  ...slideWrapperStyle,
+                  position: activeTab === 'cover' ? 'relative' : 'absolute',
+                  left: '0',
+                  top: '0',
+                  opacity: activeTab === 'cover' ? 1 : 0,
+                  pointerEvents: activeTab === 'cover' ? 'auto' : 'none',
+                  zIndex: activeTab === 'cover' ? 10 : 1,
+                  backgroundImage: `url(${bgSlideUrl})`
+                }}
+              >
+                <div className="gridOverlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(rgba(99,102,241,0.1) 1px, transparent 1px)', backgroundSize: '24px 24px', pointerEvents: 'none' }} />
+                {/* Background diagram */}
+                <img
+                  src={`${bgPortadaPath}${selectedBg.file}`}
+                  alt="Diagram"
+                  style={{
                     position: 'absolute',
-                    left: '528px', // Symmetrical horizontal centering
-                    top: '200px',
-                    transform: 'scale(0.72)',
-                    transformOrigin: 'top left',
-                    zIndex: 2
-                  }}>
-                    <ConnectionMatrix origins={data.origins} destinations={data.destinations} theme={theme} />
-                  </div>
-                </div>
-
-                {/* 3. Matriz Cliente preview */}
-                <div 
-                  ref={clientMatrixRef} 
-                  style={{ 
-                    ...slideWrapperStyle, 
-                    position: activeTab === 'clientMatrix' ? 'relative' : 'absolute',
-                    left: '0',
-                    top: '0',
-                    opacity: activeTab === 'clientMatrix' ? 1 : 0,
-                    pointerEvents: activeTab === 'clientMatrix' ? 'auto' : 'none',
-                    zIndex: activeTab === 'clientMatrix' ? 10 : 1,
-                    backgroundImage: `url(${isDark ? '/img/crestone/ppt/Matrizdark.png' : '/img/crestone/ppt/Matrizligth.png'})`
+                    left: `${selectedBg.left}px`,
+                    top: `${selectedBg.top}px`,
+                    width: `${selectedBg.width}px`,
+                    height: `${selectedBg.height}px`,
+                    pointerEvents: 'none'
                   }}
-                >
-                  {/* Slide Header */}
-                  <div style={{ position: 'absolute', left: '100px', top: '75px', zIndex: 2 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                      <CrestoneLogo size={48} color1="#3b82f6" color2={isDark ? '#ffffff' : '#0c1d4a'} />
-                      <h1 style={{ 
-                        margin: 0, 
-                        fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
-                        fontSize: '42px', 
-                        fontWeight: 800, 
-                        color: textColorMain, 
-                        letterSpacing: '-0.5px' 
-                      }}>
-                        {currentLocale === 'en' ? `Integration Matrix - ${customerName || 'Client'}` : `Matriz de Integración - ${customerName || 'Cliente'}`}
-                      </h1>
-                    </div>
-                    <p style={{ margin: '4px 0 0 0', fontSize: '16px', color: isDark ? '#94a3b8' : '#475569' }}>
-                      {currentLocale === 'en' ? 'Customized SAP integration ecosystem' : 'Ecosistema de integración SAP a medida del cliente'}
-                    </p>
-                  </div>
-                  {/* Filtered Matrix centered and moved down to prevent header overlap */}
-                  <div style={{
-                    position: 'absolute',
-                    left: '160px',
-                    top: '120px',
-                    zIndex: 2
-                  }}>
-                    <ClientConnectionMatrix origins={activeOrigins} destinations={activeDestinations} theme={theme} />
-                  </div>
-                </div>
-
-                {/* 4. Compatible con preview */}
-                <div 
-                  ref={compatibilityRef} 
-                  style={{ 
-                    ...slideWrapperStyle, 
-                    position: activeTab === 'compatibility' ? 'relative' : 'absolute',
-                    left: '0',
-                    top: '0',
-                    opacity: activeTab === 'compatibility' ? 1 : 0,
-                    pointerEvents: activeTab === 'compatibility' ? 'auto' : 'none',
-                    zIndex: activeTab === 'compatibility' ? 10 : 1,
-                    padding: '70px 80px',
-                    backgroundImage: 'url(/img/crestone/ppt_background.png)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'flex-start'
-                  }}
-                >
-                  {/* Header */}
-                  <div style={{ marginBottom: '38px' }}>
-                    <h1 style={{ 
-                      margin: 0, 
-                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", 
-                      fontSize: '60px', 
-                      fontWeight: 800, 
-                      color: '#1a202c', 
-                      letterSpacing: '-0.5px' 
+                />
+                {/* Title & Subtitle */}
+                <div style={{
+                  position: 'absolute',
+                  left: '152px',
+                  top: '410px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                  maxWidth: '800px',
+                  pointerEvents: 'none'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+                    <CrestoneLogo
+                      color1={isDark ? '#66B6FF' : '#0191FF'}
+                      color2={isDark ? '#ffffff' : '#1b2c6d'}
+                      size={70}
+                    />
+                    <h1 style={{
+                      margin: 0,
+                      fontSize: '80px',
+                      fontWeight: 800,
+                      lineHeight: 1.07,
+                      letterSpacing: '-1.5px',
+                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                      background: 'linear-gradient(90deg, #0191FF, #66B6FF)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
                     }}>
-                      {currentLocale === 'en' ? 'Crestone is compatible with' : 'Crestone es compatible con'}
+                      CRESTONE
                     </h1>
                   </div>
+                  <p style={{
+                    margin: 0,
+                    fontSize: '32px',
+                    fontWeight: 400,
+                    color: isDark ? '#e2e8f0' : '#1e293b',
+                    opacity: 0.9,
+                    textShadow: isDark ? '0 2px 6px rgba(0, 0, 0, 0.3)' : '0 1px 4px rgba(255, 255, 255, 0.60)',
+                    fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif"
+                  }}>
+                    {customerName
+                      ? `${currentLocale === 'en' ? 'Proposal for' : 'Propuesta para'} ${customerName}`
+                      : (currentLocale === 'en' ? 'Integration Matrix & Supported Targets' : 'Matriz de Integración y Destinos Soportados')}
+                  </p>
+                </div>
 
-                  {/* Symmetrical Two Card Columns */}
-                  <div style={{ display: 'flex', gap: '45px', flexGrow: 1, minHeight: 0 }}>
-                    {/* Origins Column */}
-                    <div style={{
-                      flex: 1,
-                      backgroundColor: 'rgba(255, 255, 255, 0.45)',
-                      backdropFilter: 'blur(12px)',
-                      WebkitBackdropFilter: 'blur(12px)',
-                      border: '1.5px solid rgba(255, 255, 255, 0.5)',
-                      borderRadius: '24px',
-                      padding: '38px 45px',
-                      boxShadow: '0 15px 45px rgba(0, 0, 0, 0.04)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      boxSizing: 'border-box'
+                {/* Footer */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: '60px',
+                  left: '100px',
+                  right: '100px',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'flex-end',
+                  borderTop: isDark ? '1.5px solid rgba(255, 255, 255, 0.12)' : '1.5px solid rgba(15, 23, 42, 0.15)',
+                  paddingTop: '20px',
+                  pointerEvents: 'none'
+                }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    <span style={{
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      color: isDark ? '#94a3b8' : '#475569',
+                      letterSpacing: '1.5px'
                     }}>
-                      <h2 style={{ 
-                        fontSize: '42px', 
-                        fontWeight: 700, 
-                        color: '#2d3748', 
-                        margin: '0 0 30px 0', 
-                        paddingBottom: '12px', 
-                        borderBottom: '3px solid rgba(0, 102, 204, 0.15)',
-                        fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif"
-                      }}>
-                        {currentLocale === 'en' ? 'Origins' : 'Orígenes'}
-                      </h2>
-                      {renderPptColumnGrid('origins')}
-                    </div>
-
-                    {/* Destinations Column */}
-                    <div style={{
-                      flex: 1,
-                      backgroundColor: 'rgba(255, 255, 255, 0.45)',
-                      backdropFilter: 'blur(12px)',
-                      WebkitBackdropFilter: 'blur(12px)',
-                      border: '1.5px solid rgba(255, 255, 255, 0.5)',
-                      borderRadius: '24px',
-                      padding: '38px 45px',
-                      boxShadow: '0 15px 45px rgba(0, 0, 0, 0.04)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      boxSizing: 'border-box'
+                      {currentLocale === 'es' ? 'Más Información' : 'More Information'}
+                    </span>
+                    <span style={{
+                      fontSize: '16px',
+                      fontWeight: 700,
+                      color: isDark ? '#ffffff' : '#0f172a'
                     }}>
-                      <h2 style={{ 
-                        fontSize: '42px', 
-                        fontWeight: 700, 
-                        color: '#2d3748', 
-                        margin: '0 0 30px 0', 
-                        paddingBottom: '12px', 
-                        borderBottom: '3px solid rgba(0, 102, 204, 0.15)',
-                        fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif"
-                      }}>
-                        {currentLocale === 'en' ? 'Destinations' : 'Destinos'}
-                      </h2>
-                      {renderPptColumnGrid('destinations')}
-                    </div>
+                      crestone.io
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'flex-end' }}>
+                    <span style={{
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      textTransform: 'uppercase',
+                      color: isDark ? '#94a3b8' : '#475569',
+                      letterSpacing: '1.5px'
+                    }}>
+                      {currentLocale === 'es' ? 'Entorno' : 'Environment'}
+                    </span>
+                    <span style={{
+                      fontSize: '16px',
+                      fontWeight: 700,
+                      color: '#10b981'
+                    }}>
+                      ● {environment.trim() || 'crestone.seidoranalytics.com/'}
+                    </span>
                   </div>
                 </div>
 
-                {/* 5. Despliegue preview (Scales the 1280x720 canvas by 1.5 to cover 1920x1080) */}
-                <div 
-                  ref={deploymentRef} 
-                  style={{ 
-                    width: '1920px',
-                    height: '1080px',
-                    overflow: 'hidden',
-                    backgroundColor: isDark ? '#0f172a' : '#ffffff',
-                    position: activeTab === 'deployment' ? 'relative' : 'absolute',
-                    left: '0',
-                    top: '0',
-                    opacity: activeTab === 'deployment' ? 1 : 0,
-                    pointerEvents: activeTab === 'deployment' ? 'auto' : 'none',
-                    zIndex: activeTab === 'deployment' ? 10 : 1,
-                  }}
-                >
+                {/* Connection logo overlays */}
+                {coverLogos.map((item) => (
+                  <div
+                    key={item.id}
+                    style={{
+                      position: 'absolute',
+                      left: `${item.left}px`,
+                      top: `${item.top}px`,
+                      width: '139px',
+                      height: '98px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <img
+                      src={`${bgPortadaPath}${item.coverLogoId}.png`}
+                      alt="Logo"
+                      style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* 2. Matriz Completa preview */}
+              <div
+                ref={fullMatrixRef}
+                style={{
+                  ...slideWrapperStyle,
+                  position: activeTab === 'fullMatrix' ? 'relative' : 'absolute',
+                  left: '0',
+                  top: '0',
+                  opacity: activeTab === 'fullMatrix' ? 1 : 0,
+                  pointerEvents: activeTab === 'fullMatrix' ? 'auto' : 'none',
+                  zIndex: activeTab === 'fullMatrix' ? 10 : 1,
+                  backgroundImage: `url(${isDark ? '/img/crestone/ppt/Matrizfulldark.png' : '/img/crestone/ppt/Matrizfull.png'})`
+                }}
+              >
+                {/* Slide Header */}
+                <div style={{ position: 'absolute', left: '100px', top: '75px', zIndex: 2 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                    <CrestoneLogo size={48} color1="#3b82f6" color2={isDark ? '#ffffff' : '#0c1d4a'} />
+                    <h1 style={{
+                      margin: 0,
+                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                      fontSize: '42px',
+                      fontWeight: 800,
+                      color: textColorMain,
+                      letterSpacing: '-0.5px'
+                    }}>
+                      {currentLocale === 'en' ? 'Full Connection Matrix' : 'Matriz de Conexión Crestone'}
+                    </h1>
+                  </div>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '16px', color: isDark ? '#94a3b8' : '#475569' }}>
+                    {currentLocale === 'en' ? 'Ecosystem of SAP Origins and Target Cloud Destinations' : 'Ecosistema de Orígenes SAP y Destinos en la Nube'}
+                  </p>
+                </div>
+                {/* Matrix centered and scaled */}
+                <div style={{
+                  position: 'absolute',
+                  left: '528px', // Symmetrical horizontal centering
+                  top: '200px',
+                  transform: 'scale(0.72)',
+                  transformOrigin: 'top left',
+                  zIndex: 2
+                }}>
+                  <ConnectionMatrix origins={data.origins} destinations={data.destinations} theme={theme} />
+                </div>
+              </div>
+
+              {/* 3. Matriz Cliente preview */}
+              <div
+                ref={clientMatrixRef}
+                style={{
+                  ...slideWrapperStyle,
+                  position: activeTab === 'clientMatrix' ? 'relative' : 'absolute',
+                  left: '0',
+                  top: '0',
+                  opacity: activeTab === 'clientMatrix' ? 1 : 0,
+                  pointerEvents: activeTab === 'clientMatrix' ? 'auto' : 'none',
+                  zIndex: activeTab === 'clientMatrix' ? 10 : 1,
+                  backgroundImage: `url(${isDark ? '/img/crestone/ppt/Matrizdark.png' : '/img/crestone/ppt/Matrizligth.png'})`
+                }}
+              >
+                {/* Slide Header */}
+                <div style={{ position: 'absolute', left: '100px', top: '75px', zIndex: 2 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                    <CrestoneLogo size={48} color1="#3b82f6" color2={isDark ? '#ffffff' : '#0c1d4a'} />
+                    <h1 style={{
+                      margin: 0,
+                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                      fontSize: '42px',
+                      fontWeight: 800,
+                      color: textColorMain,
+                      letterSpacing: '-0.5px'
+                    }}>
+                      {currentLocale === 'en' ? `Integration Matrix - ${customerName || 'Client'}` : `Matriz de Integración - ${customerName || 'Cliente'}`}
+                    </h1>
+                  </div>
+                  <p style={{ margin: '4px 0 0 0', fontSize: '16px', color: isDark ? '#94a3b8' : '#475569' }}>
+                    {currentLocale === 'en' ? 'Customized SAP integration ecosystem' : 'Ecosistema de integración SAP a medida del cliente'}
+                  </p>
+                </div>
+                {/* Filtered Matrix centered and moved down to prevent header overlap */}
+                <div style={{
+                  position: 'absolute',
+                  left: '160px',
+                  top: '120px',
+                  zIndex: 2
+                }}>
+                  <ClientConnectionMatrix origins={activeOrigins} destinations={activeDestinations} theme={theme} />
+                </div>
+              </div>
+
+              {/* 4. Compatible con preview */}
+              <div
+                ref={compatibilityRef}
+                style={{
+                  ...slideWrapperStyle,
+                  position: activeTab === 'compatibility' ? 'relative' : 'absolute',
+                  left: '0',
+                  top: '0',
+                  opacity: activeTab === 'compatibility' ? 1 : 0,
+                  pointerEvents: activeTab === 'compatibility' ? 'auto' : 'none',
+                  zIndex: activeTab === 'compatibility' ? 10 : 1,
+                  backgroundImage: `url(${isDark ? '/img/crestone/ppt/bgdark.png' : '/img/crestone/ppt_background.png'})`,
+                }}
+              >
+                {/* Header */}
+                <div style={{ position: 'absolute', left: '100px', top: '75px', zIndex: 2 }}>
+                  <h1 style={{
+                    margin: 0,
+                    fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                    fontSize: '54px',
+                    fontWeight: 800,
+                    color: isDark ? '#ffffff' : '#1a202c',
+                    letterSpacing: '-0.5px'
+                  }}>
+                    {currentLocale === 'en' ? 'Crestone is compatible with' : 'Crestone es compatible con'}
+                  </h1>
+                </div>
+
+                {/* Symmetrical Two Card Columns */}
+                <div style={{
+                  position: 'absolute',
+                  left: '100px',
+                  right: '100px',
+                  top: '210px',
+                  height: '750px',
+                  display: 'flex',
+                  gap: '45px',
+                  zIndex: 2
+                }}>
+                  {/* Origins Column */}
                   <div style={{
-                    width: '1280px',
-                    height: '720px',
+                    flex: 1,
+                    backgroundColor: isDark ? 'rgba(15, 23, 42, 0.55)' : 'rgba(255, 255, 255, 0.45)',
+                    border: isDark ? '1.5px solid rgba(255, 255, 255, 0.12)' : '1.5px solid rgba(255, 255, 255, 0.5)',
+                    borderRadius: '24px',
+                    padding: '38px 45px',
+                    boxShadow: isDark ? '0 15px 45px rgba(0, 0, 0, 0.3)' : '0 15px 45px rgba(0, 0, 0, 0.04)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxSizing: 'border-box'
+                  }}>
+                    <h2 style={{
+                      fontSize: '42px',
+                      fontWeight: 700,
+                      color: isDark ? '#ffffff' : '#2d3748',
+                      margin: '0 0 30px 0',
+                      paddingBottom: '12px',
+                      borderBottom: isDark ? '1px solid rgba(255, 255, 255, 0.15)' : '1px solid #cbd5e1',
+                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif"
+                    }}>
+                      {currentLocale === 'en' ? 'Origins' : 'Orígenes'}
+                    </h2>
+                    {renderPptColumnGrid('origins')}
+                  </div>
+
+                  {/* Destinations Column */}
+                  <div style={{
+                    flex: 1,
+                    backgroundColor: isDark ? 'rgba(15, 23, 42, 0.55)' : 'rgba(255, 255, 255, 0.45)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    border: isDark ? '1.5px solid rgba(255, 255, 255, 0.12)' : '1.5px solid rgba(255, 255, 255, 0.5)',
+                    borderRadius: '24px',
+                    padding: '38px 45px',
+                    boxShadow: isDark ? '0 15px 45px rgba(0, 0, 0, 0.3)' : '0 15px 45px rgba(0, 0, 0, 0.04)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxSizing: 'border-box'
+                  }}>
+                    <h2 style={{
+                      fontSize: '42px',
+                      fontWeight: 700,
+                      color: isDark ? '#ffffff' : '#2d3748',
+                      margin: '0 0 30px 0',
+                      paddingBottom: '12px',
+                      borderBottom: isDark ? '1px solid rgba(255, 255, 255, 0.15)' : '1px solid #cbd5e1',
+                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif"
+                    }}>
+                      {currentLocale === 'en' ? 'Destinations' : 'Destinos'}
+                    </h2>
+                    {renderPptColumnGrid('destinations')}
+                  </div>
+                </div>
+              </div>
+
+              {/* 5. Despliegue preview (Scales the 1280x720 canvas by 1.5 to cover 1920x1080) */}
+              <div
+                ref={deploymentRef}
+                style={{
+                  width: '1920px',
+                  height: '1080px',
+                  overflow: 'hidden',
+                  backgroundColor: isDark ? '#0f172a' : '#ffffff',
+                  position: activeTab === 'deployment' ? 'relative' : 'absolute',
+                  left: '0',
+                  top: '0',
+                  opacity: activeTab === 'deployment' ? 1 : 0,
+                  pointerEvents: activeTab === 'deployment' ? 'auto' : 'none',
+                  zIndex: activeTab === 'deployment' ? 10 : 1,
+                }}
+              >
+                <div style={{
+                  width: '1280px',
+                  height: '720px',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  transform: 'scale(1.5)',
+                  transformOrigin: 'top left',
+                  backgroundImage: `url(${isDark ? bgDespliegueDark : bgDespliegueLight})`,
+                  backgroundSize: '100% 100%',
+                  backgroundRepeat: 'no-repeat',
+                }}>
+                  {/* SVG Connections & Arrowheads Layer */}
+                  <svg style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    transform: 'scale(1.5)',
-                    transformOrigin: 'top left',
-                    backgroundImage: `url(${isDark ? bgDespliegueDark : bgDespliegueLight})`,
-                    backgroundSize: '100% 100%',
-                    backgroundRepeat: 'no-repeat',
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 2,
+                    pointerEvents: 'none'
                   }}>
-                    {/* SVG Connections & Arrowheads Layer */}
-                    <svg style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '100%',
-                      zIndex: 2,
-                      pointerEvents: 'none'
-                    }}>
-                      <defs>
-                        <marker
-                          id="arrowheadDeck"
-                          viewBox="0 0 10 10"
-                          refX="6"
-                          refY="5"
-                          markerWidth="6"
-                          markerHeight="6"
-                          orient="auto-start-reverse"
-                        >
-                          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill={arrowColor} />
-                        </marker>
-                      </defs>
+                    <defs>
+                      <marker
+                        id="arrowheadDeck"
+                        viewBox="0 0 10 10"
+                        refX="6"
+                        refY="5"
+                        markerWidth="6"
+                        markerHeight="6"
+                        orient="auto-start-reverse"
+                      >
+                        <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill={arrowColor} />
+                      </marker>
+                    </defs>
 
-                      {/* FLOW 1 (Despliegue Cloud) - Origin to Crestone */}
-                      <g>
-                        <circle cx="380" cy="245" r="5" fill={arrowColor} />
-                        <line x1="380" y1="245" x2="504" y2="245" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
-                      </g>
+                    {/* FLOW 1 (Despliegue Cloud) - Origin to Crestone */}
+                    <g>
+                      <circle cx="380" cy="245" r="5" fill={arrowColor} />
+                      <line x1="380" y1="245" x2="504" y2="245" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
+                    </g>
 
-                      {/* FLOW 1 (Despliegue Cloud) - Crestone to Destination */}
-                      <g>
-                        <circle cx="770" cy="245" r="5" fill={arrowColor} />
-                        <line x1="770" y1="245" x2="894" y2="245" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
-                      </g>
+                    {/* FLOW 1 (Despliegue Cloud) - Crestone to Destination */}
+                    <g>
+                      <circle cx="770" cy="245" r="5" fill={arrowColor} />
+                      <line x1="770" y1="245" x2="894" y2="245" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
+                    </g>
 
-                      {/* FLOW 2 (Despliegue Self Hosted) - Origin to Crestone inside Customer Network Box */}
-                      <g>
-                        <circle cx="410" cy="510" r="5" fill={arrowColor} />
-                        <line x1="410" y1="510" x2="474" y2="510" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
-                      </g>
+                    {/* FLOW 2 (Despliegue Self Hosted) - Origin to Crestone inside Customer Network Box */}
+                    <g>
+                      <circle cx="410" cy="510" r="5" fill={arrowColor} />
+                      <line x1="410" y1="510" x2="474" y2="510" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
+                    </g>
 
-                      {/* FLOW 2 (Despliegue Self Hosted) - Crestone to Destination */}
-                      <g>
-                        <circle cx="740" cy="510" r="5" fill={arrowColor} />
-                        <line x1="740" y1="510" x2="894" y2="510" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
-                      </g>
-                    </svg>
+                    {/* FLOW 2 (Despliegue Self Hosted) - Crestone to Destination */}
+                    <g>
+                      <circle cx="740" cy="510" r="5" fill={arrowColor} />
+                      <line x1="740" y1="510" x2="894" y2="510" stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowheadDeck)" />
+                    </g>
+                  </svg>
 
-                    {/* Main Slide Title */}
-                    <div style={{ position: 'absolute', top: '60px', left: '80px', zIndex: 2 }}>
-                      <h1 style={{ margin: 0, fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", fontSize: '40px', fontWeight: 800, color: textColorMain, letterSpacing: '-0.5px' }}>
-                        {currentLocale === 'en' ? 'Deployment Options' : 'Opciones de Despliegue'}
-                      </h1>
-                    </div>
-
-                    {/* FLOW 1: Despliegue Cloud */}
-                    <div style={{ position: 'absolute', top: '135px', left: '80px', zIndex: 2 }}>
-                      <h2 style={{ margin: 0, fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", fontSize: '24px', fontWeight: 700, color: textColorSub }}>
-                        {currentLocale === 'en' ? 'Cloud Deployment' : 'Despliegue Cloud'}
-                      </h2>
-                    </div>
-
-                    {/* Labels */}
-                    <div style={{ position: 'absolute', top: '185px', left: '120px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Customer Network</div>
-                    <div style={{ position: 'absolute', top: '185px', left: '510px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Crestone Network</div>
-                    <div style={{ position: 'absolute', top: '185px', left: '900px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Destination Network</div>
-
-                    {/* Cards */}
-                    <div style={{ position: 'absolute', top: '220px', left: '120px', zIndex: 4 }}>
-                      <ConnectionCard title={deployOrigin.title} icon={deployOrigin.iconName || 'file'} brand={deployOrigin.useBrand} theme={theme} />
-                    </div>
-
-                    {/* Crestone Network Box Glass Layer */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '175px',
-                      left: '460px',
-                      width: '360px',
-                      height: '140px',
-                      borderRadius: '12px',
-                      zIndex: 1,
-                      ...glassStyle
-                    }} />
-
-                    <div style={{ position: 'absolute', top: '220px', left: '510px', zIndex: 4 }}>
-                      <CrestoneCard theme={theme} />
-                    </div>
-
-                    <div style={{ position: 'absolute', top: '220px', left: '900px', zIndex: 4 }}>
-                      <ConnectionCard title={deployDestination.title} icon={deployDestination.iconName || 'file'} brand={deployDestination.useBrand} theme={theme} />
-                    </div>
-
-                    {/* FLOW 2: Despliegue Self Hosted */}
-                    <div style={{ position: 'absolute', top: '380px', left: '80px', zIndex: 2 }}>
-                      <h2 style={{ margin: 0, fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", fontSize: '24px', fontWeight: 700, color: textColorSub }}>
-                        {currentLocale === 'en' ? 'Self Hosted Deployment' : 'Despliegue Self Hosted'}
-                      </h2>
-                    </div>
-
-                    {/* Labels */}
-                    <div style={{ position: 'absolute', top: '430px', left: '120px', width: '650px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Customer Network</div>
-                    <div style={{ position: 'absolute', top: '430px', left: '900px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Destination Network</div>
-
-                    {/* Customer Box Glass Layer */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '450px',
-                      left: '120px',
-                      width: '650px',
-                      height: '120px',
-                      borderRadius: '12px',
-                      zIndex: 1,
-                      ...glassStyle
-                    }} />
-
-                    <div style={{ position: 'absolute', top: '485px', left: '150px', zIndex: 4 }}>
-                      <ConnectionCard title={deployOrigin.title} icon={deployOrigin.iconName || 'file'} brand={deployOrigin.useBrand} theme={theme} />
-                    </div>
-
-                    <div style={{ position: 'absolute', top: '485px', left: '480px', zIndex: 4 }}>
-                      <CrestoneCard theme={theme} />
-                    </div>
-
-                    <div style={{ position: 'absolute', top: '485px', left: '900px', zIndex: 4 }}>
-                      <ConnectionCard title={deployDestination.title} icon={deployDestination.iconName || 'file'} brand={deployDestination.useBrand} theme={theme} />
-                    </div>
-
+                  {/* Main Slide Title */}
+                  <div style={{ position: 'absolute', top: '60px', left: '80px', zIndex: 2 }}>
+                    <h1 style={{ margin: 0, fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", fontSize: '40px', fontWeight: 800, color: textColorMain, letterSpacing: '-0.5px' }}>
+                      {currentLocale === 'en' ? 'Deployment Options' : 'Opciones de Despliegue'}
+                    </h1>
                   </div>
-                </div>
 
+                  {/* FLOW 1: Despliegue Cloud */}
+                  <div style={{ position: 'absolute', top: '135px', left: '80px', zIndex: 2 }}>
+                    <h2 style={{ margin: 0, fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", fontSize: '24px', fontWeight: 700, color: textColorSub }}>
+                      {currentLocale === 'en' ? 'Cloud Deployment' : 'Despliegue Cloud'}
+                    </h2>
+                  </div>
+
+                  {/* Labels */}
+                  <div style={{ position: 'absolute', top: '185px', left: '120px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Customer Network</div>
+                  <div style={{ position: 'absolute', top: '185px', left: '510px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Crestone Network</div>
+                  <div style={{ position: 'absolute', top: '185px', left: '900px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Destination Network</div>
+
+                  {/* Cards */}
+                  <div style={{ position: 'absolute', top: '220px', left: '120px', zIndex: 4 }}>
+                    <ConnectionCard title={deployOrigin.title} icon={deployOrigin.iconName || 'file'} brand={deployOrigin.useBrand} theme={theme} />
+                  </div>
+
+                  {/* Crestone Network Box Glass Layer */}
+                  <div style={{
+                    position: 'absolute',
+                    top: '175px',
+                    left: '460px',
+                    width: '360px',
+                    height: '140px',
+                    borderRadius: '12px',
+                    zIndex: 1,
+                    ...glassStyle
+                  }} />
+
+                  <div style={{ position: 'absolute', top: '220px', left: '510px', zIndex: 4 }}>
+                    <CrestoneCard theme={theme} />
+                  </div>
+
+                  <div style={{ position: 'absolute', top: '220px', left: '900px', zIndex: 4 }}>
+                    <ConnectionCard title={deployDestination.title} icon={deployDestination.iconName || 'file'} brand={deployDestination.useBrand} theme={theme} />
+                  </div>
+
+                  {/* FLOW 2: Despliegue Self Hosted */}
+                  <div style={{ position: 'absolute', top: '380px', left: '80px', zIndex: 2 }}>
+                    <h2 style={{ margin: 0, fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif", fontSize: '24px', fontWeight: 700, color: textColorSub }}>
+                      {currentLocale === 'en' ? 'Self Hosted Deployment' : 'Despliegue Self Hosted'}
+                    </h2>
+                  </div>
+
+                  {/* Labels */}
+                  <div style={{ position: 'absolute', top: '430px', left: '120px', width: '650px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Customer Network</div>
+                  <div style={{ position: 'absolute', top: '430px', left: '900px', width: '260px', textAlign: 'center', fontFamily: "'Poppins', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>Destination Network</div>
+
+                  {/* Customer Box Glass Layer */}
+                  <div style={{
+                    position: 'absolute',
+                    top: '450px',
+                    left: '120px',
+                    width: '650px',
+                    height: '120px',
+                    borderRadius: '12px',
+                    zIndex: 1,
+                    ...glassStyle
+                  }} />
+
+                  <div style={{ position: 'absolute', top: '485px', left: '150px', zIndex: 4 }}>
+                    <ConnectionCard title={deployOrigin.title} icon={deployOrigin.iconName || 'file'} brand={deployOrigin.useBrand} theme={theme} />
+                  </div>
+
+                  <div style={{ position: 'absolute', top: '485px', left: '480px', zIndex: 4 }}>
+                    <CrestoneCard theme={theme} />
+                  </div>
+
+                  <div style={{ position: 'absolute', top: '485px', left: '900px', zIndex: 4 }}>
+                    <ConnectionCard title={deployDestination.title} icon={deployDestination.iconName || 'file'} brand={deployDestination.useBrand} theme={theme} />
+                  </div>
+
+                </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
+
+      {/* Premium PDF Generation Loading Modal */}
+      {isGenerating && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: isDark ? 'rgba(15, 23, 42, 0.75)' : 'rgba(255, 255, 255, 0.75)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 99999,
+          animation: 'fadeIn 0.3s ease-out'
+        }}>
+          {/* Keyframe animations */}
+          <style>{`
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            @keyframes spin-reverse {
+              0% { transform: rotate(360deg); }
+              100% { transform: rotate(0deg); }
+            }
+            @keyframes pulse {
+              0%, 100% { transform: scale(0.85); opacity: 0.5; }
+              50% { transform: scale(1.15); opacity: 1; }
+            }
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+            @keyframes scaleIn {
+              from { transform: scale(0.9); opacity: 0; }
+              to { transform: scale(1); opacity: 1; }
+            }
+          `}</style>
+
+          {/* Glass Card */}
+          <div style={{
+            backgroundColor: isDark ? 'rgba(30, 41, 59, 0.85)' : 'rgba(255, 255, 255, 0.85)',
+            border: isDark ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.05)',
+            borderRadius: '24px',
+            padding: '40px 60px',
+            boxShadow: isDark
+              ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+              : '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
+            maxWidth: '480px',
+            width: '90%',
+            animation: 'scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
+          }}>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '24px'
+            }}>
+              {/* Animated Spinner Icon */}
+              <div style={{
+                position: 'relative',
+                width: '80px',
+                height: '80px',
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  width: '100%',
+                  height: '100%',
+                  border: '4px solid transparent',
+                  borderTopColor: '#3b82f6',
+                  borderBottomColor: '#6366f1',
+                  borderRadius: '50%',
+                  animation: 'spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite',
+                }} />
+                <div style={{
+                  position: 'absolute',
+                  top: '10px',
+                  left: '10px',
+                  width: '60px',
+                  height: '60px',
+                  border: '4px solid transparent',
+                  borderLeftColor: '#10b981',
+                  borderRightColor: '#60a5fa',
+                  borderRadius: '50%',
+                  animation: 'spin-reverse 1.2s linear infinite',
+                }} />
+                <div style={{
+                  position: 'absolute',
+                  top: '28px',
+                  left: '28px',
+                  width: '24px',
+                  height: '24px',
+                  backgroundColor: '#3b82f6',
+                  borderRadius: '50%',
+                  animation: 'pulse 1.8s ease-in-out infinite',
+                }} />
+              </div>
+
+              {/* Text labels */}
+              <div style={{ textAlign: 'center' }}>
+                <h3 style={{
+                  margin: '0 0 10px 0',
+                  fontSize: '22px',
+                  fontWeight: 800,
+                  color: isDark ? '#ffffff' : '#1e293b',
+                  fontFamily: "'Poppins', sans-serif",
+                  background: 'linear-gradient(90deg, #3b82f6, #6366f1)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: isDark ? 'initial' : 'transparent'
+                }}>
+                  {currentLocale === 'en' ? 'Generating PDF...' : 'Generando PDF...'}
+                </h3>
+                <p style={{
+                  margin: 0,
+                  fontSize: '14px',
+                  color: isDark ? '#94a3b8' : '#64748b',
+                  lineHeight: '1.5'
+                }}>
+                  {currentLocale === 'en'
+                    ? 'Capturing presentation slides and compiling the document. Please do not close this window.'
+                    : 'Capturando las diapositivas de la presentación y compilando el documento final. Por favor, no cierres esta ventana.'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function GenerateDeckPage() {
+  const { i18n } = useDocusaurusContext();
+  const currentLocale = i18n?.currentLocale === 'en' ? 'en' : 'es';
+  return (
+    <Layout title={currentLocale === 'en' ? 'Presentation Deck Generator' : 'Generador de Presentaciones'} description="Compila un PDF de presentación para clientes con todos los diagramas integrados">
+      <GenerateDeckContent />
     </Layout>
   );
 }
