@@ -14,7 +14,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "deploy-doc": "docker build -t portal . && docker tag portal cloudseidoranalytics/portal:latest && docker push cloudseidoranalytics/portal:latest"
+    "deploy-doc": "docker build -t portal . && docker tag portal cloudseidoranalytics/portal:latest && docker push cloudseidoranalytics/portal:latest",
+    "update-connections": "node scripts/update-connections.js"
   },
   "dependencies": {
     "@azure/msal-browser": "^4.22.0",
