@@ -34,6 +34,7 @@ En esta página puedes generar una portada para tu presentación comercial de Po
   brand="Crestone"
   titleimg="Generador de portada"
   onDownload="/generate-cover"
+  textInbtn="Generar Portada"
 >
   Usa esta herramienta para generar una portada personalizada para tu presentación de CRESTONE, eligiendo la combinación de texto y colores que mejor se adapte a tu audiencia.
 </BoxDoc>
@@ -52,6 +53,7 @@ Usa el botón **Descargar Imagen para PPT** para exportar la diapositiva en form
   brand="Crestone"
   titleimg="Diagrama de Conexiones"
   onDownload="/connections-diagram"
+  textInbtn="Generar Diagrama"
 >
   Este recurso ofrece una vista integral de las capacidades de extracción e integración de datos de CRESTONE, mostrando su flexibilidad para conectarse con diversas fuentes de datos SAP y entornos de destino.
 </BoxDoc>

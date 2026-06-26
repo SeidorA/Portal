@@ -19,7 +19,8 @@ interface BoxDocProps {
   format: string;
   onDownload?: string;
   children: React.ReactNode;
-  brand?: React.ReactNode; 
+  brand?: any;
+  textInbtn?: string;
 }
 
 const BoxDoc: React.FC<BoxDocProps> = ({
@@ -29,24 +30,24 @@ const BoxDoc: React.FC<BoxDocProps> = ({
   onDownload,
   children,
   brand,
-  titleimg
+  titleimg,
+  textInbtn
 }) => {
   return (
     <div className={style.boxContainer}>
-    <div
-      className={style.boxblue}
-      style={{
-        backgroundImage: `url(${
-        [haza, hazb, hazc, hazd, haze, hazf, hazg, hazh][
-          Math.floor(Math.random() * 8)
-        ]
-        })`,
-      }}
-    >
-        <CaralIcon name={brand} size={50} color="#fff"/>
+      <div
+        className={style.boxblue}
+        style={{
+          backgroundImage: `url(${[haza, hazb, hazc, hazd, haze, hazf, hazg, hazh][
+            Math.floor(Math.random() * 8)
+            ]
+            })`,
+        }}
+      >
+        <CaralIcon name={brand} size={50} color="#fff" />
         {titleimg}
-      
-    </div>
+
+      </div>
       <div style={{ flex: 1 }}>
         <h3 style={{ margin: "0 0 8px 0" }}>{title}</h3>
         <div style={{ color: 'var(--carbon)', marginBottom: 12, fontSize: 15 }}>
@@ -74,8 +75,8 @@ const BoxDoc: React.FC<BoxDocProps> = ({
           }}
           onClick={() => window.open(onDownload)}
         >
-        <Translate id="boxdoc.download" />
-          
+          {textInbtn ? textInbtn : <Translate id="boxdoc.download" />}
+
         </button>
       </div>
     </div>
