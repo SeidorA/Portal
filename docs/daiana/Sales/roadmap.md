@@ -33,66 +33,57 @@ A continuación, encontrarán un resumen de las principales iniciativas organiza
 
 
 
-## Q2 2026
+## Q3 2026
 
-<div class="boxrroadmap">
-  <Cardroad title="Abril | 2026">
-    <Kind  />
-    <Subitle title="Plataforma Interoperable (MCP Ready)"  icon="command"/>
+<div className="boxrroadmap">
+  <Cardroad title="Julio | 2026">
+    <Kind />
+    <Subitle title="Autenticación de asistentes compartidos" icon="lock"/>
     <p>
-      DAIANA evoluciona hacia un modelo abierto capaz de integrarse con herramientas externas bajo estándares modernos.
+      Se incorpora un nuevo esquema de autenticación para asistentes compartidos, permitiendo reemplazar el acceso abierto mediante links públicos por un modelo de acceso más controlado y verificable.
       <br/>
       Esto permite:
       <ul>
-        <li>Extender capacidades sin desarrollos adicionales</li>
-        <li>Integrarse con ecosistemas existentes</li>
-        <li>Construir arquitecturas distribuidas de IA</li>
-        <li>Escalar de forma modular</li>
+        <li>Validar la identidad de los usuarios que acceden al asistente</li>
+        <li>Restringir el acceso a perfiles autorizados</li>
+        <li>Proteger información sensible</li>
+        <li>Mantener trazabilidad de uso</li>
       </ul>
+      Esta evolución permite utilizar asistentes en contextos corporativos con mayor nivel de seguridad, habilitando casos de uso internos y externos sin comprometer la gobernanza de la información.
     </p>
-    
   </Cardroad>
 
-  <Cardroad title="Mayo | 2026">
-    <Kind  />
-    <Subitle title="Orquestación Multimodal"  icon="network"/>
+  <Cardroad title="Agosto | 2026">
+    <Kind />
+    <Subitle title="Instalador automatizado" icon="gear"/>
     <p>
-    Incorporación de capacidades para combinar texto, documentos, imágenes y audio dentro de un mismo flujo.
-    <br/>
-    Casos de valor:
-    <ul>
-      <li>Asistentes con entrada por voz</li>
-      <li>Análisis documental enriquecido</li>
-      <li>Procesamiento visual integrado</li>
-      <li>Experiencias conversacionales más avanzadas</li>
-    </ul>
+      Permite desplegar DAIANA de forma rápida, simple y estandarizada en entornos del cliente.
+      <br/><br/>
+      Beneficios principales:
+      <ul>
+        <li>Reducción significativa de tiempos de implementación</li>
+        <li>Menor dependencia de configuraciones manuales</li>
+        <li>Estandarización del proceso de despliegue</li>
+        <li>Mayor autonomía para equipos técnicos del cliente</li>
+      </ul>
+      Esto facilita la adopción de la plataforma y acelera la puesta en marcha en entornos on-premise.
     </p>
-  
   </Cardroad>
 
-  <Cardroad title="Junio | 2026">
-    <Kind integration />
-    <Subitle title="Sistema Multiagente con Human-in-the-Loop" icon="squareFace"/>
+  <Cardroad title="Septiembre | 2026">
+    <Kind />
+    <Subitle title="Modelo Local" icon="network"/>
     <p>
-    DAIANA incorpora orquestación avanzada entre múltiples agentes especializados.
-    <br/>
-    Capacidades:
-    <ul>
-      <li>Asignación dinámica según contexto</li>
-      <li>Decisiones condicionales automatizadas</li>
-      <li>Escalamiento inteligente</li>
-      <li>Intervención humana cuando el proceso lo requiera</li>
-    </ul>
-    <br/>
-    Impacto estratégico:
-    <ul>
-      <li>Automatización de procesos complejos</li>
-      <li>Reducción de carga operativa</li>
-      <li>Mayor control y supervisión</li>
-      <li>IA alineada a procesos críticos de negocio</li>
-    </ul>
+      Incorpora la capacidad de operar con modelos de lenguaje locales (LLM), permitiendo ejecutar casos de IA sin depender exclusivamente de servicios externos.
+      <br/>
+      Esto permite:
+      <ul>
+        <li>Mantener los datos dentro de la infraestructura del cliente</li>
+        <li>Cumplir con requerimientos de privacidad y regulación</li>
+        <li>Reducir dependencia de proveedores externos</li>
+        <li>Optimizar costos en escenarios de alto volumen</li>
+      </ul>
+      Esta capacidad habilita escenarios donde la seguridad, la soberanía del dato y la eficiencia operativa son críticos, ampliando el alcance de DAIANA.
     </p>
   </Cardroad>
-
 </div>
-

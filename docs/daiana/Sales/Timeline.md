@@ -12,6 +12,58 @@ La Timeline es una vista cronológica que acompaña al roadmap y permite visuali
 
 Este espacio está pensado para brindar transparencia sobre la evolución del producto, facilitar el seguimiento de los avances y alinear expectativas sobre lo que ya está disponible y lo que se incorporará en las próximas etapas.
 
+## Q2 2026
+
+<div className="boxrroadtime">
+    <p>Este trimestre nos enfocamos en avanzar hacia una plataforma de IA abierta e interoperable, con la incorporación del soporte para Model Context Protocol (MCP), orquestación multimodal de contenidos y sistemas multiagente avanzados con supervisión humana.</p>
+
+    <h5 className="month">Abril | 2026</h5>
+    <Featurecheck realization title="Plataforma Interoperable (MCP Ready)" icon="command" description={<span>
+      DAIANA evoluciona hacia un modelo abierto capaz de integrarse con herramientas externas bajo estándares modernos.
+      <br/>
+      Esto permite:
+      <ul>
+        <li>Extender capacidades sin desarrollos adicionales</li>
+        <li>Integrarse con ecosistemas existentes</li>
+        <li>Construir arquitecturas distribuidas de IA</li>
+        <li>Escalar de forma modular</li>
+      </ul>
+    </span>} />
+
+    <h5 className="month">Mayo | 2026</h5>
+    <Featurecheck realization title="Orquestación Multimodal" icon="network" description={<span>
+      Incorporación de capacidades para combinar texto, documentos, imágenes y audio dentro de un mismo flujo.
+      <br/>
+      Casos de valor:
+      <ul>
+        <li>Asistentes con entrada por voz</li>
+        <li>Análisis documental enriquecido</li>
+        <li>Procesamiento visual integrado</li>
+        <li>Experiencias conversacionales más avanzadas</li>
+      </ul>
+    </span>} />
+
+    <h5 className="month">Junio | 2026</h5>
+    <Featurecheck realization title="Sistema Multiagente con Human-in-the-Loop" icon="squareFace" description={<span>
+      DAIANA incorpora orquestación avanzada entre múltiples agentes especializados.
+      <br/>
+      Capacidades:
+      <ul>
+        <li>Asignación dinámica según contexto</li>
+        <li>Decisiones condicionales automatizadas</li>
+        <li>Escalamiento inteligente</li>
+        <li>Intervención humana cuando el proceso lo requiera</li>
+      </ul>
+      <br/>
+      Impacto estratégico:
+      <ul>
+        <li>Automatización de procesos complejos</li>
+        <li>Reducción de carga operativa</li>
+        <li>Mayor control y supervisión</li>
+        <li>IA alineada a procesos críticos de negocio</li>
+      </ul>
+    </span>} />
+</div>
 
 
 ## Q1 2026
