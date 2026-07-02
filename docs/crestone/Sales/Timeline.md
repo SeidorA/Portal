@@ -11,63 +11,29 @@ La Timeline es una vista cronológica que acompaña al roadmap y permite visuali
 
 Este espacio está pensado para brindar transparencia sobre la evolución del producto, facilitar el seguimiento de los avances y alinear expectativas sobre lo que ya está disponible y lo que se incorporará en las próximas etapas.
 
-## Q4 2026
-
-<div className="boxrroadtime">
-    <h4>Q4 2026</h4>
-    <p>Este trimestre nos enfocamos en expandir nuestras capacidades hacia una plataforma ETL de extremo a extremo, expandir la compatibilidad multi-cloud en AWS, Azure y Google Cloud, y habilitar integraciones con Cloudera y Databricks.</p>
-
-    <h5 className="month">October | 2026</h5>
-    <Featurecheck title="Cloudera Integration" icon="Cloudera" description="Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data, facilitating Big Data analysis." />
-
-    <h5 className="month">November | 2026</h5>
-    <Featurecheck title="ETL capabilities" icon="process" description="Extend Crestone from extraction to an end-to-end ETL platform by adding built-in transformations and orchestration, enabling data cleansing and standardization before delivery to the target system and reducing reliance on external tools." />
-    <Featurecheck brand icon="GCP" title="Crestone available on Google Cloud" description="Enable Crestone deployment on Google Cloud, allowing customers to accelerate implementation without changing their cloud strategy and standardize their data operations in GCP." />
-
-    <h5 className="month">December | 2026</h5>
-    <Featurecheck brand icon="Cloud" title="Cloud Expansion" description="Enable Crestone deployment on AWS and Microsoft Azure to facilitate adoption for organizations within their preferred cloud ecosystems, ensuring greater control over data and operations." />
-    <Featurecheck brand icon="Databricks" title="Crestone available on Databricks Marketplace" description="Crestone will be available for customers to obtain directly from Databricks Marketplace, simplifying access and purchasing within the Databricks ecosystem and improving product discoverability." />
-</div>
-
-## Q3 2026
-
-<div className="boxrroadtime">
-    <h4>Q3 2026</h4>
-    <p>Este trimestre nos enfocamos en habilitar conexiones en tiempo real, simplificar la creación de consultas con un diseñador visual, e integrar Salesforce y bases de datos IBM, además de expandir nuestra presencia en el ecosistema Snowflake.</p>
-
-    <h5 className="month">July | 2026</h5>
-    <Featurecheck title="Real time connection" icon="clock" description="In addition to traditional transfer scheduling, the ability to operate in real time is added, thus completing a flexible palette of options that adapts to different business scenarios and data volumes." />
-    <Featurecheck title="Query Designer" icon="design" description="Incorporation of a visual environment for query design, simplifying the creation and validation of extraction rules without the need for advanced technical knowledge, optimizing user experience and result accuracy." />
-    <Featurecheck brand icon="Saleforce" title="Salesforce Integration" description="We will establish a deep integration to synchronize key data from Sales Cloud, Service Cloud, and Marketing Cloud." />
-
-    <h5 className="month">August | 2026</h5>
-    <Featurecheck brand icon="Snowflake" title="Crestone available on Snowflake Marketplace" description="Crestone will be available for customers to obtain directly from Snowflake Marketplace, simplifying access and purchasing within the Snowflake ecosystem and improving product discoverability." />
-
-    <h5 className="month">September | 2026</h5>
-    <Featurecheck icon="IBMDb2" title="IBM Integration" description="Integration with IBM databases (DB2 or Informix), ensuring compatibility with large corporate and mission critical environments." />
-</div>
 
 ## Q2 2026
 
 <div className="boxrroadtime">
     <h4>Q2 2026</h4>
-    <p>Este trimestre nos enfocamos en mejorar la facilidad de uso y accesibilidad del producto con la incorporación de IA y la disponibilidad en Marketplaces líderes, además de ampliar la conectividad de base de datos y la migración automatizada.</p>
+    <p>Este trimestre nos enfocamos en mejorar la accesibilidad del producto con la disponibilidad en Microsoft Marketplace, simplificar el acceso mediante SSO, e implementar control de licenciamiento. Además, incorporamos herramientas de migración automatizada y ampliamos significativamente la conectividad con bases de datos (PostgreSQL, Oracle, Sybase, MySQL, IBM y Dynamics 365).</p>
 
     <h5 className="month">April | 2026</h5>
-    <Featurecheck realization title="AI assistant" icon="squareFace" description="Ease of use one of the pillars of the product is enhanced with the incorporation of artificial intelligence, which assists you in configuration, monitoring, and resolving operational tasks, reducing time and errors." />
     <Featurecheck realization title="Crestone available on Microsoft Marketplace" brand icon="Windows" description="Crestone will be available for customers to obtain directly from Microsoft Marketplace, simplifying access and purchasing within the Microsoft/Azure ecosystem and improving product discoverability." />
     <Featurecheck realization title="SSO in Crestone for Microsoft" icon="lock" description="Enable Single Sign-On with Microsoft accounts, allowing users to access Crestone securely and seamlessly while simplifying authentication and user management." />
     <Featurecheck realization title="Licensing control" icon="squareFace" description="Implementation of a centralized interface for proactive management of the license lifecycle, including expiration alerts and usage tracking to avoid surprises at contract end." />
 
     <h5 className="month">May | 2026</h5>
     <Featurecheck realization title="Theobald to Crestone migrator" icon="arrowDownToLine" description="Provide a guided migration tool to move existing Theobald extractions into Crestone, reducing manual effort and transition risk by mapping connections/objects, generating equivalent configurations, and supporting basic validation to speed up onboarding." />
-    <Featurecheck realization title="Integrations SAP BW" icon="SAP" description="Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities." />
-    <Featurecheck realization title="ACT·in powered by Crestone" brand icon="Crestone" description={<span><b>(standard extraction layer)</b><br />act·in solutions will use Crestone as the underlying engine for data extractions and delivery, standardizing connectivity and scheduling while improving reliability and traceability end-to-end.</span>} />
 
     <h5 className="month">June | 2026</h5>
     <Featurecheck realization title="PostgreSQL Integration" icon="PostgreSQL" description="Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform." />
     <Featurecheck realization title="SAP Business Data cloud" icon="SAP" description="Incorporation of an automated channel for delivering CSV files, simplifying daily operations, reducing manual intervention, and ensuring up to date and reliable data for analysis. Additionally, it offers flexible shipping configuration and status tracking, improving operational efficiency and user experience." />
     <Featurecheck realization title="Oracle Integration" brand icon="Oracle" description="Deep and optimized integration for efficient data extraction and processing to Oracle databases." />
+    <Featurecheck realization title="Sybase Integration" brand icon="Sybase" description="Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform." />
+    <Featurecheck realization title="MySQL Integration" brand icon="mySQL" description="Enable MySQL as a destination in Crestone, allowing customers to load extracted data into MySQL databases and support operational or application-based data scenarios." />
+    <Featurecheck realization title="IBM Integration" icon="IBMDb2" description="Enable IBM databases such as DB2 or Informix as data sources, ensuring compatibility with large corporate and mission-critical environments." />
+    <Featurecheck realization title="Microsoft Dynamics 365 Integration" brand icon="Dynamics" description="Enable Microsoft Dynamics 365 as a destination, allowing Crestone to deliver data into business applications that support sales, service and customer processes." />
 </div>
 
 
