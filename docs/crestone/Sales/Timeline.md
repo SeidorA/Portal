@@ -11,6 +11,42 @@ La Timeline es una vista cronológica que acompaña al roadmap y permite visuali
 
 Este espacio está pensado para brindar transparencia sobre la evolución del producto, facilitar el seguimiento de los avances y alinear expectativas sobre lo que ya está disponible y lo que se incorporará en las próximas etapas.
 
+## Q4 2026
+
+<div className="boxrroadtime">
+    <h4>Q4 2026</h4>
+    <p>Este trimestre nos enfocamos en expandir nuestras capacidades hacia una plataforma ETL de extremo a extremo, expandir la compatibilidad multi-cloud en AWS, Azure y Google Cloud, y habilitar integraciones con Cloudera y Databricks.</p>
+
+    <h5 className="month">October | 2026</h5>
+    <Featurecheck title="Cloudera Integration" icon="Cloudera" description="Native and optimized integration with the Cloudera ecosystem for the extraction, processing, and management of large volumes of data, facilitating Big Data analysis." />
+
+    <h5 className="month">November | 2026</h5>
+    <Featurecheck title="ETL capabilities" icon="process" description="Extend Crestone from extraction to an end-to-end ETL platform by adding built-in transformations and orchestration, enabling data cleansing and standardization before delivery to the target system and reducing reliance on external tools." />
+    <Featurecheck brand icon="GCP" title="Crestone available on Google Cloud" description="Enable Crestone deployment on Google Cloud, allowing customers to accelerate implementation without changing their cloud strategy and standardize their data operations in GCP." />
+
+    <h5 className="month">December | 2026</h5>
+    <Featurecheck brand icon="Cloud" title="Cloud Expansion" description="Enable Crestone deployment on AWS and Microsoft Azure to facilitate adoption for organizations within their preferred cloud ecosystems, ensuring greater control over data and operations." />
+    <Featurecheck brand icon="Databricks" title="Crestone available on Databricks Marketplace" description="Crestone will be available for customers to obtain directly from Databricks Marketplace, simplifying access and purchasing within the Databricks ecosystem and improving product discoverability." />
+</div>
+
+## Q3 2026
+
+<div className="boxrroadtime">
+    <h4>Q3 2026</h4>
+    <p>Este trimestre nos enfocamos en habilitar conexiones en tiempo real, simplificar la creación de consultas con un diseñador visual, e integrar Salesforce y bases de datos IBM, además de expandir nuestra presencia en el ecosistema Snowflake.</p>
+
+    <h5 className="month">July | 2026</h5>
+    <Featurecheck title="Real time connection" icon="clock" description="In addition to traditional transfer scheduling, the ability to operate in real time is added, thus completing a flexible palette of options that adapts to different business scenarios and data volumes." />
+    <Featurecheck title="Query Designer" icon="design" description="Incorporation of a visual environment for query design, simplifying the creation and validation of extraction rules without the need for advanced technical knowledge, optimizing user experience and result accuracy." />
+    <Featurecheck brand icon="Saleforce" title="Salesforce Integration" description="We will establish a deep integration to synchronize key data from Sales Cloud, Service Cloud, and Marketing Cloud." />
+
+    <h5 className="month">August | 2026</h5>
+    <Featurecheck brand icon="Snowflake" title="Crestone available on Snowflake Marketplace" description="Crestone will be available for customers to obtain directly from Snowflake Marketplace, simplifying access and purchasing within the Snowflake ecosystem and improving product discoverability." />
+
+    <h5 className="month">September | 2026</h5>
+    <Featurecheck icon="IBMDb2" title="IBM Integration" description="Integration with IBM databases (DB2 or Informix), ensuring compatibility with large corporate and mission critical environments." />
+</div>
+
 ## Q2 2026
 
 <div className="boxrroadtime">
@@ -26,7 +62,6 @@ Este espacio está pensado para brindar transparencia sobre la evolución del pr
     <h5 className="month">May | 2026</h5>
     <Featurecheck realization title="Theobald to Crestone migrator" icon="arrowDownToLine" description="Provide a guided migration tool to move existing Theobald extractions into Crestone, reducing manual effort and transition risk by mapping connections/objects, generating equivalent configurations, and supporting basic validation to speed up onboarding." />
     <Featurecheck realization title="Integrations SAP BW" icon="SAP" description="Implementation of an advanced connection with SAP BW for efficient data extraction from InfoProviders, DSOs, and Cubes, consolidating BI analytical capabilities." />
-    <Featurecheck realization title="Crestone available on Snowflake Marketplace" brand icon="Snowflake" description="Crestone will be available for customers to obtain directly from Snowflake Marketplace, simplifying access and purchasing within the Snowflake ecosystem and improving product discoverability." />
     <Featurecheck realization title="ACT·in powered by Crestone" brand icon="Crestone" description={<span><b>(standard extraction layer)</b><br />act·in solutions will use Crestone as the underlying engine for data extractions and delivery, standardizing connectivity and scheduling while improving reliability and traceability end-to-end.</span>} />
 
     <h5 className="month">June | 2026</h5>

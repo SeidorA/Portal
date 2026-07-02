@@ -44,9 +44,9 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
   </Cardroad>
 
   <Cardroad title="August | 2026">
-    <Subitle title="Sybase Integration" brand icon="Sybase"/>
+    <Subitle title="Crestone available on Snowflake Marketplace" brand icon="Snowflake"/>
     <p>
-      Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform.
+      Crestone will be available for customers to obtain directly from Snowflake Marketplace, simplifying access and purchasing within the Snowflake ecosystem and improving product discoverability.
     </p>
   </Cardroad>
 

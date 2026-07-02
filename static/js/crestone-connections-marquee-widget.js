@@ -134,6 +134,46 @@
         "iconName": "PostgreSQL",
         "useBrand": true,
         "link": "/docs/documentation/sections/conections/source/postgresql-source"
+      },
+      {
+        "id": "aws-s3-source",
+        "title": "AWS S3 Source Connection",
+        "description": "AWS S3 Source Connection",
+        "iconName": "AWS",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/source/aws-s3"
+      },
+      {
+        "id": "azure-storage-source",
+        "title": "Azure Storage Source Connection",
+        "description": "Azure Storage Source Connection",
+        "iconName": "Azure",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/source/azure-storage"
+      },
+      {
+        "id": "gcp-storage-source",
+        "title": "GCP Cloud Storage Source Connection",
+        "description": "",
+        "iconName": "GoogleStorage",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/source/gcp-storage"
+      },
+      {
+        "id": "sybase-source",
+        "title": "Sybase Source Connection",
+        "description": "",
+        "iconName": "Sybase",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/source/sybase"
+      },
+      {
+        "id": "db2-source",
+        "title": "IBM DB2 Source Connection",
+        "description": "",
+        "iconName": "IBMDb2",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/source/db2"
       }
     ],
     "destinations": [
@@ -142,7 +182,7 @@
         "title": "Amazon S3",
         "description": "Create a destination to connect to AWS.",
         "iconName": "S3",
-        "useBrand": false,
+        "useBrand": true,
         "link": "/docs/documentation/sections/conections/detinations/aws"
       },
       {
@@ -242,14 +282,6 @@
         "link": "/docs/documentation/sections/conections/detinations/oracle-destination"
       },
       {
-        "id": "fileserver",
-        "title": " Windows file server ",
-        "description": "Create a node to export data as files into a storage layer such as AWS, Snowflake, Azure, Databricks, and Google Storage.",
-        "iconName": "file",
-        "useBrand": false,
-        "link": "/docs/documentation/sections/conections/detinations/fileserver"
-      },
-      {
         "id": "mysql-destination",
         "title": "MySQL Destination Connection",
         "description": "Create a connection to a MySQL database.",
@@ -264,6 +296,30 @@
         "iconName": "SAP",
         "useBrand": true,
         "link": "/docs/documentation/sections/conections/detinations/hana"
+      },
+      {
+        "id": "fileserver",
+        "title": " Windows file server ",
+        "description": "Create a node to export data as files into a storage layer such as AWS, Snowflake, Azure, Databricks, and Google Storage.",
+        "iconName": "file",
+        "useBrand": false,
+        "link": "/docs/documentation/sections/conections/detinations/fileserver"
+      },
+      {
+        "id": "db2-destination",
+        "title": "IBM DB2 Destination Connection",
+        "description": "",
+        "iconName": "IBMDb2",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/detinations/db2"
+      },
+      {
+        "id": "sybase-destination",
+        "title": "SAP ASE (Sybase) Destination Connection",
+        "description": "",
+        "iconName": "Sybase",
+        "useBrand": true,
+        "link": "/docs/documentation/sections/conections/detinations/sybase"
       }
     ]
   };
