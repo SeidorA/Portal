@@ -11,7 +11,7 @@ interface ActitemProps {
 
 function Actitem({ titleKey, link, bg, descKey }: ActitemProps) {
     return (
-        <div className={style[bg]}>
+        <div className={`${style.gridItem} ${style[bg]}`}>
             <a href={link} className={style.actinItem}>
                 <h3>
                     <Translate id={titleKey} />
@@ -26,6 +26,13 @@ function Actitem({ titleKey, link, bg, descKey }: ActitemProps) {
 
 const Actinlist: ActitemProps[] = [
     {
+        titleKey: " Act-in ByDesign",
+        link: "/docs/bydesign/intro",
+        /* Changed bg from "bd" to "by" to match the pattern */
+        bg: "by",
+        descKey: "actin.byDesign.desc",
+    },
+    {
         titleKey: " Act-in Success Factors",
         link: "/docs/bydesign/intro",
         bg: "su",
@@ -37,13 +44,7 @@ const Actinlist: ActitemProps[] = [
         bg: "bo",
         descKey: "actin.businessOne.desc",
     },
-    {
-        titleKey: " Act-in ByDesign",
-        link: "/docs/bydesign/intro",
-        /* Changed bg from "bd" to "by" to match the pattern */
-        bg: "by",
-        descKey: "actin.byDesign.desc",
-    },
+
     {
         titleKey: " Act-in S/4HANA Analytics",
         link: "/docs/bydesign/intro",
@@ -55,6 +56,12 @@ const Actinlist: ActitemProps[] = [
         link: "/docs/bydesign/intro",
         bg: "pla",
         descKey: "actin.sacPlanning.desc",
+    },
+    {
+        titleKey: "SAP Data Preparation",
+        link: "/docs/sap-data-preservation/intro/",
+        bg: "datapre",
+        descKey: "actin.dataPreparation.desc",
     },
 ];
 

@@ -3,8 +3,6 @@
     color: var(--carbon);
 }
 
-
-
 .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -13,25 +11,7 @@
     grid-row-gap: 10px;
 }
 
-
-.by {
-    grid-area: 1 / 1 / 3 / 2;
-    background-image: url(/img/index/byactin.png);
-}
-.bo { grid-area: 1 / 2 / 2 / 3; 
-    background-image: url(/img/index/one.png);
-}
-.hana { grid-area: 1 / 3 / 2 / 4; 
-     background-image: url(/img/index/hana.png);
-}
-.su { grid-area: 2 / 2 / 3 / 3; 
-    background-image: url(/img/index/Sf.png);
-}
-.pla { grid-area: 2 / 3 / 3 / 4; 
-    background-image: url(/img/index/plan.png);
-}
-
-.by, .bo, .hana, .su, .pla {
+.gridItem {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-color: var(--bg-container-tr);
@@ -42,20 +22,28 @@
     padding: 10px 10px 150px 10px;
 }
 
+.by {
+    background-image: url(/img/index/byactin.png);
+}
+.bo { 
+    background-image: url(/img/index/one.png);
+}
+.hana { 
+     background-image: url(/img/index/hana.png);
+}
+.su { 
+    background-image: url(/img/index/Sf.png);
+}
+.pla { 
+    background-image: url(/img/index/plan.png);
+}
+.datapre{
+    background-image: url(/img/index/datapre.png);
+}
+
 @media screen and (max-width: 780px) {
     .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
-
-    .by { grid-area: 1 / 1 / 1 / 3;
-        
-    }
-    .bo { grid-area: 2 / 1 / 3 / 2; }
-    .hana { grid-area: 2 / 2 / 3 / 3; }
-    .su { grid-area: 3 / 1 / 4 / 2; }
-    .pla { grid-area: 3 / 2 / 4 / 3; }
 }

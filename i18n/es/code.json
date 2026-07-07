@@ -656,5 +656,17 @@
   "theme.SearchModal.placeholder": {
     "message": "Buscar documentos",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "dataPreparation.title": {
+    "message": "Preparación de Datos",
+    "description": "The title of the data preparation page"
+  },
+  "dataPreparation.description": {
+    "message": "Transforma los datos brutos en información limpia y estructurada lista para ser analizada. Garantiza la calidad y consistencia de los datos, facilitando la obtención de insights valiosos.",
+    "description": "The description of the data preparation page"
+  },
+  "actin.dataPreparation.desc": {
+    "message": "Transforma el almacenamiento de datos históricos de una tarea técnica de mantenimiento en un paso estratégico para reducir el costo de migración a SAP RISE y habilitar analytics modernos.",
+    "description": "The description of the data preparation page"
   }
 }
