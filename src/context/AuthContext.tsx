@@ -87,17 +87,42 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const initializeAuth = async () => {
       try {
-        const { data: { session }, error } = await supabase.auth.getSession();
+        let currentSession = null;
 
-        if (error) {
-          console.error('❌ Error fetching session:', error);
+        try {
+          // Add a generous timeout (12s) to prevent hanging forever, 
+          // but allow enough time for 4+ tabs to sequentially resolve their localStorage locks.
+          const getSessionPromise = supabase.auth.getSession();
+          const timeoutPromise = new Promise<{ data: { session: any }, error: any }>((_, reject) =>
+            setTimeout(() => reject(new Error('Session fetch timeout')), 12000)
+          );
+
+          const { data: { session }, error } = await Promise.race([
+            getSessionPromise,
+            timeoutPromise
+          ]);
+          
+          if (error) {
+            console.error('❌ Error fetching session:', error);
+          }
+          currentSession = session;
+        } catch (timeoutErr) {
+          console.warn('⚠️ getSession timed out (12s), falling back to localStorage manually', timeoutErr);
+          const stored = localStorage.getItem('supabase-portal-auth-token');
+          if (stored) {
+            try {
+              currentSession = JSON.parse(stored);
+            } catch (e) {
+              console.error('Failed to parse stored session:', e);
+            }
+          }
         }
 
-        setSession(session);
+        setSession(currentSession);
 
-        if (session?.user) {
-          let userRoles = await fetchRoles(session.user.id);
-          userRoles = await autoAssignSalesRole(session.user, userRoles);
+        if (currentSession?.user) {
+          let userRoles = await fetchRoles(currentSession.user.id);
+          userRoles = await autoAssignSalesRole(currentSession.user, userRoles);
           setRoles(userRoles);
         } else {
           setRoles([]);
