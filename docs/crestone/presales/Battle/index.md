@@ -60,6 +60,12 @@ Este Battle Card no busca descalificar alternativas, sino facilitar una conversa
             <h3> Crestone vs BigQuery Toolkit</h3>
         </a>
     </div>
+    <div class="col col--6">
+        <a href="./aero">
+            ![Crestone](/img/crestone/Aecorsoft.png)
+            <h3> Crestone vs Aecorsoft</h3>
+        </a>
+    </div>
   </div>
 </div>
 

@@ -4,6 +4,7 @@ export interface Profile {
     id: string;
     email: string;
     last_sign_in_at?: string; // from auth.users or potentially synced to profiles
+    updated_at?: string;
 }
 
 export interface UserRole {
@@ -16,12 +17,12 @@ export interface UserRole {
 
 export const adminService = {
     async getUsers(): Promise<Profile[]> {
-        const { data, error } = await supabase
-            .from('profiles')
-            .select('*');
+        const { data, error } = await supabase.rpc('get_users_admin');
         if (error) {
-            console.error("Error fetching users:", error);
-            return [];
+            console.error("Error fetching users via RPC:", error);
+            // Fallback just in case
+            const fallback = await supabase.from('profiles').select('*');
+            return fallback.data || [];
         }
         return data || [];
     },
