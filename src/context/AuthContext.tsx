@@ -137,6 +137,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const { data: listener } = supabase.auth.onAuthStateChange(async (event, session) => {
       try {
+        // If gotrue is stuck on a lock, it might fire INITIAL_SESSION with a null session.
+        // If we have a token in localStorage, our manual fallback has likely handled it.
+        // So we ignore this specific null event to prevent logging the user out.
+        if (event === 'INITIAL_SESSION' && !session && typeof window !== 'undefined' && localStorage.getItem('supabase-portal-auth-token')) {
+          console.warn('⚠️ Ignoring INITIAL_SESSION with null session because a local token exists.');
+          return;
+        }
+
         setSession(session);
         if (session?.user) {
           let userRoles = await fetchRoles(session.user.id);
