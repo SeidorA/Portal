@@ -30,6 +30,24 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     detectSessionInUrl: true,
     storage: isBrowser ? window.localStorage : undefined,
     storageKey: 'supabase-portal-auth-token',
+    lock: (name, acquire) => {
+      if (typeof navigator !== 'undefined' && navigator.locks) {
+        const ac = new AbortController();
+        const timeoutId = setTimeout(() => ac.abort(), 3000);
+        
+        return navigator.locks.request(name, { signal: ac.signal }, async () => {
+          clearTimeout(timeoutId);
+          return await acquire();
+        }).catch(err => {
+          if (err.name === 'AbortError') {
+            console.warn(`[Supabase] Lock ${name} timed out, proceeding without lock to avoid deadlock.`);
+            return acquire();
+          }
+          throw err;
+        });
+      }
+      return acquire();
+    }
   },
 });
 

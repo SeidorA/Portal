@@ -87,41 +87,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     const initializeAuth = async () => {
       try {
-        let currentSession = null;
+        const { data: { session }, error } = await supabase.auth.getSession();
 
-        try {
-          // Add a timeout to prevent hanging when multiple tabs lock localStorage
-          const getSessionPromise = supabase.auth.getSession();
-          const timeoutPromise = new Promise<{ data: { session: any }, error: any }>((_, reject) =>
-            setTimeout(() => reject(new Error('Session fetch timeout')), 4000)
-          );
-
-          const { data: { session }, error } = await Promise.race([
-            getSessionPromise,
-            timeoutPromise
-          ]);
-          
-          if (error) {
-            console.error('❌ Error fetching session:', error);
-          }
-          currentSession = session;
-        } catch (timeoutErr) {
-          console.warn('⚠️ getSession timed out, falling back to localStorage manually', timeoutErr);
-          const stored = localStorage.getItem('supabase-portal-auth-token');
-          if (stored) {
-            try {
-              currentSession = JSON.parse(stored);
-            } catch (e) {
-              console.error('Failed to parse stored session:', e);
-            }
-          }
+        if (error) {
+          console.error('❌ Error fetching session:', error);
         }
 
-        setSession(currentSession);
+        setSession(session);
 
-        if (currentSession?.user) {
-          let userRoles = await fetchRoles(currentSession.user.id);
-          userRoles = await autoAssignSalesRole(currentSession.user, userRoles);
+        if (session?.user) {
+          let userRoles = await fetchRoles(session.user.id);
+          userRoles = await autoAssignSalesRole(session.user, userRoles);
           setRoles(userRoles);
         } else {
           setRoles([]);
