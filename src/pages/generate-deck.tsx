@@ -5,6 +5,7 @@ import { useColorMode } from '@docusaurus/theme-common';
 import { Brand, CaralIcon } from 'iconcaral2';
 import fallbackData from '../components/CrestoneConnections/connections.json';
 import { PDFDocument } from 'pdf-lib';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 // Data Interfaces
 interface ConnectionItem {
@@ -2525,7 +2526,9 @@ export default function GenerateDeckPage() {
   const currentLocale = i18n?.currentLocale === 'en' ? 'en' : 'es';
   return (
     <Layout title={currentLocale === 'en' ? 'Presentation Deck Generator' : 'Generador de Presentaciones'} description="Compila un PDF de presentación para clientes con todos los diagramas integrados">
-      <GenerateDeckContent />
+      <ProtectedRoute>
+        <GenerateDeckContent />
+      </ProtectedRoute>
     </Layout>
   );
 }

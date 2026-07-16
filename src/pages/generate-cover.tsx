@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './generate-cover.module.css';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 interface BackgroundOption {
   id: string;
@@ -404,6 +405,7 @@ export default function CoverGenerator() {
 
   return (
     <Layout title={t.generatorTitle} description={t.generatorSubtitle}>
+      <ProtectedRoute>
       <div className={styles.container}>
         {/* Left Column: Sidebar Controls */}
         <aside className={styles.sidebar}>
@@ -745,6 +747,7 @@ export default function CoverGenerator() {
           </div>
         )}
       </div>
+      </ProtectedRoute>
     </Layout>
   );
 }

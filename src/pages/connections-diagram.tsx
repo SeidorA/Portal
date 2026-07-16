@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Brand, CaralIcon } from 'iconcaral2';
 import fallbackData from '../components/CrestoneConnections/connections.json';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 interface ConnectionItem {
   id: string;
@@ -394,6 +395,7 @@ export default function ConnectionsDiagram() {
 
   return (
     <Layout title={t.generatorTitle} description="Export a beautiful high-resolution diagram of Crestone connections">
+      <ProtectedRoute>
       <div style={{
         padding: '40px 20px',
         maxWidth: '1600px',
@@ -1717,6 +1719,7 @@ export default function ConnectionsDiagram() {
           </div>
         </div>
       </div>
+      </ProtectedRoute>
     </Layout>
   );
 }

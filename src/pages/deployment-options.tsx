@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Brand, CaralIcon } from 'iconcaral2';
 import fallbackData from '../components/CrestoneConnections/connections.json';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 interface ConnectionItem {
   id: string;
@@ -316,6 +317,7 @@ export default function DeploymentOptions() {
 
   return (
     <Layout title={currentLocale === 'en' ? 'Deployment Options' : 'Opciones de Despliegue'} description="Generador de diapositivas de arquitectura y despliegue">
+      <ProtectedRoute>
       <div style={{
         padding: '40px 20px',
         maxWidth: '1600px',
@@ -834,6 +836,7 @@ export default function DeploymentOptions() {
           </div>
         </div>
       </div>
+      </ProtectedRoute>
     </Layout>
   );
 }
