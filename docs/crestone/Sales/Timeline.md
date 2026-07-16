@@ -16,10 +16,9 @@ Este espacio está pensado para brindar transparencia sobre la evolución del pr
 
 <div className="boxrroadtime">
     <h4>Q2 2026</h4>
-    <p>Este trimestre nos enfocamos en mejorar la accesibilidad del producto con la disponibilidad en Microsoft Marketplace, simplificar el acceso mediante SSO, e implementar control de licenciamiento. Además, incorporamos herramientas de migración automatizada y ampliamos significativamente la conectividad con bases de datos (PostgreSQL, Oracle, Sybase, MySQL, IBM y Dynamics 365).</p>
+    <p>Este trimestre nos enfocamos en mejorar la accesibilidad del producto al simplificar el acceso mediante SSO, e implementar control de licenciamiento. Además, incorporamos herramientas de migración automatizada y ampliamos significativamente la conectividad con bases de datos (PostgreSQL, Oracle, Sybase, MySQL, IBM y Dynamics 365).</p>
 
     <h5 className="month">April | 2026</h5>
-    <Featurecheck realization title="Crestone available on Microsoft Marketplace" brand icon="Windows" description="Crestone will be available for customers to obtain directly from Microsoft Marketplace, simplifying access and purchasing within the Microsoft/Azure ecosystem and improving product discoverability." />
     <Featurecheck realization title="SSO in Crestone for Microsoft" icon="lock" description="Enable Single Sign-On with Microsoft accounts, allowing users to access Crestone securely and seamlessly while simplifying authentication and user management." />
     <Featurecheck realization title="Licensing control" icon="squareFace" description="Implementation of a centralized interface for proactive management of the license lifecycle, including expiration alerts and usage tracking to avoid surprises at contract end." />
 
@@ -28,7 +27,7 @@ Este espacio está pensado para brindar transparencia sobre la evolución del pr
 
     <h5 className="month">June | 2026</h5>
     <Featurecheck realization title="PostgreSQL Integration" icon="PostgreSQL" description="Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform." />
-    <Featurecheck realization title="SAP Business Data cloud" icon="SAP" description="Incorporation of an automated channel for delivering CSV files, simplifying daily operations, reducing manual intervention, and ensuring up to date and reliable data for analysis. Additionally, it offers flexible shipping configuration and status tracking, improving operational efficiency and user experience." />
+    
     <Featurecheck realization title="Oracle Integration" brand icon="Oracle" description="Deep and optimized integration for efficient data extraction and processing to Oracle databases." />
     <Featurecheck realization title="Sybase Integration" brand icon="Sybase" description="Integration of a dedicated connector for Sybase databases, expanding the ecosystem of legacy and critical databases supported by the platform." />
     <Featurecheck realization title="MySQL Integration" brand icon="mySQL" description="Enable MySQL as a destination in Crestone, allowing customers to load extracted data into MySQL databases and support operational or application-based data scenarios." />
@@ -70,13 +69,12 @@ Este espacio está pensado para brindar transparencia sobre la evolución del pr
     <Featurecheck  realization title="Integración con PostgreSQL"  icon="PostgreSQL" brand description="Habilitar la conexión y extracción de datos optimizada con bases de datos PostgreSQL para ampliar las fuentes de información soportadas por la plataforma." /> 
 
 
-    <Featurecheck   title="Integración con Saleforce"  icon="Saleforce" brand description="Estableceremos una integración profunda para sincronizar datos clave de Sales Cloud, Service Cloud y Marketing Cloud." /> 
 
     
 
     <h5 className="month">Diciembre | 2025</h5>
 
-    <Featurecheck realization  title="Integración con Fabric"  icon="Fabric" brand description="Habilitar la conexión y extracción de datos optimizada con bases de datos Fabric para ampliar las fuentes de información soportadas por la plataforma." /> 
+    
 
     <Featurecheck   title="Integración con SAP Datasphere"  icon="SAP" brand description="Incorporación de un canal automatizado para la entrega de archivos CSV, que simplifica la operación diaria, reduce la intervención manual y asegura datos actualizados y confiables para el análisis. Además, ofrece configuración flexible de envíos y seguimiento del estado, mejorando la eficiencia operativa y la experiencia de los usuarios." /> 
 

@@ -1,0 +1,137 @@
+---
+slug: Creston_junio
+title: Junio en Creston
+date: 2026-07-11
+authors: [matias]
+tags: [Creston]
+---
+import { Brand } from 'iconcaral2';
+
+![Junio en Creston](https://supa.portal.seidoranalytics.com/storage/v1/object/public/News/campaigns/junio_crestone/top.png)
+
+## 🚀 Más conexiones, extracciones más robustas y mayor flexibilidad para integrar datos con Crestone
+
+Seguimos ampliando el ecosistema de conectividad de Crestone para que la integración de datos sea cada vez más flexible, segura y escalable.
+
+<!-- truncate -->
+
+Esta actualización incorpora nuevas conexiones con bases de datos empresariales, una nueva integración con Microsoft Dynamics, mejoras para trabajar con grandes volúmenes de información en SAP ABAP y nuevas opciones de autenticación corporativa.
+
+Más tecnologías conectadas, más alternativas para mover datos y una experiencia más flexible para configurar flujos dentro de Crestone.
+
+
+![Junio en Creston](https://supa.portal.seidoranalytics.com/storage/v1/object/public/News/campaigns/junio_crestone/db_connections.png)
+
+## Nuevas conexiones y más opciones de integración
+
+🧭 **Más flexibilidad para escenarios de integración**
+
+Con la incorporación de nuevas conexiones, Crestone permite cubrir más escenarios de movimiento de datos entre plataformas.
+
+Esto facilita casos donde una organización necesita extraer información desde una base operativa, integrarla con datos provenientes de otros sistemas y enviarla hacia otro entorno de análisis o almacenamiento.
+
+También permite acompañar arquitecturas donde distintas áreas trabajan con tecnologías diferentes, manteniendo a Crestone como capa central para conectar y administrar los flujos de datos.
+
+<br/>
+
+| Nuevos Orígenes | Nuevos Destinos |
+| :--- | :--- |
+| <Brand name="Oracle" size={24} /> Oracle | <Brand name="mySQL" size={24} /> MySQL |
+| <Brand name="PostgreSQL" size={24} /> PostgreSQL | <Brand name="Dynamics" size={24} /> Microsoft Dynamics |
+
+<br/>
+
+👉 **En resumen:** Crestone amplía su ecosistema de conectividad incorporando Oracle y PostgreSQL como nuevos orígenes de datos, MySQL como nuevo destino y Microsoft Dynamics como nueva conexión de negocio, facilitando la integración entre bases empresariales, aplicaciones operativas y plataformas de análisis, ganando mayor flexibilidad para conectar sistemas, bases de datos y procesos de negocio dentro de un mismo flujo.
+
+
+![Extracciones SAP más eficientes](https://supa.portal.seidoranalytics.com/storage/v1/object/public/News/campaigns/junio_crestone/1.png)
+
+
+## ✨Extracciones SAP más eficientes
+
+**Batch by Field para tablas SAP ABAP**
+
+Se incorporó una nueva opción para dividir extracciones de tablas SAP ABAP en partes más pequeñas, manteniendo un resultado final unificado.
+
+Esta mejora está pensada para escenarios donde una tabla tiene grandes volúmenes de información y extraer todo en una sola ejecución puede generar demoras, cortes o límites por tiempo de procesamiento.
+
+Con Batch by Field, la extracción puede dividirse por fecha o por valores de un campo, ejecutando cada parte de manera ordenada y combinando luego el resultado en un único archivo final.
+
+Por ejemplo, una extracción de documentos contables puede dividirse por mes, semana o día, evitando procesar todo el período de una sola vez.
+
+👉 **En resumen**: *Crestone permite extraer grandes volúmenes de datos desde tablas SAP ABAP de forma más controlada, reduciendo riesgos de timeout y manteniendo una única salida final para el usuario.*
+
+
+![Experiencia en la app](https://supa.portal.seidoranalytics.com/storage/v1/object/public/News/campaigns/junio_crestone/sql_script.png)
+
+## ✨ Experiencia en la app
+
+### Nuevo SQL Script Mode
+
+Se incorporó un modo SQL Script para escribir consultas SQL personalizadas directamente desde la interfaz.
+
+El usuario puede alternar entre el modo visual tradicional y el modo script. En el modo visual, puede seleccionar tablas y columnas desde la app. En el modo script, puede escribir la consulta completa en un editor SQL con formato, resaltado de sintaxis y ajuste de líneas.
+
+👉 **En resumen**: *cuando necesitas una consulta más específica, puedes escribir el SQL completo y Crestone lo ejecuta tal como fue definido.*
+
+![Azure SSO](https://supa.portal.seidoranalytics.com/storage/v1/object/public/News/campaigns/junio_crestone/azure_sso.png)
+
+## ✨ Seguridad y autenticación
+
+### 🔐 Login con Microsoft / Azure SSO
+
+Crestone incorpora autenticación mediante Microsoft y cuentas corporativas de Azure.
+
+Con esta mejora, los usuarios pueden iniciar sesión utilizando sus credenciales corporativas, sin necesidad de gestionar una contraseña adicional dentro de la plataforma.
+
+El acceso se realiza desde la opción “Sign in with Microsoft”, redirigiendo al usuario al portal corporativo de autenticación y regresando luego a Crestone con el acceso habilitado.
+
+👉 **En resumen**: *el ingreso a Crestone ahora puede integrarse con las credenciales corporativas de Microsoft, simplificando el acceso y alineándose con las políticas de seguridad de cada organización.*
+
+
+---
+
+### 🔑 OAuth 2.0 para Databricks
+
+Crestone suma soporte para autenticación OAuth 2.0 en conexiones de destino Databricks.
+
+Hasta ahora, las conexiones Databricks podían configurarse mediante token de acceso personal. Con esta actualización, también es posible utilizar Client Credentials, una alternativa más alineada con esquemas corporativos de seguridad y autenticación.
+
+La configuración permite seleccionar el modo de autenticación y completar los datos correspondientes según el método elegido.
+
+👉 **En resumen**: *las conexiones con Databricks ahora cuentan con una alternativa de autenticación más segura y alineada con entornos corporativos.*
+
+
+
+![SAP Batch](https://supa.portal.seidoranalytics.com/storage/v1/object/public/News/campaigns/junio_crestone/sap_batch.png)
+
+## ✨ Mejoras para escenarios avanzados
+
+### Mejoras en la selección de objetos SAP HANA
+
+Se mejoró la experiencia de configuración para fuentes SAP HANA, permitiendo trabajar de forma más clara con distintos tipos de objetos.
+
+Ahora la búsqueda puede contemplar tablas, vistas y Calculation Views, además de incorporar la selección de esquemas antes de realizar la búsqueda.
+
+También se agregaron identificadores visuales para diferenciar el tipo de objeto seleccionado, haciendo más simple reconocer si se está trabajando con una tabla, una vista o una Calculation View.
+
+👉 **En resumen**: *configurar fuentes SAP HANA ahora es más flexible y claro, especialmente en entornos donde se trabaja con distintos tipos de objetos de datos.*
+
+
+## Qué ganás con esta actualización
+
+✅ Más conexiones disponibles: Crestone suma nuevas integraciones con Oracle, MySQL, PostgreSQL y Microsoft Dynamics.
+
+✅ Más opciones de origen y destino: Oracle y PostgreSQL amplían las alternativas de extracción, mientras que MySQL suma una nueva opción para carga y entrega de datos.
+
+✅ Más flexibilidad para integrar datos: las nuevas conexiones amplían los escenarios posibles entre bases de datos, sistemas de negocio y entornos de análisis.
+
+✅ Más cobertura empresarial: Crestone se conecta con tecnologías utilizadas en entornos corporativos, aplicaciones operativas y arquitecturas modernas de datos.
+
+✅ Mejor manejo de grandes volúmenes SAP: las extracciones ABAP pueden dividirse en partes más pequeñas para reducir riesgos de timeout y mejorar la estabilidad.
+
+✅ Menos trabajo manual: los batch automáticos evitan duplicar nodos o dividir extracciones manualmente por períodos o rangos.
+
+✅ Acceso más simple y seguro: los usuarios pueden ingresar con credenciales corporativas de Microsoft / Azure.
+
+✅ Mejor soporte para escenarios avanzados: se mejora el trabajo con objetos SAP HANA y se incorpora OAuth 2.0 para Databricks.
