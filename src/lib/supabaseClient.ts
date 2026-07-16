@@ -30,6 +30,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     detectSessionInUrl: true,
     storage: isBrowser ? window.localStorage : undefined,
     storageKey: 'supabase-portal-auth-token',
+    lock: (name, acquireTimeout, fn) => fn(),
   },
 });
 

@@ -143,6 +143,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         // So we ignore this specific null event to prevent logging the user out.
         if (event === 'INITIAL_SESSION' && !session && typeof window !== 'undefined' && localStorage.getItem('supabase-portal-auth-token')) {
           console.warn('⚠️ Ignoring INITIAL_SESSION with null session because a local token exists.');
+          setLoading(false);
           return;
         }
 
