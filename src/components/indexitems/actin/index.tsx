@@ -58,7 +58,7 @@ const Actinlist: ActitemProps[] = [
         descKey: "actin.sacPlanning.desc",
     },
     {
-        titleKey: "SAP Data Preparation",
+        titleKey: "SAP Data Preservation",
         link: "/docs/sap-data-preservation/intro/",
         bg: "datapre",
         descKey: "actin.dataPreparation.desc",

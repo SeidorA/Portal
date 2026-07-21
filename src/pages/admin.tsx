@@ -117,8 +117,8 @@ const AdminDashboardContent = () => {
                     valB = getUserRole(userRoles, b.id);
                 } else if (sortConfig.key === 'last_activity') {
                     // Fallback to empty string if missing
-                    valA = a.last_sign_in_at || a.updated_at || '';
-                    valB = b.last_sign_in_at || b.updated_at || '';
+                    valA = a.last_activity_at || a.last_sign_in_at || a.updated_at || '';
+                    valB = b.last_activity_at || b.last_sign_in_at || b.updated_at || '';
                 }
 
                 if (valA < valB) return sortConfig.direction === 'asc' ? -1 : 1;
@@ -272,7 +272,7 @@ const AdminDashboardContent = () => {
                 {filteredUsers.map(user => {
                     const currentRole = getUserRole(userRoles, user.id);
                     // Format date roughly
-                    const activityDate = user.last_sign_in_at || user.updated_at;
+                    const activityDate = user.last_activity_at || user.last_sign_in_at || user.updated_at;
                     const lastActivity = activityDate
                         ? new Date(activityDate).toLocaleString()
                         : 'Never';

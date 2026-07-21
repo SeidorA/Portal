@@ -82,6 +82,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     return currentRoles;
   };
 
+  const updateLastActivity = async (userId: string) => {
+    try {
+      await supabase
+        .from('profiles')
+        .update({ last_activity_at: new Date().toISOString() })
+        .eq('id', userId);
+    } catch (err) {
+      console.error('Error updating last activity:', err);
+    }
+  };
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -121,6 +132,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         setSession(currentSession);
 
         if (currentSession?.user) {
+          updateLastActivity(currentSession.user.id);
           let userRoles = await fetchRoles(currentSession.user.id);
           userRoles = await autoAssignSalesRole(currentSession.user, userRoles);
           setRoles(userRoles);
@@ -149,6 +161,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
         setSession(session);
         if (session?.user) {
+          if (event === 'SIGNED_IN') {
+            updateLastActivity(session.user.id);
+          }
           let userRoles = await fetchRoles(session.user.id);
           userRoles = await autoAssignSalesRole(session.user, userRoles);
           setRoles(userRoles);

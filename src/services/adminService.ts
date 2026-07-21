@@ -5,6 +5,7 @@ export interface Profile {
     email: string;
     last_sign_in_at?: string; // from auth.users or potentially synced to profiles
     updated_at?: string;
+    last_activity_at?: string;
 }
 
 export interface UserRole {

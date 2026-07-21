@@ -22,8 +22,7 @@ Este espacio está pensado para brindar transparencia sobre la evolución del pr
     <Featurecheck realization title="SSO in Crestone for Microsoft" icon="lock" description="Enable Single Sign-On with Microsoft accounts, allowing users to access Crestone securely and seamlessly while simplifying authentication and user management." />
     <Featurecheck realization title="Licensing control" icon="squareFace" description="Implementation of a centralized interface for proactive management of the license lifecycle, including expiration alerts and usage tracking to avoid surprises at contract end." />
 
-    <h5 className="month">May | 2026</h5>
-    <Featurecheck realization title="Theobald to Crestone migrator" icon="arrowDownToLine" description="Provide a guided migration tool to move existing Theobald extractions into Crestone, reducing manual effort and transition risk by mapping connections/objects, generating equivalent configurations, and supporting basic validation to speed up onboarding." />
+    
 
     <h5 className="month">June | 2026</h5>
     <Featurecheck realization title="PostgreSQL Integration" icon="PostgreSQL" description="Enable optimized connection and data extraction with PostgreSQL databases to expand the sources of information supported by the platform." />
@@ -56,26 +55,4 @@ Este espacio está pensado para brindar transparencia sobre la evolución del pr
 </div>
 
 
-## Q4 2025
-<div className="boxrroadtime">
-    <p>Este trimestre nos enfocamos en fortalecer la base de nuestra plataforma mediante la integración con ecosistemas de datos clave y la implementación de herramientas para una gestión de licenciamiento transparente y proactiva.</p>
 
-    <h5 className="month">Octubre | 2025</h5>
-    <Featurecheck  realization title="Licensing control"  icon="newFile" description="Implementación de una interfaz centralizada para la gestión proactiva del ciclo de vida de la licencia, incluyendo alertas de vencimiento y uso para evitar sorpresas al finalizar el contrato." />
-
-    <h5 className="month">Noviembre | 2025</h5>
-    
-
-    <Featurecheck  realization title="Integración con PostgreSQL"  icon="PostgreSQL" brand description="Habilitar la conexión y extracción de datos optimizada con bases de datos PostgreSQL para ampliar las fuentes de información soportadas por la plataforma." /> 
-
-
-
-    
-
-    <h5 className="month">Diciembre | 2025</h5>
-
-    
-
-    <Featurecheck   title="Integración con SAP Datasphere"  icon="SAP" brand description="Incorporación de un canal automatizado para la entrega de archivos CSV, que simplifica la operación diaria, reduce la intervención manual y asegura datos actualizados y confiables para el análisis. Además, ofrece configuración flexible de envíos y seguimiento del estado, mejorando la eficiencia operativa y la experiencia de los usuarios." /> 
-
-</div>
