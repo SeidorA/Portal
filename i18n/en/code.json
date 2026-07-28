@@ -234,5 +234,9 @@
   },
   "actin.dataPreparation.desc": {
     "message": "Transform the storage of historical data from a technical maintenance task into a strategic step to reduce the cost of migration to SAP RISE and enable modern analytics."
+  },
+  "actin.fabric.desc": {
+    "message": "Cutting-edge analytics solution that helps companies better understand their business and address challenges directly to improve company performance.\u200b",
+    "description": "The description of the fabric page"
   }
 }

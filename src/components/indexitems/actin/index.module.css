@@ -40,6 +40,9 @@
 .datapre{
     background-image: url(/img/index/datapre.png);
 }
+.fabric{
+    background-image: url(/img/index/ain_fabric_ligth.png);
+}
 
 @media screen and (max-width: 780px) {
     .grid {

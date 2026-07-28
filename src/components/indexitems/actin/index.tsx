@@ -63,6 +63,12 @@ const Actinlist: ActitemProps[] = [
         bg: "datapre",
         descKey: "actin.dataPreparation.desc",
     },
+    {
+        titleKey: "Act-in SAP + Microsoft Fabric ",
+        link: "/docs/fabric/intro/",
+        bg: "fabric",
+        descKey: "actin.fabric.desc",
+    }
 ];
 
 export default function Actin() {

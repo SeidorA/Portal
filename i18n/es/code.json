@@ -668,5 +668,9 @@
   "actin.dataPreparation.desc": {
     "message": "Transforma el almacenamiento de datos históricos de una tarea técnica de mantenimiento en un paso estratégico para reducir el costo de migración a SAP RISE y habilitar analytics modernos.",
     "description": "The description of the data preparation page"
+  },
+  "actin.fabric.desc": {
+    "message": "Una solución analítica de vanguardia que ayuda a las empresas a comprender mejor su negocio y a afrontar los retos de forma directa para mejorar el rendimiento de la empresa.\u200b",
+    "description": "The description of the fabric page"
   }
 }
