@@ -1,5 +1,5 @@
 ---
-title:  Commercial
+title:  Comercial
 ---
 import Archivos from '@site/src/components/archivos';
 

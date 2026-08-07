@@ -38,21 +38,3 @@ import BoxDoc from '@site/src/components/boxdocs';
 
 </div>
 
-
-
-Crestone y Xtract Universal son soluciones para la extracción de datos desde SAP hacia diversas plataformas. Aunque ambos permiten la transferencia de información a diferentes destinos, existen diferencias clave en su enfoque, implementación y funcionalidades adicionales. La siguiente comparación destaca los aspectos más relevantes para evaluar cuál se adapta mejor a las necesidades del equipo técnico.
-
-| Criterio             | Crestone                                                                  | Xtract Universal                                                                 |
-|----------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| Conexión SAP         | ODATA, ODP(SAPI), TABLE                                                   | ODP, TABLE, CDC, BAPIS                                                           |
-| Extracción SAP       | Datos a múltiples destinos (stage, tabla)                                 | Datos a múltiples destinos (stage, tabla)                                        |
-| Workspace            | Sí                                                                        | No tiene                                                                         |
-| Alertas              | Sí, en aplicación y mail                                                  | No tiene                                                                         |
-| Destinos soportados  | AWS S3, Snowflake, Azure, Databricks                                      | Más variedad (Azure SQL, Oracle, MySQL, SAP HANA, Power BI, Tableau, etc.)       |
-| Automatización       | Programación de trabajos con múltiples nodos mediante “JOBS”              | API expuesta para ejecución remota                                               |
-| Implementación       | Cloud y/o Self-hosted                                                     | Instalación local                                                                |
-| Ayudas al usuario    | - Rapid deployment (SAP) <br/> - Importación y exportación de JOBS*        | Permite clonar ejecuciones                                                       |
-
-
-
-

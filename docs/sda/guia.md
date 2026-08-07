@@ -1,9 +1,8 @@
 ---
 title: Guía para creación de Data Advisor
 sidebar_label: Data Advisor
-sidebar_position: 1
+sidebar_position: 3
 ---
-import BoxDoc from '@site/src/components/boxdocs';
 
 ## Historial de Revisiones
 | Fecha | Version | Descripción | Revisor |
@@ -225,16 +224,3 @@ A partir de esta base, cada implementación puede adaptar los flujos, agentes y 
 
 
 
-## Documentación comercial
-
-<BoxDoc
-  title="SEIDOR Data Advisor - Uso Interno"
-  language="Español"
-  format="PPTX"
-  brand="Daiana"
-  titleimg="SEIDOR Data Advisor."
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/g/personal/admin_seidoranalytics_onmicrosoft_com/IQB1TCd1ZRDGQ6tg_MyE14F-AZkX7bZ57YE45TM3KSQ1KYI?e=PpXUWj"
->
-  Incluye un asistente como parte del proyecto para que el equipo cuente con un consultor virtual disponible en todo momento. ​
-
-</BoxDoc>

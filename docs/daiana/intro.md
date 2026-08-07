@@ -15,58 +15,6 @@ Desde asistentes conversacionales hasta sistemas complejos de atención al clien
 
 ![Daiana Baner](/img/portadadaiana.png)
 
-## Material Comercial
-
-<div class="padding-vert--sd">
-<BoxDoc
-  title="Brochure comercial"
-  language="Español"
-  format="PDF"
-  brand="Daiana"
-  titleimg="Brochure comercial"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/Eco7gYXU0IpItwbpxnU9pDoB1l_oH7bRMqHxpJ1jB0thXg?e=hDb8ij"
->
- Documento comercial completo destacando su alcance, funciones  y compatibilidad.
-</BoxDoc>
-
-
-
-<BoxDoc
-  title="Presentación Comercial"
-  language="Español"
-  format="PPTX"
-  brand="Daiana"
-  titleimg="Presentación Comercial"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/DAIANA/(100)%20Comercial%20-%20Commercial/Daiana%20-%20Presentacion%20Comercial%202026.pptx?d=w147b4ce47da84ff085bccc964b5db222&csf=1&web=1&e=raBzYy"
->
- Presentación corporativa lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
-</BoxDoc>
-
-<BoxDoc
-  title="Propuesta economica"
-  language="Español"
-  format="PPTX"
-  brand="Daiana"
-  titleimg="Propuesta economica"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/DAIANA/(100)%20Comercial%20-%20Commercial/Propuesta%20economica%20DAIANA%202026.pptx?d=wf245bed4a3684d809f85093227fca7d1&csf=1&web=1&e=cSLyVK"
->
- Propuesta economica lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso, planes y ecosistema de integraciones.
-</BoxDoc>
-
-<BoxDoc
-  title="Presentación Comercial DAIANA"
-  language="Inglés"
-  format="PPTX"
-  brand="Daiana"
-  titleimg="Commercial Presentation"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:p:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/DAIANA/(100)%20Comercial%20-%20Commercial/Daiana%20-%20Commercial%20presentation%202026%20(EN).pptx?d=wd3f86b87c0ba4f378de0a8dfbac50e8f&csf=1&web=1&e=uSveCa"
->
- Presentación corporativa lista para exponer, con toda la información clave de Daiana: funcionalidades, beneficios, casos de uso y ecosistema de integraciones.
-</BoxDoc>
-
-</div>
-
-
 ## ¿Qué es Daiana?
 
 <div class="box_img">

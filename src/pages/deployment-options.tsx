@@ -188,6 +188,10 @@ export default function DeploymentOptions() {
   const [selectedOriginId, setSelectedOriginId] = useState<string>('');
   const [selectedDestinationId, setSelectedDestinationId] = useState<string>('');
   const [isDownloading, setIsDownloading] = useState<boolean>(false);
+  const [deploymentMode, setDeploymentMode] = useState<'ambas' | 'cloud' | 'self-hosted'>('ambas');
+  const [showTitles, setShowTitles] = useState<boolean>(true);
+  const [originLabel, setOriginLabel] = useState<string>('');
+  const [analyticsDestinationId, setAnalyticsDestinationId] = useState<string>('none');
 
   // Load Connections Data
   useEffect(() => {
@@ -286,6 +290,27 @@ export default function DeploymentOptions() {
     WebkitBackdropFilter: 'blur(12px)',
     boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.04)'
   };
+
+  const cloudOffset = deploymentMode === 'cloud' ? 120 : 0;
+  const selfHostedOffset = deploymentMode === 'self-hosted' ? -130 : 0;
+
+  const hasAnalytics = analyticsDestinationId && analyticsDestinationId !== 'none';
+  const analyticsDestination = hasAnalytics ? (data?.destinations.find(d => d.id === analyticsDestinationId) || data?.destinations[0]) : null;
+
+  const startX = hasAnalytics ? 40 : 120;
+  const spacing = hasAnalytics ? 300 : 390;
+
+  const col1X = startX;
+  const col2X = startX + spacing;
+  const col3X = startX + spacing * 2;
+  const col4X = startX + spacing * 3;
+
+  const flow1BoxLeft = col2X - 50;
+  const flow1BoxWidth = 360;
+
+  const flow2BoxLeft = col1X;
+  const flow2BoxWidth = (col2X - col1X) + 260 + 50;
+  const flow2OriginX = col1X + 30;
 
   // PNG Exporter function
   const downloadPng = async () => {
@@ -446,6 +471,130 @@ export default function DeploymentOptions() {
               </select>
             </div>
 
+            {/* Origin Label Input */}
+            <div>
+              <span style={{ display: 'block', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
+                {currentLocale === 'en' ? 'Origin Label' : 'Etiqueta de Origen'}
+              </span>
+              <input
+                type="text"
+                value={originLabel}
+                onChange={(e) => setOriginLabel(e.target.value)}
+                placeholder={currentLocale === 'en' ? 'e.g. SAP ERP 6.0' : 'ej. SAP ERP 6.0'}
+                style={{
+                  width: '100%',
+                  padding: '10px 12px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--ifm-toc-border-color)',
+                  backgroundColor: 'var(--ifm-background-color)',
+                  color: 'var(--ifm-color-content)',
+                  fontSize: '14px',
+                  outline: 'none'
+                }}
+              />
+            </div>
+
+            {/* Analytics Destination Selector */}
+            <div>
+              <span style={{ display: 'block', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
+                {currentLocale === 'en' ? 'Analytics Layer' : 'Capa de Analítica'}
+              </span>
+              <select
+                value={analyticsDestinationId}
+                onChange={(e) => setAnalyticsDestinationId(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '10px 12px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--ifm-toc-border-color)',
+                  backgroundColor: 'var(--ifm-background-color)',
+                  color: 'var(--ifm-color-content)',
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  outline: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                <option value="none">{currentLocale === 'en' ? 'None' : 'Ninguna'}</option>
+                {data.destinations.map((d) => (
+                  <option key={d.id} value={d.id}>
+                    {d.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Deployment Mode Selector */}
+            <div>
+              <span style={{ display: 'block', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)', marginBottom: '8px' }}>
+                {currentLocale === 'en' ? 'Deployment Mode' : 'Modo de Despliegue'}
+              </span>
+              <select
+                value={deploymentMode}
+                onChange={(e) => setDeploymentMode(e.target.value as 'ambas' | 'cloud' | 'self-hosted')}
+                style={{
+                  width: '100%',
+                  padding: '10px 12px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--ifm-toc-border-color)',
+                  backgroundColor: 'var(--ifm-background-color)',
+                  color: 'var(--ifm-color-content)',
+                  fontSize: '14px',
+                  fontWeight: 500,
+                  outline: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                <option value="ambas">{currentLocale === 'en' ? 'Both' : 'Ambas'}</option>
+                <option value="cloud">Cloud</option>
+                <option value="self-hosted">Self Hosted</option>
+              </select>
+            </div>
+
+            {/* Show Titles Toggle */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--ifm-color-gray-medium-dark)' }}>
+                {currentLocale === 'en' ? 'Show Titles' : 'Mostrar Títulos'}
+              </span>
+              <label style={{
+                position: 'relative',
+                display: 'inline-block',
+                width: '44px',
+                height: '24px'
+              }}>
+                <input
+                  type="checkbox"
+                  checked={showTitles}
+                  onChange={(e) => setShowTitles(e.target.checked)}
+                  style={{ opacity: 0, width: 0, height: 0 }}
+                />
+                <span style={{
+                  position: 'absolute',
+                  cursor: 'pointer',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: showTitles ? '#3b82f6' : '#cbd5e1',
+                  transition: '.4s',
+                  borderRadius: '24px'
+                }}>
+                  <span style={{
+                    position: 'absolute',
+                    content: '""',
+                    height: '18px',
+                    width: '18px',
+                    left: '3px',
+                    bottom: '3px',
+                    backgroundColor: 'white',
+                    transition: '.4s',
+                    borderRadius: '50%',
+                    transform: showTitles ? 'translateX(20px)' : 'translateX(0)'
+                  }} />
+                </span>
+              </label>
+            </div>
+
             {/* Action Buttons */}
             <button
               onClick={downloadPng}
@@ -551,282 +700,192 @@ export default function DeploymentOptions() {
                     </marker>
                   </defs>
 
-                  {/* FLOW 1 (Despliegue Cloud) - Origin to Crestone */}
-                  <g>
-                    {/* Circle starting point */}
-                    <circle cx="380" cy="245" r="5" fill={arrowColor} />
-                    {/* Horizontal connection line */}
-                    <line
-                      x1="380"
-                      y1="245"
-                      x2="504"
-                      y2="245"
-                      stroke={arrowColor}
-                      strokeWidth="2.5"
-                      markerEnd="url(#arrowhead)"
-                    />
-                  </g>
+                  {(deploymentMode === 'ambas' || deploymentMode === 'cloud') && (
+                    <>
+                      {/* FLOW 1 (Despliegue Cloud) */}
+                      <g>
+                        <circle cx={col1X + 260} cy={245 + cloudOffset} r="5" fill={arrowColor} />
+                        <line x1={col1X + 260} y1={245 + cloudOffset} x2={col2X - 6} y2={245 + cloudOffset} stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowhead)" />
+                      </g>
+                      <g>
+                        <circle cx={col2X + 260} cy={245 + cloudOffset} r="5" fill={arrowColor} />
+                        <line x1={col2X + 260} y1={245 + cloudOffset} x2={col3X - 6} y2={245 + cloudOffset} stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowhead)" />
+                      </g>
+                      {hasAnalytics && (
+                        <g>
+                          <circle cx={col3X + 260} cy={245 + cloudOffset} r="5" fill={arrowColor} />
+                          <line x1={col3X + 260} y1={245 + cloudOffset} x2={col4X - 6} y2={245 + cloudOffset} stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowhead)" />
+                        </g>
+                      )}
+                    </>
+                  )}
 
-                  {/* FLOW 1 (Despliegue Cloud) - Crestone to Destination */}
-                  <g>
-                    {/* Circle starting point */}
-                    <circle cx="770" cy="245" r="5" fill={arrowColor} />
-                    {/* Horizontal connection line */}
-                    <line
-                      x1="770"
-                      y1="245"
-                      x2="894"
-                      y2="245"
-                      stroke={arrowColor}
-                      strokeWidth="2.5"
-                      markerEnd="url(#arrowhead)"
-                    />
-                  </g>
-
-                  {/* FLOW 2 (Despliegue Self Hosted) - Origin to Crestone inside Customer Network Box */}
-                  <g>
-                    {/* Circle starting point */}
-                    <circle cx="410" cy="510" r="5" fill={arrowColor} />
-                    {/* Horizontal connection line */}
-                    <line
-                      x1="410"
-                      y1="510"
-                      x2="474"
-                      y2="510"
-                      stroke={arrowColor}
-                      strokeWidth="2.5"
-                      markerEnd="url(#arrowhead)"
-                    />
-                  </g>
-
-                  {/* FLOW 2 (Despliegue Self Hosted) - Crestone (inside Customer Network Box) to Destination */}
-                  <g>
-                    {/* Circle starting point */}
-                    <circle cx="740" cy="510" r="5" fill={arrowColor} />
-                    {/* Horizontal connection line */}
-                    <line
-                      x1="740"
-                      y1="510"
-                      x2="894"
-                      y2="510"
-                      stroke={arrowColor}
-                      strokeWidth="2.5"
-                      markerEnd="url(#arrowhead)"
-                    />
-                  </g>
+                  {(deploymentMode === 'ambas' || deploymentMode === 'self-hosted') && (
+                    <>
+                      {/* FLOW 2 (Despliegue Self Hosted) */}
+                      <g>
+                        <circle cx={flow2OriginX + 260} cy={510 + selfHostedOffset} r="5" fill={arrowColor} />
+                        <line x1={flow2OriginX + 260} y1={510 + selfHostedOffset} x2={col2X - 6} y2={510 + selfHostedOffset} stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowhead)" />
+                      </g>
+                      <g>
+                        <circle cx={col2X + 260} cy={510 + selfHostedOffset} r="5" fill={arrowColor} />
+                        <line x1={col2X + 260} y1={510 + selfHostedOffset} x2={col3X - 6} y2={510 + selfHostedOffset} stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowhead)" />
+                      </g>
+                      {hasAnalytics && (
+                        <g>
+                          <circle cx={col3X + 260} cy={510 + selfHostedOffset} r="5" fill={arrowColor} />
+                          <line x1={col3X + 260} y1={510 + selfHostedOffset} x2={col4X - 6} y2={510 + selfHostedOffset} stroke={arrowColor} strokeWidth="2.5" markerEnd="url(#arrowhead)" />
+                        </g>
+                      )}
+                    </>
+                  )}
                 </svg>
 
                 {/* Main Slide Title */}
-                <div style={{
-                  position: 'absolute',
-                  top: '60px',
-                  left: '80px',
-                  zIndex: 2
-                }}>
-                  <h1 style={{
-                    margin: 0,
-                    fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
-                    fontSize: '40px',
-                    fontWeight: 800,
-                    color: textColorMain,
-                    letterSpacing: '-0.5px'
+                {showTitles && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '60px',
+                    left: '80px',
+                    zIndex: 2
                   }}>
-                    {currentLocale === 'en' ? 'Deployment Options' : 'Opciones de Despliegue'}
-                  </h1>
-                </div>
+                    <h1 style={{
+                      margin: 0,
+                      fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                      fontSize: '40px',
+                      fontWeight: 800,
+                      color: textColorMain,
+                      letterSpacing: '-0.5px'
+                    }}>
+                      {currentLocale === 'en' ? 'Deployment Options' : 'Opciones de Despliegue'}
+                    </h1>
+                  </div>
+                )}
 
                 {/* ================= FLOW 1: Despliegue Cloud ================= */}
-                <div style={{
-                  position: 'absolute',
-                  top: '135px',
-                  left: '80px',
-                  zIndex: 2
-                }}>
-                  <h2 style={{
-                    margin: 0,
-                    fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
-                    fontSize: '24px',
-                    fontWeight: 700,
-                    color: textColorSub,
-                    letterSpacing: '-0.2px'
-                  }}>
-                    {currentLocale === 'en' ? 'Cloud Deployment' : 'Despliegue Cloud'}
-                  </h2>
-                </div>
+                {(deploymentMode === 'ambas' || deploymentMode === 'cloud') && (
+                  <>
+                    {showTitles && (
+                      <div style={{
+                        position: 'absolute',
+                        top: `${135 + cloudOffset}px`,
+                        left: '80px',
+                        zIndex: 2
+                      }}>
+                        <h2 style={{
+                          margin: 0,
+                          fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                          fontSize: '24px',
+                          fontWeight: 700,
+                          color: textColorSub,
+                          letterSpacing: '-0.2px'
+                        }}>
+                          {currentLocale === 'en' ? 'Cloud Deployment' : 'Despliegue Cloud'}
+                        </h2>
+                      </div>
+                    )}
 
-                {/* Labels for Flow 1 */}
-                <div style={{
-                  position: 'absolute',
-                  top: '185px',
-                  left: '120px',
-                  width: '260px',
-                  textAlign: 'center',
-                  fontFamily: "'Poppins', 'Inter', sans-serif",
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: networkLabelColor,
-                  zIndex: 2
-                }}>
-                  Customer Network
-                </div>
+                    {/* Labels for Flow 1 */}
+                    <div style={{ position: 'absolute', top: `${185 + cloudOffset}px`, left: `${col1X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                      Customer Network
+                    </div>
+                    <div style={{ position: 'absolute', top: `${185 + cloudOffset}px`, left: `${col2X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                      Crestone Network
+                    </div>
+                    <div style={{ position: 'absolute', top: `${185 + cloudOffset}px`, left: `${col3X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                      Destination Network
+                    </div>
+                    {hasAnalytics && (
+                      <div style={{ position: 'absolute', top: `${185 + cloudOffset}px`, left: `${col4X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                        Analytics & Visualization Layer
+                      </div>
+                    )}
 
-                <div style={{
-                  position: 'absolute',
-                  top: '185px',
-                  left: '510px',
-                  width: '260px',
-                  textAlign: 'center',
-                  fontFamily: "'Poppins', 'Inter', sans-serif",
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: networkLabelColor,
-                  zIndex: 2
-                }}>
-                  Crestone Network
-                </div>
+                    {/* Cards for Flow 1 */}
+                    <div style={{ position: 'absolute', top: `${220 + cloudOffset}px`, left: `${col1X}px`, zIndex: 3 }}>
+                      <ConnectionCard title={selectedOrigin.title} icon={selectedOrigin.iconName || 'file'} brand={selectedOrigin.useBrand} theme={theme} />
+                    </div>
+                    {originLabel && (
+                      <div style={{ position: 'absolute', top: `${280 + cloudOffset}px`, left: `${col1X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '14px', fontWeight: 700, color: textColorMain, zIndex: 3 }}>
+                        {originLabel}
+                      </div>
+                    )}
 
-                <div style={{
-                  position: 'absolute',
-                  top: '185px',
-                  left: '900px',
-                  width: '260px',
-                  textAlign: 'center',
-                  fontFamily: "'Poppins', 'Inter', sans-serif",
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: networkLabelColor,
-                  zIndex: 2
-                }}>
-                  Destination Network
-                </div>
-
-                {/* Cards for Flow 1 */}
-                {/* Selected Origin */}
-                <div style={{ position: 'absolute', top: '220px', left: '120px', zIndex: 3 }}>
-                  <ConnectionCard
-                    title={selectedOrigin.title}
-                    icon={selectedOrigin.iconName || 'file'}
-                    brand={selectedOrigin.useBrand}
-                    theme={theme}
-                  />
-                </div>
-
-                {/* Crestone Network Box Outline */}
-                <div style={{
-                  position: 'absolute',
-                  top: '175px',
-                  left: '460px',
-                  width: '360px',
-                  height: '140px',
-                  borderRadius: '12px',
-                  pointerEvents: 'none',
-                  zIndex: 1,
-                  ...glassStyle
-                }} />
-
-                {/* Crestone Card */}
-                <div style={{ position: 'absolute', top: '220px', left: '510px', zIndex: 3 }}>
-                  <CrestoneCard theme={theme} />
-                </div>
-
-                {/* Selected Destination */}
-                <div style={{ position: 'absolute', top: '220px', left: '900px', zIndex: 3 }}>
-                  <ConnectionCard
-                    title={selectedDestination.title}
-                    icon={selectedDestination.iconName || 'file'}
-                    brand={selectedDestination.useBrand}
-                    theme={theme}
-                  />
-                </div>
+                    <div style={{ position: 'absolute', top: `${175 + cloudOffset}px`, left: `${flow1BoxLeft}px`, width: `${flow1BoxWidth}px`, height: '140px', borderRadius: '12px', pointerEvents: 'none', zIndex: 1, ...glassStyle }} />
+                    <div style={{ position: 'absolute', top: `${220 + cloudOffset}px`, left: `${col2X}px`, zIndex: 3 }}>
+                      <CrestoneCard theme={theme} />
+                    </div>
+                    <div style={{ position: 'absolute', top: `${220 + cloudOffset}px`, left: `${col3X}px`, zIndex: 3 }}>
+                      <ConnectionCard title={selectedDestination.title} icon={selectedDestination.iconName || 'file'} brand={selectedDestination.useBrand} theme={theme} />
+                    </div>
+                    {hasAnalytics && analyticsDestination && (
+                      <div style={{ position: 'absolute', top: `${220 + cloudOffset}px`, left: `${col4X}px`, zIndex: 3 }}>
+                        <ConnectionCard title={analyticsDestination.title} icon={analyticsDestination.iconName || 'file'} brand={analyticsDestination.useBrand} theme={theme} />
+                      </div>
+                    )}
+                  </>
+                )}
 
 
                 {/* ================= FLOW 2: Despliegue Self Hosted ================= */}
-                <div style={{
-                  position: 'absolute',
-                  top: '380px',
-                  left: '80px',
-                  zIndex: 2
-                }}>
-                  <h2 style={{
-                    margin: 0,
-                    fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
-                    fontSize: '24px',
-                    fontWeight: 700,
-                    color: textColorSub,
-                    letterSpacing: '-0.2px'
-                  }}>
-                    {currentLocale === 'en' ? 'Self Hosted Deployment' : 'Despliegue Self Hosted'}
-                  </h2>
-                </div>
+                {(deploymentMode === 'ambas' || deploymentMode === 'self-hosted') && (
+                  <>
+                    {showTitles && (
+                      <div style={{
+                        position: 'absolute',
+                        top: `${380 + selfHostedOffset}px`,
+                        left: '80px',
+                        zIndex: 2
+                      }}>
+                        <h2 style={{
+                          margin: 0,
+                          fontFamily: "'Poppins', 'Outfit', 'Inter', sans-serif",
+                          fontSize: '24px',
+                          fontWeight: 700,
+                          color: textColorSub,
+                          letterSpacing: '-0.2px'
+                        }}>
+                          {currentLocale === 'en' ? 'Self Hosted Deployment' : 'Despliegue Self Hosted'}
+                        </h2>
+                      </div>
+                    )}
 
-                {/* Labels for Flow 2 */}
-                <div style={{
-                  position: 'absolute',
-                  top: '430px',
-                  left: '120px',
-                  width: '650px',
-                  textAlign: 'center',
-                  fontFamily: "'Poppins', 'Inter', sans-serif",
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: networkLabelColor,
-                  zIndex: 2
-                }}>
-                  Customer Network
-                </div>
+                    {/* Labels for Flow 2 */}
+                    <div style={{ position: 'absolute', top: `${430 + selfHostedOffset}px`, left: `${col1X}px`, width: `${flow2BoxWidth}px`, textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                      Customer Network
+                    </div>
+                    <div style={{ position: 'absolute', top: `${430 + selfHostedOffset}px`, left: `${col3X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                      Destination Network
+                    </div>
+                    {hasAnalytics && (
+                      <div style={{ position: 'absolute', top: `${430 + selfHostedOffset}px`, left: `${col4X}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '13px', fontWeight: 600, color: networkLabelColor, zIndex: 2 }}>
+                        Analytics & Visualization Layer
+                      </div>
+                    )}
 
-                <div style={{
-                  position: 'absolute',
-                  top: '430px',
-                  left: '900px',
-                  width: '260px',
-                  textAlign: 'center',
-                  fontFamily: "'Poppins', 'Inter', sans-serif",
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: networkLabelColor,
-                  zIndex: 2
-                }}>
-                  Destination Network
-                </div>
+                    <div style={{ position: 'absolute', top: `${450 + selfHostedOffset}px`, left: `${flow2BoxLeft}px`, width: `${flow2BoxWidth}px`, height: '120px', borderRadius: '12px', pointerEvents: 'none', zIndex: 1, ...glassStyle }} />
+                    <div style={{ position: 'absolute', top: `${485 + selfHostedOffset}px`, left: `${flow2OriginX}px`, zIndex: 3 }}>
+                      <ConnectionCard title={selectedOrigin.title} icon={selectedOrigin.iconName || 'file'} brand={selectedOrigin.useBrand} theme={theme} />
+                    </div>
+                    {originLabel && (
+                      <div style={{ position: 'absolute', top: `${545 + selfHostedOffset}px`, left: `${flow2OriginX}px`, width: '260px', textAlign: 'center', fontFamily: "'Poppins', 'Inter', sans-serif", fontSize: '14px', fontWeight: 700, color: textColorMain, zIndex: 3 }}>
+                        {originLabel}
+                      </div>
+                    )}
 
-                {/* Customer Network Outer Box Outline (Contains both Origin & Crestone) */}
-                <div style={{
-                  position: 'absolute',
-                  top: '450px',
-                  left: '120px',
-                  width: '650px',
-                  height: '120px',
-                  borderRadius: '12px',
-                  pointerEvents: 'none',
-                  zIndex: 1,
-                  ...glassStyle
-                }} />
-
-                {/* Origin Card inside Customer Network */}
-                <div style={{ position: 'absolute', top: '485px', left: '150px', zIndex: 3 }}>
-                  <ConnectionCard
-                    title={selectedOrigin.title}
-                    icon={selectedOrigin.iconName || 'file'}
-                    brand={selectedOrigin.useBrand}
-                    theme={theme}
-                  />
-                </div>
-
-                {/* Crestone Card inside Customer Network */}
-                <div style={{ position: 'absolute', top: '485px', left: '480px', zIndex: 3 }}>
-                  <CrestoneCard theme={theme} />
-                </div>
-
-                {/* Selected Destination Card */}
-                <div style={{ position: 'absolute', top: '485px', left: '900px', zIndex: 3 }}>
-                  <ConnectionCard
-                    title={selectedDestination.title}
-                    icon={selectedDestination.iconName || 'file'}
-                    brand={selectedDestination.useBrand}
-                    theme={theme}
-                  />
-                </div>
+                    <div style={{ position: 'absolute', top: `${485 + selfHostedOffset}px`, left: `${col2X}px`, zIndex: 3 }}>
+                      <CrestoneCard theme={theme} />
+                    </div>
+                    <div style={{ position: 'absolute', top: `${485 + selfHostedOffset}px`, left: `${col3X}px`, zIndex: 3 }}>
+                      <ConnectionCard title={selectedDestination.title} icon={selectedDestination.iconName || 'file'} brand={selectedDestination.useBrand} theme={theme} />
+                    </div>
+                    {hasAnalytics && analyticsDestination && (
+                      <div style={{ position: 'absolute', top: `${485 + selfHostedOffset}px`, left: `${col4X}px`, zIndex: 3 }}>
+                        <ConnectionCard title={analyticsDestination.title} icon={analyticsDestination.iconName || 'file'} brand={analyticsDestination.useBrand} theme={theme} />
+                      </div>
+                    )}
+                  </>
+                )}
 
 
 

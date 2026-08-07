@@ -152,7 +152,7 @@ const config: Config = {
               sidebarId: 'crestonevar',
             },
             {
-              label: 'SAP Data Preservation',
+              label: 'Data Preservation',
               to: '/docs/sap-data-preservation/intro',
               sidebarId: 'sap-data-preservation',
             },
@@ -166,7 +166,11 @@ const config: Config = {
               sidebarId: 'daianavar',
             },
 
-
+            {
+              label: 'SEIDOR Data Advisor',
+              to: '/docs/sda/intro',
+              sidebarId: 'sdaconfig',
+            },
             {
               type: 'html',
               value: '<div class="dropdown-header">.</div>',

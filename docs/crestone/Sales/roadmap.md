@@ -84,11 +84,6 @@ Hemos diseñado este roadmap con el objetivo de maximizar el valor para nuestros
       In addition to traditional transfer scheduling, the ability to operate in real time is added, thus completing a flexible palette of options that adapts to different business scenarios and data volumes.
     </p>
     <hr />
-    <Subitle title="Amazon S3 Integration" brand icon="S3"/>
-    <p>
-      Enable Amazon S3 as a data source, allowing Crestone to read files and datasets stored in AWS cloud storage environments.
-    </p>
-    <hr />
     <Subitle title="Amazon Redshift Integration" brand icon="AmazonRedshift"/>
     <p>
       Enable Amazon Redshift as a data source, helping customers extract analytical data from AWS data warehouse environments into Crestone workflows.
