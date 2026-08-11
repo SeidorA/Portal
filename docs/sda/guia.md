@@ -1,6 +1,6 @@
 ---
 title: Guía para creación de Data Advisor
-sidebar_label: Data Advisor
+sidebar_label: Guía básica
 sidebar_position: 3
 ---
 
