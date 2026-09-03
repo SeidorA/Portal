@@ -149,7 +149,7 @@ const config: Config = {
             {
               label: 'Crestone',
               to: '/docs/crestone/intro',
-              sidebarId: 'crestonevar',
+              sidebarId: 'crestoneSidebar',
             },
             {
               label: 'Data Preservation',
@@ -163,7 +163,7 @@ const config: Config = {
             {
               label: 'Daiana',
               to: '/docs/daiana/intro',
-              sidebarId: 'daianavar',
+              sidebarId: 'daianaSidebar',
             },
 
             {
