@@ -18,7 +18,7 @@ import BoxDoc from '@site/src/components/boxdocs';
 </BoxDoc>
 
 <BoxDoc
-  title="Brochure Comercial"
+  title="Brochure Comercial (Vertical)"
   language="Español"
   format="PDF"
   brand="Crestone"
@@ -30,7 +30,7 @@ import BoxDoc from '@site/src/components/boxdocs';
 
 
 <BoxDoc
-  title="Brochure Comercial"
+  title="Brochure Comercial (Vertical)"
   language="Inglés"
   format="PDF"
   brand="Crestone"
