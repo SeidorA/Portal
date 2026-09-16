@@ -13,10 +13,10 @@ A continuación encontrarás distintos documentos que muestran lo aprendido en p
   language="Español"
   format="PDF"
   brand="Crestone"
-  titleimg="Configuracion conexion SAP Rise (Grupo UMA)"
+  titleimg="Configuracion conexion SAP Rise"
   onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/conocimiento%20en%20Instalaciones/Configuraci%C3%B3n%20conexi%C3%B3n%20SAP%20RISE%20(Grupo%20UMA)%20-%20Crestone.pdf?d=w806c3ec179714c6f83de37a3d92b6186&csf=1&web=1&e=tGXBlc"
 >
-  En este documento se detallan los pasos realizados para la configuracion de conexion a SAP Rise (Grupo UMA).
+  En este documento se detallan los pasos realizados para la configuracion de conexion a SAP Rise.
 </BoxDoc>
 
 <BoxDoc
