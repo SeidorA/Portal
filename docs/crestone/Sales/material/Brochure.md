@@ -18,12 +18,12 @@ import BoxDoc from '@site/src/components/boxdocs';
 </BoxDoc>
 
 <BoxDoc
-  title="Brochure Agnostico (vertical)"
+  title="Brochure Comercial"
   language="Español"
   format="PDF"
   brand="Crestone"
   titleimg="Brochure comercial"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EegS5HoZqStGnJEVheigyp4BGkyVlytrANqFhuiy3QZkHQ?e=G6hUV3"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Brochure%20Comercial/Commercial%20Brochure%20-%20CRESTONE.pdf?d=w330a664cc6614caa9dd45d7b7b485df0&csf=1&web=1&e=y0SEVA"
 >
   Versión en formato vertical del brochure comercial, con el mismo enfoque agnóstico: resaltar las funcionalidades de Crestone sin referencias a proveedores de nube o bases de datos.
 </BoxDoc>
@@ -35,7 +35,7 @@ import BoxDoc from '@site/src/components/boxdocs';
   format="PDF"
   brand="Crestone"
   titleimg="Comercial Brochure"
-  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/g/personal/admin_seidoranalytics_onmicrosoft_com/EUxmCjNhxqpMndRde3tIXfAB-CLnfMB7fLjd_vwx_gD7CA?e=w6lf7P"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/Brochure%20Comercial/Commercial%20Brochure%20EN%20-%20CRESTONE.pdf?d=wfc4b2fadf736455dbe523f01abd44d7f&csf=1&web=1&e=gmKJmB"
 >
   Documento comercial completo que incluye el listado actualizado de todas las marcas y plataformas soportadas por Crestone, destacando su alcance y compatibilidad.
 </BoxDoc>
