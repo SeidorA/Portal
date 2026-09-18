@@ -1,9 +1,9 @@
-.actinItem{
+.actinItem {
     height: 100%;
     color: var(--carbon);
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -25,23 +25,33 @@
 .by {
     background-image: url(/img/index/byactin.png);
 }
-.bo { 
+
+.bo {
     background-image: url(/img/index/one.png);
 }
-.hana { 
-     background-image: url(/img/index/hana.png);
+
+.hana {
+    background-image: url(/img/index/hana.png);
 }
-.su { 
+
+.su {
     background-image: url(/img/index/Sf.png);
 }
-.pla { 
+
+.pla {
     background-image: url(/img/index/plan.png);
 }
-.datapre{
+
+.datapre {
     background-image: url(/img/index/datapre.png);
 }
-.fabric{
+
+.fabric {
     background-image: url(/img/index/ain_fabric_ligth.png);
+}
+
+.snowflake {
+    background-image: url(/img/index/ain_snowflake_ligth.png);
 }
 
 @media screen and (max-width: 780px) {

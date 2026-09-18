@@ -226,6 +226,11 @@ const config: Config = {
               label: 'Act·in SAP + Microsoft FABRIC',
               to: '/docs/fabric/intro',
               sidebarId: 'fabric',
+            },
+            {
+              label: 'Act·in SAP + Snowflake',
+              to: '/docs/snowflake/intro',
+              sidebarId: 'snowflake',
             }
 
           ],

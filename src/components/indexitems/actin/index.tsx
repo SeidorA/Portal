@@ -64,9 +64,15 @@ const Actinlist: ActitemProps[] = [
         descKey: "actin.dataPreparation.desc",
     },
     {
-        titleKey: "Act-in SAP + Microsoft Fabric ",
+        titleKey: "Act-in SAP + MS Fabric",
         link: "/docs/fabric/intro/",
         bg: "fabric",
+        descKey: "actin.fabric.desc",
+    },
+    {
+        titleKey: "Act-in SAP + Snowflake",
+        link: "/docs/snowflake/intro/",
+        bg: "snowflake",
         descKey: "actin.fabric.desc",
     }
 ];
