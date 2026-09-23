@@ -9,6 +9,17 @@ A continuación encontrarás distintos documentos que muestran lo aprendido en p
 
 <div class="margin-vert--lg">
 <BoxDoc
+  title="Buenas Prácticas y Recomendaciones (Diferentes Arquitecturas Cloud)"
+  language="Español"
+  format="PDF"
+  brand="Crestone"
+  titleimg="Buenas Prácticas y Recomendaciones"
+  onDownload="https://seidoranalytics-my.sharepoint.com/:b:/r/personal/admin_seidoranalytics_onmicrosoft_com/Documents/INNOVACION/CRESTONE/(100)%20Comercial%20-%20Commercial/conocimiento%20en%20Instalaciones/Buenas%20Pr%C3%A1cticas%20y%20Recomendaciones.pdf?d=w50b1702ae64542269ecdfef153991d44&csf=1&web=1&e=P2BqQw"
+>
+  En este documento se detallan las mejores prácticas y recomendaciones para la instalación de Crestone en diferentes arquitecturas Cloud.
+</BoxDoc>
+
+<BoxDoc
   title="Configuracion conexion SAP Rise"
   language="Español"
   format="PDF"
